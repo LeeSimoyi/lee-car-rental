@@ -1316,6 +1316,7 @@ section {
 .car-details-card {
   width: 1000px;
   max-width: 95%;
+  margin-top: 100px;
   background: #fff;
   border-radius: 22px;
   display: flex;
