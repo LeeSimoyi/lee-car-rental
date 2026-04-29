@@ -1,0 +1,1081 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="shortcut icon" href="imgs/favicon.png" type="image/x-icon">
+  <title>Lee Car Rental | Drive Excellence. Experience Comfort.</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+  <!-- ================= HEADER SECTION ================= -->
+  <header class="header" id="top">
+  <div class="container header-inner">
+
+    <a href="#home" class="logo">
+      <span class="logo-mark">LCR</span>
+      <span class="logo-text">Car Rental</span>
+    </a>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <nav class="nav" id="nav">
+
+  <button class="nav-close" id="navClose" aria-label="Close menu">
+    <i class="fa-solid fa-xmark"></i>
+  </button>
+
+  <a href="#home">Home</a>
+  <a href="#fleet">Our Fleet</a>
+  <a href="#services">Services</a>
+  <a href="#about">About Us</a>
+  <a href="#testimonials">Testimonials</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contact">Contact</a>
+
+</nav>
+
+<!-- overlay -->
+<div class="nav-overlay" id="navOverlay"></div>
+
+    <div class="header-actions">
+      <button class="signin-btn" id="signinBtn">
+        <i class="fa-regular fa-user"></i>
+        Sign In
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- ================= AUTH OVERLAY ================= -->
+<div class="auth-overlay" id="authOverlay"></div>
+
+<!-- ================= AUTH POPUP ================= -->
+<div class="auth-popup" id="authPopup">
+
+  <div class="auth-card">
+
+    <div class="authbtnclose">
+    <button class="auth-close" id="authClose">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    </div>
+
+    <!-- Tabs -->
+    <div class="auth-tabs">
+      <button class="auth-tab active" data-tab="login">Sign In</button>
+      <button class="auth-tab" data-tab="register">Create Account</button>
+    </div>
+
+    <!-- LOGIN -->
+    <form class="auth-form active" id="loginForm">
+      <h3>Welcome Back</h3>
+
+      <div class="auth-group">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" placeholder="Email address" required>
+      </div>
+
+      <div class="auth-group">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <button class="btn btn-primary full">Sign In</button>
+
+      <div class="auth-divider"><span>or continue with</span></div>
+
+      <button type="button" class="google-btn" id="googleLogin">
+        <i class="fa-brands fa-google"></i>
+        Continue with Google
+      </button>
+    </form>
+
+    <!-- REGISTER -->
+    <form class="auth-form" id="registerForm">
+      <h3>Create Account</h3>
+
+      <div class="auth-group">
+        <i class="fa-solid fa-user"></i>
+        <input type="text" placeholder="Full Name" required>
+      </div>
+
+      <div class="auth-group">
+        <i class="fa-solid fa-envelope"></i>
+        <input type="email" placeholder="Email address" required>
+      </div>
+
+      <div class="auth-group">
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" placeholder="Password" required>
+      </div>
+
+      <button class="btn btn-primary full">Create Account</button>
+    </form>
+
+  </div>
+</div>
+
+
+<!-- ================= HERO SECTION ================= -->
+<section class="hero" id="home">
+
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-grid">
+
+    <!-- Left Content -->
+    <div class="hero-content">
+      <h1 class="reveal">
+        Premium Cars. <br>
+        Unmatched Experience.
+      </h1>
+
+      <p class="hero-subtitle reveal reveal-delay-1">
+        Rent luxury and economy cars at unbeatable prices. Fast booking, zero hidden fees.
+      </p>
+
+      <div class="hero-actions reveal reveal-delay-2">
+        <a href="#fleet" class="hero-btn hero-btn-primary">Explore Cars</a>
+        <a href="#contact" class="hero-btn hero-btn-outline">Book Now</a>
+      </div>
+
+      <!-- Stats -->
+      <div class="hero-stats reveal reveal-delay-3">
+        <div>
+          <h3>500+</h3>
+          <p>Cars Available</p>
+        </div>
+        <div>
+          <h3>10K+</h3>
+          <p>Happy Clients</p>
+        </div>
+        <div>
+          <h3>24/7</h3>
+          <p>Support</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Right Booking Form -->
+    <div class="hero-booking-card reveal reveal-delay-2">
+
+      <h3>Book Your Ride</h3>
+
+      <form class="hero-form">
+
+        <div class="hero-form-group">
+          <i class="fa-solid fa-envelope"></i>
+          <input type="email" placeholder="Enter your email address" required>
+        </div>
+
+        <div class="hero-form-group hero-form-group-column">
+          <label>Pickup Date</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input type="date" required>
+          </div>
+        </div>
+
+        <div class="hero-form-group hero-form-group-column">
+          <label>Return Date</label>
+          <div class="input-with-icon">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input type="date" required>
+          </div>
+        </div>
+
+        <button type="submit" class="hero-btn hero-btn-primary hero-btn-full">
+          Search Cars
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= BRANDS SECTION ================= -->   
+<section class="brands">
+
+  <div class="container">
+
+    <p class="section-kicker center">Top Brands</p>
+    <h2 class="section-title center">Choose Your Favorite Brand</h2>
+
+    <div class="brand-grid">
+
+      <div class="brand-card">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/bmw.svg">
+        <span>BMW</span>
+      </div>
+
+      <div class="brand-card">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/landrover.svg">
+        <span>Range Rover</span>
+      </div>
+
+      <div class="brand-card">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/mercedes.svg">
+        <span>Mercedes</span>
+      </div>
+
+      <div class="brand-card">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/toyota.svg">
+        <span>Toyota</span>
+      </div>
+
+      <div class="brand-card">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/ford.svg">
+        <span>Ford</span>
+      </div>
+
+      <div class="brand-card">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/honda.svg">
+        <span>Honda Civic</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+  <!-- ================= FEATURES SECTION ================= --> 
+  <section class="features">
+
+    <div class="container">
+
+      <h2 class="section-title center">
+        Enjoy flexibility and unbeatable rates with our city car rentals.
+      </h2>
+
+      <div class="feature-grid">
+
+        <div class="feature-card reveal reveal-delay-1">
+          <div class="feature-icon">
+            <i class="fa-solid fa-mobile-screen-button"></i>
+          </div>
+          <h3>Easy online booking</h3>
+          <p>Reserve your ride in minutes with our user-friendly booking platform.</p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-2">
+          <div class="feature-icon">
+            <i class="fa-solid fa-car-side"></i>
+          </div>
+          <h3>Comfort & style</h3>
+          <p>Choose from premium vehicles curated for comfort, style, and safety.</p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-3">
+          <div class="feature-icon">
+            <i class="fa-solid fa-wallet"></i>
+          </div>
+          <h3>Smart savings</h3>
+          <p>Transparent rates with no hidden fees for maximum value.</p>
+        </div>
+
+        <div class="feature-card reveal reveal-delay-4">
+          <div class="feature-icon">
+            <i class="fa-solid fa-headset"></i>
+          </div>
+          <h3>24/7 support</h3>
+          <p>Dedicated support for seamless trips, day or night.</p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FLEET SECTION ================= --> 
+  <section class="fleet" id="fleet">
+
+    <div class="container">
+
+      <div class="fleet-header">
+
+        <div>
+          <p class="section-kicker">Our Fleet</p>
+          <h2 class="section-title reveal">
+            Choose the perfect car for your journey
+          </h2>
+        </div>
+
+        <div class="fleet-search-wrap">
+          <i class="fa-solid fa-magnifying-glass search-icon"></i>
+
+          <input
+            type="text"
+            id="searchInput"
+            class="search-input"
+            placeholder="Search cars, SUVs, luxury..."
+          />
+        </div>
+
+      </div>
+
+      <h3 class="fleet-category-title" id="fleetCategoryTitle">
+        Cars
+      </h3>
+
+      <div class="fleet-filters">
+        <button class="filter-btn active" data-filter="all">All Cars</button>
+        <button class="filter-btn" data-filter="premium">Premium</button>
+        <button class="filter-btn" data-filter="suv">SUV</button>
+        <button class="filter-btn" data-filter="economy">Economy</button>
+      </div>
+
+      <div class="fleet-grid" id="fleetGrid">
+        <!-- Cards injected from script.js -->
+      </div>
+
+    </div>
+  </section>
+
+
+ <!-- ================= BOOKING MODAL ================= -->
+<div class="booking-modal" id="bookingModal">
+
+  <div class="booking-card">
+
+    <button class="booking-close" id="bookingClose">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+
+    <div class="booking-layout">
+
+      <!-- left -->
+      <div class="booking-left">
+        <img id="bookingCarImg" src="" alt="">
+        <h3 id="bookingCarName"></h3>
+        <p class="booking-price" id="bookingCarPrice"></p>
+
+        <!-- calculator -->
+        <div class="price-box">
+
+          <div class="calc-row">
+            <span>Days</span>
+            <input type="number" id="days" value="1" min="1">
+          </div>
+
+          <div class="calc-row total">
+            <span>Total</span>
+            <strong id="bookingTotal">$0</strong>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- right -->
+      <div class="booking-right">
+
+        <form class="booking-form" id="bookingForm">
+
+          <h4 class="form-title">Your Details</h4>
+
+          <div class="form-group">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" required placeholder=" ">
+            <label>Full Name</label>
+          </div>
+
+          <div class="form-group">
+            <i class="fa-solid fa-envelope"></i>
+            <input type="email" required placeholder=" ">
+            <label>Email Address</label>
+          </div>
+
+          <div class="form-group">
+            <i class="fa-solid fa-calendar-days"></i>
+            <input type="date" id="pickupDate" required>
+            <label>Pickup Date</label>
+          </div>
+
+          <div class="form-group">
+            <i class="fa-solid fa-calendar-check"></i>
+            <input type="date" id="returnDate" required>
+            <label>Return Date</label>
+          </div>
+
+          <!-- payment -->
+          <h4 class="form-title">Payment Method</h4>
+
+          <div class="payment-methods">
+
+            <label class="pay-option">
+              <input type="radio" name="payment" checked>
+              <span><i class="fa-solid fa-credit-card"></i> Card</span>
+            </label>
+
+            <label class="pay-option">
+              <input type="radio" name="payment">
+              <span><i class="fa-brands fa-paypal"></i> PayPal</span>
+            </label>
+
+            <label class="pay-option">
+              <input type="radio" name="payment">
+              <span><i class="fa-solid fa-money-bill-wave"></i> Cash</span>
+            </label>
+
+          </div>
+
+        </form>
+
+        <div class="booking-footer">
+          <button type="submit" class="btn btn-primary full" id="confirmBooking">
+            <i class="fa-solid fa-car"></i>
+            Confirm Booking
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+<!-- ================= CAR DETAILS MODAL ================= -->   
+<div class="car-details-modal" id="carDetailsModal">
+
+  <div class="car-details-card">
+
+
+    <div class="close-background">
+    <span class="details-close" id="detailsClose">
+      <i class="fa-solid fa-xmark"></i>
+    </span>
+    </div>
+
+    <div class="details-grid">
+
+      
+      <div class="details-gallery">
+        <img id="mainCarImage" src="" alt="">
+        <div class="thumbs" id="thumbContainer"></div>
+      </div>
+
+     
+      <div class="details-info">
+
+        <h2 id="detailsName"></h2>
+        <p class="details-desc" id="detailsDesc"></p>
+
+        <div class="details-specs">
+          <span><i class="fa-solid fa-gear"></i> <span id="specTrans"></span></span>
+          <span><i class="fa-solid fa-users"></i> <span id="specSeats"></span></span>
+          <span><i class="fa-solid fa-gas-pump"></i> <span id="specFuel"></span></span>
+        </div>
+
+        <div class="details-features" id="featuresList"></div>
+
+        <div class="details-price">
+          $<span id="detailsPrice"></span> <small>/day</small>
+        </div>
+
+        <!-- calculator -->
+        <div class="price-calc">
+          <input type="number" id="daysInput" value="1" min="1">
+          <p>Total: <strong id="totalPrice"></strong></p>
+        </div>
+
+        <button class="btn btn-primary full" id="detailsBookBtn">
+          Book This Car
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <!-- Booking Success Notification -->
+  <div class="booking-success" id="bookingSuccess">
+    <i class="fa-solid fa-circle-check"></i>
+    Booking Confirmed Successfully!
+  </div>
+
+<!-- ================= WHY CHOOSE US SECTION ================= -->
+<section class="why-us">
+
+  <div class="why-bg"></div>
+
+  <div class="container why-content">
+
+    <p class="section-kicker center">Why Choose Us</p>
+    <h2 class="section-title center">Drive Smarter. Travel Better.</h2>
+
+    <div class="why-grid">
+
+      <div class="why-card">
+        <i class="fa-solid fa-car-side"></i>
+        <h3>Premium Fleet</h3>
+        <p>Choose from luxury, SUV, sedan, and economy vehicles maintained to the highest standards.</p>
+      </div>
+
+      <div class="why-card">
+        <i class="fa-solid fa-clock"></i>
+        <h3>Fast & Easy Booking</h3>
+        <p>Reserve your ideal car in minutes with our smooth and hassle-free booking experience.</p>
+      </div>
+
+      <div class="why-card">
+        <i class="fa-solid fa-headset"></i>
+        <h3>24/7 Customer Care</h3>
+        <p>Our dedicated support team is always available whenever you need assistance on the road.</p>
+      </div>
+
+    </div>
+
+    <div class="why-stats">
+
+      <div class="stat">
+        <h3>500+</h3>
+        <p>Vehicles Ready</p>
+      </div>
+
+      <div class="stat">
+        <h3>15k+</h3>
+        <p>Satisfied Clients</p>
+      </div>
+
+      <div class="stat">
+        <h3>99%</h3>
+        <p>Positive Reviews</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+  
+  <!-- ================= SERVICES SECTION ================= -->  
+  <section class="services" id="services">
+
+    <div class="container">
+
+      <p class="section-kicker center">Services</p>
+      <h2 class="section-title center">
+        Exceptional service, every mile.
+      </h2>
+
+      <div class="service-grid">
+
+        <div class="reveal reveal-scale reveal-delay-1">
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-plane-departure"></i>
+          </div>
+          <h3>Airport Transfers</h3>
+          <p>Chauffeur-driven airport shuttles with punctual pickups and drop-offs.</p>
+          <a class="service-link" data-service="airport">Read more</a>
+        </article>
+        </div>
+
+        <div class="reveal reveal-scale reveal-delay-2">
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-ring"></i>
+          </div>
+          <h3>Wedding Events</h3>
+          <p>Luxury fleet for unforgettable entrances on your special day.</p>
+          <a class="service-link" data-service="wedding">Read more</a>
+        </article>
+        </div>
+
+        <div class="reveal reveal-scale reveal-delay-3">
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-briefcase"></i>
+          </div>
+          <h3>Business Meetings</h3>
+          <p>Executive transport designed for professionals on tight schedules.</p>
+          <a class="service-link" data-service="business">Read more</a>
+        </article>
+        </div>
+
+        <div class="reveal reveal-scale reveal-delay-4">
+        <article class="service-card">
+          <div class="service-icon">
+            <i class="fa-solid fa-route"></i>
+          </div>
+          <h3>Intercity Trips</h3>
+          <p>Long-distance journeys with reliable vehicles and flexible plans.</p>
+          <a class="service-link" data-service="intercity">Read more</a>
+        </article>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ================= SERVICE MODAL ================= -->  
+  <div class="service-modal" id="serviceModal">
+
+    <div class="modal-card">
+
+      <span class="modal-close">
+        <i class="fa-solid fa-xmark"></i>
+      </span>
+
+      <img id="modalImage" class="modal-img" alt="Service Image">
+
+      <h3 id="modalTitle"></h3>
+
+      <p id="modalText"></p>
+
+    </div>
+
+  </div>
+
+
+<!-- ================= ABOUT SECTION ================= -->
+<section class="about" id="about">
+
+  <div class="container about-inner">
+
+    <div class="about-text reveal-left reveal">
+
+      <p class="section-kicker">About Us</p>
+
+      <h2 class="section-title">
+        Driving excellence.<br>Delivering comfort.
+      </h2>
+
+      <p class="about-desc">
+        At <strong>LCR Car Rental</strong>, we redefine travel with premium vehicles,
+        seamless booking, and personalized service. Whether it's business or leisure,
+        every journey is designed for comfort, reliability, and style.
+      </p>
+
+      <div class="about-highlights">
+
+        <div class="highlight">
+          <h3>500+</h3>
+          <p>Happy Clients</p>
+        </div>
+
+        <div class="highlight">
+          <h3>120+</h3>
+          <p>Premium Cars</p>
+        </div>
+
+        <div class="highlight">
+          <h3>24/7</h3>
+          <p>Support</p>
+        </div>
+
+      </div>
+
+      <a href="#fleet" class="btn btn-primary">
+        Explore Our Fleet
+      </a>
+
+    </div>
+
+    
+    <div class="about-media reveal-right reveal">
+
+      <div class="about-image">
+        <div class="image-overlay"></div>
+
+        <div class="about-card">
+          <p>⭐ 4.9 Rating</p>
+          <span>Trusted by hundreds of customers</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+  
+<!-- ================= TESTIMONIALS SECTION ================= -->   
+<section class="testimonials" id="testimonials">
+
+  <div class="container">
+
+    <p class="section-kicker center">
+      What Our Clients Say
+    </p>
+
+    <h2 class="section-title center">
+      Real experiences. Trusted journeys.
+    </h2>
+
+    <div class="testimonial-slider">
+
+      <!-- 1 -->
+      <article class="testimonial-card">
+        <div class="rating">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          The booking process was smooth and the communication was timely.
+          The car was in great condition and made our trip effortless.
+        </p>
+        <div class="testimonial-user">
+          <img src="https://i.pravatar.cc/60?img=32" alt="client">
+          <div class="user-info">
+            <p class="testimonial-name">L. Simoyi</p>
+            <p class="testimonial-role">Vacation Traveler</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 2 -->
+      <article class="testimonial-card">
+        <div class="rating">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          Excellent service and transparent pricing. This is now my reliable
+          go-to for airport and business rides—comfortable and dependable.
+        </p>
+        <div class="testimonial-user">
+          <img src="https://i.pravatar.cc/60?img=5" alt="client">
+          <div class="user-info">
+            <p class="testimonial-name">Sarah M.</p>
+            <p class="testimonial-role">Business Traveler</p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 3 -->
+      <article class="testimonial-card">
+        <div class="rating">
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <p class="testimonial-text">
+          Friendly staff, clean vehicles, and flexible rental options.
+          Highly recommended for both short and long trips.
+        </p>
+        <div class="testimonial-user">
+          <img src="https://i.pravatar.cc/60?img=12" alt="client">
+          <div class="user-info">
+            <p class="testimonial-name">John K.</p>
+            <p class="testimonial-role">Frequent Renter</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ================= FAQ SECTION ================= -->
+<section class="faq" id="faq">
+  <div class="container">
+
+    <p class="section-kicker center">FAQ</p>
+    <h2 class="section-title center">Got Questions? We’ve Got Answers</h2>
+
+    <div class="faq-wrapper">
+
+      <div class="faq-left">
+        
+        <h3 class="faq-title">
+          <img src="https://cdn-icons-png.flaticon.com/512/743/743922.png" alt="car icon">
+          Your Journey, Simplified
+        </h3>
+
+        <p>
+          Renting a car should be simple, transparent, and stress-free. 
+          We’ve answered the most common questions to help you book with confidence 
+          and enjoy every mile of your journey.
+        </p>
+
+        <div class="faq-highlights">
+
+          <div class="highlight">
+            <i class="fa-solid fa-check"></i>
+            <span>24/7 Customer Support</span>
+          </div>
+
+          <div class="highlight">
+            <i class="fa-solid fa-check"></i>
+            <span>Flexible Booking Options</span>
+          </div>
+
+          <div class="highlight">
+            <i class="fa-solid fa-check"></i>
+            <span>No Hidden Charges</span>
+          </div>
+
+          <div class="highlight">
+            <i class="fa-solid fa-check"></i>
+            <span>Trusted by Thousands</span>
+          </div>
+
+        </div>
+
+        <a href="#contact" class="faq-btn">Still have questions?</a>
+      </div>
+
+      
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <div class="faq-question">
+            What documents are required?
+            <span class="icon"><i class="fa-solid fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            You need a valid driving license, ID proof, and payment method.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Can I cancel my booking?
+            <span class="icon"><i class="fa-solid fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            Yes, free cancellation within 24 hours.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Is fuel included?
+            <span class="icon"><i class="fa-solid fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            Fuel policy depends on your selected plan.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            Do you offer doorstep delivery?
+            <span class="icon"><i class="fa-solid fa-plus"></i></span>
+          </div>
+          <div class="faq-answer">
+            Yes, we provide doorstep delivery in selected cities at an additional cost.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <!-- ================= CONTACT SECTION ================= -->   
+<section class="contact" id="contact">
+
+  <div class="container">
+
+    <p class="section-kicker center">Contact Us</p>
+
+    <h2 class="section-title center">
+      We’re here to assist you anytime.
+    </h2>
+
+    <div class="contact-grid">
+
+      <!-- Contact Info -->
+      <div class="contact-info reveal-left reveal">
+
+        <div class="contact-item">
+          <i class="fa-solid fa-phone"></i>
+          <div>
+            <strong>Phone</strong>
+            <p>+91 977 36 125 94</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-envelope"></i>
+          <div>
+            <strong>Email</strong>
+            <p>info@leecarrental.com</p>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <i class="fa-solid fa-location-dot"></i>
+          <div>
+            <strong>Location</strong>
+            <p>First Street Corner, Bulawayo</p>
+          </div>
+        </div>
+
+        <a
+          href="https://www.google.com/maps?q=Bulawayo,Zimbabwe"
+          target="_blank"
+          class="directions-btn"
+        >
+          Get Directions
+        </a>
+
+      </div>
+
+      <!-- Contact Form -->
+      <form class="contact-form reveal-right reveal" id="contactForm">
+
+        
+        <h3 class="contact-form-title">Send a Message</h3>
+
+        <input type="text" name="name" placeholder="Your full name" required />
+        <input type="email" name="email" placeholder="Your email address" required />
+        <input type="tel" name="phone" placeholder="Your phone number" required />
+
+        <textarea
+          name="message"
+          rows="4"
+          placeholder="Your message"
+          required
+        ></textarea>
+
+        <button type="submit" class="btn btn-primary full">
+          Send Message
+        </button>
+
+        <p class="form-status" id="formStatus"></p>
+
+      </form>
+
+    </div>
+
+    <!-- Map -->
+    <div class="contact-map">
+
+      <iframe
+        src="https://maps.google.com/maps?q=Bulawayo%20Zimbabwe&t=&z=13&ie=UTF8&iwloc=&output=embed"
+        loading="lazy">
+      </iframe>
+
+    </div>
+
+  </div>
+
+</section>
+
+   
+<!-- ================= FOOTER SECTION ================= -->
+<footer class="footer">
+
+  <!-- CTA -->
+  <div class="footer-cta">
+    <div class="footer-cta-inner">
+      <h3>Ready to hit the road?</h3>
+      <p>Book your premium ride today with zero hassle.</p>
+      <a href="#fleet" class="btn">Explore Cars</a>
+    </div>
+  </div>
+
+  <div class="container footer-inner">
+
+    <!-- brand -->
+    <div class="footer-col footer-brand">
+      <a href="#home">
+      <div class="logo logo-footer">
+        <span class="logo-mark">LCR</span>
+        <span class="logo-text">Lee Car Rental</span>
+      </div>
+      </a>
+
+      <p>
+        Premium car rental experience with comfort, luxury, and reliability.
+        Your journey starts with us.
+      </p>
+
+      <!-- social -->
+      <div class="footer-socials">
+        <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+    </div>
+
+    <!-- links -->
+    <div class="footer-col">
+      <h4>Company</h4>
+      <a href="#about">About Us</a>
+      <a href="#fleet">Our Fleet</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+    </div>
+
+    <!-- services -->
+    <div class="footer-col">
+      <h4>Services</h4>
+      <a href="#">Luxury Cars</a>
+      <a href="#">SUV Rentals</a>
+      <a href="#">Business Trips</a>
+      <a href="#">Airport Pickup</a>
+    </div>
+
+    <!-- contact -->
+    <div class="footer-col">
+      <h4>Contact</h4>
+
+      <div class="footer-contact">
+        <i class="fa-solid fa-phone"></i>
+        <span>+91 977 36 125 94</span>
+      </div>
+
+      <div class="footer-contact">
+        <i class="fa-solid fa-envelope"></i>
+        <span>info@leecarrental.com</span>
+      </div>
+
+      <div class="footer-contact">
+        <i class="fa-solid fa-location-dot"></i>
+        <span>J.N Street, Bulawayo</span>
+      </div>
+
+      <a href="#contact" class="footer-contact-btn">
+        Get in Touch
+      </a>
+    </div>
+
+  </div>
+
+  <!-- bottom -->
+  <div class="footer-bottom">
+    <p>© 2026 LCR Car Rental • Designed for premium experience</p>
+  </div>
+
+</footer>
+
+<!-- ================= FIREBASE ================= -->
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+<!-- ================= MAIN JS ================= -->
+<script src="script.js"></script>
+
+</body>
+</html>
