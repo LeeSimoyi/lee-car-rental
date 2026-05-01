@@ -53,7 +53,7 @@ const cars = [
     name:"Range Rover",
     type:"suv",
     category:"premium",
-    price:360,
+    price:220,
     img:"imgs/Range Rover.png",
     images:[
       "imgs/Range Rover.png",
@@ -73,7 +73,7 @@ const cars = [
     name:"Toyota Fortuner",
     type:"suv",
     category:"premium",
-    price:272,
+    price:140,
     img:"imgs/Toyota Fortuner.png",
     images:[
       "imgs/Toyota Fortuner.png",
@@ -93,7 +93,7 @@ const cars = [
     name:"Land Cruiser",
     type:"suv",
     category:"premium",
-    price:240,
+    price:180,
     img:"imgs/landcruiser.png",
     images:[
       "imgs/landcruiser.png",
@@ -113,7 +113,7 @@ const cars = [
     name:"Mercedes-Benz Maybach",
     type:"premium",
     category:"premium",
-    price:480,
+    price:320,
     img:"imgs/Mercedes-Maybach_S680.png",
     images:[
       "imgs/Mercedes-Maybach_S680.png",
@@ -133,7 +133,7 @@ const cars = [
     name:"BMW Sedan",
     type:"premium",
     category:"premium",
-    price:240,
+    price:120,
     img:"imgs/BMW.jpeg",
     images:[
       "imgs/BMW.jpeg",
@@ -153,7 +153,7 @@ const cars = [
     name:"Mercedes-Benz G63 AMG",
     type:"suv",
     category:"premium",
-    price:720,
+    price:300,
     img:"imgs/G wagon.jpeg",
     images:[
       "imgs/G wagon.jpeg",
@@ -173,7 +173,7 @@ const cars = [
     name:"Toyota Aqua",
     type:"compact",
     category:"economy",
-    price:96,
+    price:35,
     img:"imgs/Toyota Aqua.jpeg",
     images:[
       "imgs/Toyota Aqua.jpeg",
@@ -193,7 +193,7 @@ const cars = [
     name:"Toyota Quantum",
     type:"van",
     category:"economy",
-    price:180,
+    price:110,
     img:"imgs/Toyota Quantam.jpeg",
     images:[
       "imgs/Toyota Quantam.jpeg",
@@ -213,7 +213,7 @@ const cars = [
     name:"Honda Civic",
     type:"sedan",
     category:"economy",
-    price:168,
+    price:55,
     img:"imgs/Honda Civic.png",
     images:[
       "imgs/Honda Civic.png",
