@@ -1,6 +1,6 @@
 # <img src="https://cdn-icons-png.flaticon.com/512/744/744465.png" width="32"/> Lee Car Rental — Premium Single Page Car Rental Website
 
-![Lee Car Rental Banner](imgs/LCR-Banner.png)
+![Lee Car Rental Banner](imgs/ReadMe.png)
 
 > **Drive Excellence. Experience Comfort.**  
 A modern, fully responsive premium single-page car rental website built with **HTML, CSS, JavaScript, and Firebase Authentication**.
