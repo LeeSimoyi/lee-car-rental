@@ -1,841 +1,711 @@
-/* =====================================================
-   1. HEADER & MOBILE NAVIGATION
-===================================================== */
-
-const navToggle = document.getElementById("navToggle");
-const nav = document.getElementById("nav");
-const navClose = document.getElementById("navClose");
-const navOverlay = document.getElementById("navOverlay");
-const navLinks = document.querySelectorAll(".nav a");
-
-/* OPEN NAV */
-navToggle.addEventListener("click", () => {
-  nav.classList.add("open");
-  navOverlay.classList.add("active");
-  navToggle.classList.add("hide");   // hide hamburger icon
-  document.body.style.overflow = "hidden";
-});
-
-/* CLOSE NAV */
-function closeNav() {
-  nav.classList.remove("open");
-  navOverlay.classList.remove("active");
-  navToggle.classList.remove("hide"); // show hamburger again
-  document.body.style.overflow = "";
-}
-
-/* CLOSE EVENTS */
-navClose.addEventListener("click", closeNav);
-navOverlay.addEventListener("click", closeNav);
-
-navLinks.forEach(link => {
-  link.addEventListener("click", closeNav);
-});
-
-/* Header scroll */
-const header = document.querySelector(".header");
-
-function handleHeader(){
-  header.classList.toggle("scrolled", window.scrollY > 10);
-}
-
-window.addEventListener("scroll", handleHeader);
-window.addEventListener("load", handleHeader);
-
-
-
-/* =====================================================
-   2. FLEET DATA
-===================================================== */
-
-const cars = [
-  {
-    name:"Range Rover",
-    type:"suv",
-    category:"premium",
-    price:220,
-    img:"imgs/Range Rover.png",
-    images:[
-      "imgs/Range Rover.png",
-      "imgs/range2.jpg",
-      "imgs/range3.jpg"
-    ],
-    transmission:"Automatic",
-    seats:"5 seats",
-    ac:true,
-    fuel:"Petrol",
-    rating:4.8,
-    reviews:124,
-    description:"Luxury SUV with premium comfort, powerful performance, and cutting-edge technology.",
-    features:["Sunroof","Leather Seats","GPS","Reverse Camera","Bluetooth"]
-  },
-  {
-    name:"Toyota Fortuner",
-    type:"suv",
-    category:"premium",
-    price:140,
-    img:"imgs/Toyota Fortuner.png",
-    images:[
-      "imgs/Toyota Fortuner.png",
-      "imgs/fortuner2.png",
-      "imgs/fortuner3.png"
-    ],
-    transmission:"Automatic",
-    seats:"7 seats",
-    ac:true,
-    fuel:"Diesel",
-    rating:4.7,
-    reviews:98,
-    description:"Rugged and reliable SUV perfect for long trips and off-road adventures.",
-    features:["4x4 Drive","Cruise Control","Rear AC","Touchscreen","Parking Sensors"]
-  },
-  {
-    name:"Land Cruiser",
-    type:"suv",
-    category:"premium",
-    price:180,
-    img:"imgs/landcruiser.png",
-    images:[
-      "imgs/landcruiser.png",
-      "imgs/land2.png",
-      "imgs/land3.png"
-    ],
-    transmission:"Automatic",
-    seats:"7 seats",
-    ac:true,
-    fuel:"Diesel",
-    rating:4.9,
-    reviews:150,
-    description:"Iconic luxury SUV built for performance, durability, and extreme comfort.",
-    features:["4WD","Luxury Interior","Navigation","Sunroof","Premium Audio"]
-  },
-  {
-    name:"Mercedes-Benz Maybach",
-    type:"premium",
-    category:"premium",
-    price:320,
-    img:"imgs/Mercedes-Maybach_S680.png",
-    images:[
-      "imgs/Mercedes-Maybach_S680.png",
-      "imgs/maybach2.png",
-      "imgs/maybach3.png"
-    ],
-    transmission:"Automatic",
-    seats:"4 seats",
-    ac:true,
-    fuel:"Petrol",
-    rating:5.0,
-    reviews:60,
-    description:"Ultra-luxury sedan offering unmatched comfort, elegance, and prestige.",
-    features:["Massage Seats","Ambient Lighting","Executive Rear Seats","Panoramic Roof","Voice Control"]
-  },
-  {
-    name:"BMW Sedan",
-    type:"premium",
-    category:"premium",
-    price:120,
-    img:"imgs/BMW.jpeg",
-    images:[
-      "imgs/BMW.jpeg",
-      "imgs/bmw2.jpeg",
-      "imgs/bmw3.jpeg"
-    ],
-    transmission:"Automatic",
-    seats:"5 seats",
-    ac:true,
-    fuel:"Petrol",
-    rating:4.6,
-    reviews:85,
-    description:"Sporty and elegant sedan with dynamic performance and modern tech.",
-    features:["Sport Mode","iDrive System","Parking Assist","Bluetooth","Dual AC"]
-  },
-  {
-    name:"Mercedes-Benz G63 AMG",
-    type:"suv",
-    category:"premium",
-    price:300,
-    img:"imgs/G wagon.jpeg",
-    images:[
-      "imgs/G wagon.jpeg",
-      "imgs/g63-2.jpeg",
-      "imgs/g63-3.jpeg"
-    ],
-    transmission:"Automatic",
-    seats:"5 seats",
-    ac:true,
-    fuel:"Petrol",
-    rating:4.9,
-    reviews:110,
-    description:"High-performance luxury SUV with bold design and extreme power.",
-    features:["AMG Engine","4MATIC AWD","Luxury Cabin","LED Lights","Digital Display"]
-  },
-  {
-    name:"Toyota Aqua",
-    type:"compact",
-    category:"economy",
-    price:35,
-    img:"imgs/Toyota Aqua.jpeg",
-    images:[
-      "imgs/Toyota Aqua.jpeg",
-      "imgs/aqua2.jpeg",
-      "imgs/aqua3.jpeg"
-    ],
-    transmission:"Automatic",
-    seats:"4 seats",
-    ac:true,
-    fuel:"Hybrid",
-    rating:4.3,
-    reviews:70,
-    description:"Fuel-efficient compact car ideal for city driving and daily use.",
-    features:["Eco Mode","Bluetooth","Airbags","Touchscreen","Rear Camera"]
-  },
-  {
-    name:"Toyota Quantum",
-    type:"van",
-    category:"economy",
-    price:110,
-    img:"imgs/Toyota Quantam.jpeg",
-    images:[
-      "imgs/Toyota Quantam.jpeg",
-      "imgs/quantum2.jpeg",
-      "imgs/quantum3.jpeg"
-    ],
-    transmission:"Manual",
-    seats:"12 seats",
-    ac:true,
-    fuel:"Diesel",
-    rating:4.5,
-    reviews:55,
-    description:"Spacious van perfect for group travel, tours, and family trips.",
-    features:["Large Capacity","Rear AC","Comfort Seats","Sliding Door","Luggage Space"]
-  },
-  {
-    name:"Honda Civic",
-    type:"sedan",
-    category:"economy",
-    price:55,
-    img:"imgs/Honda Civic.png",
-    images:[
-      "imgs/Honda Civic.png",
-      "imgs/civic2.png",
-      "imgs/civic3.png"
-    ],
-    transmission:"Automatic",
-    seats:"5 seats",
-    ac:true,
-    fuel:"Petrol",
-    rating:4.6,
-    reviews:90,
-    description:"Stylish sedan with smooth performance and excellent fuel efficiency.",
-    features:["Cruise Control","Touchscreen","Rear Camera","Bluetooth","Eco Mode"]
-  }
-];
-
-/* =====================================================
-   3. FLEET UI
-===================================================== */
-
-const fleetGrid = document.getElementById("fleetGrid");
-const filterButtons = document.querySelectorAll(".filter-btn");
-const searchInput = document.getElementById("searchInput");
-const categoryTitle = document.getElementById("fleetCategoryTitle");
-
-function updateCategoryText(filter){
-  if(filter==="all") categoryTitle.textContent="Cars";
-  if(filter==="premium") categoryTitle.textContent="Luxury Sedans";
-  if(filter==="suv") categoryTitle.textContent="Spacious and Powerful";
-  if(filter==="economy") categoryTitle.textContent="Budget Friendly";
-}
-
-/* =====================================================
-   4. RENDER CARS
-===================================================== */
-
-function renderCars(filter="all", query=""){
-
-  const q=query.toLowerCase().trim();
-  fleetGrid.innerHTML="";
-
-  const filtered=cars.filter(car=>{
-    const matchesFilter = filter==="all" || car.category===filter || car.type===filter;
-    const matchesQuery = !q || car.name.toLowerCase().includes(q);
-    return matchesFilter && matchesQuery;
-  });
-
-  if(!filtered.length){
-    fleetGrid.innerHTML='<p class="empty-state">No cars found.</p>';
-    return;
-  }
-
-  filtered.forEach(car=>{
-
-    const card=document.createElement("article");
-    card.className="car-card";
-
-    if(car.category === "premium"){
-      card.classList.add("premium");
-    }
-
-    card.innerHTML=`
-      <div class="car-image">
-        <img src="${car.img}" alt="${car.name}">
-      </div>
-
-      <div class="car-meta">
-        <span class="car-title">${car.name}</span>
-        <span class="car-tag">${car.category}</span>
-      </div>
-
-      <div class="car-price-row">
-        <div class="car-price">
-          $${car.price}<span>/day</span>
-        </div>
-
-        <div class="car-icons">
-          <span><i class="fa-solid fa-gear"></i> ${car.transmission}</span>
-          <span><i class="fa-solid fa-users"></i> ${car.seats}</span>
-          <span><i class="fa-solid fa-snowflake"></i> ${car.ac ? "AC":"No AC"}</span>
-        </div>
-      </div>
-
-      <div class="car-actions">
-        <button class="btn btn-outline btn-details">Car Details</button>
-        <button class="btn btn-primary btn-book">Book Now</button>
-      </div>
-    `;
-
-    fleetGrid.appendChild(card);
-  });
-}
-
-renderCars();
-
-/* =====================================================
-   5. FILTER + SEARCH
-===================================================== */
-
-filterButtons.forEach(btn=>{
-  btn.addEventListener("click",()=>{
-    filterButtons.forEach(b=>b.classList.remove("active"));
-    btn.classList.add("active");
-
-    const filter=btn.dataset.filter;
-    updateCategoryText(filter);
-    renderCars(filter, searchInput.value);
-  });
-});
-
-searchInput.addEventListener("input",()=>{
-  const active=document.querySelector(".filter-btn.active");
-  renderCars(active?.dataset.filter || "all", searchInput.value);
-});
-
-
-/* =====================================================
-   6. BOOKING MODAL
-===================================================== */
-
-const bookingModal = document.getElementById("bookingModal");
-const bookingClose = document.getElementById("bookingClose");
-
-const bookingCarName = document.getElementById("bookingCarName");
-const bookingCarImg = document.getElementById("bookingCarImg");
-const bookingCarPrice = document.getElementById("bookingCarPrice");
-
-const bookingForm = document.getElementById("bookingForm");
-const bookingSuccess = document.getElementById("bookingSuccess");
-
-/* NEW CALCULATOR ELEMENTS */
-const daysInputBooking = document.getElementById("days");
-const bookingTotal = document.getElementById("bookingTotal");
-
-let selectedCar = null;
-
-/* OPEN BOOKING MODAL */
-document.addEventListener("click", (e) => {
-  if (e.target.closest(".btn-book")) {
-    const card = e.target.closest(".car-card");
-    const name = card.querySelector(".car-title").textContent;
-
-    const car = cars.find(c => c.name === name);
-    if (!car) return;
-
-    selectedCar = car;
-
-    bookingCarName.textContent = car.name;
-    bookingCarImg.src = car.img;
-    bookingCarPrice.textContent = "$" + car.price + "/day";
-
-    /* RESET CALCULATOR */
-    daysInputBooking.value = 1;
-    updateBookingTotal();
-
-    bookingModal.classList.add("active");
-    document.body.style.overflow = "hidden";
-  }
-});
-
-/* CALCULATOR FUNCTION */
-function updateBookingTotal() {
-  if (!selectedCar) return;
-
-  const days = parseInt(daysInputBooking.value) || 1;
-  const total = days * selectedCar.price;
-
-  bookingTotal.textContent = "$" + total;
-}
-
-/* Listen to input */
-daysInputBooking.addEventListener("input", updateBookingTotal);
-
-/* SUBMIT FORM */
-bookingForm.addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  bookingModal.classList.remove("active");
-  document.body.style.overflow = "";
-
-  bookingSuccess.classList.add("show");
-  bookingForm.reset();
-
-  setTimeout(() => {
-    bookingSuccess.classList.remove("show");
-  }, 3500);
-});
-
-/* CLOSE MODAL */
-function closeBookingModal() {
-  bookingModal.classList.remove("active");
-  document.body.style.overflow = "";
-}
-
-/* Close button */
-bookingClose.addEventListener("click", closeBookingModal);
-
-/* Click outside */
-bookingModal.addEventListener("click", (e) => {
-  if (e.target === bookingModal) {
-    closeBookingModal();
-  }
-});
-
-const pickupDate = document.getElementById("pickupDate");
-const returnDate = document.getElementById("returnDate");
-const confirmBtn = document.getElementById("confirmBooking");
-
-/* AUTO CALCULATE DAYS */
-function calculateDays() {
-  if (!pickupDate.value || !returnDate.value) return;
-
-  const start = new Date(pickupDate.value);
-  const end = new Date(returnDate.value);
-
-  const diffTime = end - start;
-  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
-  if (diffDays > 0) {
-    daysInputBooking.value = diffDays;
-  } else {
-    daysInputBooking.value = 1;
-  }
-
-  updateBookingTotal();
-}
-
-/* Listen to changes */
-pickupDate.addEventListener("change", calculateDays);
-returnDate.addEventListener("change", calculateDays);
-
-/* CONFIRM BOOKING */
-confirmBtn.addEventListener("click", (e) => {
-  e.preventDefault();
-
-  if (!pickupDate.value || !returnDate.value) {
-    alert("Please select dates");
-    return;
-  }
-
-  bookingModal.classList.remove("active");
-  document.body.style.overflow = "";
-
-  bookingSuccess.classList.add("show");
-
-  setTimeout(() => {
-    bookingSuccess.classList.remove("show");
-  }, 3000);
-});
-
-
-/* =====================================================
-   7. DETAILS MODAL
-===================================================== */
-
-const detailsModal = document.getElementById("carDetailsModal");
-const detailsClose = document.getElementById("detailsClose");
-const detailsBookBtn = document.getElementById("detailsBookBtn");
-
-const detailsName = document.getElementById("detailsName");
-const detailsDesc = document.getElementById("detailsDesc");
-const detailsPrice = document.getElementById("detailsPrice");
-
-const specTrans = document.getElementById("specTrans");
-const specSeats = document.getElementById("specSeats");
-const specFuel = document.getElementById("specFuel");
-
-const mainImage = document.getElementById("mainCarImage");
-const thumbContainer = document.getElementById("thumbContainer");
-
-const featuresList = document.getElementById("featuresList");
-
-const daysInput = document.getElementById("daysInput");
-const totalPrice = document.getElementById("totalPrice");
-
-let currentCarPrice = 0;
-
-/* Open details */
-document.addEventListener("click",(e)=>{
-  if(e.target.closest(".btn-details")){
-    const card = e.target.closest(".car-card");
-    const name = card.querySelector(".car-title").textContent;
-
-    const car = cars.find(c=>c.name===name);
-    if(!car) return;
-
-    selectedCar = car;
-
-    detailsName.textContent = car.name;
-    detailsDesc.textContent = car.description;
-    detailsPrice.textContent = car.price;
-
-    specTrans.textContent = car.transmission;
-    specSeats.textContent = car.seats;
-    specFuel.textContent = car.fuel;
-
-    currentCarPrice = car.price;
-
-    mainImage.src = car.images?.[0] || car.img;
-
-    /* thumbnails */
-    thumbContainer.innerHTML="";
-    (car.images || [car.img]).forEach(img=>{
-      const el=document.createElement("img");
-      el.src=img;
-      el.onclick=()=>mainImage.src=img;
-      thumbContainer.appendChild(el);
+/* ══════════════════════════════════════════
+   HERO SCROLL-REVEAL
+══════════════════════════════════════════ */
+(function () {
+  const heroEls = document.querySelectorAll('.hero-fade');
+  const heroSection = document.getElementById('home');
+  function revealHero() { heroEls.forEach(el => el.classList.add('visible')); }
+  const heroObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) { setTimeout(revealHero, 120); heroObserver.unobserve(heroSection); }
     });
+  }, { threshold: 0.1 });
+  if (heroSection) heroObserver.observe(heroSection);
+})();
 
-    /* features */
-    featuresList.innerHTML="";
-    (car.features||[]).forEach(f=>{
-      featuresList.innerHTML+=`<span>${f}</span>`;
-    });
-
-    daysInput.value=1;
-    updateTotal();
-
-    detailsModal.classList.add("active");
-    document.body.style.overflow="hidden";
+/* ══════════════════════════════════════════
+   AUTO COUNTER
+══════════════════════════════════════════ */
+(function () {
+  function animateCounter(el) {
+    const target = parseFloat(el.dataset.target);
+    const isDecimal = el.dataset.decimal === 'true';
+    const duration = 1800, steps = 60, stepTime = duration / steps;
+    let step = 0;
+    const timer = setInterval(() => {
+      step++;
+      const progress = 1 - Math.pow(1 - step / steps, 3);
+      const current = target * progress;
+      el.textContent = isDecimal ? current.toFixed(1) : Math.floor(current);
+      if (step >= steps) { clearInterval(timer); el.textContent = isDecimal ? target.toFixed(1) : Math.floor(target); }
+    }, stepTime);
   }
-});
+  const counterEls = document.querySelectorAll('.count-num');
+  const counted = new Set();
+  const counterObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !counted.has(entry.target)) { counted.add(entry.target); animateCounter(entry.target); }
+    });
+  }, { threshold: 0.4 });
+  counterEls.forEach(el => counterObserver.observe(el));
+})();
 
-/* price calc */
-function updateTotal(){
-  totalPrice.textContent = "$" + ((daysInput.value||1)*currentCarPrice);
-}
-daysInput.addEventListener("input",updateTotal);
+/* ══════════════════════════════════════════
+   CAR DATA — Real model-specific images
+   Each car: 6 images for hero slider (Exterior, Side, Dynamic, Dashboard, Interior, Night Shot)
+             6 photos for gallery tab (same set, first is "large")
+══════════════════════════════════════════ */
+const CAR_DATA = {
 
-/* book from details */
-detailsBookBtn.addEventListener("click",()=>{
-  if(!selectedCar) return;
+  /* ── TOYOTA CAMRY ─────────────────────────────────────── */
+  camry: {
+    name: 'Toyota Camry',
+    subtitle: 'Mid-Size Sedan · 2023 Model',
+    price: '$45',
+    bookingName: 'Toyota Camry',
+    badge: { text: 'Most Popular', color: '#f59e0b' },
+    images: [
+      { url: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=1400&q=85', label: 'Exterior – Front' },
+      { url: 'imgs/Toyota Side.png', label: 'Side Profile' },
+      { url: 'imgs/Toyota Exterior.png',    label: 'Dynamic – On Road' },
+      { url: 'imgs/Toyota Dashboard.png', label: 'Dashboard' },
+      { url: 'imgs/Toyota Interior.png', label: 'Interior – Cabin' },
+      { url: 'imgs/Toyota night drive.png', label: 'Night Shot' },
+    ],
+    specs: [
+      { icon: 'fa-user-group',  label: 'Passengers',   value: '5 Adults' },
+      { icon: 'fa-gears',       label: 'Transmission', value: 'Automatic' },
+      { icon: 'fa-gas-pump',    label: 'Fuel Type',    value: 'Petrol' },
+      { icon: 'fa-gauge-high',  label: 'Engine',       value: '2.5L 4-Cylinder' },
+      { icon: 'fa-suitcase',    label: 'Luggage',      value: '3 Large Bags' },
+      { icon: 'fa-road',        label: 'Drive',        value: 'Front-Wheel Drive' },
+      { icon: 'fa-snowflake',   label: 'Climate',      value: 'Dual-Zone A/C' },
+      { icon: 'fa-car-side',    label: 'Body Style',   value: 'Sedan' },
+    ],
+    features: [
+      'Apple CarPlay & Android Auto',
+      'Adaptive Cruise Control',
+      'Lane Departure Warning',
+      'Pre-Collision Safety System',
+      'Wireless Phone Charging',
+      'Leather-Trimmed Seats',
+      'Backup Camera with Guidelines',
+      'Rain-Sensing Windscreen Wipers',
+    ],
+    pricing: [
+      { duration: 'Daily',         price: '$45',   per: '/day',   note: '200 km included',         highlight: false },
+      { duration: 'Weekly (7 days)',price: '$280',  per: '/week',  note: 'Save $35 vs daily rate',  highlight: true  },
+      { duration: 'Monthly',       price: '$900',  per: '/month', note: 'Best long-term value',    highlight: false },
+    ],
+    photos: [
+      { url: 'https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=900&q=80', label: 'Exterior',         large: true  },
+      { url: 'imgs/Toyota Side.png', label: 'Side Profile',     large: false },
+      { url: 'imgs/Toyota Exterior.png',    label: 'Dynamic – On Road',         large: false },
+      { url: 'imgs/Toyota Dashboard.png', label: 'Dashboard',       large: false },
+      { url: 'imgs/Toyota Interior.png', label: 'Interior – Cabin',        large: false },
+      { url: 'imgs/Toyota night drive.png', label: 'Night Shot',     large: false },
+    ],
+  },
 
-  detailsModal.classList.remove("active");
+  /* ── FORD EXPLORER ────────────────────────────────────── */
+  explorer: {
+    name: 'Ford Explorer',
+    subtitle: 'Full-Size SUV · 2023 Model',
+    price: '$75',
+    bookingName: 'Ford Explorer',
+    badge: { text: 'Family Choice', color: '#f59e0b' },
+    images: [
+      { url: 'imgs/Ford Explorer.png', label: 'Exterior – Front' },
+      { url: 'imgs/Ford rear or side.png', label: 'Side Profile' },
+      { url: 'imgs/Ford Explorer.png',    label: 'Dynamic – Off Road' },
+      { url: 'imgs/Ford dashbord.png', label: 'Dashboard' },
+      { url: 'imgs/Ford interior.png', label: 'Interior – Cabin' },
+      { url: 'imgs/Ford night drive.png', label: 'Night Shot' },
+    ],
+    specs: [
+      { icon: 'fa-user-group',  label: 'Passengers',   value: '7 Adults' },
+      { icon: 'fa-gears',       label: 'Transmission', value: 'Automatic' },
+      { icon: 'fa-gas-pump',    label: 'Fuel Type',    value: 'Diesel' },
+      { icon: 'fa-gauge-high',  label: 'Engine',       value: '3.0L EcoBoost V6' },
+      { icon: 'fa-suitcase',    label: 'Luggage',      value: '5 Large Bags' },
+      { icon: 'fa-road',        label: 'Drive',        value: 'All-Wheel Drive' },
+      { icon: 'fa-snowflake',   label: 'Climate',      value: 'Tri-Zone A/C' },
+      { icon: 'fa-car-side',    label: 'Body Style',   value: 'SUV' },
+    ],
+    features: [
+      '3rd Row Seating (7 passengers)',
+      'SYNC 4 Infotainment 13.2" Screen',
+      'Adaptive Cruise Control w/ Stop & Go',
+      'Ford Co-Pilot360 Safety Suite',
+      'Terrain Management System',
+      'Power-Folding 3rd Row Seats',
+      'Panoramic Vista Roof',
+      'Class III Tow Capability',
+    ],
+    pricing: [
+      { duration: 'Daily',         price: '$75',   per: '/day',   note: '200 km included',         highlight: false },
+      { duration: 'Weekly (7 days)',price: '$470',  per: '/week',  note: 'Save $55 vs daily rate',  highlight: true  },
+      { duration: 'Monthly',       price: '$1,500',per: '/month', note: 'Best long-term value',    highlight: false },
+    ],
+    photos: [
+      { url: 'imgs/Ford Explorer.png', label: 'Exterior – Front',         large: true  },
+      { url: 'imgs/Ford rear or side.png', label: 'Side Profile',     large: false },
+      { url: 'imgs/Ford Explorer.png',    label: 'Dynamic – Off Road',         large: false },
+      { url: 'imgs/Ford dashbord.png', label: 'Dashboard',       large: false },
+      { url: 'imgs/Ford interior.png', label: 'Interior – Cabin',        large: false },
+      { url: 'imgs/Ford night drive.png', label: 'Night Shot',      large: false },
+    ],
+  },
 
-  bookingCarName.textContent = selectedCar.name;
-  bookingCarImg.src = selectedCar.img;
-  bookingCarPrice.textContent = "$" + selectedCar.price + "/day";
+  /* ── MERCEDES-BENZ C300 ───────────────────────────────── */
+  mercedes: {
+    name: 'Mercedes-Benz C300',
+    subtitle: 'Luxury Sedan · 2024 Model',
+    price: '$120',
+    bookingName: 'Mercedes-Benz C300',
+    badge: { text: 'Premium', color: '#8b5cf6' },
+    images: [
+      { url: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=1400&q=85', label: 'Exterior – Front' },
+      { url: 'imgs/Mercedes-Benz Profile.png', label: 'Side Profile' },
+      { url: 'imgs/Mercedes-Benz Rear.png', label: 'Dynamic – Rear' },
+      { url: 'imgs/Mercedes-Benz Dashboard.png',    label: 'Dashboard' },
+      { url: 'imgs/Mercedes-Benz Interior.png', label: 'Interior – Cabin' },
+      { url: 'imgs/Mercedes-Benz Night Drive.png', label: 'Night Shot' },
+    ],
+    specs: [
+      { icon: 'fa-user-group',  label: 'Passengers',   value: '5 Adults' },
+      { icon: 'fa-gears',       label: 'Transmission', value: '9G-TRONIC Auto' },
+      { icon: 'fa-gas-pump',    label: 'Fuel Type',    value: 'Petrol' },
+      { icon: 'fa-gauge-high',  label: 'Engine',       value: '2.0L Turbocharged I4' },
+      { icon: 'fa-suitcase',    label: 'Luggage',      value: '3 Large Bags' },
+      { icon: 'fa-road',        label: 'Drive',        value: '4MATIC All-Wheel' },
+      { icon: 'fa-snowflake',   label: 'Climate',      value: 'Dual-Zone Thermotronic' },
+      { icon: 'fa-car-side',    label: 'Body Style',   value: 'Luxury Sedan' },
+    ],
+    features: [
+      'MBUX Multimedia System with AI',
+      'Burmester® Surround Sound',
+      'Heated & Ventilated Front Seats',
+      'Massage Function (Driver Seat)',
+      'Ambient Lighting (64 Colours)',
+      'Active Distance Assist DISTRONIC',
+      'Parking Package with 360° Camera',
+      'KEYLESS GO Start System',
+    ],
+    pricing: [
+      { duration: 'Daily',         price: '$120',  per: '/day',   note: '200 km included',         highlight: false },
+      { duration: 'Weekly (7 days)',price: '$750',  per: '/week',  note: 'Save $90 vs daily rate',  highlight: true  },
+      { duration: 'Monthly',       price: '$2,400',per: '/month', note: 'Best long-term value',    highlight: false },
+    ],
+    photos: [
+      { url: 'https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=900&q=80', label: 'Exterior',     large: true  },
+      { url: 'imgs/Mercedes-Benz Profile.png', label: 'Side Profile', large: false },
+      { url: 'imgs/Mercedes-Benz Rear.png', label: 'Dynamic – Rear',     large: false },
+      { url: 'imgs/Mercedes-Benz Dashboard.png',    label: 'Dashboard',   large: false },
+      { url: 'imgs/Mercedes-Benz Interior.png', label: 'Interior – Cabin',large: false },
+      { url: 'imgs/Mercedes-Benz Night Drive.png', label: 'Night Shot',  large: false },
+    ],
+  },
 
-  bookingModal.classList.add("active");
-});
+  /* ── TESLA MODEL 3 ────────────────────────────────────── */
+  tesla: {
+    name: 'Tesla Model 3',
+    subtitle: 'Electric Sedan · 2024 Model',
+    price: '$95',
+    bookingName: 'Tesla Model 3',
+    badge: { text: 'New', color: '#ef4444' },
+    images: [
+      { url: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=1400&q=85', label: 'Exterior – Front' },
+      { url: 'imgs/Tesla side.png', label: 'Side Profile' },
+      { url: 'imgs/Tesla exterior.png', label: 'Dynamic – On Road' },
+      { url: 'imgs/Tesla dashboard.png',label: 'Dashboard' },
+      { url: 'imgs/Tesla interior.png',label: 'Interior – Cabin' },
+      { url: 'imgs/Tesla night.png', label: 'Night Shot' },
+    ],
+    specs: [
+      { icon: 'fa-user-group',  label: 'Passengers',   value: '5 Adults' },
+      { icon: 'fa-gears',       label: 'Transmission', value: 'Single-Speed Auto' },
+      { icon: 'fa-bolt',        label: 'Fuel Type',    value: 'Electric (BEV)' },
+      { icon: 'fa-gauge-high',  label: 'Range',        value: '570 km per charge' },
+      { icon: 'fa-suitcase',    label: 'Luggage',      value: '2 Large Bags + Frunk' },
+      { icon: 'fa-road',        label: 'Drive',        value: 'Rear-Wheel Drive' },
+      { icon: 'fa-snowflake',   label: 'Climate',      value: 'Heat Pump A/C' },
+      { icon: 'fa-car-side',    label: 'Body Style',   value: 'Electric Sedan' },
+    ],
+    features: [
+      '15.4" Cinematic Touchscreen',
+      'Autopilot (Full Self-Drive Capable)',
+      'Over-The-Air Software Updates',
+      'Sentry Mode & Dashcam',
+      'Glass Roof (UV Protected)',
+      '0–100 km/h in 3.1 seconds',
+      'Premium Audio System (17 Speakers)',
+      'Wireless Phone Charging',
+    ],
+    pricing: [
+      { duration: 'Daily',         price: '$95',   per: '/day',   note: 'Unlimited electric charge',highlight: false },
+      { duration: 'Weekly (7 days)',price: '$595',  per: '/week',  note: 'Save $70 vs daily rate',   highlight: true  },
+      { duration: 'Monthly',       price: '$1,900',per: '/month', note: 'Best long-term value',     highlight: false },
+    ],
+    photos: [
+      { url: 'https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=900&q=80', label: 'Exterior',     large: true  },
+      { url: 'imgs/Tesla side.png', label: 'Side Profile',large: false },
+      { url: 'imgs/Tesla exterior.png', label: 'Dynamic – On Road',    large: false },
+      { url: 'imgs/Tesla dashboard.png',label: 'Dashboard',   large: false },
+      { url: 'imgs/Tesla interior.png',label: 'Interior – Cabin',    large: false },
+      { url: 'imgs/Tesla night.png', label: 'Night Shot',  large: false },
+    ],
+  },
 
-/* close */
-function closeDetails(){
-  detailsModal.classList.remove("active");
-  document.body.style.overflow="";
-}
+  /* ── BMW X5 ───────────────────────────────────────────── */
+  bmw: {
+    name: 'BMW X5',
+    subtitle: 'Luxury SUV · 2023 Model',
+    price: '$140',
+    bookingName: 'BMW X5',
+    badge: { text: 'Luxury', color: '#4169E1' },
+    images: [
+      { url: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=1400&q=85', label: 'Exterior – Front' },
+      { url: 'imgs/BMW Rear.png',label: 'Side Profile' },
+      { url: 'imgs/BMW Exterior.png',label: 'Dynamic – Road' },
+      { url: 'imgs/BMW Dashboard.png',  label: 'Dashboard' },
+      { url: 'imgs/BMW Entirior.png',label: 'Interior – Cabin' },
+      { url: 'imgs/BMW Night drive.png',label: 'Night Shot' },
+    ],
+    specs: [
+      { icon: 'fa-user-group',  label: 'Passengers',   value: '5 Adults' },
+      { icon: 'fa-gears',       label: 'Transmission', value: '8-Speed Steptronic' },
+      { icon: 'fa-gas-pump',    label: 'Fuel Type',    value: 'Petrol' },
+      { icon: 'fa-gauge-high',  label: 'Engine',       value: '3.0L TwinPower Turbo I6' },
+      { icon: 'fa-suitcase',    label: 'Luggage',      value: '4 Large Bags' },
+      { icon: 'fa-road',        label: 'Drive',        value: 'xDrive All-Wheel' },
+      { icon: 'fa-snowflake',   label: 'Climate',      value: '4-Zone Auto Climate' },
+      { icon: 'fa-car-side',    label: 'Body Style',   value: 'Luxury SUV' },
+    ],
+    features: [
+      'BMW Live Cockpit Professional',
+      'Harman Kardon Surround Sound',
+      'Panoramic Sunroof',
+      'Driving Assistant Professional',
+      'Parking Assistant Plus w/ Surround View',
+      'Heated Front & Rear Seats',
+      'Executive Drive Active Roll Stabilisation',
+      'BMW Head-Up Display',
+    ],
+    pricing: [
+      { duration: 'Daily',         price: '$140',  per: '/day',   note: '200 km included',          highlight: false },
+      { duration: 'Weekly (7 days)',price: '$875',  per: '/week',  note: 'Save $105 vs daily rate',  highlight: true  },
+      { duration: 'Monthly',       price: '$2,800',per: '/month', note: 'Best long-term value',     highlight: false },
+    ],
+    photos: [
+      { url: 'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=80',  label: 'Exterior',     large: true  },
+      { url: 'imgs/BMW Rear.png',label: 'Side Profile', large: false },
+      { url: 'imgs/BMW Exterior.png',label: 'Dynamic – Road',     large: false },
+      { url: 'imgs/BMW Dashboard.png',  label: 'Dashboard',  label: 'Dashboard',   large: false },
+      { url: 'imgs/BMW Entirior.png',label: 'Interior – Cabin',    large: false },
+      { url: 'imgs/BMW Night drive.png',label: 'Night Shot',  large: false },
+    ],
+  },
 
-detailsClose.onclick=closeDetails;
-detailsModal.onclick=(e)=>{
-  if(e.target===detailsModal) closeDetails();
+  /* ── HONDA CIVIC ──────────────────────────────────────── */
+  civic: {
+    name: 'Honda Civic',
+    subtitle: 'Compact Sedan · 2023 Model',
+    price: '$35',
+    bookingName: 'Honda Civic',
+    badge: { text: 'Economy', color: '#10b981' },
+    images: [
+      { url: 'imgs/Honda civic Interior.png', label: 'Exterior – Front' },
+      { url: 'imgs/Honda rear.png', label: 'Side Profile' },
+      { url: 'imgs/Honda civic Interior.png',    label: 'Dynamic – On Road' },
+      { url: 'imgs/Honda dashboard.png', label: 'Dashboard' },
+      { url: 'imgs/Honda intirior.png', label: 'Interior – Cabin' },
+      { url: 'imgs/Honda night drive.png', label: 'Night Shot' },
+    ],
+    specs: [
+      { icon: 'fa-user-group',  label: 'Passengers',   value: '5 Adults' },
+      { icon: 'fa-gears',       label: 'Transmission', value: '6-Speed Manual' },
+      { icon: 'fa-gas-pump',    label: 'Fuel Type',    value: 'Petrol' },
+      { icon: 'fa-gauge-high',  label: 'Engine',       value: '1.5L VTEC Turbo' },
+      { icon: 'fa-suitcase',    label: 'Luggage',      value: '2 Large Bags' },
+      { icon: 'fa-road',        label: 'Drive',        value: 'Front-Wheel Drive' },
+      { icon: 'fa-snowflake',   label: 'Climate',      value: 'Single-Zone A/C' },
+      { icon: 'fa-car-side',    label: 'Body Style',   value: 'Compact Sedan' },
+    ],
+    features: [
+      'Honda Sensing Safety Suite',
+      '9" Touchscreen with Apple CarPlay',
+      'Lane Keeping Assist',
+      'Automatic Emergency Braking',
+      'Adaptive Cruise Control',
+      'Backup Camera',
+      'Honda CONNECT Wi-Fi Hotspot',
+      'Fuel Economy: 7.4L/100km',
+    ],
+    pricing: [
+      { duration: 'Daily',         price: '$35',  per: '/day',   note: '200 km included',         highlight: false },
+      { duration: 'Weekly (7 days)',price: '$210', per: '/week',  note: 'Save $35 vs daily rate',  highlight: true  },
+      { duration: 'Monthly',       price: '$700', per: '/month', note: 'Best long-term value',    highlight: false },
+    ],
+    photos: [
+      { url: 'imgs/Honda civic Interior.png', label: 'Exterior – Front',     large: true  },
+      { url: 'imgs/Honda rear.png', label: 'Side Profile' , large: false },
+      { url: 'imgs/Honda civic Interior.png',    label: 'Dynamic – On Road',     large: false },
+      { url: 'imgs/Honda dashboard.png', label: 'Dashboard',   large: false },
+      { url: 'imgs/Honda intirior.png', label: 'Interior – Cabin',large: false },
+      { url: 'imgs/Honda night drive.png', label: 'Night Shot',  large: false },
+    ],
+  },
 };
 
-
-/* =====================================================
-   8. SERVICE MODAL
-===================================================== */
-
-const serviceModal = document.getElementById("serviceModal");
-const modalClose = document.querySelector(".modal-close");
-
-const modalImage = document.getElementById("modalImage");
-const modalTitle = document.getElementById("modalTitle");
-const modalText = document.getElementById("modalText");
-
-/* Service Data */
-const servicesData = {
-  airport: {
-    title: "Airport Transfers",
-    img: "imgs/Aiport transfer.jpg",
-    text: "Enjoy stress-free airport pickups and drop-offs with our professional chauffeurs. Always on time, always comfortable."
-  },
-  wedding: {
-    title: "Wedding Events",
-    img: "imgs/wedding events.jpg",
-    text: "Make your special day unforgettable with our luxury fleet, perfect for grand entrances and elegant travel."
-  },
-  business: {
-    title: "Business Meetings",
-    img: "imgs/business events.jpg",
-    text: "Arrive in style and on time with executive vehicles designed for professionals and corporate travel."
-  },
-  intercity: {
-    title: "Intercity Trips",
-    img: "imgs/intercity.jpg",
-    text: "Travel long distances comfortably with our reliable cars and flexible rental packages."
-  }
+/* ── Service Data ── */
+const SVC_DATA = {
+  daily:     { title:'Daily & Long-Term Rental',     cat:'Flexible Rental Plans',                bannerImg:'https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=900&q=80',    iconClass:'si-blue',   iconHtml:'<i class="fa-solid fa-calendar-days"></i>', desc:'Our daily and long-term rental plans are designed to give you maximum flexibility at the best possible price. Whether you need a car for a quick day trip around Mutare or an extended multi-month assignment, LCR has a plan that fits your life — with no hidden costs and transparent pricing from day one.', features:[{icon:'fa-check-circle',text:'Day rates from just $35/day on economy vehicles'},{icon:'fa-check-circle',text:'Weekly discounts averaging 10–15% savings'},{icon:'fa-check-circle',text:'Monthly rates starting from $700/month'},{icon:'fa-check-circle',text:'200 km/day free mileage on all plans'},{icon:'fa-check-circle',text:'Free vehicle swap on plans over 30 days'},{icon:'fa-check-circle',text:'Full insurance and roadside assistance included'}], price:'$35', priceSub:'/ day · economy vehicles', priceLabel:'Starting from', includes:['Insurance Included','Free Cancellation (24hr)','EcoCash Accepted'] },
+  airport:   { title:'Airport Transfers',            cat:'Meet & Greet · Door-to-Door',          bannerImg:'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&q=80',    iconClass:'si-amber',  iconHtml:'<i class="fa-solid fa-plane-arrival"></i>',   desc:'Skip the stress of arriving in an unfamiliar city. Our airport transfer service monitors your flight in real-time and ensures a professional driver is waiting for you — name board in hand — the moment you clear customs. Available 24/7, 365 days a year at Mutare Airport.', features:[{icon:'fa-check-circle',text:'Real-time flight tracking — we adjust for delays'},{icon:'fa-check-circle',text:'Meet-and-greet with personalised name board'},{icon:'fa-check-circle',text:'Available 24/7 including public holidays'},{icon:'fa-check-circle',text:'All vehicle classes: economy to luxury'},{icon:'fa-check-circle',text:'Free 60-minute wait time after landing'},{icon:'fa-check-circle',text:'Fixed pricing — no surge charges'}], price:'$25', priceSub:'/ transfer · one-way', priceLabel:'From', includes:['Fixed Price','60-min Wait Included','Meet & Greet'] },
+  corporate: { title:'Corporate & Business Rental',  cat:'NGOs · Embassies · Companies',         bannerImg:'https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=900&q=80',    iconClass:'si-purple', iconHtml:'<i class="fa-solid fa-briefcase"></i>',        desc:'LCR is the preferred fleet partner for dozens of NGOs, mining corporations, diplomatic missions, and government departments across Zimbabwe. We offer fully managed corporate mobility solutions — from a single vehicle to a dedicated fleet of 50+ units — with consolidated monthly invoicing and priority support.', features:[{icon:'fa-check-circle',text:'Dedicated account manager and fleet coordinator'},{icon:'fa-check-circle',text:'Monthly consolidated invoicing in USD or ZiG'},{icon:'fa-check-circle',text:'Priority vehicle availability and emergency swaps'},{icon:'fa-check-circle',text:'Custom branding and livery options available'},{icon:'fa-check-circle',text:'Driver training and compliance support'},{icon:'fa-check-circle',text:'GPS fleet tracking and monthly reports'}], price:'Custom', priceSub:'tailored to your fleet size', priceLabel:'Pricing', includes:['Dedicated Manager','Monthly Invoicing','Priority Fleet Access'] },
+  chauffeur: { title:'Chauffeur & Driver Services',  cat:'VIP · Weddings · Executive',           bannerImg:'https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=80',    iconClass:'si-teal',   iconHtml:'<i class="fa-solid fa-user-tie"></i>',         desc:"LCR's professional chauffeur service is second to none. Our licensed, background-checked drivers are immaculately presented and possess intimate knowledge of every road in Manicaland. Perfect for weddings, VIP airport runs, corporate events, and government dignitaries.", features:[{icon:'fa-check-circle',text:'Licensed, uniformed, background-checked drivers'},{icon:'fa-check-circle',text:'Luxury sedans and executive SUVs available'},{icon:'fa-check-circle',text:'Hourly hire from 2 hours minimum'},{icon:'fa-check-circle',text:'Half-day (4hr) and full-day (8hr) packages'},{icon:'fa-check-circle',text:'Wedding car decoration included on request'},{icon:'fa-check-circle',text:'Strict punctuality and discretion guaranteed'}], price:'$60', priceSub:'/ hour · executive vehicle + driver', priceLabel:'From', includes:['Uniformed Driver','Vehicle + Fuel','Complimentary Water'] },
+  safari:    { title:'Safari & Outstation Tours',    cat:'Nyanga · Chimanimani · Gonarezhou',    bannerImg:'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80',    iconClass:'si-green',  iconHtml:'<i class="fa-solid fa-map-location-dot"></i>', desc:"Zimbabwe's eastern highlands and safari destinations are some of Africa's best-kept secrets. LCR provides capable 4x4 vehicles and optional certified tour guides to take you through Nyanga National Park, Chimanimani's dramatic mountains, Vumba Botanical Gardens, and all the way to Gonarezhou.", features:[{icon:'fa-check-circle',text:"4x4 vehicles built for Zimbabwe's terrain"},{icon:'fa-check-circle',text:'Optional certified ZTA tour guides'},{icon:'fa-check-circle',text:'Unlimited kilometres on all tour packages'},{icon:'fa-check-circle',text:'Camping gear and cooler box hire available'},{icon:'fa-check-circle',text:'Multi-day itineraries from 1 to 14 days'},{icon:'fa-check-circle',text:'Cross-border permits arranged on request'}], price:'$120', priceSub:'/ day · 4x4 with unlimited km', priceLabel:'From', includes:['Unlimited Mileage','Full Insurance','24/7 Support'] },
+  roadside:  { title:'24/7 Roadside Assistance',     cat:'All of Manicaland Province',           bannerImg:'https://images.unsplash.com/photo-1487754180451-c456f719a1fc?w=900&q=80',    iconClass:'si-red',    iconHtml:'<i class="fa-solid fa-truck-medical"></i>',    desc:'No matter where you are in Manicaland, help is never more than one call away. Every LCR rental comes with complimentary 24/7 roadside assistance. Our rapid-response team averages under 45 minutes to reach you — day or night, weekday or public holiday.', features:[{icon:'fa-check-circle',text:'Average 45-minute response across Manicaland'},{icon:'fa-check-circle',text:"Free replacement vehicle if yours can't be fixed"},{icon:'fa-check-circle',text:'Tyre change, jump-start, fuel delivery included'},{icon:'fa-check-circle',text:'Emergency towing to nearest LCR depot'},{icon:'fa-check-circle',text:'Dedicated WhatsApp emergency line'},{icon:'fa-check-circle',text:'Included free with every rental — no add-on cost'}], price:'Free', priceSub:'included with every rental', priceLabel:'Cost', includes:['Free Replacement Car','Free Towing','24/7 WhatsApp'] },
 };
 
-/* Open Modal */
-document.addEventListener("click", (e) => {
-  const link = e.target.closest(".service-link");
+/* ── State ── */
+let currentGalleryIdx = 0;
+let currentCarId = null;
+let currentCarData = null;
 
-  if (link) {
-    const key = link.dataset.service;
-    const service = servicesData[key];
+/* ── Car Detail Page ── */
+function openCarDetailPage(carId) {
+  const car = CAR_DATA[carId];
+  if (!car) return;
+  currentCarId = carId;
+  currentCarData = car;
+  currentGalleryIdx = 0;
+  const page = document.getElementById('carDetailPage');
+  populateCarDetailPage(car, carId);
+  page.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  page.scrollTop = 0;
+  document.getElementById('cdpTopbarTitle').textContent = car.name;
+  document.getElementById('cdpBreadName').textContent = car.name;
+}
 
-    if (!service) return;
+function closeCarDetailPage() {
+  document.getElementById('carDetailPage').classList.remove('open');
+  document.body.style.overflow = '';
+}
 
-    modalTitle.textContent = service.title;
-    modalText.textContent = service.text;
-    modalImage.src = service.img;
+function populateCarDetailPage(car, carId) {
+  renderDetailGallery(car, 0);
+  document.getElementById('cdpBadgeRow').innerHTML =
+    `<span class="cdp-cat-badge" style="background:${car.badge.color}20;color:${car.badge.color};border:1.5px solid ${car.badge.color}40">${car.badge.text}</span>`;
+  document.getElementById('cdpTitle').textContent = car.name;
+  document.getElementById('cdpSubtitle').textContent = car.subtitle;
+  document.getElementById('cdpPrice').textContent = car.price;
+  document.getElementById('cdpSpecsList').innerHTML = car.specs.map(s =>
+    `<div class="cdp-spec-row"><span class="cdp-spec-label"><i class="fa-solid ${s.icon}"></i> ${s.label}</span><span class="cdp-spec-val">${s.value}</span></div>`
+  ).join('');
+  document.getElementById('cdpFeaturesList').innerHTML = car.features.map(f =>
+    `<li><i class="fa-solid fa-check-circle"></i> ${f}</li>`
+  ).join('');
 
-    serviceModal.classList.add("active");
-    document.body.style.overflow = "hidden";
-  }
-});
+  /* Photo Gallery — 6 shots with proper labels */
+  document.getElementById('cdpPhotoGrid').innerHTML = car.photos.map(p =>
+    `<div class="cdp-photo-item${p.large ? ' large' : ''}">
+       <img src="${p.url}" alt="${car.name} – ${p.label}" loading="lazy">
+       <span class="cdp-photo-label">${p.label}</span>
+     </div>`
+  ).join('');
 
-/* Close Modal */
-modalClose.addEventListener("click", () => {
-  serviceModal.classList.remove("active");
-  document.body.style.overflow = "";
-});
+  document.getElementById('cdpPricingGrid').innerHTML = car.pricing.map(p =>
+    `<div class="cdp-pricing-card${p.highlight ? ' highlight' : ''}">
+       ${p.highlight ? '<span class="cdp-best-label">Best Value</span>' : ''}
+       <div class="dur">${p.duration}</div>
+       <div class="price">${p.price}<span>${p.per}</span></div>
+       <div class="note">${p.note}</div>
+     </div>`
+  ).join('');
 
-/* Close on outside click */
-serviceModal.addEventListener("click", (e) => {
-  if (e.target === serviceModal) {
-    serviceModal.classList.remove("active");
-    document.body.style.overflow = "";
-  }
-});
+  /* "Also available" — 3 other cars */
+  const others = Object.entries(CAR_DATA).filter(([id]) => id !== carId).slice(0, 3);
+  document.getElementById('cdpAlsoGrid').innerHTML = others.map(([id, c]) =>
+    `<div class="cdp-also-card" onclick="switchCarDetail('${id}')">
+       <img class="cdp-also-img" src="${c.images[0].url.replace('w=1400', 'w=600')}" alt="${c.name}">
+       <div class="cdp-also-info">
+         <div class="cdp-also-name">${c.name}</div>
+         <div class="cdp-also-price">${c.price} <span>/ day</span></div>
+       </div>
+     </div>`
+  ).join('');
 
+  /* Reset tabs */
+  document.querySelectorAll('.cdp-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.cdp-tab-panel').forEach(p => p.classList.remove('active'));
+  document.querySelector('.cdp-tab[data-tab="overview"]').classList.add('active');
+  document.getElementById('cdp-tab-overview').classList.add('active');
+}
 
-/* =====================================================
-   9. FAQ
-===================================================== */
+function switchCarDetail(carId) {
+  currentGalleryIdx = 0;
+  currentCarId = carId;
+  currentCarData = CAR_DATA[carId];
+  populateCarDetailPage(currentCarData, carId);
+  document.getElementById('cdpTopbarTitle').textContent = currentCarData.name;
+  document.getElementById('cdpBreadName').textContent = currentCarData.name;
+  document.getElementById('carDetailPage').scrollTop = 0;
+}
 
-document.querySelectorAll(".faq-item").forEach(item => {
-  const icon = item.querySelector(".icon");
-
-  item.addEventListener("click", () => {
-
-    document.querySelectorAll(".faq-item").forEach(el => {
-      if (el !== item) {
-        el.classList.remove("active");
-        el.querySelector(".icon").textContent = "+";
-      }
+function renderDetailGallery(car, idx) {
+  const img     = document.getElementById('cdpHeroImg');
+  const label   = document.getElementById('cdpImgLabel');
+  const counter = document.getElementById('cdpImgCounter');
+  const thumbs  = document.getElementById('cdpThumbs');
+  img.style.opacity = '0';
+  img.style.transform = 'scale(1.03)';
+  setTimeout(() => {
+    img.src = car.images[idx].url;
+    img.alt = car.name + ' – ' + car.images[idx].label;
+    img.style.opacity = '1';
+    img.style.transform = 'scale(1)';
+  }, 120);
+  label.textContent   = car.images[idx].label;
+  counter.textContent = `${idx + 1} / ${car.images.length}`;
+  thumbs.innerHTML = car.images.map((im, i) =>
+    `<div class="cdp-thumb${i === idx ? ' active' : ''}" data-idx="${i}">
+       <img src="${im.url.replace('w=1400', 'w=200')}" alt="${im.label}" loading="lazy">
+     </div>`
+  ).join('');
+  thumbs.querySelectorAll('.cdp-thumb').forEach(th => {
+    th.addEventListener('click', () => {
+      currentGalleryIdx = parseInt(th.dataset.idx);
+      renderDetailGallery(currentCarData, currentGalleryIdx);
     });
+  });
+}
 
-    item.classList.toggle("active");
+function changeDetailGallery(dir) {
+  if (!currentCarData) return;
+  const total = currentCarData.images.length;
+  currentGalleryIdx = (currentGalleryIdx + dir + total) % total;
+  renderDetailGallery(currentCarData, currentGalleryIdx);
+}
 
-    if (item.classList.contains("active")) {
-      icon.textContent = "-";
-    } else {
-      icon.textContent = "+";
-    }
+document.getElementById('cdpPrev').addEventListener('click', () => changeDetailGallery(-1));
+document.getElementById('cdpNext').addEventListener('click', () => changeDetailGallery(1));
+document.getElementById('cdpBackBtn').addEventListener('click', closeCarDetailPage);
+document.getElementById('cdpTopbarBookBtn').addEventListener('click', () => {
+  closeCarDetailPage();
+  setTimeout(() => { if (currentCarData) openBooking(currentCarData.bookingName); }, 450);
+});
+document.getElementById('cdpBookBig').addEventListener('click', () => {
+  closeCarDetailPage();
+  setTimeout(() => { if (currentCarData) openBooking(currentCarData.bookingName); }, 450);
+});
+
+document.querySelectorAll('.cdp-tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.cdp-tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.cdp-tab-panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById('cdp-tab-' + tab.dataset.tab).classList.add('active');
   });
 });
 
+document.addEventListener('keydown', e => {
+  const page = document.getElementById('carDetailPage');
+  if (!page.classList.contains('open')) return;
+  if (e.key === 'Escape') closeCarDetailPage();
+  if (e.key === 'ArrowLeft') changeDetailGallery(-1);
+  if (e.key === 'ArrowRight') changeDetailGallery(1);
+});
 
-/* =====================================================
-   10. CONTACT FORM
-===================================================== */
+/* ── Service Modal ── */
+function openSvcModal(svcId) {
+  const svc = SVC_DATA[svcId];
+  if (!svc) return;
+  document.getElementById('svcModalBannerImg').src = svc.bannerImg;
+  document.getElementById('svcModalIcon').className = 'svc-modal-banner-icon ' + svc.iconClass;
+  document.getElementById('svcModalIcon').innerHTML = svc.iconHtml;
+  document.getElementById('svcModalTitle').textContent = svc.title;
+  document.getElementById('svcModalCat').textContent = svc.cat;
+  document.getElementById('svcModalDesc').textContent = svc.desc;
+  document.getElementById('svcModalFeatGrid').innerHTML = svc.features.map(f =>
+    `<div class="svc-modal-feat-item"><i class="fa-solid ${f.icon}"></i><span>${f.text}</span></div>`
+  ).join('');
+  document.getElementById('svcModalPriceLabel').textContent = svc.priceLabel;
+  document.getElementById('svcModalPrice').textContent = svc.price;
+  document.getElementById('svcModalPriceSub').textContent = svc.priceSub;
+  document.getElementById('svcModalIncludesRow').innerHTML = svc.includes.map(inc =>
+    `<span class="svc-modal-include-chip"><i class="fa-solid fa-circle-check"></i> ${inc}</span>`
+  ).join('');
+  document.getElementById('svcModalBarLabel').textContent = svc.title;
+  document.getElementById('svcModalBookBtn').onclick = () => { closeSvcModal(); setTimeout(() => scrollToSection('#booking'), 350); };
+  document.getElementById('svcModalScroll').scrollTop = 0;
+  document.getElementById('svcModalOverlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
 
-const contactForm = document.getElementById("contactForm");
-const formStatus = document.getElementById("formStatus");
+function closeSvcModal() {
+  document.getElementById('svcModalOverlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
 
-if (contactForm && formStatus) {
-  contactForm.addEventListener("submit", (e) => {
-    e.preventDefault();
+document.getElementById('svcModalClose').addEventListener('click', closeSvcModal);
+document.getElementById('svcModalOverlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('svcModalOverlay')) closeSvcModal();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && document.getElementById('svcModalOverlay').classList.contains('open')) closeSvcModal();
+});
 
-    const name = new FormData(contactForm).get("name");
-
-    formStatus.textContent = `Thank you, ${name}. We’ve received your message.`;
-
-    formStatus.classList.add("show");
-    contactForm.reset();
-
+/* ── Hero Thumbnails ── */
+document.querySelectorAll('.hero-thumb').forEach(thumb => {
+  thumb.addEventListener('click', () => {
+    document.querySelectorAll('.hero-thumb').forEach(t => t.classList.remove('active'));
+    thumb.classList.add('active');
+    const img = document.getElementById('heroMainImg');
+    img.style.opacity = '0';
+    img.style.transform = 'scale(1.05)';
     setTimeout(() => {
-      formStatus.classList.remove("show");
-    }, 4000);
+      img.src = thumb.dataset.img;
+      document.getElementById('heroCarName').textContent = thumb.dataset.name;
+      document.getElementById('heroCarSub').textContent  = thumb.dataset.sub;
+      img.style.opacity = '1';
+      img.style.transform = 'scale(1)';
+    }, 200);
   });
+});
+document.getElementById('heroMainImg').style.transition = 'opacity .35s ease, transform .5s ease';
+
+/* ── Helpers ── */
+function scrollToSection(selector) {
+  const el = document.querySelector(selector);
+  if (el) el.scrollIntoView({ behavior: 'smooth' });
+}
+function showToast(title, msg) {
+  const t = document.getElementById('toast');
+  document.getElementById('toastTitle').textContent = title;
+  document.getElementById('toastMsg').textContent   = msg;
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 5000);
 }
 
+/* ── Active nav link ── */
+const sections = document.querySelectorAll('section[id]');
+const navLinksEl = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let current = 'home';
+  sections.forEach(s => { if (window.scrollY >= s.offsetTop - 130) current = s.id; });
+  navLinksEl.forEach(a => { a.classList.toggle('active', a.getAttribute('href') === '#' + current); });
+});
 
-/* =====================================================
-   11. SCROLL REVEAL
-===================================================== */
+/* ── Hamburger & Drawer ── */
+const hamburger   = document.getElementById('hamburger');
+const navDrawer   = document.getElementById('navDrawer');
+const drawerBg    = document.getElementById('drawerBg');
+const drawerClose = document.getElementById('drawerClose');
+const drawerLinks = document.querySelectorAll('.drawer-link');
 
-const reveals = document.querySelectorAll(".reveal");
+function openDrawer()  { navDrawer.classList.add('open');    hamburger.setAttribute('aria-expanded', 'true');  document.body.style.overflow = 'hidden'; }
+function closeDrawer() { navDrawer.classList.remove('open'); hamburger.setAttribute('aria-expanded', 'false'); document.body.style.overflow = ''; }
 
-if ('IntersectionObserver' in window) {
-  const observer = new IntersectionObserver(entries=>{
-    entries.forEach(entry=>{
-      if(entry.isIntersecting){
-        entry.target.classList.add("show");
-        observer.unobserve(entry.target);
-      }
+hamburger.addEventListener('click', () => navDrawer.classList.contains('open') ? closeDrawer() : openDrawer());
+drawerBg.addEventListener('click', closeDrawer);
+drawerClose.addEventListener('click', closeDrawer);
+drawerLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    closeDrawer();
+    drawerLinks.forEach(l => l.classList.remove('drawer-active'));
+    link.classList.add('drawer-active');
+  });
+});
+document.getElementById('drawerBookBtn').addEventListener('click',    () => { closeDrawer(); setTimeout(() => scrollToSection('#booking'), 300); });
+document.getElementById('drawerContactBtn').addEventListener('click', () => { closeDrawer(); setTimeout(() => scrollToSection('#contact'), 300); });
+
+/* ── Scroll to top ── */
+const toTop = document.getElementById('toTop');
+window.addEventListener('scroll', () => { toTop.classList.toggle('show', window.scrollY > 400); });
+toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+/* ── Reveal animations ── */
+const revealEls = document.querySelectorAll('.reveal');
+const revealObserver = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('up'); });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObserver.observe(el));
+
+/* ── Fleet filter ── */
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const f = btn.dataset.filter;
+    document.querySelectorAll('.car-card').forEach(card => {
+      card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
     });
-  },{threshold:0.15});
-
-  reveals.forEach(el=>observer.observe(el));
-} else {
-  reveals.forEach(el => el.classList.add("show"));
-}
-
-
-
-
-// ================= AUTH UI =================
-const signinBtn   = document.getElementById("signinBtn");
-const authPopup   = document.getElementById("authPopup");
-const authOverlay = document.getElementById("authOverlay");
-const authClose   = document.getElementById("authClose");
-
-function openAuth(){
-  authPopup.classList.add("active");
-  authOverlay.classList.add("active");
-}
-
-function closeAuth(){
-  authPopup.classList.remove("active");
-  authOverlay.classList.remove("active");
-}
-
-signinBtn.onclick = openAuth;
-authClose.onclick = closeAuth;
-authOverlay.onclick = closeAuth;
-
-document.addEventListener("keydown",(e)=>{
-  if(e.key === "Escape") closeAuth();
-});
-
-// ================= TABS =================
-const tabs  = document.querySelectorAll(".auth-tab");
-const forms = document.querySelectorAll(".auth-form");
-
-tabs.forEach(tab=>{
-  tab.onclick = ()=>{
-    tabs.forEach(t=>t.classList.remove("active"));
-    forms.forEach(f=>f.classList.remove("active"));
-
-    tab.classList.add("active");
-    document.getElementById(tab.dataset.tab + "Form").classList.add("active");
-  };
-});
-
-
-// ================= FIREBASE CONFIG =================
-const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  appId: "YOUR_APP_ID"
-};
-
-// ================= INIT FIREBASE =================
-firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-
-// keep user logged in
-auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL);
-
-
-// ================= GOOGLE LOGIN =================
-const googleBtn = document.getElementById("googleLogin");
-
-googleBtn.addEventListener("click", async ()=>{
-
-  googleBtn.innerHTML = `
-    <i class="fa-solid fa-spinner fa-spin"></i>
-    Connecting...
-  `;
-  googleBtn.disabled = true;
-
-  const provider = new firebase.auth.GoogleAuthProvider();
-  provider.setCustomParameters({
-    prompt: "select_account"
   });
+});
 
-  try {
-
-    let result;
-
-    // mobile devices use redirect
-    if(window.innerWidth <= 768){
-      await auth.signInWithRedirect(provider);
-      return;
+/* ── Open booking with car preset ── */
+function openBooking(carName) {
+  const sel = document.getElementById('vehicleSelect');
+  if (sel) {
+    for (let opt of sel.options) {
+      if (opt.text.startsWith(carName)) { sel.value = opt.value; break; }
     }
-
-    // desktop popup
-    result = await auth.signInWithPopup(provider);
-
-    const user = result.user;
-
-    alert("Welcome " + user.displayName);
-    closeAuth();
-
-  } catch(error){
-    console.error(error);
-    alert(error.message);
   }
+  document.getElementById('booking').scrollIntoView({ behavior: 'smooth' });
+}
 
-  googleBtn.innerHTML = `
-    <i class="fa-brands fa-google"></i>
-    Continue with Google
-  `;
-  googleBtn.disabled = false;
+/* ── Date defaults ── */
+(function () {
+  const today = new Date(), tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  const fmt = d => d.toISOString().split('T')[0];
+  const pd = document.getElementById('pickupDate');
+  const rd = document.getElementById('returnDate');
+  if (pd) { pd.min = fmt(today); pd.value = fmt(today); }
+  if (rd) { rd.min = fmt(tomorrow); rd.value = fmt(tomorrow); }
+  if (pd) pd.addEventListener('change', () => {
+    const min = new Date(pd.value);
+    min.setDate(min.getDate() + 1);
+    rd.min = fmt(min);
+    if (new Date(rd.value) <= new Date(pd.value)) rd.value = fmt(min);
+  });
+})();
+
+/* ── Booking form ── */
+document.getElementById('bookingForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  showToast('Booking Confirmed! 🎉', 'Our team will contact you within 15 minutes.');
+  this.reset();
+  const today = new Date(), tomorrow = new Date(today);
+  tomorrow.setDate(today.getDate() + 1);
+  const fmt = d => d.toISOString().split('T')[0];
+  document.getElementById('pickupDate').value = fmt(today);
+  document.getElementById('returnDate').value = fmt(tomorrow);
 });
 
-
-// ================= HANDLE REDIRECT RESULT =================
-auth.getRedirectResult()
-.then((result)=>{
-  if(result.user){
-    alert("Welcome " + result.user.displayName);
-    closeAuth();
-  }
-})
-.catch((error)=>{
-  console.error(error);
+/* ── FAQ Accordion ── */
+document.querySelectorAll('.faq-item').forEach(item => {
+  item.querySelector('.faq-q').addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item').forEach(i => {
+      i.classList.remove('open');
+      i.querySelector('.faq-icon i').classList.replace('fa-minus', 'fa-plus');
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      item.querySelector('.faq-icon i').classList.replace('fa-plus', 'fa-minus');
+    }
+  });
 });
 
+/* ── Contact chips ── */
+document.querySelectorAll('.topic-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('active'));
+    chip.classList.add('active');
+    document.getElementById('contactTopic').value = chip.dataset.topic;
+  });
+});
 
-// ================= AUTO LOGIN CHECK =================
-auth.onAuthStateChanged((user)=>{
-  if(user){
-    signinBtn.innerHTML = `
-      <img src="${user.photoURL}" 
-      style="width:28px;height:28px;border-radius:50%;object-fit:cover;">
-      ${user.displayName.split(" ")[0]}
-    `;
-  }
+/* ── Contact form ── */
+document.getElementById('contactForm').addEventListener('submit', function (e) {
+  e.preventDefault();
+  const topic = document.getElementById('contactTopic').value;
+  showToast('Message Sent! ✉️', `We received your "${topic}" enquiry and will reply within 2 hours.`);
+  this.reset();
+  document.querySelectorAll('.topic-chip').forEach(c => c.classList.remove('active'));
+  document.querySelector('.topic-chip[data-topic="General Enquiry"]').classList.add('active');
+  document.getElementById('contactTopic').value = 'General Enquiry';
 });
