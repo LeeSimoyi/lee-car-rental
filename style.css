@@ -1,36 +1,4 @@
-/* ============================================================
-   style.css — LCR Lee Car Rental
-   ============================================================
-   TABLE OF CONTENTS
-   ─────────────────────────────────────────────────────────────
-   1.  Design System (CSS Variables)
-   2.  Global Reset & Base Styles
-   3.  Layout Helpers  (wrap, section, labels, buttons)
-   4.  Animation Utilities  (reveal, hero-fade, counters)
-   5.  Navbar
-   6.  Mobile Drawer Menu
-   7.  Hero Section
-   8.  About Section
-   9.  Fleet Section
-  10.  Car Detail Page  (full-screen slide-over)
-  11.  Services Section
-  12.  Service Popup Modal
-  13.  Booking Section
-  14.  How It Works Section
-  15.  Reviews Section
-  16.  FAQ Section
-  17.  Contact Section
-  18.  CTA Banner
-  19.  Footer
-  20.  Utilities  (scroll-to-top, toast)
-  21.  Responsive Breakpoints
-   ============================================================ */
 
-
-/* ============================================================
-   1. DESIGN SYSTEM — CSS Custom Properties
-      Change these variables to retheme the entire site.
-   ============================================================ */
 :root {
   /* Brand colours */
   --blue:        #4169E1;
@@ -67,7 +35,7 @@
 
 
 /* ============================================================
-   2. GLOBAL RESET & BASE STYLES
+   GLOBAL RESET & BASE STYLES
    ============================================================ */
 *, *::before, *::after {
   margin: 0;
@@ -96,10 +64,9 @@ button  { font-family: var(--font); cursor: pointer; }
 
 
 /* ============================================================
-   3. LAYOUT HELPERS
+   LAYOUT HELPERS
    ============================================================ */
 
-/* Centered, max-width wrapper */
 .wrap {
   width: 100%;
   max-width: var(--container);
@@ -107,10 +74,8 @@ button  { font-family: var(--font); cursor: pointer; }
   padding-inline: var(--pad);
 }
 
-/* Generic section spacing */
 .section { padding: clamp(64px, 8vw, 110px) 0; }
 
-/* Section label pill (small uppercase badge above headings) */
 .s-label {
   display: inline-flex;
   align-items: center;
@@ -126,7 +91,6 @@ button  { font-family: var(--font); cursor: pointer; }
   margin-bottom: 16px;
 }
 
-/* Section heading */
 .s-title {
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 800;
@@ -136,7 +100,6 @@ button  { font-family: var(--font); cursor: pointer; }
 }
 .s-title span { color: var(--blue); }
 
-/* Section sub-heading */
 .s-sub {
   font-size: clamp(.9rem, 1.2vw, 1rem);
   color: var(--text-2);
@@ -146,7 +109,6 @@ button  { font-family: var(--font); cursor: pointer; }
 
 /* ── Buttons ─────────────────────────────────────────────── */
 
-/* Primary button (used on hero — translucent glass style) */
 .btn-primary {
   display: inline-flex;
   align-items: center;
@@ -169,7 +131,6 @@ button  { font-family: var(--font); cursor: pointer; }
   box-shadow: 0 16px 36px rgba(0,0,0,0.22);
 }
 
-/* Override: solid blue for any section that isn't the hero */
 section:not(.hero) .btn-primary {
   background: var(--blue);
   border-color: var(--blue);
@@ -181,7 +142,6 @@ section:not(.hero) .btn-primary:hover {
   box-shadow: 0 16px 36px rgba(65,105,225,0.38);
 }
 
-/* Ghost / outline button */
 .btn-ghost {
   display: inline-flex;
   align-items: center;
@@ -204,7 +164,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-   4. ANIMATION UTILITIES
+   ANIMATION UTILITIES
    ============================================================ */
 
 /* ── Scroll-reveal (IntersectionObserver adds .up in script.js) ── */
@@ -244,9 +204,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-   5. NAVBAR
-   Fixed at the top; shows logo, nav links, Book Now button.
-   On screens < 900px the links are hidden.
+   NAVBAR
    ============================================================ */
 .nav {
   position: fixed;
@@ -318,7 +276,6 @@ section:not(.hero) .btn-primary:hover {
 .nav-links a:hover,
 .nav-links a.active { color: var(--blue); background: var(--blue-light); }
 
-/* Book Now button */
 .nav-cta { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
 .nav-book {
   display: inline-flex;
@@ -378,8 +335,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-   6. MOBILE DRAWER MENU
-   Slides in from the left. Activated by hamburger click.
+   MOBILE DRAWER MENU
    ============================================================ */
 .nav-drawer {
   display: none; /* JS sets display:block when .open is added */
@@ -388,7 +344,6 @@ section:not(.hero) .btn-primary:hover {
   z-index: 10001;
 }
 
-/* Semi-transparent backdrop */
 .nav-drawer-bg {
   position: absolute;
   inset: 0;
@@ -398,7 +353,6 @@ section:not(.hero) .btn-primary:hover {
   transition: opacity .38s ease;
 }
 
-/* Sliding panel */
 .nav-drawer-panel {
   position: absolute;
   left: 0; top: 0;
@@ -412,12 +366,10 @@ section:not(.hero) .btn-primary:hover {
   box-shadow: 20px 0 60px rgba(0,0,0,.15);
 }
 
-/* Open state */
-.nav-drawer.open              { display: block; }
+.nav-drawer.open { display: block; }
 .nav-drawer.open .nav-drawer-bg    { opacity: 1; }
 .nav-drawer.open .nav-drawer-panel { transform: translateX(0); }
 
-/* Drawer header */
 .nav-drawer-header {
   display: flex;
   align-items: center;
@@ -425,6 +377,7 @@ section:not(.hero) .btn-primary:hover {
   padding: 18px 20px 14px;
   border-bottom: 1px solid #f1f2f5;
 }
+
 .nav-drawer-close {
   width: 38px; height: 38px;
   border-radius: 50%;
@@ -439,6 +392,7 @@ section:not(.hero) .btn-primary:hover {
   transition: var(--transition);
   flex-shrink: 0;
 }
+
 .nav-drawer-close:hover {
   background: var(--blue);
   border-color: var(--blue);
@@ -493,7 +447,6 @@ section:not(.hero) .btn-primary:hover {
 
 .drawer-divider { height: 1px; background: #f1f2f5; margin: 6px 12px; }
 
-/* Drawer footer buttons */
 .nav-drawer-footer {
   padding: 16px 20px 24px;
   border-top: 1px solid #f1f2f5;
@@ -501,6 +454,7 @@ section:not(.hero) .btn-primary:hover {
   flex-direction: column;
   gap: 10px;
 }
+
 .drawer-book-btn {
   width: 100%; padding: 14px;
   background: var(--blue); color: #fff;
@@ -525,9 +479,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-   7. HERO SECTION
-   Full-viewport banner with background image + overlay.
-   Split into two columns: content (left) + visual (right).
+   HERO SECTION
    ============================================================ */
 .hero {
   min-height: 100vh;
@@ -536,10 +488,9 @@ section:not(.hero) .btn-primary:hover {
   align-items: center;
   position: relative;
   overflow: hidden;
-  padding-top: 68px; /* clear the fixed navbar */
+  padding-top: 68px;
 }
 
-/* Background photo (low opacity, desaturated) */
 .hero-bg {
   position: absolute;
   inset: 0;
@@ -552,7 +503,6 @@ section:not(.hero) .btn-primary:hover {
   mix-blend-mode: luminosity;
 }
 
-/* Dark gradient overlay */
 .hero::before {
   content: '';
   position: absolute;
@@ -565,7 +515,6 @@ section:not(.hero) .btn-primary:hover {
   pointer-events: none;
 }
 
-/* Radial glow (top-right) */
 .hero::after {
   content: '';
   position: absolute;
@@ -576,7 +525,6 @@ section:not(.hero) .btn-primary:hover {
   z-index: 0;
 }
 
-/* Inner two-column grid */
 .hero-inner {
   position: relative;
   z-index: 1;
@@ -591,7 +539,6 @@ section:not(.hero) .btn-primary:hover {
   padding-block: clamp(60px, 8vw, 100px);
 }
 
-/* Left: text content */
 .hero-content {
   display: flex;
   flex-direction: column;
@@ -618,13 +565,13 @@ section:not(.hero) .btn-primary:hover {
   margin-top: 18px;
 }
 
-/* CTA buttons row */
 .hero-btns {
   display: flex;
   gap: 14px;
   flex-wrap: wrap;
   margin-bottom: 48px;
 }
+
 .hero-btns .btn-primary { padding: 16px 32px; font-size: 1rem; }
 .hero-btns .btn-outline {
   display: inline-flex;
@@ -646,7 +593,6 @@ section:not(.hero) .btn-primary:hover {
   transform: translateY(-3px);
 }
 
-/* Stats strip */
 .hero-stats {
   display: flex;
   gap: 0;
@@ -662,11 +608,9 @@ section:not(.hero) .btn-primary:hover {
 .hero-stats .stat strong .sup  { color: rgba(255,255,255,.7); font-size: 70%; }
 .hero-stats .stat span         { font-size: .78rem; color: rgba(255,255,255,.5); font-weight: 500; line-height: 1.4; }
 
-/* Right: visual card stack */
 .hero-visual { position: relative; display: flex; align-items: center; justify-content: center; }
 .hero-card-stack { position: relative; width: 100%; max-width: 520px; }
 
-/* Main image card */
 .hero-main-card {
   position: relative;
   border-radius: 28px;
@@ -675,11 +619,13 @@ section:not(.hero) .btn-primary:hover {
   box-shadow: 0 40px 80px rgba(0,0,0,.35);
   border: 1px solid rgba(255,255,255,.15);
 }
+
 .hero-main-card img {
   width: 100%; height: 100%;
   object-fit: cover;
   animation: heroZoom 12s ease-in-out infinite alternate;
 }
+
 @keyframes heroZoom { from { transform: scale(1); } to { transform: scale(1.06); } }
 .hero-main-card::after {
   content: '';
@@ -691,7 +637,6 @@ section:not(.hero) .btn-primary:hover {
 .hero-car-label strong { display: block; font-size: 1.1rem; font-weight: 800; }
 .hero-car-label span   { font-size: .78rem; color: rgba(255,255,255,.7); }
 
-/* Floating info badges */
 .hero-float-card {
   position: absolute;
   background: rgba(255,255,255,.15);
@@ -707,6 +652,7 @@ section:not(.hero) .btn-primary:hover {
   white-space: nowrap;
   box-shadow: 0 16px 40px rgba(0,0,0,.2);
 }
+
 .hero-float-card .fc-icon {
   width: 38px; height: 38px;
   border-radius: 12px;
@@ -714,10 +660,10 @@ section:not(.hero) .btn-primary:hover {
   display: flex; align-items: center; justify-content: center;
   font-size: .95rem; flex-shrink: 0;
 }
+
 .hero-float-card .fc-text strong { display: block; font-size: .88rem; font-weight: 700; }
 .hero-float-card .fc-text span   { font-size: .73rem; opacity: .7; }
 
-/* Badge positions and float animations */
 .hfc-1 { top: -20px; right: -20px; animation: fcFloat1 5s ease-in-out infinite; }
 .hfc-3 {
   top: 50%; right: -32px;
@@ -726,16 +672,17 @@ section:not(.hero) .btn-primary:hover {
   flex-direction: column; align-items: flex-start;
   gap: 4px; padding: 16px 20px;
 }
+
 @keyframes fcFloat1 { 0%,100%{ transform:translateY(0) }           50%{ transform:translateY(-10px) } }
 @keyframes fcFloat3 { 0%,100%{ transform:translateY(-50%) }         50%{ transform:translateY(calc(-50% - 10px)) } }
 
-/* Thumbnail strip */
 .hero-thumb-strip { 
   display: flex; 
   gap: 10px; 
   margin-top: 16px; 
   justify-content: center; 
 }
+
 .hero-thumb {
   width: 72px; height: 50px;
   border-radius: 10px;
@@ -745,11 +692,13 @@ section:not(.hero) .btn-primary:hover {
   transition: var(--transition);
   flex-shrink: 0;
 }
+
 .hero-thumb img { 
   width: 100%; 
   height: 100%; 
   object-fit: cover; 
 }
+
 .hero-thumb:hover,
 .hero-thumb.active { 
   border-color: rgba(255,255,255,.7); 
