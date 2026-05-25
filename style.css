@@ -1993,8 +1993,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  12. SERVICE POPUP MODAL
-      Centered modal overlay with fade + scale-in animation.
+  SERVICE POPUP MODAL
    ============================================================ */
 .svc-modal-overlay {
   position: fixed; 
@@ -2036,7 +2035,6 @@ section:not(.hero) .btn-primary:hover {
   opacity: 1; 
 }
 
-/* Sticky top bar */
 .svc-modal-sticky-bar {
   position: sticky; 
   top: 0; 
@@ -2086,7 +2084,6 @@ section:not(.hero) .btn-primary:hover {
   transform: scale(1.1) rotate(90deg); 
 }
 
-/* Scrollable content area */
 .svc-modal-scroll {
   flex: 1; 
   overflow-y: auto; 
@@ -2107,7 +2104,6 @@ section:not(.hero) .btn-primary:hover {
   background: rgba(65,105,225,.6); 
 }
 
-/* Banner */
 .svc-modal-banner         { 
   height: 180px; 
   position: relative; 
@@ -2157,7 +2153,6 @@ section:not(.hero) .btn-primary:hover {
   font-weight: 500; 
 }
 
-/* Body text */
 .svc-modal-body { padding: 28px 32px 36px; }
 .svc-modal-desc  { 
   font-size: .97rem; 
@@ -2166,7 +2161,6 @@ section:not(.hero) .btn-primary:hover {
   margin-bottom: 28px; 
 }
 
-/* Features checklist */
 .svc-modal-features   { margin-bottom: 28px; }
 .svc-modal-features h4  { 
   font-size: .78rem; 
@@ -2203,7 +2197,6 @@ section:not(.hero) .btn-primary:hover {
   margin-top: 2px; 
 }
 
-/* Pricing box */
 .svc-modal-pricing {
   background: linear-gradient(135deg, var(--blue), var(--blue-dark));
   border-radius: 12px; 
@@ -2258,7 +2251,6 @@ section:not(.hero) .btn-primary:hover {
   font-size: .78rem; 
 }
 
-/* CTA buttons */
 .svc-modal-actions { 
   display: flex; 
   gap: 12px; flex-wrap: wrap; 
