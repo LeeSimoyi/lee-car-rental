@@ -1099,9 +1099,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  10. CAR DETAIL PAGE
-      Full-screen slide-over (translateX: 100% → 0).
-      Contains sticky topbar, hero gallery, and tabbed content.
+  CAR DETAIL PAGE
    ============================================================ */
 .car-detail-page {
   position: fixed; inset: 0;
@@ -1112,9 +1110,9 @@ section:not(.hero) .btn-primary:hover {
   transition: transform .52s cubic-bezier(.22,1,.36,1);
   will-change: transform;
 }
+
 .car-detail-page.open { transform: translateX(0); }
 
-/* Sticky top bar */
 .cdp-topbar {
   position: sticky;
   top: 0; 
@@ -1129,6 +1127,7 @@ section:not(.hero) .btn-primary:hover {
   justify-content: space-between; 
   gap: 16px;
 }
+
 .cdp-back-btn {
   display: inline-flex; 
   align-items: center; 
@@ -1143,12 +1142,15 @@ section:not(.hero) .btn-primary:hover {
   cursor: pointer;
   transition: var(--transition);
 }
+
 .cdp-back-btn:hover { 
   border-color: var(--blue); 
   color: var(--blue); 
-  background: var(--blue-light); }
+  background: var(--blue-light); 
+}
+
 .cdp-back-btn i  { font-size: .8rem; }
-.cdp-topbar-title     { 
+.cdp-topbar-title { 
   font-size: 1rem; 
   font-weight: 700; 
   color: var(--text); 
@@ -1156,6 +1158,7 @@ section:not(.hero) .btn-primary:hover {
   overflow: hidden; 
   text-overflow: ellipsis; 
 }
+
 .cdp-topbar-book {
   display: inline-flex; 
   align-items: center; 
@@ -1173,18 +1176,19 @@ section:not(.hero) .btn-primary:hover {
   white-space: nowrap; 
   flex-shrink: 0;
 }
+
 .cdp-topbar-book:hover { 
   background: var(--blue-dark); 
   transform: translateY(-2px); 
 }
 
-/* Hero gallery area */
 .cdp-hero { 
   position: relative; 
   height: clamp(320px, 50vw, 520px); 
   overflow: hidden; 
   background: #0d1b2a; 
 }
+
 .cdp-hero-img { 
   width: 100%; 
   height: 100%; 
@@ -1192,13 +1196,13 @@ section:not(.hero) .btn-primary:hover {
   transition: opacity .4s ease, transform .6s ease; 
   display: block; 
 }
+
 .cdp-hero-overlay { 
   position: absolute; 
   inset: 0; 
   background: linear-gradient(to top, rgba(10,18,36,.75) 0%, rgba(10,18,36,.15) 50%, transparent 100%); 
 }
 
-/* Gallery thumbnails strip */
 .cdp-thumbs {
   position: absolute; 
   bottom: 20px; 
@@ -1211,6 +1215,7 @@ section:not(.hero) .btn-primary:hover {
   border-radius: 16px; 
   border: 1px solid rgba(255,255,255,.12);
 }
+
 .cdp-thumb {
   width: 64px; 
   height: 44px;
@@ -1221,22 +1226,25 @@ section:not(.hero) .btn-primary:hover {
   transition: var(--transition); 
   flex-shrink: 0;
 }
+
 .cdp-thumb img { 
   width: 100%; 
   height: 100%; 
   object-fit: cover; 
-  display: block; }
+  display: block; 
+}
+
 .cdp-thumb:hover  { 
   border-color: rgba(255,255,255,.7); 
   transform: translateY(-3px); 
 }
+
 .cdp-thumb.active  { 
   border-color: #fff; 
   transform: translateY(-3px); 
   box-shadow: 0 4px 12px rgba(0,0,0,.4); 
 }
 
-/* Arrow nav buttons */
 .cdp-arrow-prev, .cdp-arrow-next {
   position: absolute; 
   top: 50%; 
@@ -1256,6 +1264,7 @@ section:not(.hero) .btn-primary:hover {
   transition: var(--transition); 
   z-index: 2;
 }
+
 .cdp-arrow-prev { left: 20px; }
 .cdp-arrow-next { right: 20px; }
 .cdp-arrow-prev:hover,
@@ -1264,7 +1273,6 @@ section:not(.hero) .btn-primary:hover {
   border-color: var(--blue); 
 }
 
-/* Overlay labels */
 .cdp-img-counter {
   position: absolute; 
   top: 20px; 
@@ -1278,6 +1286,7 @@ section:not(.hero) .btn-primary:hover {
   border-radius: 999px; 
   border: 1px solid rgba(255,255,255,.15);
 }
+
 .cdp-img-label {
   position: absolute; 
   bottom: 80px; 
@@ -1294,14 +1303,12 @@ section:not(.hero) .btn-primary:hover {
   border: 1px solid rgba(255,255,255,.15);
 }
 
-/* Page body */
 .cdp-body { 
   max-width: var(--container); 
   margin: 0 auto; 
   padding: 40px clamp(1rem, 4vw, 3rem) 80px; 
 }
 
-/* Breadcrumb */
 .cdp-breadcrumb {
   display: flex; 
   align-items: center; 
@@ -1311,12 +1318,14 @@ section:not(.hero) .btn-primary:hover {
   margin-bottom: 28px; 
   flex-wrap: wrap;
 }
+
 .cdp-breadcrumb a { 
   color: var(--blue); 
   font-weight: 600; 
   cursor: pointer; 
   transition: color .2s; 
 }
+
 .cdp-breadcrumb a:hover { color: var(--blue-dark); }
 .cdp-breadcrumb i  { font-size: .7rem; }
 .cdp-breadcrumb span    { 
@@ -1324,7 +1333,6 @@ section:not(.hero) .btn-primary:hover {
   font-weight: 600; 
 }
 
-/* Title row */
 .cdp-header-row {
   display: flex; 
   align-items: flex-start; 
@@ -1333,19 +1341,23 @@ section:not(.hero) .btn-primary:hover {
   margin-bottom: 36px; 
   flex-wrap: wrap;
 }
+
 .cdp-badge-row { 
   display: flex; 
   gap: 8px; 
   margin-bottom: 10px; 
   flex-wrap: wrap; 
 }
+
 .cdp-cat-badge { 
   font-size: .72rem; 
   font-weight: 700; 
   letter-spacing: 1px; 
   text-transform: uppercase; 
   padding: 4px 13px; 
-  border-radius: 999px; }
+  border-radius: 999px; 
+}
+
 .cdp-title    { 
   font-size: clamp(1.8rem, 3.5vw, 2.6rem); 
   font-weight: 800; 
@@ -1353,12 +1365,12 @@ section:not(.hero) .btn-primary:hover {
   line-height: 1.1; 
   margin-bottom: 6px;
  }
+
 .cdp-subtitle { 
   font-size: .95rem; 
   color: var(--text-3);
  }
 
-/* Price box (top-right) */
 .cdp-price-col {
   text-align: right; 
   flex-shrink: 0;
@@ -1367,6 +1379,7 @@ section:not(.hero) .btn-primary:hover {
   border-radius: var(--radius);
   padding: 20px 28px;
 }
+
 .cdp-price-col .from   { 
   font-size: .78rem; 
   color: var(--text-3); 
@@ -1375,6 +1388,7 @@ section:not(.hero) .btn-primary:hover {
   letter-spacing: 1px; 
   margin-bottom: 4px; 
 }
+
 .cdp-price-col strong  { 
   display: block; 
   font-size: 2.8rem; 
@@ -1382,10 +1396,12 @@ section:not(.hero) .btn-primary:hover {
   color: var(--blue); 
   line-height: 1; 
 }
+
 .cdp-price-col .per  {
   font-size: .88rem; 
   color: var(--text-3); 
 }
+
 .cdp-price-col .book-big {
   margin-top: 14px; 
   padding: 13px 28px;
@@ -1404,12 +1420,12 @@ section:not(.hero) .btn-primary:hover {
   width: 100%; 
   justify-content: center;
 }
+
 .cdp-price-col .book-big:hover { 
   background: var(--blue-dark); 
   transform: translateY(-2px); 
 }
 
-/* Tab navigation */
 .cdp-tabs {
   display: flex; 
   gap: 4px;
@@ -1418,7 +1434,9 @@ section:not(.hero) .btn-primary:hover {
   overflow-x: auto; 
   scrollbar-width: none;
 }
+
 .cdp-tabs::-webkit-scrollbar { display: none; }
+
 .cdp-tab {
   padding: 12px 22px;
   font-weight: 700; 
@@ -1436,33 +1454,35 @@ section:not(.hero) .btn-primary:hover {
   white-space: nowrap; 
   flex-shrink: 0;
 }
+
 .cdp-tab.active  { 
   color: var(--blue); 
   border-bottom-color: var(--blue); }
 .cdp-tab:hover:not(.active) { color: var(--text-2); }
 .cdp-tab i { font-size: .85rem; }
 
-/* Tab panel + fade-up animation */
 .cdp-tab-panel   { 
   display: none; 
   animation: fadeUp .35s ease; 
 }
+
 .cdp-tab-panel.active { display: block; }
 @keyframes fadeUp { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
 
-/* Overview tab: 2-col cards */
 .cdp-overview-grid { 
   display: grid; 
   grid-template-columns: 1fr 1fr; 
   gap: 24px; 
   margin-bottom: 28px; 
 }
+
 .cdp-card { 
   background: var(--bg-white); 
   border: 1.5px solid var(--border); 
   border-radius: var(--radius); 
   padding: 28px; 
 }
+
 .cdp-card-title { 
   font-size: .82rem; 
   font-weight: 700; 
@@ -1474,6 +1494,7 @@ section:not(.hero) .btn-primary:hover {
   gap: 8px; 
   margin-bottom: 20px; 
 }
+
 .cdp-card-title i { color: var(--blue); }
 .cdp-spec-row { 
   display: flex; 
@@ -1482,6 +1503,7 @@ section:not(.hero) .btn-primary:hover {
   padding: 12px 0; 
   border-bottom: 1px solid var(--border); 
 }
+
 .cdp-spec-row:last-child { border-bottom: none; }
 .cdp-spec-label { 
   display: flex; 
@@ -1490,22 +1512,26 @@ section:not(.hero) .btn-primary:hover {
   font-size: .88rem; 
   color: var(--text-3); 
 }
+
 .cdp-spec-label i { 
   color: var(--blue); 
   width: 16px; 
   text-align: center; 
 }
+
 .cdp-spec-val { 
   font-size: .92rem; 
   font-weight: 700; 
   color: var(--text);
  }
+
 .cdp-features-list { 
   list-style: none; 
   display: flex; 
   flex-direction: column; 
   gap: 12px; 
 }
+
 .cdp-features-list li { 
   display: flex; 
   align-items: flex-start; 
@@ -1514,6 +1540,7 @@ section:not(.hero) .btn-primary:hover {
   color: var(--text-2); 
   line-height: 1.5; 
 }
+
 .cdp-features-list li i { 
   color: var(--blue); 
   flex-shrink: 0; 
@@ -1521,12 +1548,12 @@ section:not(.hero) .btn-primary:hover {
   font-size: .85rem; 
 }
 
-/* Gallery tab: masonry-style grid */
 .cdp-photo-grid { 
   display: grid; 
   grid-template-columns: repeat(3, 1fr); 
   gap: 14px; 
 }
+
 .cdp-photo-item { 
   border-radius: var(--radius-sm); 
   overflow: hidden; 
@@ -1534,10 +1561,12 @@ section:not(.hero) .btn-primary:hover {
   cursor: zoom-in; 
   position: relative; 
 }
+
 .cdp-photo-item.large { 
   grid-column: span 2; 
   aspect-ratio: 16/9; 
 }
+
 .cdp-photo-item img { 
   width: 100%; 
   height: 100%; 
@@ -1545,6 +1574,7 @@ section:not(.hero) .btn-primary:hover {
   transition: transform .45s ease; 
   display: block;
 }
+
 .cdp-photo-item:hover img { transform: scale(1.05); }
 .cdp-photo-item::after { 
   content: ''; 
@@ -1553,6 +1583,7 @@ section:not(.hero) .btn-primary:hover {
   background: rgba(65,105,225,0); 
   transition: background .3s; 
 }
+
 .cdp-photo-item:hover::after { background: rgba(65,105,225,.1); }
 .cdp-photo-label {
   position: absolute; 
@@ -1569,13 +1600,13 @@ section:not(.hero) .btn-primary:hover {
   z-index: 1;
 }
 
-/* Pricing tab: plan cards */
 .cdp-pricing-grid { 
   display: grid; 
   grid-template-columns: repeat(3, 1fr); 
   gap: 20px; 
   margin-bottom: 28px; 
 }
+
 .cdp-pricing-card {
   border-radius: var(--radius); 
   border: 1.5px solid var(--border);
@@ -1585,6 +1616,7 @@ section:not(.hero) .btn-primary:hover {
   position: relative; 
   overflow: hidden;
 }
+
 .cdp-pricing-card::before {
   content: ''; 
   position: absolute; 
@@ -1596,21 +1628,25 @@ section:not(.hero) .btn-primary:hover {
   transform: scaleX(0); 
   transition: transform .35s ease;
 }
+
 .cdp-pricing-card:hover { 
   transform: translateY(-6px); 
   box-shadow: var(--shadow); 
   border-color: rgba(65,105,225,.3); 
 }
+
 .cdp-pricing-card:hover::before { transform: scaleX(1); }
 .cdp-pricing-card.highlight { 
   background: var(--blue); 
   border-color: var(--blue); 
   color: #fff; 
 }
+
 .cdp-pricing-card.highlight::before { 
   background: rgba(255,255,255,.4); 
   transform: scaleX(1); 
 }
+
 .cdp-pricing-card .dur   { 
   font-size: .75rem; 
   font-weight: 700; 
@@ -1619,6 +1655,7 @@ section:not(.hero) .btn-primary:hover {
   margin-bottom: 14px; 
   color: var(--text-3); 
 }
+
 .cdp-pricing-card.highlight .dur { color: rgba(255,255,255,.75); }
 .cdp-pricing-card .price { 
   font-size: 2.2rem; 
@@ -1627,6 +1664,7 @@ section:not(.hero) .btn-primary:hover {
   color: var(--text); 
   margin-bottom: 4px; 
 }
+
 .cdp-pricing-card.highlight .price { color: #fff; }
 .cdp-pricing-card .price span { 
   font-size: .88rem; 
@@ -1654,7 +1692,6 @@ section:not(.hero) .btn-primary:hover {
   border: 1px solid rgba(255,255,255,.3);
 }
 
-/* Inclusions box */
 .cdp-includes { 
   background: var(--bg-white); 
   border: 1.5px solid var(--border); 
@@ -1693,7 +1730,6 @@ section:not(.hero) .btn-primary:hover {
   flex-shrink: 0; 
 }
 
-/* Also Available strip */
 .cdp-also  { 
   margin-top: 48px; 
   padding-top: 40px; 
