@@ -1785,8 +1785,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  11. SERVICES SECTION
-      Six clickable service cards + a corporate CTA banner.
+  SERVICES SECTION
    ============================================================ */
 .services { background: var(--bg-white); }
 .services-header { 
@@ -1795,7 +1794,6 @@ section:not(.hero) .btn-primary:hover {
 }
 .services-header .s-sub { margin-inline: auto; }
 
-/* Trust strip */
 .services-strip {
   display: flex; 
   align-items: center; 
@@ -1821,7 +1819,6 @@ section:not(.hero) .btn-primary:hover {
   background: rgba(65,105,225,.2); 
 }
 
-/* Service card grid */
 .services-grid { 
   display: grid; 
   grid-template-columns: repeat(3, 1fr); 
@@ -1858,7 +1855,6 @@ section:not(.hero) .btn-primary:hover {
 }
 .service-card:hover::after { transform: scaleX(1); }
 
-/* Service icon */
 .service-icon-wrap {
   width: 64px; height: 64px;
   border-radius: 18px;
@@ -1937,7 +1933,6 @@ section:not(.hero) .btn-primary:hover {
   flex-shrink: 0; 
 }
 
-/* "Click to learn more" hover chip */
 .service-more-chip {
   position: absolute; 
   top: 16px; 
@@ -1960,7 +1955,6 @@ section:not(.hero) .btn-primary:hover {
   transform: none; 
 }
 
-/* Corporate CTA banner */
 .services-cta {
   background: linear-gradient(135deg, #0d1b2a, #0f1f4a); 
   border-radius: var(--radius); 
@@ -1970,12 +1964,14 @@ section:not(.hero) .btn-primary:hover {
   gap: 32px; 
   align-items: center;
 }
+
 .services-cta h3 { 
   font-size: clamp(1.3rem, 2.5vw, 1.7rem); 
   font-weight: 800; 
   color: #fff; 
   margin-bottom: 8px; 
 }
+
 .services-cta p  { 
   color: rgba(255,255,255,.65); 
   font-size: .95rem; 
