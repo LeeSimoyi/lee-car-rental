@@ -707,8 +707,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-   8. ABOUT SECTION
-   Two-column layout: photos + text, then dark counter strip.
+   ABOUT SECTION
    ============================================================ */
 .about { background: var(--bg-white); }
 
@@ -719,7 +718,6 @@ section:not(.hero) .btn-primary:hover {
   align-items: center;
 }
 
-/* Photo side */
 .about-visual { position: relative; padding-bottom: 28px; }
 .about-img-main {
   width: 100%; aspect-ratio: 4/3;
@@ -728,6 +726,7 @@ section:not(.hero) .btn-primary:hover {
   box-shadow: 0 32px 64px rgba(0,0,0,.14);
   display: block;
 }
+
 .about-img-accent {
   position: absolute;
   width: 42%; aspect-ratio: 4/3;
@@ -737,6 +736,7 @@ section:not(.hero) .btn-primary:hover {
   box-shadow: 0 16px 40px rgba(0,0,0,.18);
   bottom: 0; right: -16px;
 }
+
 .about-founded-badge {
   position: absolute;
   top: 20px; left: -16px;
@@ -748,6 +748,7 @@ section:not(.hero) .btn-primary:hover {
   text-align: center;
   z-index: 2;
 }
+
 .about-founded-badge strong { 
   display: block; 
   font-size: 1.9rem; 
@@ -762,16 +763,15 @@ section:not(.hero) .btn-primary:hover {
   opacity: .85; 
 }
 
-/* Text side */
 .about-content .s-sub { margin-bottom: 32px; }
 
-/* Value pillar cards */
 .about-pillars {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 14px;
   margin-bottom: 32px;
 }
+
 .about-pillar {
   background: var(--bg);
   border-radius: 16px;
@@ -782,12 +782,14 @@ section:not(.hero) .btn-primary:hover {
   flex-direction: column;
   gap: 10px;
 }
+
 .about-pillar:hover {
   border-color: rgba(65,105,225,.35);
   box-shadow: 0 8px 28px rgba(65,105,225,.10);
   transform: translateY(-4px);
   background: var(--bg-white);
 }
+
 .about-pillar-icon {
   width: 44px; height: 44px;
   border-radius: 12px;
@@ -799,18 +801,21 @@ section:not(.hero) .btn-primary:hover {
   font-size: 1.1rem; 
   flex-shrink: 0;
 }
+
 .about-pillar h4 { 
   font-size: .93rem; 
   font-weight: 700; 
   color: var(--text); 
-  margin: 0; }
+  margin: 0; 
+}
+
 .about-pillar p  { 
   font-size: .82rem; 
   color: var(--text-2); 
   line-height: 1.65; 
-  margin: 0; }
+  margin: 0; 
+}
 
-/* Team avatar strip */
 .about-team {
   display: flex;
   align-items: center;
@@ -820,6 +825,7 @@ section:not(.hero) .btn-primary:hover {
   border: 1.5px solid var(--border);
   border-radius: 16px;
 }
+
 .team-avatars { display: flex; }
 .team-avatars .av {
   width: 42px; height: 42px;
@@ -829,12 +835,14 @@ section:not(.hero) .btn-primary:hover {
   margin-left: -10px;
   box-shadow: 0 2px 8px rgba(0,0,0,.12);
 }
+
 .team-avatars .av:first-child { margin-left: 0; }
 .team-avatars .av img    { 
   width: 100%; 
   height: 100%; 
   object-fit: cover; 
 }
+
 .team-avatars .av-more   { 
   background: var(--blue); 
   display: flex; 
@@ -842,18 +850,20 @@ section:not(.hero) .btn-primary:hover {
   justify-content: center; 
   font-weight: 700; 
   font-size: .72rem; 
-  color: #fff; }
+  color: #fff; 
+}
+
 .about-team-text strong  { 
   display: block; 
   font-size: .92rem; 
   font-weight: 700; 
 }
+
 .about-team-text span    { 
   font-size: .82rem; 
   color: var(--text-3); 
 }
 
-/* Dark animated counter strip */
 .about-counters {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -863,12 +873,14 @@ section:not(.hero) .btn-primary:hover {
   border-radius: 20px;
   overflow: hidden;
 }
+
 .about-counter {
   padding: 36px 24px;
   text-align: center;
   border-right: 1px solid rgba(255,255,255,.08);
   transition: var(--transition);
 }
+
 .about-counter:last-child { border-right: none; }
 .about-counter:hover      { background: rgba(65,105,225,.12); }
 .about-counter strong     { 
@@ -877,7 +889,9 @@ section:not(.hero) .btn-primary:hover {
   font-weight: 800; 
   color: #fff; 
   line-height: 1; 
-  margin-bottom: 6px; }
+  margin-bottom: 6px; 
+}
+
 .about-counter strong span { color: #6a9eff; }
 .about-counter p          { 
   font-size: .82rem; 
@@ -886,17 +900,16 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-   9. FLEET SECTION
-   Filter buttons + a 3-column car card grid.
+   FLEET SECTION
    ============================================================ */
 .fleet { background: var(--bg); }
 .fleet-header {
    text-align: center; 
    margin-bottom: 60px; 
   }
+
 .fleet-header .s-sub { margin-inline: auto; }
 
-/* Filter pills */
 .fleet-filters { 
   display: flex; 
   gap: 12px; 
@@ -904,6 +917,7 @@ section:not(.hero) .btn-primary:hover {
   flex-wrap: wrap; 
   margin: 32px 0 48px; 
 }
+
 .filter-btn {
   padding: 10px 22px;
   border-radius: 999px;
@@ -915,6 +929,7 @@ section:not(.hero) .btn-primary:hover {
   transition: var(--transition); 
   cursor: pointer;
 }
+
 .filter-btn:hover,
 .filter-btn.active {
   background: var(--blue); 
@@ -923,12 +938,11 @@ section:not(.hero) .btn-primary:hover {
   box-shadow: 0 6px 20px rgba(65,105,225,.28);
 }
 
-/* 3-column grid */
 .cars-grid { 
   display: grid; 
-  grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  grid-template-columns: repeat(3, 1fr); gap: 28px; 
+}
 
-/* Car card */
 .car-card {
   background: var(--bg);
   border-radius: var(--radius);
@@ -937,13 +951,13 @@ section:not(.hero) .btn-primary:hover {
   transition: var(--transition);
   position: relative;
 }
+
 .car-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg);
   border-color: rgba(65,105,225,.3);
 }
 
-/* Category badge */
 .car-badge {
   position: absolute; 
   top: 16px; 
@@ -958,23 +972,25 @@ section:not(.hero) .btn-primary:hover {
   border-radius: 999px; 
   z-index: 2;
 }
+
 .car-badge.popular { background: #f59e0b; }
 .car-badge.premium { background: #8b5cf6; }
 .car-badge.new     { background: #ef4444; }
 
-/* Card image */
 .car-img-wrap { 
   width: 100%; 
   aspect-ratio: 16/9; 
   overflow: hidden; 
   position: relative; 
 }
+
 .car-img-wrap img { 
   width: 100%; 
   height: 100%; 
   object-fit: cover; 
   transition: transform .45s ease; 
 }
+
 .car-card:hover .car-img-wrap img { transform: scale(1.06); }
 .car-img-wrap::after {
   content: '';
@@ -986,16 +1002,19 @@ section:not(.hero) .btn-primary:hover {
   background: linear-gradient(to top, rgba(0,0,0,.18), transparent);
 }
 
-/* Card text area */
 .car-info     { padding: 22px 24px 24px; }
 .car-name     {
    font-size: 1.15rem; 
    font-weight: 700; 
-   margin-bottom: 4px; }
+   margin-bottom: 4px; 
+}
+
 .car-category { 
   font-size: .82rem; 
   color: var(--text-3); 
-  margin-bottom: 16px; }
+  margin-bottom: 16px; 
+}
+
 .car-specs {
   display: flex; gap: 18px;
   padding: 14px 0;
@@ -1003,6 +1022,7 @@ section:not(.hero) .btn-primary:hover {
   border-bottom: 1px solid var(--border);
   margin-bottom: 18px;
 }
+
 .spec { 
   display: flex; 
   align-items: center; 
@@ -1011,26 +1031,30 @@ section:not(.hero) .btn-primary:hover {
   color: var(--text-2); 
   font-weight: 500; 
 }
+
 .spec i { 
   color: var(--blue); 
   font-size: .9rem; 
 }
 
-/* Card footer: price + action buttons */
 .car-footer { 
   display: flex; 
   align-items: center; 
   justify-content: space-between; 
   gap: 10px; 
 }
+
 .car-price .price-strong { 
   font-size: 1.4rem; 
   font-weight: 800; 
-  color: var(--blue); }
+  color: var(--blue); 
+}
+
 .car-price span { 
   font-size: .8rem; 
   color: var(--text-3); 
 }
+
 .car-actions { display: flex; gap: 8px; }
 .car-book-btn {
   padding: 9px 16px; 
@@ -1044,10 +1068,12 @@ section:not(.hero) .btn-primary:hover {
   cursor: pointer; 
   white-space: nowrap;
 }
+
 .car-book-btn:hover { 
   background: var(--blue-dark); 
   transform: scale(1.05); 
 }
+
 .car-details-btn {
   padding: 9px 16px; 
   background: transparent; 
@@ -1063,10 +1089,12 @@ section:not(.hero) .btn-primary:hover {
   gap: 6px; 
   white-space: nowrap;
 }
+
 .car-details-btn:hover { 
   background: var(--blue-light); 
   transform: scale(1.05); 
 }
+
 .car-details-btn i { font-size: .75rem; }
 
 
