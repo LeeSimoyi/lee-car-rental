@@ -3212,8 +3212,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  18. CTA BANNER
-      Dark section just before the footer.
+   CTA BANNER
    ============================================================ */
 .cta-banner {
   background: linear-gradient(135deg, #0d1b2a, #0f1f4a);
@@ -3222,7 +3221,7 @@ section:not(.hero) .btn-primary:hover {
   position: relative; 
   overflow: hidden;
 }
-/* Radial glow */
+
 .cta-banner::before {
   content: ''; 
   position: absolute; 
@@ -3275,7 +3274,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  19. FOOTER
+   FOOTER
    ============================================================ */
 footer {
   background: #0a1120;
@@ -3283,7 +3282,6 @@ footer {
   color: rgba(255,255,255,.7);
 }
 
-/* 4-column grid */
 .footer-grid { 
   display: grid; 
   grid-template-columns: 1.5fr repeat(3, 1fr); 
@@ -3291,7 +3289,6 @@ footer {
   margin-bottom: 56px; 
 }
 
-/* Brand column */
 .footer-logo    { 
   font-size: 1.6rem; 
   font-weight: 800; 
@@ -3326,7 +3323,6 @@ footer {
   transform: translateY(-3px); 
 }
 
-/* Link columns */
 .footer-col h5     { 
   font-size: .9rem; 
   font-weight: 700; 
@@ -3358,7 +3354,6 @@ footer {
   font-size: .85rem; 
 }
 
-/* Divider + copyright */
 footer hr { 
   border: none; 
   height: 1px; 
@@ -3378,10 +3373,9 @@ footer hr {
 
 
 /* ============================================================
-  20. UTILITIES — Scroll-to-top + Toast notification
+   UTILITIES — Scroll-to-top + Toast notification
    ============================================================ */
 
-/* Scroll-to-top floating button */
 .to-top {
   position: fixed; 
   bottom: 32px; 
@@ -3414,7 +3408,6 @@ footer hr {
   transform: translateY(-4px); 
 }
 
-/* Toast notification */
 .toast {
   position: fixed; 
   bottom: 24px; 
@@ -3455,7 +3448,7 @@ footer hr {
 
 
 /* ============================================================
-  21. RESPONSIVE BREAKPOINTS
+   RESPONSIVE BREAKPOINTS
       Three tiers: ≤1024, ≤900, ≤720, ≤600, ≤390
    ============================================================ */
 
