@@ -2727,8 +2727,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  16. FAQ SECTION
-      Two-column: contact card (left) + accordion list (right).
+   FAQ SECTION
    ============================================================ */
 .faq { background: var(--bg); }
 .faq-inner { 
@@ -2738,7 +2737,6 @@ section:not(.hero) .btn-primary:hover {
   align-items: start; 
 }
 
-/* Left column */
 .faq-left .s-sub { margin-bottom: 32px; }
 .faq-contact-card { 
   background: var(--blue); 
@@ -2775,7 +2773,6 @@ section:not(.hero) .btn-primary:hover {
   box-shadow: 0 8px 20px rgba(0,0,0,.15); 
 }
 
-/* Right column: accordion */
 .faq-list { 
   display: flex; 
   flex-direction: column; 
@@ -2793,7 +2790,6 @@ section:not(.hero) .btn-primary:hover {
   box-shadow: 0 8px 24px rgba(65,105,225,.10); 
 }
 
-/* Question row */
 .faq-q { 
   display: flex; 
   align-items: center; 
@@ -2829,7 +2825,6 @@ section:not(.hero) .btn-primary:hover {
   color: #fff; 
 }
 
-/* Answer panel (collapsed by default) */
 .faq-a {
   max-height: 0; 
   overflow: hidden;
@@ -2848,8 +2843,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  17. CONTACT SECTION
-      4 info cards, Google map + hours (left), form (right).
+   CONTACT SECTION
    ============================================================ */
 .contact { background: var(--bg-white); }
 .contact-header { 
@@ -2858,7 +2852,6 @@ section:not(.hero) .btn-primary:hover {
 }
 .contact-header .s-sub { margin-inline: auto; }
 
-/* Info cards row */
 .contact-info-row { 
   display: grid; 
   grid-template-columns: repeat(4, 1fr); 
@@ -2928,7 +2921,6 @@ section:not(.hero) .btn-primary:hover {
   font-weight: 600; 
 }
 
-/* Two-column body */
 .contact-body { 
   display: grid; 
   grid-template-columns: 1fr 1.1fr; 
@@ -2936,7 +2928,6 @@ section:not(.hero) .btn-primary:hover {
   align-items: start; 
 }
 
-/* Map + hours column */
 .contact-map-wrap { 
   display: flex; 
   flex-direction: column; 
@@ -2980,7 +2971,6 @@ section:not(.hero) .btn-primary:hover {
   color: var(--text); 
 }
 
-/* Business hours */
 .contact-hours { 
   background: linear-gradient(135deg, #0d1b2a, #0f1f4a); 
   border-radius: var(--radius); 
@@ -3028,7 +3018,6 @@ section:not(.hero) .btn-primary:hover {
   font-weight: 700; 
 }
 
-/* Contact form card */
 .contact-form-wrap { 
   background: var(--bg); 
   border: 1.5px solid var(--border); 
@@ -3047,7 +3036,6 @@ section:not(.hero) .btn-primary:hover {
   color: var(--text-2); 
 }
 
-/* Form grid */
 .contact-form-grid { 
   display: grid; 
   grid-template-columns: 1fr 1fr; 
@@ -3098,7 +3086,6 @@ section:not(.hero) .btn-primary:hover {
   box-shadow: 0 0 0 3px rgba(65,105,225,.12); 
 }
 
-/* Topic chips */
 .contact-topics { 
   display: flex; 
   flex-wrap: wrap;
@@ -3123,7 +3110,6 @@ section:not(.hero) .btn-primary:hover {
   color: #fff; 
 }
 
-/* Submit button */
 .contact-submit {
   width: 100%; 
   padding: 15px; 
@@ -3147,7 +3133,6 @@ section:not(.hero) .btn-primary:hover {
   transform: translateY(-3px); 
 }
 
-/* Fine print */
 .contact-form-note { 
   display: flex; 
   align-items: center; 
@@ -3159,7 +3144,6 @@ section:not(.hero) .btn-primary:hover {
 }
 .contact-form-note i { color: var(--blue); }
 
-/* Social media strip */
 .contact-social-strip {
   margin-top: 56px; 
   background: var(--bg); 
