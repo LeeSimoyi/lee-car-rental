@@ -2296,8 +2296,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  13. BOOKING SECTION
-      Dark background, two-column: perks list + form.
+   BOOKING SECTION
    ============================================================ */
 .booking { 
   background: linear-gradient(135deg, #0d1b2a, #0f1f4a); 
@@ -2310,19 +2309,20 @@ section:not(.hero) .btn-primary:hover {
   align-items: start; 
 }
 
-/* Left column */
 .booking-label        { color: #6a9eff; }
 .booking-left .s-title { color: #fff; }
 .booking-left .s-sub  { 
   color: rgba(255,255,255,.65); 
   margin-bottom: 36px; 
 }
+
 .booking-perks { 
   list-style: none; 
   display: flex; 
   flex-direction: 
   column; gap: 16px; 
 }
+
 .booking-perks li { 
   display: flex; 
   align-items: center; 
@@ -2330,6 +2330,7 @@ section:not(.hero) .btn-primary:hover {
   color: rgba(255,255,255,.8); 
   font-size: .95rem; 
 }
+
 .booking-perks li .perk-icon {
   width: 42px; 
   height: 42px; 
@@ -2343,7 +2344,6 @@ section:not(.hero) .btn-primary:hover {
   font-size: 1rem;
 }
 
-/* Right column: form card */
 .booking-form-wrap {
   background: rgba(255,255,255,.05); 
   backdrop-filter: blur(20px);
@@ -2351,19 +2351,20 @@ section:not(.hero) .btn-primary:hover {
   border-radius: 24px;
   padding: clamp(28px, 4vw, 44px);
 }
+
 .booking-form-title { 
   font-size: 1.4rem; 
   font-weight: 800; 
   color: #fff; 
   margin-bottom: 6px; 
 }
+
 .booking-form-sub   { 
   color: rgba(255,255,255,.5); 
   font-size: .9rem; 
   margin-bottom: 28px; 
 }
 
-/* Form grid */
 .form-grid { 
   display: grid; 
   grid-template-columns: 1fr 1fr; 
@@ -2417,7 +2418,6 @@ section:not(.hero) .btn-primary:hover {
   color: #fff; 
 }
 
-/* Date row */
 .date-row { 
   display: grid; 
   grid-template-columns: 1fr auto 1fr; 
@@ -2431,7 +2431,6 @@ section:not(.hero) .btn-primary:hover {
   font-size: 1.1rem; 
 }
 
-/* Submit button */
 .booking-submit {
   width: 100%; 
   padding: 16px; 
@@ -2455,7 +2454,6 @@ section:not(.hero) .btn-primary:hover {
   transform: translateY(-3px); 
 }
 
-/* Fine print */
 .booking-note {
   margin-top: 14px; 
   text-align: center; 
@@ -2470,8 +2468,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  14. HOW IT WORKS SECTION
-      Four-step horizontal timeline with a connecting line.
+   HOW IT WORKS SECTION
    ============================================================ */
 .how { background: var(--bg); }
 .how-header { 
@@ -2485,7 +2482,7 @@ section:not(.hero) .btn-primary:hover {
   gap: 8px; 
   position: relative;
 }
-/* Horizontal connecting line */
+
 .steps-grid::before {
   content: '';
   position: absolute; 
@@ -2506,6 +2503,7 @@ section:not(.hero) .btn-primary:hover {
   z-index: 1; 
   padding: 0 12px; 
 }
+
 .step-num  {
   width: 80px; 
   height: 80px; 
@@ -2535,8 +2533,7 @@ section:not(.hero) .btn-primary:hover {
 
 
 /* ============================================================
-  15. REVIEWS SECTION
-      Summary panel + 6 review cards (one dark "featured" variant).
+   REVIEWS SECTION
    ============================================================ */
 .reviews { background: var(--bg-white); }
 .reviews-header { 
@@ -2545,7 +2542,6 @@ section:not(.hero) .btn-primary:hover {
 }
 .reviews-header .s-sub { margin-inline: auto; }
 
-/* Summary panel */
 .rating-summary {
   display: flex; 
   align-items: center; 
@@ -2577,7 +2573,6 @@ section:not(.hero) .btn-primary:hover {
   color: var(--text-3); 
 }
 
-/* Rating bar chart */
 .rating-bars { 
   flex: 1; 
   min-width: 240px; 
@@ -2615,7 +2610,6 @@ section:not(.hero) .btn-primary:hover {
   width: 24px; 
 }
 
-/* Highlight bullet list */
 .rating-highlights { 
   display: flex; 
   flex-direction: column; 
@@ -2636,7 +2630,6 @@ section:not(.hero) .btn-primary:hover {
   font-weight: 500; 
 }
 
-/* Review cards */
 .reviews-grid { 
   display: grid; 
   grid-template-columns: repeat(3, 1fr); 
@@ -2651,7 +2644,7 @@ section:not(.hero) .btn-primary:hover {
   position: relative; 
   overflow: hidden;
 }
-/* Decorative large quotation mark */
+
 .review-card::before {
   content: '\201C'; 
   position: absolute; 
@@ -2722,7 +2715,6 @@ section:not(.hero) .btn-primary:hover {
   font-weight: 600; 
 }
 
-/* Featured (dark) variant */
 .review-card.featured { 
   background: linear-gradient(135deg, #0f1f4a, #0d1b2a); 
   border-color: rgba(65,105,225,.3); 
