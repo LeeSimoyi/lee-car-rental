@@ -3521,14 +3521,20 @@ footer hr {
   .about-counters    { grid-template-columns: repeat(2, 1fr); }
 
   /* Services */
-  .services-grid     { grid-template-columns: repeat(2, 1fr); }
-  .services-cta      { grid-template-columns: 1fr; text-align: center; }
+  .services-grid  { grid-template-columns: repeat(2, 1fr); }
+  .services-cta  { 
+    grid-template-columns: 1fr; 
+    text-align: center; 
+  }
   .services-cta-btns { justify-content: center; }
 
   /* Contact */
   .contact-info-row  { grid-template-columns: repeat(2, 1fr); }
   .contact-body      { grid-template-columns: 1fr; }
-  .contact-social-strip { flex-direction: column; text-align: center; }
+  .contact-social-strip { 
+    flex-direction: column; 
+    text-align: center; 
+  }
   .contact-social-links { justify-content: center; }
 
   /* Car Detail Page */
