@@ -182,11 +182,11 @@ section:not(.hero) .btn-primary:hover {
   transform: translateY(40px);
   transition: opacity .7s ease, transform .7s cubic-bezier(0.22,1,0.36,1);
 }
-.reveal.up        { opacity: 1; transform: none; }
-.reveal-l         { transform: translateX(-50px); }
-.reveal-r         { transform: translateX(50px); }
+.reveal.up  { opacity: 1; transform: none; }
+.reveal-l  { transform: translateX(-50px); }
+.reveal-r   { transform: translateX(50px); }
 .reveal-l.up,
-.reveal-r.up      { transform: none; opacity: 1; }
+.reveal-r.up  { transform: none; opacity: 1; }
 
 /* Staggered transition delays */
 .d1 { transition-delay: .1s; }
@@ -201,7 +201,10 @@ section:not(.hero) .btn-primary:hover {
   transform: translateY(36px);
   transition: opacity .75s ease, transform .75s cubic-bezier(0.22,1,0.36,1);
 }
-.hero-fade.visible { opacity: 1; transform: none; }
+.hero-fade.visible { 
+  opacity: 1; 
+  transform: none; 
+}
 .hd1 { transition-delay: .10s; }
 .hd2 { transition-delay: .25s; }
 .hd3 { transition-delay: .42s; }
@@ -236,7 +239,6 @@ section:not(.hero) .btn-primary:hover {
   gap: 12px;
 }
 
-/* Logo */
 .nav-logo {
   display: flex;
   align-items: center;
@@ -244,6 +246,7 @@ section:not(.hero) .btn-primary:hover {
   text-decoration: none;
   flex-shrink: 0;
 }
+
 .nav-logo-mark {
   display: flex;
   align-items: center;
@@ -255,6 +258,7 @@ section:not(.hero) .btn-primary:hover {
   transition: var(--transition);
   flex-shrink: 0;
 }
+
 .nav-logo-mark:hover { transform: rotate(-4deg) scale(1.06); }
 .nav-logo-mark span  { 
   font-weight: 900; 
@@ -284,7 +288,6 @@ section:not(.hero) .btn-primary:hover {
   text-transform: uppercase; 
 }
 
-/* Nav links (desktop) */
 .nav-links {
   display: flex;
   align-items: center;
@@ -293,6 +296,7 @@ section:not(.hero) .btn-primary:hover {
   flex: 1;
   justify-content: center;
 }
+
 .nav-links a {
   font-weight: 600;
   font-size: .84rem;
@@ -304,6 +308,7 @@ section:not(.hero) .btn-primary:hover {
   white-space: nowrap;
   text-decoration: none;
 }
+
 .nav-links a:hover,
 .nav-links a.active { color: var(--blue); background: var(--blue-light); }
 
