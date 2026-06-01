@@ -16,11 +16,11 @@
   --text-3:  #9ca3af;
 
   /* Structural */
-  --border:      #e5e7eb;
-  --shadow:      0 16px 40px rgba(0,0,0,0.10);
-  --shadow-lg:   0 30px 70px rgba(0,0,0,0.14);
-  --radius:      20px;
-  --radius-sm:   12px;
+  --border:   #e5e7eb;
+  --shadow: 0 16px 40px rgba(0,0,0,0.10);
+  --shadow-lg: 0 30px 70px rgba(0,0,0,0.14);
+  --radius: 20px;
+  --radius-sm: 12px;
 
   /* Typography */
   --font:        'Poppins', sans-serif;
