@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>LCR Admin — Lee Car Rental Dashboard</title>
+  <meta name="robots" content="noindex,nofollow">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%234169E1'/><text x='32' y='44' text-anchor='middle' font-family='Arial Black' font-weight='900' font-size='28' fill='white'>LCR</text></svg>" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       LOGIN SCREEN
+  ══════════════════════════════════════════ -->
+  <div class="login-screen" id="loginScreen">
+    <!-- Full-screen car background image with overlay -->
+    <div class="login-bg-img"></div>
+    <div class="login-overlay"></div>
+
+    <div class="login-card">
+      <!-- Logo -->
+      <div class="login-logo">
+        <div class="login-logo-mark"><span>LCR</span></div>
+        <div>
+          <strong>Lee Car Rental</strong>
+          <span>Admin Portal</span>
+        </div>
+      </div>
+
+      <h2 class="login-title">Welcome Back</h2>
+      <p class="login-sub">Sign in to access the admin dashboard</p>
+
+      <!-- PIN field — stacked layout (input above, button below) -->
+      <div class="login-field">
+        <label><i class="fa-solid fa-lock"></i> Admin PIN</label>
+        <input type="password" id="loginPin" class="login-input" placeholder="Enter 4-digit PIN" maxlength="4" inputmode="numeric" autocomplete="current-password">
+        <button class="login-btn" id="loginBtn">
+          <i class="fa-solid fa-sign-in-alt"></i> Login
+        </button>
+        <div class="login-hint">Default PIN: <strong>1234</strong></div>
+        <div class="login-error" id="loginError"></div>
+      </div>
+
+      <div class="login-demo-note">
+        <i class="fa-solid fa-circle-info"></i>
+        Demo mode — all data stored in your browser
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       ADMIN SHELL
+  ══════════════════════════════════════════ -->
+  <div class="admin-shell" id="adminShell" style="display:none">
+
+    <!-- ── Sidebar ── -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="sidebar-logo">
+          <div class="sidebar-logo-mark"><span>LCR</span></div>
+          <div class="sidebar-logo-text">
+            <strong>LCR Admin</strong>
+            <span>Lee Car Rental</span>
+          </div>
+        </div>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close sidebar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <nav class="sidebar-nav" id="sidebarNav">
+        <div class="nav-section-label">MAIN</div>
+        <a class="sidebar-link active" data-page="dashboard" onclick="adminApp.navigate('dashboard')">
+          <i class="fa-solid fa-gauge-high"></i><span>Dashboard</span>
+          <div class="sidebar-link-badge" id="nav-badge-dashboard"></div>
+        </a>
+        <a class="sidebar-link" data-page="bookings" onclick="adminApp.navigate('bookings')">
+          <i class="fa-solid fa-calendar-check"></i><span>Bookings</span>
+          <div class="sidebar-link-badge" id="nav-badge-bookings"></div>
+        </a>
+        <a class="sidebar-link" data-page="fleet" onclick="adminApp.navigate('fleet')">
+          <i class="fa-solid fa-car"></i><span>Fleet Status</span>
+        </a>
+        <a class="sidebar-link" data-page="cars" onclick="adminApp.navigate('cars')">
+          <i class="fa-solid fa-car-on"></i><span>Manage Cars</span>
+        </a>
+
+        <div class="nav-section-label">REPORTS</div>
+        <a class="sidebar-link" data-page="analytics" onclick="adminApp.navigate('analytics')">
+          <i class="fa-solid fa-chart-line"></i><span>Analytics</span>
+        </a>
+        <a class="sidebar-link" data-page="log" onclick="adminApp.navigate('log')">
+          <i class="fa-solid fa-list-ul"></i><span>Activity Log</span>
+        </a>
+
+        <div class="nav-section-label">SYSTEM</div>
+        <a class="sidebar-link" data-page="settings" onclick="adminApp.navigate('settings')">
+          <i class="fa-solid fa-gear"></i><span>Settings</span>
+        </a>
+        <a class="sidebar-link" href="../index.html" target="_blank">
+          <i class="fa-solid fa-globe"></i><span>View Website</span>
+          <i class="fa-solid fa-external-link sidebar-ext"></i>
+        </a>
+      </nav>
+
+      <!-- Sidebar footer: profile picture + admin info -->
+      <div class="sidebar-footer">
+        <div class="sidebar-profile-wrap" onclick="adminApp.navigate('settings')">
+          <div class="sidebar-avatar-wrap">
+            <img id="sidebarAvatarImg" class="sidebar-avatar-img" src="" alt="Admin" style="display:none">
+            <div id="sidebarAvatarInitial" class="sidebar-admin-avatar">A</div>
+            <div class="sidebar-avatar-badge"><i class="fa-solid fa-circle"></i></div>
+          </div>
+          <div class="sidebar-admin-info">
+            <strong id="sidebarAdminName">Administrator</strong>
+            <span>Super Admin</span>
+          </div>
+        </div>
+        <button class="sidebar-logout" id="sidebarLogout" onclick="adminApp.logout()" title="Sign out">
+          <i class="fa-solid fa-sign-out-alt"></i>
+        </button>
+      </div>
+    </aside>
+
+    <!-- Sidebar overlay (mobile) -->
+    <div class="sidebar-overlay" id="sidebarOverlay" onclick="adminApp.closeSidebar()"></div>
+
+    <!-- ── Main area ── -->
+    <div class="admin-main" id="adminMain">
+
+      <!-- Top bar -->
+      <header class="admin-topbar" id="adminTopbar">
+        <div class="topbar-left">
+          <button class="topbar-hamburger" id="topbarHamburger" onclick="adminApp.openSidebar()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="topbar-page-title" id="topbarTitle">Dashboard</div>
+        </div>
+        <div class="topbar-right">
+          <div class="topbar-search-wrap">
+            <i class="fa-solid fa-search topbar-search-icon"></i>
+            <input type="text" id="topbarSearch" class="topbar-search" placeholder="Search bookings…">
+          </div>
+          <button class="topbar-notif" id="topbarNotif" onclick="adminApp.navigate('bookings')">
+            <i class="fa-solid fa-bell"></i>
+            <span class="notif-dot" id="notifDot" style="display:none"></span>
+          </button>
+          <button class="topbar-refresh" onclick="adminApp.refreshPage()" title="Refresh">
+            <i class="fa-solid fa-rotate-right"></i>
+          </button>
+          <!-- Topbar avatar with profile picture support -->
+          <div class="topbar-avatar-wrap" onclick="adminApp.navigate('settings')">
+            <img id="topbarAvatarImg" class="topbar-avatar-img" src="" alt="Admin" style="display:none">
+            <div id="topbarAvatarInitial" class="topbar-avatar">A</div>
+          </div>
+        </div>
+      </header>
+
+      <!-- Page content -->
+      <main class="admin-content" id="adminContent"></main>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       BOOKING DETAIL DRAWER
+  ══════════════════════════════════════════ -->
+  <div class="booking-drawer-overlay" id="drawerOverlay" onclick="adminApp.closeDrawer()"></div>
+  <div class="booking-drawer" id="bookingDrawer">
+    <div class="drawer-topbar">
+      <div class="drawer-title"><i class="fa-solid fa-id-card" style="color:#4169E1;margin-right:8px"></i>Booking Details</div>
+      <button class="drawer-close-btn" onclick="adminApp.closeDrawer()" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="drawer-body" id="drawerBody"></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       TOAST
+  ══════════════════════════════════════════ -->
+  <div class="admin-toast" id="adminToast">
+    <i class="fa-solid fa-circle-check admin-toast-icon" id="adminToastIcon"></i>
+    <div><strong id="adminToastTitle"></strong><div id="adminToastMsg"></div></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       CONFIRM DIALOG
+  ══════════════════════════════════════════ -->
+  <div class="admin-confirm-overlay" id="adminConfirmOverlay">
+    <div class="admin-confirm-box">
+      <div class="admin-confirm-icon" id="confirmIcon"><i class="fa-solid fa-triangle-exclamation"></i></div>
+      <h3 id="confirmTitle">Confirm Action</h3>
+      <p id="confirmMsg"></p>
+      <div class="admin-confirm-btns">
+        <button class="admin-confirm-cancel" id="confirmCancel">Cancel</button>
+        <button class="admin-confirm-ok" id="confirmOk">Confirm</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       CAR FORM MODAL (Add / Edit Car)
+  ══════════════════════════════════════════ -->
+  <div class="car-form-overlay" id="carFormOverlay">
+    <div class="car-form-modal" id="carFormModal">
+      <div class="car-form-header">
+        <div class="car-form-title" id="carFormTitle">
+          <i class="fa-solid fa-car-on"></i> Add New Vehicle
+        </div>
+        <button class="car-form-close" onclick="adminApp.closeCarForm()">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="car-form-body">
+        <input type="hidden" id="cfCarId">
+
+        <div class="car-form-grid">
+          <!-- Name & Category -->
+          <div class="car-form-field">
+            <label>Car Name *</label>
+            <input type="text" id="cfName" class="car-form-input" placeholder="e.g. Toyota Camry">
+          </div>
+          <div class="car-form-field">
+            <label>Category *</label>
+            <select id="cfCategory" class="car-form-select">
+              <option value="">— Select category —</option>
+              <option value="sedan">Sedan</option>
+              <option value="suv">SUV</option>
+              <option value="luxury">Luxury</option>
+              <option value="electric">Electric</option>
+              <option value="truck">Truck / Pickup</option>
+              <option value="minivan">Minivan</option>
+            </select>
+          </div>
+
+          <!-- Subtitle & Price -->
+          <div class="car-form-field">
+            <label>Subtitle / Model Year</label>
+            <input type="text" id="cfSubtitle" class="car-form-input" placeholder="e.g. Mid-Size Sedan · 2024 Model">
+          </div>
+          <div class="car-form-field">
+            <label>Price Per Day (USD) *</label>
+            <input type="number" id="cfPrice" class="car-form-input" placeholder="45" min="1">
+          </div>
+
+          <!-- Specs row 1 -->
+          <div class="car-form-field">
+            <label>Seats / Passengers</label>
+            <input type="text" id="cfSeats" class="car-form-input" placeholder="e.g. 5 Adults">
+          </div>
+          <div class="car-form-field">
+            <label>Transmission</label>
+            <select id="cfTransmission" class="car-form-select">
+              <option value="Automatic">Automatic</option>
+              <option value="Manual">Manual</option>
+              <option value="CVT">CVT</option>
+              <option value="Semi-Auto">Semi-Automatic</option>
+            </select>
+          </div>
+
+          <!-- Specs row 2 -->
+          <div class="car-form-field">
+            <label>Fuel Type</label>
+            <select id="cfFuel" class="car-form-select">
+              <option value="Petrol">Petrol</option>
+              <option value="Diesel">Diesel</option>
+              <option value="Electric">Electric</option>
+              <option value="Hybrid">Hybrid</option>
+              <option value="Plug-in Hybrid">Plug-in Hybrid</option>
+            </select>
+          </div>
+          <div class="car-form-field">
+            <label>Engine / Range</label>
+            <input type="text" id="cfEngine" class="car-form-input" placeholder="e.g. 2.5L 4-Cylinder">
+          </div>
+
+          <!-- Luggage & Drive -->
+          <div class="car-form-field">
+            <label>Luggage Capacity</label>
+            <input type="text" id="cfLuggage" class="car-form-input" placeholder="e.g. 3 Large Bags">
+          </div>
+          <div class="car-form-field">
+            <label>Drive Type</label>
+            <select id="cfDrive" class="car-form-select">
+              <option value="Front-Wheel Drive">Front-Wheel Drive (FWD)</option>
+              <option value="Rear-Wheel Drive">Rear-Wheel Drive (RWD)</option>
+              <option value="All-Wheel Drive">All-Wheel Drive (AWD)</option>
+              <option value="4WD">Four-Wheel Drive (4WD)</option>
+            </select>
+          </div>
+
+          <!-- Status & Badge -->
+          <div class="car-form-field">
+            <label>Badge Label</label>
+            <input type="text" id="cfBadge" class="car-form-input" placeholder="e.g. Popular, New, Premium">
+          </div>
+          <div class="car-form-field">
+            <label>Availability</label>
+            <select id="cfAvailable" class="car-form-select">
+              <option value="true">Available</option>
+              <option value="false">Unavailable</option>
+            </select>
+          </div>
+
+          <!-- Description -->
+          <div class="car-form-field car-form-full">
+            <label>Short Description</label>
+            <textarea id="cfDesc" class="car-form-textarea" rows="2" placeholder="Brief description shown in detail page…"></textarea>
+          </div>
+
+          <!-- Key Features -->
+          <div class="car-form-field car-form-full">
+            <label>Key Features <span style="color:var(--text-3);font-weight:400;text-transform:none;letter-spacing:0">(one per line, or click + to add)</span></label>
+            <div class="features-list" id="cfFeaturesList"></div>
+            <button type="button" class="add-img-btn" style="margin-top:6px" onclick="adminApp.addFeatureRow()">
+              <i class="fa-solid fa-plus"></i> Add Feature
+            </button>
+          </div>
+
+          <!-- Car Images -->
+          <div class="car-form-field car-form-full">
+            <label>Car Images <span style="color:var(--text-3);font-weight:400;text-transform:none;letter-spacing:0">(enter image URLs · first image = main photo)</span></label>
+            <div class="img-url-list" id="cfImageList"></div>
+            <button type="button" class="add-img-btn" style="margin-top:6px" onclick="adminApp.addImageRow()">
+              <i class="fa-solid fa-plus"></i> Add Image URL
+            </button>
+          </div>
+
+          <!-- Pricing tiers -->
+          <div class="car-form-field car-form-full">
+            <label>Pricing Notes</label>
+            <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px">
+              <div>
+                <div style="font-size:0.7rem;color:var(--text-3);margin-bottom:4px">Weekly note</div>
+                <input type="text" id="cfWeeklyNote" class="car-form-input" placeholder="e.g. Save $35 vs daily">
+              </div>
+              <div>
+                <div style="font-size:0.7rem;color:var(--text-3);margin-bottom:4px">Monthly price ($)</div>
+                <input type="number" id="cfMonthlyPrice" class="car-form-input" placeholder="700">
+              </div>
+              <div>
+                <div style="font-size:0.7rem;color:var(--text-3);margin-bottom:4px">Monthly note</div>
+                <input type="text" id="cfMonthlyNote" class="car-form-input" placeholder="Best long-term value">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="car-form-footer">
+        <button class="btn-ghost-sm" onclick="adminApp.closeCarForm()">Cancel</button>
+        <button class="btn-primary-sm" onclick="adminApp.saveCarForm()">
+          <i class="fa-solid fa-floppy-disk"></i> Save Vehicle
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../db.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>
