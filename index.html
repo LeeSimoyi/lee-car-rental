@@ -1,51 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ============================================================
-       META & PAGE SETTINGS
-       ============================================================ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LCR — Lee Car Rental | Premium Car Rental</title>
-  <meta name="description" content="LCR Lee Car Rental — Premium car rental service with top-tier fleet, easy booking, and exceptional service in Mutare, Zimbabwe.">
-
-  <!-- Favicon (inline SVG) -->
-  <link rel="shortcut icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%234169E1'/><text x='32' y='44' text-anchor='middle' font-family='Arial Black' font-weight='900' font-size='28' fill='white'>LCR</text></svg>"
-    type="image/svg+xml">
-
-  <!-- ============================================================
-       EXTERNAL FONTS & ICONS
-       ============================================================ -->
+  <title>LCR — Lee Car Rental | Premium Car Rental Mutare</title>
+  <meta name="description" content="LCR Lee Car Rental — Premium car rental in Mutare, Zimbabwe. Book online, instant confirmation, full insurance.">
+  <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='12' fill='%234169E1'/><text x='32' y='44' text-anchor='middle' font-family='Arial Black' font-weight='900' font-size='28' fill='white'>LCR</text></svg>" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- ============================================================
-       STYLESHEET
-       ============================================================ -->
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="booking-modal.css">
 </head>
 <body>
 
-
-  <!-- ============================================================
-       NAVBAR
-       ============================================================ -->
+  <!-- ============================================================ NAVBAR ============================================================ -->
   <nav class="nav" id="mainNav">
     <div class="wrap nav-inner">
-
-      <!-- Logo -->
       <a href="#home" class="nav-logo" aria-label="LCR Lee Car Rental home">
         <div class="nav-logo-mark"><span>LCR</span></div>
-        <div class="nav-logo-text">
-          <strong><span class="lc">LC</span>R</strong>
-          <em>Lee Car Rental</em>
-        </div>
+        <div class="nav-logo-text"><strong><span class="lc">LC</span>R</strong><em>Lee Car Rental</em></div>
       </a>
-
-      <!-- Desktop navigation links -->
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -56,46 +32,29 @@
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
-      <!-- Desktop CTA -->
       <div class="nav-cta">
-        <button class="nav-book" onclick="scrollToSection('#booking')">
-          <i class="fa-solid fa-calendar-check"></i> Book Now
+        <button class="nav-track" onclick="BookingModal.openStatusChecker()">
+          <i class="fa-solid fa-magnifying-glass"></i> Track Booking
         </button>
+        <button class="nav-book" onclick="BookingModal.open()">Book Now</button>
       </div>
-
-      <!-- Mobile hamburger button (visible below 900px) -->
-      <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false">
+      <button class="hamburger" id="hamburger" aria-label="Open navigation" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-
     </div>
   </nav>
 
-
-  <!-- ============================================================
-       MOBILE DRAWER MENU
-       ============================================================ -->
+  <!-- ============================================================ MOBILE DRAWER ============================================================ -->
   <div class="nav-drawer" id="navDrawer" role="dialog" aria-modal="true">
-
-    <!-- Dark semi-transparent backdrop -->
     <div class="nav-drawer-bg" id="drawerBg"></div>
-
-    <!-- Slide-in panel -->
     <div class="nav-drawer-panel" id="drawerPanel">
-
-      <!-- Panel header: logo + close button -->
       <div class="nav-drawer-header">
         <div class="nav-drawer-logo">
           <div class="nav-drawer-logo-mark"><span>LCR</span></div>
           <span class="nav-drawer-logo-text"><span class="lc">LC</span>R</span>
         </div>
-        <button class="nav-drawer-close" id="drawerClose" aria-label="Close menu">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+        <button class="nav-drawer-close" id="drawerClose"><i class="fa-solid fa-xmark"></i></button>
       </div>
-
-      <!-- Navigation links -->
       <nav class="nav-drawer-nav" id="drawerNav">
         <a href="#home"     class="drawer-link drawer-active"><span class="drawer-icon"><i class="fa-solid fa-house"></i></span>Home</a>
         <a href="#about"    class="drawer-link"><span class="drawer-icon"><i class="fa-solid fa-circle-info"></i></span>About Us</a>
@@ -106,45 +65,35 @@
         <a href="#reviews"  class="drawer-link"><span class="drawer-icon"><i class="fa-solid fa-star"></i></span>Reviews</a>
         <a href="#faq"      class="drawer-link"><span class="drawer-icon"><i class="fa-solid fa-circle-question"></i></span>FAQ</a>
         <a href="#contact"  class="drawer-link"><span class="drawer-icon"><i class="fa-solid fa-envelope"></i></span>Contact</a>
+        <div class="drawer-divider"></div>
+        <a onclick="BookingModal.openStatusChecker();closeDrawer()" class="drawer-link" style="cursor:pointer">
+          <span class="drawer-icon"><i class="fa-solid fa-magnifying-glass"></i></span>Track My Booking
+        </a>
       </nav>
-
-      <!-- Bottom action buttons -->
       <div class="nav-drawer-footer">
-        <button class="drawer-book-btn"    id="drawerBookBtn">   <i class="fa-solid fa-calendar-check"></i> Book Now</button>
-        <button class="drawer-contact-btn" id="drawerContactBtn"><i class="fa-solid fa-headset"></i> Call Us: +263 77 123 4567</button>
+        <button class="drawer-book-btn" id="drawerBookBtn">Book Now</button>
+        <button class="drawer-contact-btn" id="drawerContactBtn"><i class="fa-solid fa-headset"></i> Call: +263 77 123 4567</button>
       </div>
-
     </div>
   </div>
 
-
-  <!-- ============================================================
-       CAR DETAIL PAGE
-       ============================================================ -->
-  <div class="car-detail-page" id="carDetailPage" role="main" aria-label="Car detail page">
-
-    <!-- Sticky top bar: back button, car name, book button -->
+  <!-- ============================================================ CAR DETAIL PAGE ============================================================ -->
+  <div class="car-detail-page" id="carDetailPage" role="main">
     <div class="cdp-topbar">
-      <button class="cdp-back-btn"   id="cdpBackBtn"><i class="fa-solid fa-arrow-left"></i> Back to Fleet</button>
+      <button class="cdp-back-btn" id="cdpBackBtn"><i class="fa-solid fa-arrow-left"></i> Back to Fleet</button>
       <span class="cdp-topbar-title" id="cdpTopbarTitle">Vehicle Details</span>
-      <button class="cdp-topbar-book" id="cdpTopbarBookBtn"><i class="fa-solid fa-calendar-check"></i> Book Now</button>
+      <button class="cdp-topbar-book" id="cdpTopbarBookBtn">Book Now</button>
     </div>
-
-    <!-- Hero image gallery with arrow controls and thumbnails -->
     <div class="cdp-hero" id="cdpHero">
       <img class="cdp-hero-img" id="cdpHeroImg" src="" alt="Car image">
       <div class="cdp-hero-overlay"></div>
       <div class="cdp-img-counter" id="cdpImgCounter">1 / 6</div>
-      <div class="cdp-img-label"   id="cdpImgLabel">Exterior</div>
+      <div class="cdp-img-label" id="cdpImgLabel">Exterior</div>
       <button class="cdp-arrow-prev" id="cdpPrev"><i class="fa-solid fa-chevron-left"></i></button>
       <button class="cdp-arrow-next" id="cdpNext"><i class="fa-solid fa-chevron-right"></i></button>
       <div class="cdp-thumbs" id="cdpThumbs"></div>
     </div>
-
-    <!-- Page body: breadcrumb, title, price, tabs, content -->
     <div class="cdp-body">
-
-      <!-- Breadcrumb -->
       <div class="cdp-breadcrumb">
         <a onclick="closeCarDetailPage()"><i class="fa-solid fa-house"></i> Home</a>
         <i class="fa-solid fa-chevron-right"></i>
@@ -152,30 +101,24 @@
         <i class="fa-solid fa-chevron-right"></i>
         <span id="cdpBreadName">Vehicle</span>
       </div>
-
-      <!-- Title row: name + price block -->
       <div class="cdp-header-row">
         <div class="cdp-title-col">
           <div class="cdp-badge-row" id="cdpBadgeRow"></div>
-          <div class="cdp-title"    id="cdpTitle"></div>
+          <div class="cdp-title" id="cdpTitle"></div>
           <div class="cdp-subtitle" id="cdpSubtitle"></div>
         </div>
         <div class="cdp-price-col">
           <div class="from">Starting from</div>
           <strong id="cdpPrice"></strong>
           <div class="per">per day</div>
-          <button class="book-big" id="cdpBookBig"><i class="fa-solid fa-calendar-check"></i> Reserve This Car</button>
+          <button class="book-big" id="cdpBookBig">Reserve This Car</button>
         </div>
       </div>
-
-      <!-- Tab navigation: Overview | Photo Gallery | Pricing -->
       <div class="cdp-tabs">
         <button class="cdp-tab active" data-tab="overview"><i class="fa-solid fa-gauge-high"></i> Overview</button>
-        <button class="cdp-tab"        data-tab="gallery"> <i class="fa-solid fa-images"></i> Photo Gallery</button>
-        <button class="cdp-tab"        data-tab="pricing"> <i class="fa-solid fa-tags"></i> Pricing</button>
+        <button class="cdp-tab" data-tab="gallery"><i class="fa-solid fa-images"></i> Photo Gallery</button>
+        <button class="cdp-tab" data-tab="pricing"><i class="fa-solid fa-tags"></i> Pricing</button>
       </div>
-
-      <!-- TAB 1 — Overview: specs grid + features list (populated by JS) -->
       <div class="cdp-tab-panel active" id="cdp-tab-overview">
         <div class="cdp-overview-grid">
           <div class="cdp-card">
@@ -188,13 +131,9 @@
           </div>
         </div>
       </div>
-
-      <!-- TAB 2 — Photo Gallery (populated by JS) -->
       <div class="cdp-tab-panel" id="cdp-tab-gallery">
         <div class="cdp-photo-grid" id="cdpPhotoGrid"></div>
       </div>
-
-      <!-- TAB 3 — Pricing: plan cards + inclusions (populated by JS) -->
       <div class="cdp-tab-panel" id="cdp-tab-pricing">
         <div class="cdp-pricing-grid" id="cdpPricingGrid"></div>
         <div class="cdp-includes">
@@ -209,38 +148,21 @@
           </div>
         </div>
       </div>
-
-      <!-- Also Available: 3 other cars (populated by JS) -->
       <div class="cdp-also">
         <h3>Also Available in Our Fleet</h3>
         <div class="cdp-also-grid" id="cdpAlsoGrid"></div>
       </div>
-
     </div>
   </div>
 
-
-  <!-- ============================================================
-       SERVICE POPUP MODAL
-       ============================================================ -->
+  <!-- ============================================================ SERVICE MODAL ============================================================ -->
   <div class="svc-modal-overlay" id="svcModalOverlay" role="dialog" aria-modal="true">
     <div class="svc-modal" id="svcModal">
-
-      <!-- Sticky coloured top bar with title and close button -->
       <div class="svc-modal-sticky-bar">
-        <div class="svc-modal-bar-label">
-          <i class="fa-solid fa-star"></i>
-          <span id="svcModalBarLabel">Our Services</span>
-        </div>
-        <button class="svc-modal-close-btn" id="svcModalClose" aria-label="Close">
-          <i class="fa-solid fa-xmark"></i>
-        </button>
+        <div class="svc-modal-bar-label"><i class="fa-solid fa-star"></i><span id="svcModalBarLabel">Our Services</span></div>
+        <button class="svc-modal-close-btn" id="svcModalClose"><i class="fa-solid fa-xmark"></i></button>
       </div>
-
-      <!-- Scrollable body -->
       <div class="svc-modal-scroll" id="svcModalScroll">
-
-        <!-- Banner: background image + icon + title -->
         <div class="svc-modal-banner" id="svcModalBanner">
           <img class="svc-modal-banner-bg" id="svcModalBannerImg" src="" alt="">
           <div class="svc-modal-banner-overlay"></div>
@@ -252,253 +174,127 @@
             </div>
           </div>
         </div>
-
-        <!-- Text body: description, features, pricing, CTA buttons -->
         <div class="svc-modal-body">
           <p class="svc-modal-desc" id="svcModalDesc"></p>
-
           <div class="svc-modal-features">
             <h4><i class="fa-solid fa-list-check"></i> What's included</h4>
             <div class="svc-modal-feat-grid" id="svcModalFeatGrid"></div>
           </div>
-
           <div class="svc-modal-pricing" id="svcModalPricing">
             <div class="svc-modal-pricing-row">
               <div class="svc-modal-pricing-info">
-                <p  id="svcModalPriceLabel">Starting from</p>
+                <p id="svcModalPriceLabel">Starting from</p>
                 <strong id="svcModalPrice"></strong>
-                <span   id="svcModalPriceSub"></span>
+                <span id="svcModalPriceSub"></span>
               </div>
             </div>
             <div class="svc-modal-includes-row" id="svcModalIncludesRow"></div>
           </div>
-
           <div class="svc-modal-actions">
-            <button class="svc-modal-book" id="svcModalBookBtn">
-              <i class="fa-solid fa-calendar-check"></i> Book This Service
-            </button>
-            <button class="svc-modal-contact"
-              onclick="closeSvcModal(); setTimeout(() => scrollToSection('#contact'), 300)">
-              <i class="fa-solid fa-headset"></i> Contact Us
-            </button>
+            <button class="svc-modal-book" id="svcModalBookBtn"><i class="fa-solid fa-calendar-check"></i> Book This Service</button>
+            <button class="svc-modal-contact" onclick="closeSvcModal(); setTimeout(() => scrollToSection('#contact'), 300)"><i class="fa-solid fa-headset"></i> Contact Us</button>
           </div>
         </div>
-
       </div>
     </div>
   </div>
 
-
-  <!-- ============================================================
-       SECTION 1 — HERO
-       ============================================================ -->
+  <!-- ============================================================ SECTION 1 — HERO ============================================================ -->
   <section class="hero" id="home">
     <div class="hero-bg"></div>
-
     <div class="hero-inner">
-
-      <!-- Left column: headline, description, CTAs, stats -->
       <div class="hero-content">
-        <h1 class="hero-fade hd1">
-          Drive Your
-          <span class="line2">Dream Car</span>
-          <span class="accent">Today.</span>
-        </h1>
-
-        <p class="hero-desc hero-fade hd2">
-          Experience luxury, comfort, and freedom on the road across Zimbabwe.
-          Choose from our premium fleet and confirm your booking in under 2 minutes.
-        </p>
-
+        <h1 class="hero-fade hd1">Drive Your<span class="line2">Dream Car</span><span class="accent">Today.</span></h1>
+        <p class="hero-desc hero-fade hd2">Experience luxury, comfort, and freedom on the road across Zimbabwe. Choose from our premium fleet and confirm your booking in under 2 minutes.</p>
         <div class="hero-btns hero-fade hd3">
-          <a href="#fleet"   class="btn-primary"><i class="fa-solid fa-car"></i> Browse Fleet</a>
-          <a href="#booking" class="btn-outline"><i class="fa-solid fa-calendar"></i> Book Now</a>
+          <a href="#fleet" class="btn-primary"><i class="fa-solid fa-car"></i> Browse Fleet</a>
+          <button onclick="BookingModal.open()" class="btn-outline">Book Now</button>
         </div>
-
-        <!-- Animated counter stats -->
+        <!-- Track booking shortcut -->
+        <div class="hero-track-row hero-fade hd3" style="margin-top:14px">
+          <button onclick="BookingModal.openStatusChecker()" class="hero-track-btn">
+            <i class="fa-solid fa-magnifying-glass"></i> Track my existing booking
+          </button>
+        </div>
         <div class="hero-stats hero-fade hd4">
-          <div class="stat">
-            <strong><span class="count-num" data-target="200" data-suffix="+">0</span><span class="sup">+</span></strong>
-            <span>Cars<br>Available</span>
-          </div>
-          <div class="stat">
-            <strong><span class="count-num" data-target="15" data-suffix="K+">0</span><span class="sup">K+</span></strong>
-            <span>Happy<br>Clients</span>
-          </div>
-          <div class="stat">
-            <strong><span class="count-num" data-target="4.9" data-suffix="★" data-decimal="true">0</span><span class="sup">★</span></strong>
-            <span>Average<br>Rating</span>
-          </div>
+          <div class="stat"><strong><span class="count-num" data-target="200" data-suffix="+">0</span><span class="sup">+</span></strong><span>Cars<br>Available</span></div>
+          <div class="stat"><strong><span class="count-num" data-target="15" data-suffix="K+">0</span><span class="sup">K+</span></strong><span>Happy<br>Clients</span></div>
+          <div class="stat"><strong><span class="count-num" data-target="4.9" data-suffix="★" data-decimal="true">0</span><span class="sup">★</span></strong><span>Average<br>Rating</span></div>
         </div>
       </div>
-
-      <!-- Right column: hero car card with floating badges and thumbnails -->
       <div class="hero-visual">
         <div class="hero-card-stack">
-
-          <!-- Main car image (swaps when a thumbnail is clicked) -->
           <div class="hero-main-card" id="heroMainCard">
-            <img id="heroMainImg"
-              src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=85"
-              alt="BMW X5 — Premium SUV">
-            <div class="hero-car-label">
-              <strong id="heroCarName">BMW X5</strong>
-              <span   id="heroCarSub">Luxury SUV · from $140/day</span>
-            </div>
+            <img id="heroMainImg" src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=85" alt="BMW X5">
+            <div class="hero-car-label"><strong id="heroCarName">BMW X5</strong><span id="heroCarSub">Luxury SUV · from $140/day</span></div>
           </div>
-
-          <!-- Floating badge: Fully Insured -->
           <div class="hero-float-card hfc-1">
             <div class="fc-icon"><i class="fa-solid fa-shield-halved"></i></div>
-            <div class="fc-text">
-              <strong>Fully Insured</strong>
-              <span>Every vehicle covered</span>
-            </div>
+            <div class="fc-text"><strong>Fully Insured</strong><span>Every vehicle covered</span></div>
           </div>
-
-          <!-- Floating badge: Star rating -->
           <div class="hero-float-card hfc-3" style="padding:16px 20px;flex-direction:column;align-items:flex-start;gap:6px;">
             <div style="display:flex;gap:3px;color:#f59e0b;font-size:.78rem;margin-bottom:2px;">
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
             </div>
             <strong style="font-size:.88rem;color:#fff;font-weight:700;">Rated 4.9/5</strong>
             <span style="font-size:.72rem;opacity:.6;">2,847 reviews</span>
           </div>
-
-          <!-- Thumbnail strip — click to change main image -->
           <div class="hero-thumb-strip">
-            <div class="hero-thumb active"
-              data-img="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=85"
-              data-name="BMW X5" data-sub="Luxury SUV · from $140/day">
-              <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=200&q=70" alt="BMW X5">
-            </div>
-            <div class="hero-thumb"
-              data-img="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=900&q=85"
-              data-name="Mercedes C300" data-sub="Luxury Sedan · from $120/day">
-              <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=200&q=70" alt="Mercedes">
-            </div>
-            <div class="hero-thumb"
-              data-img="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=900&q=85"
-              data-name="Tesla Model 3" data-sub="Electric Sedan · from $95/day">
-              <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=200&q=70" alt="Tesla">
-            </div>
-            <div class="hero-thumb"
-              data-img="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=900&q=85"
-              data-name="Ford Explorer" data-sub="Full-Size SUV · from $75/day">
-              <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=200&q=70" alt="Explorer">
-            </div>
+            <div class="hero-thumb active" data-img="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=900&q=85" data-name="BMW X5" data-sub="Luxury SUV · from $140/day"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=200&q=70" alt="BMW X5"></div>
+            <div class="hero-thumb" data-img="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=900&q=85" data-name="Mercedes C300" data-sub="Luxury Sedan · from $120/day"><img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=200&q=70" alt="Mercedes"></div>
+            <div class="hero-thumb" data-img="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=900&q=85" data-name="Tesla Model 3" data-sub="Electric Sedan · from $95/day"><img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=200&q=70" alt="Tesla"></div>
+            <div class="hero-thumb" data-img="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=900&q=85" data-name="Ford Explorer" data-sub="Full-Size SUV · from $75/day"><img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=200&q=70" alt="Explorer"></div>
           </div>
-
         </div>
       </div>
-
     </div>
   </section>
 
-
-  <!-- ============================================================
-       SECTION 2 — ABOUT
-       ============================================================ -->
+  <!-- ============================================================ SECTION 2 — ABOUT ============================================================ -->
   <section class="section about" id="about">
     <div class="wrap">
       <div class="about-inner">
-
-        <!-- Visual side: main photo, accent photo, founded badge -->
         <div class="about-visual reveal reveal-l">
-          <img class="about-img-main"
-            src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=700&q=80"
-            alt="LCR team and fleet">
-          <img class="about-img-accent"
-            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&q=80"
-            alt="Premium vehicle detail">
-          <div class="about-founded-badge">
-            <strong>2009</strong>
-            <span>Founded</span>
-          </div>
+          <img class="about-img-main" src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=700&q=80" alt="LCR team and fleet">
+          <img class="about-img-accent" src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=400&q=80" alt="Premium vehicle">
+          <div class="about-founded-badge"><strong>2009</strong><span>Founded</span></div>
         </div>
-
-        <!-- Text side: heading, body copy, pillar cards, team strip -->
         <div class="about-content">
           <div class="s-label reveal"><i class="fa-solid fa-building"></i> About Us</div>
           <h2 class="s-title reveal d1">Zimbabwe's Most <span>Trusted</span> Car Rental</h2>
-          <p class="s-sub reveal d2">
-            Lee Car Rental (LCR) was born in Mutare with a single belief: every journey deserves a great car.
-            Since 2009, we have been connecting travellers, business professionals, and families across Zimbabwe
-            with premium, well-maintained vehicles at honest prices.
-          </p>
-
-          <!-- Value pillars -->
+          <p class="s-sub reveal d2">Lee Car Rental (LCR) was born in Mutare with a single belief: every journey deserves a great car. Since 2009, we have been connecting travellers, business professionals, and families across Zimbabwe with premium, well-maintained vehicles at honest prices.</p>
           <div class="about-pillars reveal d3">
-            <div class="about-pillar">
-              <div class="about-pillar-icon"><i class="fa-solid fa-leaf"></i></div>
-              <h4>Eco-Conscious Fleet</h4>
-              <p>We actively grow our electric and hybrid fleet to support sustainable travel.</p>
-            </div>
-            <div class="about-pillar">
-              <div class="about-pillar-icon"><i class="fa-solid fa-handshake"></i></div>
-              <h4>Community First</h4>
-              <p>Proudly local — we employ Mutare residents and partner with Zimbabwean tourism operators.</p>
-            </div>
+            <div class="about-pillar"><div class="about-pillar-icon"><i class="fa-solid fa-leaf"></i></div><h4>Eco-Conscious Fleet</h4><p>We actively grow our electric and hybrid fleet to support sustainable travel.</p></div>
+            <div class="about-pillar"><div class="about-pillar-icon"><i class="fa-solid fa-handshake"></i></div><h4>Community First</h4><p>Proudly local — we employ Mutare residents and partner with Zimbabwean tourism operators.</p></div>
           </div>
-
-          <!-- Team avatar strip -->
           <div class="about-team reveal d4">
             <div class="team-avatars">
-              <div class="av"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Team member"></div>
-              <div class="av"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Team member"></div>
-              <div class="av"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="Team member"></div>
+              <div class="av"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80" alt="Team"></div>
+              <div class="av"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=100&q=80" alt="Team"></div>
+              <div class="av"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&q=80" alt="Team"></div>
               <div class="av av-more">+40</div>
             </div>
-            <div class="about-team-text">
-              <strong>Our Dedicated Team</strong>
-              <span>43 passionate professionals serving you across Mutare</span>
-            </div>
+            <div class="about-team-text"><strong>Our Dedicated Team</strong><span>43 passionate professionals serving you across Mutare</span></div>
           </div>
         </div>
       </div>
-
-      <!-- Animated statistics counter strip -->
       <div class="about-counters reveal d2">
-        <div class="about-counter">
-          <strong><span class="count-num" data-target="15"  data-suffix="K+">0</span><span>K+</span></strong>
-          <p>Happy customers served since 2009</p>
-        </div>
-        <div class="about-counter">
-          <strong><span class="count-num" data-target="200" data-suffix="+">0</span><span>+</span></strong>
-          <p>Premium vehicles in our active fleet</p>
-        </div>
-        <div class="about-counter">
-          <strong><span class="count-num" data-target="16"  data-suffix="yrs">0</span><span>yrs</span></strong>
-          <p>Years of trusted service in Zimbabwe</p>
-        </div>
-        <div class="about-counter">
-          <strong><span class="count-num" data-target="4.9" data-suffix="★" data-decimal="true">0</span><span>★</span></strong>
-          <p>Average rating across 2,847 reviews</p>
-        </div>
+        <div class="about-counter"><strong><span class="count-num" data-target="15" data-suffix="K+">0</span><span>K+</span></strong><p>Happy customers served since 2009</p></div>
+        <div class="about-counter"><strong><span class="count-num" data-target="200" data-suffix="+">0</span><span>+</span></strong><p>Premium vehicles in our active fleet</p></div>
+        <div class="about-counter"><strong><span class="count-num" data-target="16" data-suffix="yrs">0</span><span>yrs</span></strong><p>Years of trusted service in Zimbabwe</p></div>
+        <div class="about-counter"><strong><span class="count-num" data-target="4.9" data-suffix="★" data-decimal="true">0</span><span>★</span></strong><p>Average rating across 2,847 reviews</p></div>
       </div>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       SECTION 3 — FLEET
-       Filterable grid of six car cards.
-       Each card shows an image, category, specs, price, and two
-       buttons: "Details" (opens Car Detail Page) and "Book Now"
-       (scrolls to the Booking form with the car pre-selected).
-       ============================================================ -->
+  <!-- ============================================================ SECTION 3 — FLEET ============================================================ -->
   <section class="section fleet" id="fleet">
     <div class="wrap">
-
       <div class="fleet-header">
         <div class="s-label reveal"><i class="fa-solid fa-car-side"></i> Our Fleet</div>
         <h2 class="s-title reveal d1">Choose Your <span>Perfect Ride</span></h2>
         <p class="s-sub reveal d2">From compact city cars to luxury SUVs — we have the right vehicle for every journey and every budget in Mutare.</p>
       </div>
-
-      <!-- Filter buttons — data-filter values match data-cat on each card -->
       <div class="fleet-filters reveal">
         <button class="filter-btn active" data-filter="all">All Vehicles</button>
         <button class="filter-btn" data-filter="sedan">Sedan</button>
@@ -506,16 +302,10 @@
         <button class="filter-btn" data-filter="luxury">Luxury</button>
         <button class="filter-btn" data-filter="electric">Electric</button>
       </div>
-
-      <!-- Car cards grid -->
       <div class="cars-grid" id="carsGrid">
-
-        <!-- Car 1: Toyota Camry -->
         <div class="car-card reveal d1" data-cat="sedan" data-car="camry">
           <span class="car-badge popular">Popular</span>
-          <div class="car-img-wrap">
-            <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80" alt="Toyota Camry">
-          </div>
+          <div class="car-img-wrap"><img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=600&q=80" alt="Toyota Camry"></div>
           <div class="car-info">
             <div class="car-name">Toyota Camry</div>
             <div class="car-category">Mid-Size Sedan</div>
@@ -528,18 +318,14 @@
               <div class="car-price"><span class="price-strong">$45</span><span>/day</span></div>
               <div class="car-actions">
                 <button class="car-details-btn" onclick="openCarDetailPage('camry')"><i class="fa-solid fa-eye"></i> Details</button>
-                <button class="car-book-btn"    onclick="openBooking('Toyota Camry')">Book Now</button>
+                <button class="car-book-btn" onclick="BookingModal.open('camry')">Book Now</button>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Car 2: Ford Explorer -->
         <div class="car-card reveal d2" data-cat="suv" data-car="explorer">
           <span class="car-badge" style="background:#f59e0b">SUV</span>
-          <div class="car-img-wrap">
-            <img src="imgs/Ford Explorer.png" alt="Ford Explorer">
-          </div>
+          <div class="car-img-wrap"><img src="imgs/Ford Explorer.png" alt="Ford Explorer"></div>
           <div class="car-info">
             <div class="car-name">Ford Explorer</div>
             <div class="car-category">Full-Size SUV</div>
@@ -552,18 +338,14 @@
               <div class="car-price"><span class="price-strong">$75</span><span>/day</span></div>
               <div class="car-actions">
                 <button class="car-details-btn" onclick="openCarDetailPage('explorer')"><i class="fa-solid fa-eye"></i> Details</button>
-                <button class="car-book-btn"    onclick="openBooking('Ford Explorer')">Book Now</button>
+                <button class="car-book-btn" onclick="BookingModal.open('explorer')">Book Now</button>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Car 3: Mercedes-Benz C300 -->
         <div class="car-card reveal d3" data-cat="luxury" data-car="mercedes">
           <span class="car-badge premium">Premium</span>
-          <div class="car-img-wrap">
-            <img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80" alt="Mercedes-Benz C300">
-          </div>
+          <div class="car-img-wrap"><img src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?w=600&q=80" alt="Mercedes-Benz C300"></div>
           <div class="car-info">
             <div class="car-name">Mercedes-Benz C300</div>
             <div class="car-category">Luxury Sedan</div>
@@ -576,18 +358,14 @@
               <div class="car-price"><span class="price-strong">$120</span><span>/day</span></div>
               <div class="car-actions">
                 <button class="car-details-btn" onclick="openCarDetailPage('mercedes')"><i class="fa-solid fa-eye"></i> Details</button>
-                <button class="car-book-btn"    onclick="openBooking('Mercedes-Benz C300')">Book Now</button>
+                <button class="car-book-btn" onclick="BookingModal.open('mercedes')">Book Now</button>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Car 4: Tesla Model 3 -->
         <div class="car-card reveal d1" data-cat="electric" data-car="tesla">
           <span class="car-badge new">New</span>
-          <div class="car-img-wrap">
-            <img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&q=80" alt="Tesla Model 3">
-          </div>
+          <div class="car-img-wrap"><img src="https://images.unsplash.com/photo-1560958089-b8a1929cea89?w=600&q=80" alt="Tesla Model 3"></div>
           <div class="car-info">
             <div class="car-name">Tesla Model 3</div>
             <div class="car-category">Electric Sedan</div>
@@ -600,17 +378,13 @@
               <div class="car-price"><span class="price-strong">$95</span><span>/day</span></div>
               <div class="car-actions">
                 <button class="car-details-btn" onclick="openCarDetailPage('tesla')"><i class="fa-solid fa-eye"></i> Details</button>
-                <button class="car-book-btn"    onclick="openBooking('Tesla Model 3')">Book Now</button>
+                <button class="car-book-btn" onclick="BookingModal.open('tesla')">Book Now</button>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Car 5: BMW X5 -->
         <div class="car-card reveal d2" data-cat="suv" data-car="bmw">
-          <div class="car-img-wrap">
-            <img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80" alt="BMW X5">
-          </div>
+          <div class="car-img-wrap"><img src="https://images.unsplash.com/photo-1555215695-3004980ad54e?w=600&q=80" alt="BMW X5"></div>
           <div class="car-info">
             <div class="car-name">BMW X5</div>
             <div class="car-category">Luxury SUV</div>
@@ -623,17 +397,13 @@
               <div class="car-price"><span class="price-strong">$140</span><span>/day</span></div>
               <div class="car-actions">
                 <button class="car-details-btn" onclick="openCarDetailPage('bmw')"><i class="fa-solid fa-eye"></i> Details</button>
-                <button class="car-book-btn"    onclick="openBooking('BMW X5')">Book Now</button>
+                <button class="car-book-btn" onclick="BookingModal.open('bmw')">Book Now</button>
               </div>
             </div>
           </div>
         </div>
-
-        <!-- Car 6: Honda Civic -->
         <div class="car-card reveal d3" data-cat="sedan" data-car="civic">
-          <div class="car-img-wrap">
-            <img src="imgs/Honda civic Interior.png" alt="Honda Civic">
-          </div>
+          <div class="car-img-wrap"><img src="imgs/Honda civic Interior.png" alt="Honda Civic"></div>
           <div class="car-info">
             <div class="car-name">Honda Civic</div>
             <div class="car-category">Compact Sedan</div>
@@ -646,32 +416,23 @@
               <div class="car-price"><span class="price-strong">$35</span><span>/day</span></div>
               <div class="car-actions">
                 <button class="car-details-btn" onclick="openCarDetailPage('civic')"><i class="fa-solid fa-eye"></i> Details</button>
-                <button class="car-book-btn"    onclick="openBooking('Honda Civic')">Book Now</button>
+                <button class="car-book-btn" onclick="BookingModal.open('civic')">Book Now</button>
               </div>
             </div>
           </div>
         </div>
-
-      </div><!-- /cars-grid -->
+      </div>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       SECTION 4 — SERVICES
-       Six service cards (click to open the Service Modal).
-       Ends with a "Custom Package" CTA banner.
-       ============================================================ -->
+  <!-- ============================================================ SECTION 4 — SERVICES ============================================================ -->
   <section class="section services" id="services">
     <div class="wrap">
-
       <div class="services-header">
         <div class="s-label reveal"><i class="fa-solid fa-star"></i> What We Offer</div>
         <h2 class="s-title reveal d1">Our Premium <span>Services</span></h2>
         <p class="s-sub reveal d2">Beyond just handing you keys — LCR delivers a complete, worry-free mobility experience. <strong>Click any service to learn more.</strong></p>
       </div>
-
-      <!-- Trust strip -->
       <div class="services-strip reveal d3">
         <div class="services-strip-item"><i class="fa-solid fa-circle-check"></i> No Hidden Fees</div>
         <div class="services-strip-sep"></div>
@@ -683,219 +444,25 @@
         <div class="services-strip-sep"></div>
         <div class="services-strip-item"><i class="fa-solid fa-circle-check"></i> EcoCash Accepted</div>
       </div>
-
-      <!-- Service cards grid (each opens the Service Modal via openSvcModal) -->
       <div class="services-grid">
-
-        <div class="service-card reveal d1" onclick="openSvcModal('daily')">
-          <span class="service-more-chip">Click to learn more</span>
-          <div class="service-icon-wrap si-blue"><i class="fa-solid fa-calendar-days"></i></div>
-          <h3>Daily &amp; Long-Term Rental</h3>
-          <p>Flexible rental plans from a single day to several months — with increasing discounts the longer you stay.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check-circle"></i> From $35/day with no mileage anxiety</li>
-            <li><i class="fa-solid fa-check-circle"></i> Monthly rates from $800/month</li>
-            <li><i class="fa-solid fa-check-circle"></i> Free vehicle swap on long-term plans</li>
-          </ul>
-          <span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
-
-        <div class="service-card reveal d2" onclick="openSvcModal('airport')">
-          <span class="service-more-chip">Click to learn more</span>
-          <div class="service-icon-wrap si-amber"><i class="fa-solid fa-plane-arrival"></i></div>
-          <h3>Airport Transfers</h3>
-          <p>Start your journey stress-free. Our drivers monitor your flight in real time and meet you at Mutare Airport.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check-circle"></i> Real-time flight tracking</li>
-            <li><i class="fa-solid fa-check-circle"></i> Meet-and-greet with name board</li>
-            <li><i class="fa-solid fa-check-circle"></i> Available 24/7, including holidays</li>
-          </ul>
-          <span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
-
-        <div class="service-card reveal d3" onclick="openSvcModal('corporate')">
-          <span class="service-more-chip">Click to learn more</span>
-          <div class="service-icon-wrap si-purple"><i class="fa-solid fa-briefcase"></i></div>
-          <h3>Corporate &amp; Business Rental</h3>
-          <p>Tailored solutions for companies, NGOs, and government departments with dedicated account management.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check-circle"></i> Dedicated fleet &amp; account manager</li>
-            <li><i class="fa-solid fa-check-circle"></i> Monthly consolidated invoicing</li>
-            <li><i class="fa-solid fa-check-circle"></i> Priority vehicle availability</li>
-          </ul>
-          <span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
-
-        <div class="service-card reveal d1" onclick="openSvcModal('chauffeur')">
-          <span class="service-more-chip">Click to learn more</span>
-          <div class="service-icon-wrap si-teal"><i class="fa-solid fa-user-tie"></i></div>
-          <h3>Chauffeur &amp; Driver Services</h3>
-          <p>Our courteous, licensed chauffeurs know every road in Manicaland — ideal for weddings and VIP events.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check-circle"></i> Licensed, background-checked drivers</li>
-            <li><i class="fa-solid fa-check-circle"></i> Luxury and executive vehicle options</li>
-            <li><i class="fa-solid fa-check-circle"></i> Hourly, half-day, and full-day hire</li>
-          </ul>
-          <span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
-
-        <div class="service-card reveal d2" onclick="openSvcModal('safari')">
-          <span class="service-more-chip">Click to learn more</span>
-          <div class="service-icon-wrap si-green"><i class="fa-solid fa-map-location-dot"></i></div>
-          <h3>Safari &amp; Outstation Tours</h3>
-          <p>Explore Zimbabwe's breathtaking landscapes — from Nyanga's mountains to Chimanimani's valleys.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check-circle"></i> 4x4 vehicles for off-road terrain</li>
-            <li><i class="fa-solid fa-check-circle"></i> Optional certified tour guides</li>
-            <li><i class="fa-solid fa-check-circle"></i> Unlimited kilometres on tour packages</li>
-          </ul>
-          <span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
-
-        <div class="service-card reveal d3" onclick="openSvcModal('roadside')">
-          <span class="service-more-chip">Click to learn more</span>
-          <div class="service-icon-wrap si-red"><i class="fa-solid fa-truck-medical"></i></div>
-          <h3>24/7 Roadside Assistance</h3>
-          <p>Drive with total confidence knowing help is always one call away — across all of Manicaland province.</p>
-          <ul class="service-features">
-            <li><i class="fa-solid fa-check-circle"></i> Average response time under 45 minutes</li>
-            <li><i class="fa-solid fa-check-circle"></i> Free replacement vehicle if needed</li>
-            <li><i class="fa-solid fa-check-circle"></i> Covers all of Manicaland province</li>
-          </ul>
-          <span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span>
-        </div>
-
-      </div><!-- /services-grid -->
-
-      <!-- Corporate CTA banner -->
+        <div class="service-card reveal d1" onclick="openSvcModal('daily')"><span class="service-more-chip">Click to learn more</span><div class="service-icon-wrap si-blue"><i class="fa-solid fa-calendar-days"></i></div><h3>Daily &amp; Long-Term Rental</h3><p>Flexible rental plans from a single day to several months — with increasing discounts the longer you stay.</p><ul class="service-features"><li><i class="fa-solid fa-check-circle"></i> From $35/day with no mileage anxiety</li><li><i class="fa-solid fa-check-circle"></i> Monthly rates from $800/month</li><li><i class="fa-solid fa-check-circle"></i> Free vehicle swap on long-term plans</li></ul><span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span></div>
+        <div class="service-card reveal d2" onclick="openSvcModal('airport')"><span class="service-more-chip">Click to learn more</span><div class="service-icon-wrap si-amber"><i class="fa-solid fa-plane-arrival"></i></div><h3>Airport Transfers</h3><p>Start your journey stress-free. Our drivers monitor your flight in real time and meet you at Mutare Airport.</p><ul class="service-features"><li><i class="fa-solid fa-check-circle"></i> Real-time flight tracking</li><li><i class="fa-solid fa-check-circle"></i> Meet-and-greet with name board</li><li><i class="fa-solid fa-check-circle"></i> Available 24/7, including holidays</li></ul><span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span></div>
+        <div class="service-card reveal d3" onclick="openSvcModal('corporate')"><span class="service-more-chip">Click to learn more</span><div class="service-icon-wrap si-purple"><i class="fa-solid fa-briefcase"></i></div><h3>Corporate &amp; Business Rental</h3><p>Tailored solutions for companies, NGOs, and government departments with dedicated account management.</p><ul class="service-features"><li><i class="fa-solid fa-check-circle"></i> Dedicated fleet &amp; account manager</li><li><i class="fa-solid fa-check-circle"></i> Monthly consolidated invoicing</li><li><i class="fa-solid fa-check-circle"></i> Priority vehicle availability</li></ul><span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span></div>
+        <div class="service-card reveal d1" onclick="openSvcModal('chauffeur')"><span class="service-more-chip">Click to learn more</span><div class="service-icon-wrap si-teal"><i class="fa-solid fa-user-tie"></i></div><h3>Chauffeur &amp; Driver Services</h3><p>Our courteous, licensed chauffeurs know every road in Manicaland — ideal for weddings and VIP events.</p><ul class="service-features"><li><i class="fa-solid fa-check-circle"></i> Licensed, background-checked drivers</li><li><i class="fa-solid fa-check-circle"></i> Luxury and executive vehicle options</li><li><i class="fa-solid fa-check-circle"></i> Hourly, half-day, and full-day hire</li></ul><span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span></div>
+        <div class="service-card reveal d2" onclick="openSvcModal('safari')"><span class="service-more-chip">Click to learn more</span><div class="service-icon-wrap si-green"><i class="fa-solid fa-map-location-dot"></i></div><h3>Safari &amp; Outstation Tours</h3><p>Explore Zimbabwe's breathtaking landscapes — from Nyanga's mountains to Chimanimani's valleys.</p><ul class="service-features"><li><i class="fa-solid fa-check-circle"></i> 4x4 vehicles for off-road terrain</li><li><i class="fa-solid fa-check-circle"></i> Optional certified tour guides</li><li><i class="fa-solid fa-check-circle"></i> Unlimited kilometres on tour packages</li></ul><span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span></div>
+        <div class="service-card reveal d3" onclick="openSvcModal('roadside')"><span class="service-more-chip">Click to learn more</span><div class="service-icon-wrap si-red"><i class="fa-solid fa-truck-medical"></i></div><h3>24/7 Roadside Assistance</h3><p>Drive with total confidence knowing help is always one call away — across all of Manicaland province.</p><ul class="service-features"><li><i class="fa-solid fa-check-circle"></i> Average response time under 45 minutes</li><li><i class="fa-solid fa-check-circle"></i> Free replacement vehicle if needed</li><li><i class="fa-solid fa-check-circle"></i> Covers all of Manicaland province</li></ul><span class="service-link">View full details <i class="fa-solid fa-arrow-right"></i></span></div>
+      </div>
       <div class="services-cta reveal d2">
-        <div>
-          <h3>Need a Custom Package for Your Business?</h3>
-          <p>We build bespoke mobility solutions for NGOs, mining companies, embassies, and government departments across Zimbabwe.</p>
-        </div>
+        <div><h3>Need a Custom Package for Your Business?</h3><p>We build bespoke mobility solutions for NGOs, mining companies, embassies, and government departments across Zimbabwe.</p></div>
         <div class="services-cta-btns">
-          <a href="#contact" class="btn-primary"
-            style="background:var(--blue);border-color:var(--blue);box-shadow:0 10px 28px rgba(65,105,225,.35);color:#fff;">
-            <i class="fa-solid fa-phone"></i> Contact Sales
-          </a>
-          <a href="#booking" class="btn-ghost"><i class="fa-solid fa-file-lines"></i> Get a Quote</a>
+          <a href="#contact" class="btn-primary" style="background:var(--blue);border-color:var(--blue);color:#fff;"><i class="fa-solid fa-phone"></i> Contact Sales</a>
+          <button onclick="BookingModal.open()" class="btn-ghost">Get a Quote</button>
         </div>
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       SECTION 5 — BOOKING FORM
-       Dark-themed section with a multi-field reservation form.
-       On submit, shows a toast confirmation and resets the form.
-       Vehicle select is pre-filled when arriving from a car card.
-       ============================================================ -->
-  <section class="booking" id="booking">
-    <div class="wrap">
-      <div class="booking-inner">
-
-        <!-- Left: headline, body copy, trust perks -->
-        <div class="booking-left">
-          <div class="s-label booking-label reveal"><i class="fa-solid fa-calendar-check"></i> Easy Booking</div>
-          <h2 class="s-title reveal d1" style="color:#fff">Reserve Your <span style="color:#6a9eff">Car Now</span></h2>
-          <p class="s-sub reveal d2">Fill out the form and confirm your booking instantly. No hidden fees, no surprises — serving all of Mutare, Zimbabwe.</p>
-          <ul class="booking-perks reveal d3">
-            <li><div class="perk-icon"><i class="fa-solid fa-circle-check"></i></div> Free cancellation up to 24 hours before pickup</li>
-            <li><div class="perk-icon"><i class="fa-solid fa-shield-halved"></i></div> Full insurance coverage included in every rental</li>
-            <li><div class="perk-icon"><i class="fa-solid fa-headset"></i></div> 24/7 roadside assistance &amp; customer support</li>
-            <li><div class="perk-icon"><i class="fa-solid fa-tags"></i></div> Price match guarantee — we beat any competitor</li>
-            <li><div class="perk-icon"><i class="fa-solid fa-credit-card"></i></div> Secure payment — Visa, Mastercard &amp; EcoCash</li>
-          </ul>
-        </div>
-
-        <!-- Right: the reservation form -->
-        <div class="booking-form-wrap reveal reveal-r">
-          <div class="booking-form-title">Book Your Vehicle</div>
-          <div class="booking-form-sub">Complete details below to confirm your reservation</div>
-          <form id="bookingForm">
-            <div class="form-grid">
-
-              <!-- Vehicle selector (pre-filled by openBooking()) -->
-              <div class="form-group form-full">
-                <label><i class="fa-solid fa-car"></i> Select Vehicle</label>
-                <select id="vehicleSelect">
-                  <option value="">— Choose a car —</option>
-                  <option>Toyota Camry — $45/day</option>
-                  <option>Ford Explorer — $75/day</option>
-                  <option>Mercedes-Benz C300 — $120/day</option>
-                  <option>Tesla Model 3 — $95/day</option>
-                  <option>BMW X5 — $140/day</option>
-                  <option>Honda Civic — $35/day</option>
-                </select>
-              </div>
-
-              <div class="form-group">
-                <label><i class="fa-solid fa-user"></i> Full Name</label>
-                <input type="text" placeholder="Your full name" required>
-              </div>
-              <div class="form-group">
-                <label><i class="fa-solid fa-phone"></i> Phone</label>
-                <input type="tel" placeholder="+263 77 123 4567" required>
-              </div>
-
-              <div class="form-group form-full">
-                <label><i class="fa-solid fa-envelope"></i> Email</label>
-                <input type="email" placeholder="you@email.com" required>
-              </div>
-
-              <!-- Date range picker -->
-              <div class="form-group form-full">
-                <label><i class="fa-solid fa-calendar-days"></i> Rental Period</label>
-                <div class="date-row">
-                  <div class="form-group" style="margin:0"><input type="date" id="pickupDate" required></div>
-                  <div class="date-sep"><i class="fa-solid fa-arrow-right-long"></i></div>
-                  <div class="form-group" style="margin:0"><input type="date" id="returnDate" required></div>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label><i class="fa-solid fa-location-dot"></i> Pickup Location</label>
-                <select>
-                  <option value="">Select location</option>
-                  <option>Mutare City Centre</option>
-                  <option>Mutare Airport</option>
-                  <option>Sakubva Bus Terminal</option>
-                  <option>Dangamvura</option>
-                  <option>Greenside</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label><i class="fa-solid fa-users"></i> Passengers</label>
-                <select>
-                  <option>1-2 passengers</option>
-                  <option>3-4 passengers</option>
-                  <option>5-6 passengers</option>
-                  <option>7+ passengers</option>
-                </select>
-              </div>
-
-            </div><!-- /form-grid -->
-
-            <button type="submit" class="booking-submit">
-              <i class="fa-solid fa-calendar-check"></i>
-              Confirm Booking
-              <i class="fa-solid fa-arrow-right"></i>
-            </button>
-            <p class="booking-note"><i class="fa-solid fa-lock"></i> Secure booking · No credit card required to reserve</p>
-          </form>
-        </div>
-
       </div>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       SECTION 6 — HOW IT WORKS
-       Four-step visual process guide.
-       ============================================================ -->
+  <!-- ============================================================ SECTION 5 — HOW IT WORKS ============================================================ -->
   <section class="section how" id="how">
     <div class="wrap">
       <div class="how-header">
@@ -903,37 +470,16 @@
         <h2 class="s-title reveal d1">How It <span>Works</span></h2>
         <p class="s-sub reveal d2" style="margin-inline:auto">Renting a car with LCR in Mutare takes just minutes.</p>
       </div>
-
       <div class="steps-grid">
-        <div class="step-item reveal d1">
-          <div class="step-num"><i class="fa-solid fa-car-side"></i></div>
-          <h4>Choose Your Car</h4>
-          <p>Browse our premium fleet and pick the vehicle that perfectly matches your needs and budget.</p>
-        </div>
-        <div class="step-item reveal d2">
-          <div class="step-num"><i class="fa-solid fa-calendar-days"></i></div>
-          <h4>Set Your Dates</h4>
-          <p>Select your pickup and return dates, choose a convenient Mutare location, and review pricing.</p>
-        </div>
-        <div class="step-item reveal d3">
-          <div class="step-num"><i class="fa-solid fa-credit-card"></i></div>
-          <h4>Secure Payment</h4>
-          <p>Complete your booking with our encrypted payment system. Multiple payment options accepted.</p>
-        </div>
-        <div class="step-item reveal d4">
-          <div class="step-num"><i class="fa-solid fa-key"></i></div>
-          <h4>Drive Away</h4>
-          <p>Pick up your car at the agreed time, hit the road, and enjoy your journey with full confidence.</p>
-        </div>
+        <div class="step-item reveal d1"><div class="step-num"><i class="fa-solid fa-car-side"></i></div><h4>Choose Your Car</h4><p>Browse our premium fleet and pick the vehicle that perfectly matches your needs and budget.</p></div>
+        <div class="step-item reveal d2"><div class="step-num"><i class="fa-solid fa-calendar-days"></i></div><h4>Set Your Dates</h4><p>Select your pickup and return dates, choose a convenient Mutare location, and review pricing.</p></div>
+        <div class="step-item reveal d3"><div class="step-num"><i class="fa-solid fa-clock"></i></div><h4>Await Approval</h4><p>Our team reviews your booking within 15–30 minutes and sends confirmation to your email.</p></div>
+        <div class="step-item reveal d4"><div class="step-num"><i class="fa-solid fa-key"></i></div><h4>Drive Away</h4><p>Pick up your car at the agreed time, hit the road, and enjoy your journey with full confidence.</p></div>
       </div>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       SECTION 7 — REVIEWS
-       Star-rating summary with bar chart, plus six customer cards.
-       ============================================================ -->
+  <!-- ============================================================ SECTION 6 — REVIEWS ============================================================ -->
   <section class="section reviews" id="reviews">
     <div class="wrap">
       <div class="reviews-header">
@@ -941,18 +487,8 @@
         <h2 class="s-title reveal d1">What Our <span>Clients Say</span></h2>
         <p class="s-sub reveal d2">Real experiences from real customers. Over 15,000 satisfied renters trust LCR in Mutare.</p>
       </div>
-
-      <!-- Rating summary: overall score + bar chart + highlights -->
       <div class="rating-summary reveal">
-        <div class="rating-big">
-          <strong>4.9</strong>
-          <div class="stars">
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-            <i class="fa-solid fa-star-half-stroke"></i>
-          </div>
-          <span>Based on 2,847 reviews</span>
-        </div>
+        <div class="rating-big"><strong>4.9</strong><div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div><span>Based on 2,847 reviews</span></div>
         <div class="rating-bars">
           <div class="rb-row"><span>5</span><div class="rb-bar"><div class="rb-fill" style="width:82%"></div></div><span>82%</span></div>
           <div class="rb-row"><span>4</span><div class="rb-bar"><div class="rb-fill" style="width:12%"></div></div><span>12%</span></div>
@@ -968,149 +504,296 @@
           <div class="rh-item"><i class="fa-solid fa-circle-check"></i><span>On-time delivery &amp; pickup</span></div>
         </div>
       </div>
-
-      <!-- Review cards -->
       <div class="reviews-grid">
-
-        <div class="review-card featured reveal d1">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">Absolutely the best car rental experience I've ever had in Mutare. The Mercedes was spotless and the entire process from booking to return was seamless.</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background:linear-gradient(135deg,#4169E1,#2f54c8)">TM</div>
-            <div class="review-meta"><strong>Tafadzwa Mutasa</strong><span>Business Traveler · Mutare</span></div>
-            <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
-          </div>
-        </div>
-
-        <div class="review-card reveal d2">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">Rented the Ford Explorer for a family road trip to Nyanga. Spacious, clean, and comfortable throughout. Customer support was available when we needed them.</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8)">CS</div>
-            <div class="review-meta"><strong>Chipo Sibanda</strong><span>Family Traveler · Mutare</span></div>
-            <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
-          </div>
-        </div>
-
-        <div class="review-card reveal d3">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-          <p class="review-text">The Tesla Model 3 was a dream. Instant torque, tech-loaded cabin. Great sustainable travel option across Zimbabwe.</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background:linear-gradient(135deg,#10b981,#047857)">RM</div>
-            <div class="review-meta"><strong>Ruvimbo Moyo</strong><span>Tech Enthusiast · Harare</span></div>
-            <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
-          </div>
-        </div>
-
-        <div class="review-card reveal d1">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">Booked last minute for a wedding in Mutare and LCR came through beautifully. The BMW X5 was a showstopper. Pickup was smooth, pricing was transparent.</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706)">NZ</div>
-            <div class="review-meta"><strong>Nyaradzo Zvenyika</strong><span>Event Planner · Mutare</span></div>
-            <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
-          </div>
-        </div>
-
-        <div class="review-card reveal d2">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
-          <p class="review-text">Used LCR for a month-long project in Manicaland. Consistent, reliable service every time. The cars were always on time and in perfect condition.</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)">SK</div>
-            <div class="review-meta"><strong>Simba Kurewa</strong><span>Corporate Client · Mutare</span></div>
-            <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
-          </div>
-        </div>
-
-        <div class="review-card reveal d3">
-          <div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div>
-          <p class="review-text">As a solo female traveler, safety was my top concern. LCR's verified cars and 24/7 support gave me complete peace of mind on my solo trip through Manicaland.</p>
-          <div class="review-author">
-            <div class="review-avatar" style="background:linear-gradient(135deg,#ec4899,#be185d)">FM</div>
-            <div class="review-meta"><strong>Fadzai Mhlanga</strong><span>Solo Traveler · Bulawayo</span></div>
-            <div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div>
-          </div>
-        </div>
-
-      </div><!-- /reviews-grid -->
-    </div>
-  </section>
-
-
-  <!-- ============================================================
-       SECTION 8 — FAQ
-       Accordion-style questions with a contact card on the left.
-       ============================================================ -->
-  <section class="section faq" id="faq">
-    <div class="wrap">
-      <div class="faq-inner">
-
-        <!-- Left column: heading + contact card -->
-        <div class="faq-left">
-          <div class="s-label reveal"><i class="fa-solid fa-circle-question"></i> FAQ</div>
-          <h2 class="s-title reveal d1">Frequently Asked <span>Questions</span></h2>
-          <p class="s-sub reveal d2">Everything you need to know about renting a car with LCR in Mutare.</p>
-          <div class="faq-contact-card reveal d3">
-            <h4>Still have questions?</h4>
-            <p>Our team is available 24/7 to answer any questions about our services, pricing, or availability.</p>
-            <button class="btn-contact" onclick="scrollToSection('#contact')"><i class="fa-solid fa-headset"></i> Chat with Us</button>
-          </div>
-        </div>
-
-        <!-- Right column: accordion items (JS toggles .open class) -->
-        <div class="faq-list" id="faqList">
-
-          <div class="faq-item reveal d1">
-            <div class="faq-q"><span class="faq-q-text">What documents do I need to rent a car?</span><div class="faq-icon"><i class="fa-solid fa-plus"></i></div></div>
-            <div class="faq-a"><p>You'll need a valid government-issued ID, a valid Zimbabwe driving licence (at least 1 year old), and a credit or debit card for the security deposit. International renters need an International Driving Permit (IDP).</p></div>
-          </div>
-
-          <div class="faq-item reveal d2">
-            <div class="faq-q"><span class="faq-q-text">Is insurance included in the rental price?</span><div class="faq-icon"><i class="fa-solid fa-plus"></i></div></div>
-            <div class="faq-a"><p>Yes! All LCR rentals include basic third-party insurance at no extra cost. We also offer comprehensive collision damage waivers (CDW) as optional add-ons during checkout.</p></div>
-          </div>
-
-          <div class="faq-item reveal d3">
-            <div class="faq-q"><span class="faq-q-text">Can I cancel or modify my booking?</span><div class="faq-icon"><i class="fa-solid fa-plus"></i></div></div>
-            <div class="faq-a"><p>Free cancellation is available up to 24 hours before your scheduled pickup. Modifications can be made up to 12 hours before pickup, subject to availability.</p></div>
-          </div>
-
-          <div class="faq-item reveal d1">
-            <div class="faq-q"><span class="faq-q-text">What is the minimum age to rent a car?</span><div class="faq-icon"><i class="fa-solid fa-plus"></i></div></div>
-            <div class="faq-a"><p>The minimum age to rent a standard vehicle is 21 years. For luxury vehicles (Mercedes, BMW, Tesla), the minimum age is 25 with at least 3 years of licensed driving experience.</p></div>
-          </div>
-
-          <div class="faq-item reveal d2">
-            <div class="faq-q"><span class="faq-q-text">Are there mileage limits on rentals?</span><div class="faq-icon"><i class="fa-solid fa-plus"></i></div></div>
-            <div class="faq-a"><p>Standard rentals come with 200 km/day free mileage. Unlimited mileage plans are available as an upgrade for longer trips or outstation travel.</p></div>
-          </div>
-
-          <div class="faq-item reveal d3">
-            <div class="faq-q"><span class="faq-q-text">Can I take the car outside Mutare?</span><div class="faq-icon"><i class="fa-solid fa-plus"></i></div></div>
-            <div class="faq-a"><p>Yes! Outstation travel within Zimbabwe is permitted. Travel to neighbouring countries requires special permits — contact us for details.</p></div>
-          </div>
-
-          <div class="faq-item reveal d1">
-            <div class="faq-q"><span class="faq-q-text">What happens if the car breaks down?</span><div class="faq-icon"><i class="fa-solid fa-plus"></i></div></div>
-            <div class="faq-a"><p>Our 24/7 roadside assistance team will be dispatched immediately. If the vehicle cannot be repaired quickly, we'll arrange a replacement car at no additional cost.</p></div>
-          </div>
-
-          <div class="faq-item reveal d2">
-            <div class="faq-q"><span class="faq-q-text">How does the security deposit work?</span><div class="faq-icon"><i class="fa-solid fa-plus"></i></div></div>
-            <div class="faq-a"><p>A refundable security deposit is held on your card at pickup and fully released within 3–5 business days after the vehicle is returned in its original condition.</p></div>
-          </div>
-
-        </div><!-- /faq-list -->
+        <div class="review-card featured reveal d1"><div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">Absolutely the best car rental experience I've ever had in Mutare. The Mercedes was spotless and the entire process from booking to return was seamless.</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#4169E1,#2f54c8)">TM</div><div class="review-meta"><strong>Tafadzwa Mutasa</strong><span>Business Traveler · Mutare</span></div><div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div></div></div>
+        <div class="review-card reveal d2"><div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">Rented the Ford Explorer for a family road trip to Nyanga. Spacious, clean, and comfortable throughout. Customer support was available when we needed them.</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#3b82f6,#1d4ed8)">CS</div><div class="review-meta"><strong>Chipo Sibanda</strong><span>Family Traveler · Mutare</span></div><div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div></div></div>
+        <div class="review-card reveal d3"><div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div><p class="review-text">The Tesla Model 3 was a dream. Instant torque, tech-loaded cabin. Great sustainable travel option across Zimbabwe.</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#10b981,#047857)">RM</div><div class="review-meta"><strong>Ruvimbo Moyo</strong><span>Tech Enthusiast · Harare</span></div><div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div></div></div>
+        <div class="review-card reveal d1"><div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">Booked last minute for a wedding in Mutare and LCR came through beautifully. The BMW X5 was a showstopper. Pickup was smooth, pricing was transparent.</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#f59e0b,#d97706)">NZ</div><div class="review-meta"><strong>Nyaradzo Zvenyika</strong><span>Event Planner · Mutare</span></div><div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div></div></div>
+        <div class="review-card reveal d2"><div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div><p class="review-text">Used LCR for a month-long project in Manicaland. Consistent, reliable service every time. The cars were always on time and in perfect condition.</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#8b5cf6,#6d28d9)">SK</div><div class="review-meta"><strong>Simba Kurewa</strong><span>Corporate Client · Mutare</span></div><div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div></div></div>
+        <div class="review-card reveal d3"><div class="review-stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></div><p class="review-text">As a solo female traveler, safety was my top concern. LCR's verified cars and 24/7 support gave me complete peace of mind on my solo trip through Manicaland.</p><div class="review-author"><div class="review-avatar" style="background:linear-gradient(135deg,#ec4899,#be185d)">FM</div><div class="review-meta"><strong>Fadzai Mhlanga</strong><span>Solo Traveler · Bulawayo</span></div><div class="review-verified"><i class="fa-solid fa-circle-check"></i> Verified</div></div></div>
       </div>
     </div>
   </section>
 
+  <!-- ============================================================ SECTION 7 — FAQ (Advanced) ============================================================ -->
+  <section class="section faq" id="faq">
+    <div class="wrap">
 
-  <!-- ============================================================
-       SECTION 9 — CONTACT
-       Contact info cards, Google Maps embed, business hours,
-       topic chips, and a full contact form.
-       ============================================================ -->
+      <!-- Section header -->
+      <div class="faq-header reveal">
+        <div class="s-label"><i class="fa-solid fa-circle-question"></i> Help Centre</div>
+        <h2 class="s-title">Frequently Asked <span>Questions</span></h2>
+        <p class="s-sub">Everything you need to know about renting with LCR in Mutare. Can't find an answer? Reach out to our team anytime.</p>
+      </div>
+
+      <!-- Category filter tabs -->
+      <div class="faq-tabs reveal d1" id="faqTabs">
+        <button class="faq-tab-btn active" data-cat="all"><i class="fa-solid fa-border-all"></i> All</button>
+        <button class="faq-tab-btn" data-cat="booking"><i class="fa-solid fa-calendar-check"></i> Booking</button>
+        <button class="faq-tab-btn" data-cat="documents"><i class="fa-solid fa-id-card"></i> Documents</button>
+        <button class="faq-tab-btn" data-cat="payment"><i class="fa-solid fa-credit-card"></i> Payment</button>
+        <button class="faq-tab-btn" data-cat="vehicles"><i class="fa-solid fa-car"></i> Vehicles</button>
+        <button class="faq-tab-btn" data-cat="support"><i class="fa-solid fa-headset"></i> Support</button>
+      </div>
+
+      <div class="faq-inner">
+
+        <!-- FAQ accordion list -->
+        <div class="faq-list" id="faqList">
+
+          <!-- BOOKING -->
+          <div class="faq-item reveal d1" data-cat="booking">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-calendar-check"></i></div>
+              <span class="faq-q-text">How does online booking and approval work?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>Booking with LCR is simple and fast. Submit your reservation online in under 2 minutes. You'll instantly receive a unique booking reference number.</p>
+                <div class="faq-steps">
+                  <div class="faq-step"><span>1</span><div><strong>Submit</strong><p>Fill in the booking form and confirm your details.</p></div></div>
+                  <div class="faq-step"><span>2</span><div><strong>Review</strong><p>Our team reviews your request within 15–30 minutes.</p></div></div>
+                  <div class="faq-step"><span>3</span><div><strong>Confirm</strong><p>You receive a confirmation and pickup instructions.</p></div></div>
+                  <div class="faq-step"><span>4</span><div><strong>Drive</strong><p>Collect your vehicle and hit the road!</p></div></div>
+                </div>
+                <div class="faq-tip"><i class="fa-solid fa-lightbulb"></i> Use the <strong>Track Booking</strong> button at any time to check your reservation status.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal d2" data-cat="booking">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-rotate-left"></i></div>
+              <span class="faq-q-text">Can I cancel or modify my booking?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>We offer flexible cancellation and modification options:</p>
+                <div class="faq-policy-grid">
+                  <div class="faq-policy-item green"><i class="fa-solid fa-circle-check"></i><strong>Free Cancellation</strong><span>Up to 24 hours before pickup — no charge</span></div>
+                  <div class="faq-policy-item amber"><i class="fa-solid fa-clock"></i><strong>Late Cancellation</strong><span>Within 24 hours — 20% of booking value</span></div>
+                  <div class="faq-policy-item blue"><i class="fa-solid fa-pen"></i><strong>Modifications</strong><span>Up to 12 hours before pickup, subject to availability</span></div>
+                  <div class="faq-policy-item red"><i class="fa-solid fa-ban"></i><strong>No-Show</strong><span>Full booking fee applies</span></div>
+                </div>
+                <div class="faq-tip"><i class="fa-solid fa-lightbulb"></i> Cancel or track your booking instantly using your reference number via the <strong>Track Booking</strong> portal.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal d3" data-cat="booking">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-calendar-days"></i></div>
+              <span class="faq-q-text">How far in advance should I book?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>We accept same-day bookings, but we recommend booking at least <strong>24–48 hours in advance</strong> to guarantee your preferred vehicle. During peak seasons (school holidays, public holidays, December), book <strong>2–3 weeks ahead</strong> to avoid disappointment.</p>
+                <div class="faq-tip"><i class="fa-solid fa-lightbulb"></i> Booking further in advance also unlocks better availability across our full fleet.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DOCUMENTS -->
+          <div class="faq-item reveal d1" data-cat="documents">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-id-card"></i></div>
+              <span class="faq-q-text">What documents do I need to rent a car?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <div class="faq-doc-list">
+                  <div class="faq-doc-item"><i class="fa-solid fa-id-card"></i><div><strong>National ID or Passport</strong><p>Valid government-issued photo identification.</p></div><span class="faq-required">Required</span></div>
+                  <div class="faq-doc-item"><i class="fa-solid fa-car"></i><div><strong>Driver's Licence</strong><p>Valid Zimbabwe licence, minimum 1 year old. International renters need an IDP.</p></div><span class="faq-required">Required</span></div>
+                  <div class="faq-doc-item"><i class="fa-solid fa-credit-card"></i><div><strong>Payment Card</strong><p>Visa, Mastercard, or EcoCash for deposit and payment.</p></div><span class="faq-required">Required</span></div>
+                  <div class="faq-doc-item"><i class="fa-solid fa-file-contract"></i><div><strong>Company Letter</strong><p>For corporate bookings billed to a business account.</p></div><span class="faq-optional">Optional</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal d2" data-cat="documents">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-user-check"></i></div>
+              <span class="faq-q-text">What is the minimum age to rent a car?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <div class="faq-policy-grid">
+                  <div class="faq-policy-item blue"><i class="fa-solid fa-car"></i><strong>Standard Vehicles</strong><span>Minimum age: <strong>21 years</strong> with 1+ year licence</span></div>
+                  <div class="faq-policy-item amber"><i class="fa-solid fa-star"></i><strong>Luxury Vehicles</strong><span>Minimum age: <strong>25 years</strong> with 3+ years experience (Mercedes, BMW, Tesla)</span></div>
+                </div>
+                <div class="faq-tip"><i class="fa-solid fa-lightbulb"></i> Young driver surcharges may apply for drivers aged 21–24. Contact us for details.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PAYMENT -->
+          <div class="faq-item reveal d1" data-cat="payment">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-credit-card"></i></div>
+              <span class="faq-q-text">What payment methods do you accept?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <div class="faq-payment-grid">
+                  <div class="faq-payment-item"><i class="fa-solid fa-mobile-screen-button" style="color:#10b981"></i><strong>EcoCash</strong><p>Instant mobile payments</p></div>
+                  <div class="faq-payment-item"><i class="fa-brands fa-cc-visa" style="color:#1a1f71"></i><strong>Visa</strong><p>Credit &amp; debit cards</p></div>
+                  <div class="faq-payment-item"><i class="fa-brands fa-cc-mastercard" style="color:#eb001b"></i><strong>Mastercard</strong><p>Credit &amp; debit cards</p></div>
+                  <div class="faq-payment-item"><i class="fa-solid fa-building-columns" style="color:#4169E1"></i><strong>Bank Transfer</strong><p>Corporate accounts</p></div>
+                  <div class="faq-payment-item"><i class="fa-solid fa-money-bill-wave" style="color:#22c55e"></i><strong>Cash</strong><p>USD, ZiG &amp; Rands accepted</p></div>
+                </div>
+                <div class="faq-tip"><i class="fa-solid fa-lightbulb"></i> A refundable security deposit is held at pickup and released within 3–5 business days of return.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal d2" data-cat="payment">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <span class="faq-q-text">How does the security deposit work?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>A <strong>refundable security deposit</strong> is pre-authorised on your card at vehicle pickup. No money is charged unless there is damage, excess mileage, or fuel shortfall.</p>
+                <div class="faq-policy-grid">
+                  <div class="faq-policy-item blue"><i class="fa-solid fa-car"></i><strong>Economy / Sedan</strong><span>Deposit: $150 USD</span></div>
+                  <div class="faq-policy-item amber"><i class="fa-solid fa-truck-pickup"></i><strong>SUV / 4x4</strong><span>Deposit: $250 USD</span></div>
+                  <div class="faq-policy-item green"><i class="fa-solid fa-rotate-left"></i><strong>Release Time</strong><span>3–5 business days after return</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal d3" data-cat="payment">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-shield-halved"></i></div>
+              <span class="faq-q-text">Is insurance included in the rental price?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>Yes! Every LCR rental includes <strong>basic third-party insurance</strong> at no extra cost. We also offer additional coverage:</p>
+                <div class="faq-doc-list">
+                  <div class="faq-doc-item"><i class="fa-solid fa-circle-check" style="color:#10b981"></i><div><strong>Third-Party Liability</strong><p>Included free with every rental.</p></div><span class="faq-required" style="background:#d1fae5;color:#059669">Included</span></div>
+                  <div class="faq-doc-item"><i class="fa-solid fa-car-burst" style="color:#f59e0b"></i><div><strong>Collision Damage Waiver (CDW)</strong><p>Reduces your liability in case of an accident.</p></div><span class="faq-optional">Add-on</span></div>
+                  <div class="faq-doc-item"><i class="fa-solid fa-user-shield" style="color:#8b5cf6"></i><div><strong>Personal Accident Cover</strong><p>Medical cover for driver and passengers.</p></div><span class="faq-optional">Add-on</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VEHICLES -->
+          <div class="faq-item reveal d1" data-cat="vehicles">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-road"></i></div>
+              <span class="faq-q-text">Are there mileage limits on rentals?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <div class="faq-policy-grid">
+                  <div class="faq-policy-item blue"><i class="fa-solid fa-gauge-high"></i><strong>Daily Rentals</strong><span><strong>200 km/day</strong> free mileage included</span></div>
+                  <div class="faq-policy-item green"><i class="fa-solid fa-infinity"></i><strong>Unlimited Option</strong><span>Available as an upgrade for long trips &amp; outstation travel</span></div>
+                  <div class="faq-policy-item amber"><i class="fa-solid fa-triangle-exclamation"></i><strong>Excess Mileage</strong><span>$0.20/km charged beyond the daily allowance</span></div>
+                </div>
+                <div class="faq-tip"><i class="fa-solid fa-lightbulb"></i> Our Safari &amp; Outstation packages all include unlimited kilometres — perfect for exploring Zimbabwe.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal d2" data-cat="vehicles">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-map-location-dot"></i></div>
+              <span class="faq-q-text">Can I take the car outside Mutare or Zimbabwe?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>Outstation travel within Zimbabwe is fully permitted. Cross-border travel requires advance authorisation:</p>
+                <div class="faq-doc-list">
+                  <div class="faq-doc-item"><i class="fa-solid fa-flag" style="color:#10b981"></i><div><strong>Within Zimbabwe</strong><p>Permitted on all standard rentals. Notify us if travelling to remote areas.</p></div><span class="faq-required" style="background:#d1fae5;color:#059669">Allowed</span></div>
+                  <div class="faq-doc-item"><i class="fa-solid fa-globe" style="color:#f59e0b"></i><div><strong>South Africa / Mozambique / Zambia</strong><p>Cross-border permit required. Allow 48 hours for processing.</p></div><span class="faq-optional">Permit needed</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- SUPPORT -->
+          <div class="faq-item reveal d1" data-cat="support">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-truck-medical"></i></div>
+              <span class="faq-q-text">What happens if the car breaks down?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <p>Drive with confidence — our <strong>24/7 roadside assistance</strong> covers all of Manicaland Province.</p>
+                <div class="faq-steps">
+                  <div class="faq-step"><span><i class="fa-solid fa-phone"></i></span><div><strong>Call Us</strong><p>Dial our emergency line: <strong>+263 77 123 4567</strong></p></div></div>
+                  <div class="faq-step"><span><i class="fa-solid fa-location-dot"></i></span><div><strong>Share Location</strong><p>Send us your GPS location via WhatsApp.</p></div></div>
+                  <div class="faq-step"><span><i class="fa-solid fa-truck-fast"></i></span><div><strong>We're on the Way</strong><p>Average response time: <strong>under 45 minutes</strong>.</p></div></div>
+                  <div class="faq-step"><span><i class="fa-solid fa-car"></i></span><div><strong>Replacement</strong><p>If the vehicle can't be repaired, we deliver a replacement at no cost.</p></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item reveal d2" data-cat="support">
+            <div class="faq-q">
+              <div class="faq-q-icon"><i class="fa-solid fa-headset"></i></div>
+              <span class="faq-q-text">How can I contact LCR customer support?</span>
+              <div class="faq-icon"><i class="fa-solid fa-chevron-down"></i></div>
+            </div>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                <div class="faq-contact-grid">
+                  <a href="tel:+263771234567" class="faq-contact-item"><i class="fa-solid fa-phone" style="color:#4169E1"></i><strong>Phone</strong><span>+263 77 123 4567</span></a>
+                  <a href="https://wa.me/263771234567" class="faq-contact-item"><i class="fa-brands fa-whatsapp" style="color:#25d366"></i><strong>WhatsApp</strong><span>Quick replies in minutes</span></a>
+                  <a href="mailto:info@leecarsrental.co.zw" class="faq-contact-item"><i class="fa-solid fa-envelope" style="color:#f59e0b"></i><strong>Email</strong><span>info@leecarsrental.co.zw</span></a>
+                  <div class="faq-contact-item" onclick="scrollToSection('#contact')"><i class="fa-solid fa-location-dot" style="color:#ef4444"></i><strong>In Person</strong><span>14 Herbert Chitepo St, Mutare</span></div>
+                </div>
+                <div class="faq-tip"><i class="fa-solid fa-clock"></i> Office hours: Mon–Fri 7am–7pm · Sat 8am–5pm · Emergency line 24/7</div>
+              </div>
+            </div>
+          </div>
+
+        </div><!-- /faq-list -->
+
+        <!-- Right sidebar: still have questions card -->
+        <div class="faq-sidebar">
+          <div class="faq-contact-card reveal d2">
+            <div class="faq-contact-card-icon"><i class="fa-solid fa-headset"></i></div>
+            <h4>Still have questions?</h4>
+            <p>Our friendly team is available 24/7 to help with anything from pricing to vehicle recommendations.</p>
+            <button class="btn-contact" onclick="scrollToSection('#contact')"><i class="fa-solid fa-paper-plane"></i> Send a Message</button>
+            <a href="https://wa.me/263771234567" class="faq-whatsapp-btn"><i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp</a>
+          </div>
+          <!-- Popular questions quick links -->
+          <div class="faq-popular reveal d3">
+            <div class="faq-popular-title"><i class="fa-solid fa-fire"></i> Popular Questions</div>
+            <ul class="faq-popular-list">
+              <li onclick="openFaqItem(0)"><i class="fa-solid fa-chevron-right"></i> How does booking work?</li>
+              <li onclick="openFaqItem(1)"><i class="fa-solid fa-chevron-right"></i> Cancellation policy</li>
+              <li onclick="openFaqItem(3)"><i class="fa-solid fa-chevron-right"></i> Required documents</li>
+              <li onclick="openFaqItem(5)"><i class="fa-solid fa-chevron-right"></i> Accepted payments</li>
+              <li onclick="openFaqItem(8)"><i class="fa-solid fa-chevron-right"></i> Mileage limits</li>
+              <li onclick="openFaqItem(10)"><i class="fa-solid fa-chevron-right"></i> Breakdown assistance</li>
+            </ul>
+          </div>
+        </div>
+
+      </div><!-- /faq-inner -->
+    </div>
+  </section>
+
+  <!-- ============================================================ SECTION 8 — CONTACT ============================================================ -->
   <section class="section contact" id="contact">
     <div class="wrap">
       <div class="contact-header">
@@ -1118,55 +801,17 @@
         <h2 class="s-title reveal d1">We'd Love to <span>Hear From You</span></h2>
         <p class="s-sub reveal d2">Whether you have a question about our fleet, need a custom corporate quote, or simply want to say hello — our team is ready.</p>
       </div>
-
-      <!-- Four contact info cards -->
       <div class="contact-info-row">
-        <div class="contact-info-card reveal d1">
-          <div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div>
-          <h4>Visit Our Office</h4>
-          <p>14 Herbert Chitepo Street<br>Mutare, Manicaland<br>Zimbabwe</p>
-        </div>
-        <div class="contact-info-card reveal d2">
-          <div class="contact-info-icon"><i class="fa-solid fa-phone-volume"></i></div>
-          <h4>Call Us Anytime</h4>
-          <p>
-            <a href="tel:+263201234567">+263 20 123 4567</a><br>
-            <a href="tel:+263771234567">+263 77 123 4567</a><br>
-            <span style="font-size:.8rem;color:var(--text-3)">24/7 Emergency Line</span>
-          </p>
-        </div>
-        <div class="contact-info-card reveal d3">
-          <div class="contact-info-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
-          <h4>Email Us</h4>
-          <p>
-            <a href="mailto:info@leecarsrental.co.zw">info@leecarsrental.co.zw</a><br>
-            <a href="mailto:bookings@leecarsrental.co.zw">bookings@leecarsrental.co.zw</a>
-          </p>
-        </div>
-        <div class="contact-info-card reveal d4">
-          <div class="contact-info-icon"><i class="fa-brands fa-whatsapp"></i></div>
-          <h4>WhatsApp Us</h4>
-          <p>
-            <a href="https://wa.me/263771234567">+263 77 123 4567</a><br>
-            <span style="font-size:.83rem;color:var(--text-2)">Quick replies, usually within 5 min</span>
-          </p>
-        </div>
+        <div class="contact-info-card reveal d1"><div class="contact-info-icon"><i class="fa-solid fa-location-dot"></i></div><h4>Visit Our Office</h4><p>14 Herbert Chitepo Street<br>Mutare, Manicaland<br>Zimbabwe</p></div>
+        <div class="contact-info-card reveal d2"><div class="contact-info-icon"><i class="fa-solid fa-phone-volume"></i></div><h4>Call Us Anytime</h4><p><a href="tel:+263201234567">+263 20 123 4567</a><br><a href="tel:+263771234567">+263 77 123 4567</a><br><span style="font-size:.8rem;color:var(--text-3)">24/7 Emergency Line</span></p></div>
+        <div class="contact-info-card reveal d3"><div class="contact-info-icon"><i class="fa-solid fa-envelope-open-text"></i></div><h4>Email Us</h4><p><a href="mailto:info@leecarsrental.co.zw">info@leecarsrental.co.zw</a><br><a href="mailto:bookings@leecarsrental.co.zw">bookings@leecarsrental.co.zw</a></p></div>
+        <div class="contact-info-card reveal d4"><div class="contact-info-icon"><i class="fa-brands fa-whatsapp"></i></div><h4>WhatsApp Us</h4><p><a href="https://wa.me/263771234567">+263 77 123 4567</a><br><span style="font-size:.83rem;color:var(--text-2)">Quick replies, usually within 5 min</span></p></div>
       </div>
-
-      <!-- Body: map/hours (left) + contact form (right) -->
       <div class="contact-body">
-
-        <!-- Map and business hours -->
         <div class="contact-map-wrap">
           <div class="contact-map-frame reveal reveal-l">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30365.85!2d32.644!3d-18.974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4e2c0e3b5a7%3A0x1234abcd5678ef90!2sMutare%2C%20Zimbabwe!5e0!3m2!1sen!2sus!4v1700000000000"
-              loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-              title="LCR Mutare Office Location" allowfullscreen></iframe>
-            <div class="contact-map-overlay">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>14 Herbert Chitepo St, Mutare</span>
-            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30365.85!2d32.644!3d-18.974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1931a4e2c0e3b5a7%3A0x1234abcd5678ef90!2sMutare%2C%20Zimbabwe!5e0!3m2!1sen!2sus!4v1700000000000" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="LCR Mutare Office Location" allowfullscreen></iframe>
+            <div class="contact-map-overlay"><i class="fa-solid fa-location-dot"></i><span>14 Herbert Chitepo St, Mutare</span></div>
           </div>
           <div class="contact-hours reveal d2">
             <div class="contact-hours-title"><i class="fa-solid fa-clock"></i> Business Hours</div>
@@ -1179,15 +824,8 @@
             </div>
           </div>
         </div>
-
-        <!-- Contact form with topic chips -->
         <div class="contact-form-wrap reveal reveal-r">
-          <div class="contact-form-header">
-            <h3>Send Us a Message</h3>
-            <p>We respond to all enquiries within 2 business hours.</p>
-          </div>
-
-          <!-- Topic selector chips -->
+          <div class="contact-form-header"><h3>Send Us a Message</h3><p>We respond to all enquiries within 2 business hours.</p></div>
           <div style="margin-bottom:20px">
             <p style="font-size:.82rem;font-weight:600;color:var(--text-2);letter-spacing:.4px;text-transform:uppercase;margin-bottom:10px">What's this about?</p>
             <div class="contact-topics" id="contactTopics">
@@ -1199,7 +837,6 @@
               <button type="button" class="topic-chip" data-topic="Other">Other</button>
             </div>
           </div>
-
           <form id="contactForm">
             <input type="hidden" id="contactTopic" value="General Enquiry">
             <div class="contact-form-grid">
@@ -1209,144 +846,78 @@
               <div class="contact-form-group contact-form-full"><label><i class="fa-solid fa-tag"></i> Subject</label><input type="text" placeholder="e.g. Corporate fleet enquiry for 5 vehicles" required></div>
               <div class="contact-form-group contact-form-full"><label><i class="fa-solid fa-comment-dots"></i> Your Message</label><textarea rows="5" placeholder="Tell us how we can help you…" required></textarea></div>
             </div>
-            <button type="submit" class="contact-submit">
-              <i class="fa-solid fa-paper-plane"></i> Send Message <i class="fa-solid fa-arrow-right"></i>
-            </button>
+            <button type="submit" class="contact-submit"><i class="fa-solid fa-paper-plane"></i> Send Message <i class="fa-solid fa-arrow-right"></i></button>
             <p class="contact-form-note"><i class="fa-solid fa-shield-halved"></i> Your information is private and never shared with third parties.</p>
           </form>
         </div>
-
-      </div><!-- /contact-body -->
-
-      <!-- Social media links strip -->
+      </div>
       <div class="contact-social-strip reveal d3">
-        <div class="contact-social-left">
-          <h4>Connect With Us on Social Media</h4>
-          <p>Follow LCR for fleet updates, travel tips, and exclusive deals across Zimbabwe.</p>
-        </div>
+        <div class="contact-social-left"><h4>Connect With Us on Social Media</h4><p>Follow LCR for fleet updates, travel tips, and exclusive deals across Zimbabwe.</p></div>
         <div class="contact-social-links">
-          <a href="#" class="social-pill whatsapp"> <i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
-          <a href="#" class="social-pill facebook"> <i class="fa-brands fa-facebook-f"></i> Facebook</a>
+          <a href="#" class="social-pill whatsapp"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+          <a href="#" class="social-pill facebook"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
           <a href="#" class="social-pill instagram"><i class="fa-brands fa-instagram"></i> Instagram</a>
-          <a href="#" class="social-pill linkedin">  <i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
+          <a href="#" class="social-pill linkedin"><i class="fa-brands fa-linkedin-in"></i> LinkedIn</a>
         </div>
       </div>
-
     </div>
   </section>
 
-
-  <!-- ============================================================
-       SECTION 10 — CTA BANNER
-       Final call-to-action before the footer.
-       ============================================================ -->
+  <!-- ============================================================ CTA BANNER ============================================================ -->
   <section class="cta-banner">
     <div class="wrap cta-banner-inner">
-      <div class="s-label reveal" style="margin-inline:auto;color:#6a9eff;background:rgba(65,105,225,.15);border:1px solid rgba(65,105,225,.3)">
-        <i class="fa-solid fa-bolt"></i> Ready to Go?
-      </div>
+      <div class="s-label reveal" style="margin-inline:auto;color:#6a9eff;background:rgba(65,105,225,.15);border:1px solid rgba(65,105,225,.3)"><i class="fa-solid fa-bolt"></i> Ready to Go?</div>
       <h2 class="reveal d1">Start Your Journey Today</h2>
       <p class="reveal d2">Book your perfect car in under 2 minutes in Mutare, Zimbabwe. No hidden charges. No hassle. Just drive.</p>
       <div class="cta-banner-btns reveal d3">
-        <a href="#fleet"   class="btn-primary"><i class="fa-solid fa-car"></i> Explore Fleet</a>
-        <a href="#booking" class="btn-ghost">  <i class="fa-solid fa-calendar-check"></i> Book Now</a>
+        <a href="#fleet" class="btn-primary"><i class="fa-solid fa-car"></i> Explore Fleet</a>
+        <button onclick="BookingModal.open()" class="btn-ghost">Book Now</button>
       </div>
     </div>
   </section>
 
-
-  <!-- ============================================================
-       FOOTER
-       ============================================================ -->
+  <!-- ============================================================ FOOTER ============================================================ -->
   <footer>
     <div class="wrap">
       <div class="footer-grid">
-
-        <!-- Brand column -->
         <div class="footer-brand">
           <div class="footer-logo"><span>LC</span>R</div>
           <p class="footer-tagline">Premium car rental service in Mutare, Zimbabwe — offering comfort, luxury, and freedom on the road. Your journey, your way.</p>
           <div class="footer-socials">
-            <a href="#" aria-label="Facebook"> <i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
             <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" aria-label="LinkedIn"> <i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="#" aria-label="Twitter/X"><i class="fa-brands fa-x-twitter"></i></a>
-            <a href="#" aria-label="WhatsApp"> <i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
           </div>
         </div>
-
-        <!-- Quick Links -->
-        <div class="footer-col">
-          <h5>Quick Links</h5>
-          <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#fleet">Browse Fleet</a></li>
-            <li><a href="#services">Our Services</a></li>
-            <li><a href="#booking">Book a Car</a></li>
-            <li><a href="#reviews">Reviews</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        <!-- Vehicle Types -->
-        <div class="footer-col">
-          <h5>Vehicle Types</h5>
-          <ul>
-            <li><a href="#fleet">Sedan Cars</a></li>
-            <li><a href="#fleet">SUV &amp; 4x4</a></li>
-            <li><a href="#fleet">Luxury Cars</a></li>
-            <li><a href="#fleet">Electric Vehicles</a></li>
-            <li><a href="#fleet">Economy Cars</a></li>
-          </ul>
-        </div>
-
-        <!-- Contact Info -->
-        <div class="footer-col">
-          <h5>Contact</h5>
-          <ul>
-            <li><i class="fa-solid fa-location-dot"></i> Mutare, Zimbabwe</li>
-            <li><i class="fa-solid fa-phone"></i> +263 20 123 4567</li>
-            <li><i class="fa-solid fa-envelope"></i> info@leecarsrental.co.zw</li>
-            <li><i class="fa-solid fa-headset"></i> 24/7 Support</li>
-          </ul>
-        </div>
-
-      </div><!-- /footer-grid -->
-
+        <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#fleet">Browse Fleet</a></li><li><a href="#services">Our Services</a></li><li><a href="#reviews">Reviews</a></li><li><a href="#faq">FAQ</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div class="footer-col"><h5>Vehicle Types</h5><ul><li><a href="#fleet">Sedan Cars</a></li><li><a href="#fleet">SUV &amp; 4x4</a></li><li><a href="#fleet">Luxury Cars</a></li><li><a href="#fleet">Electric Vehicles</a></li><li><a href="#fleet">Economy Cars</a></li></ul></div>
+        <div class="footer-col"><h5>Contact</h5><ul><li><i class="fa-solid fa-location-dot"></i> Mutare, Zimbabwe</li><li><i class="fa-solid fa-phone"></i> +263 20 123 4567</li><li><i class="fa-solid fa-envelope"></i> info@leecarsrental.co.zw</li><li><i class="fa-solid fa-headset"></i> 24/7 Support</li></ul></div>
+      </div>
       <hr>
       <div class="footer-bottom">
         <span>© 2026 LCR Lee Car Rental, Mutare, Zimbabwe. All Rights Reserved.</span>
         <div style="display:flex;gap:20px"><a href="#">Privacy Policy</a><a href="#">Terms of Service</a></div>
       </div>
+      <!-- Admin portal link -->
+      <div style="text-align:center;margin-top:16px">
+        <a href="admin/index.html" style="font-size:0.75rem;color:rgba(255,255,255,0.2);transition:color 0.2s" onmouseover="this.style.color='rgba(255,255,255,0.5)'" onmouseout="this.style.color='rgba(255,255,255,0.2)'">
+          <i class="fa-solid fa-lock"></i> Staff Portal
+        </a>
+      </div>
     </div>
   </footer>
 
-
-  <!-- ============================================================
-       UTILITIES
-       ============================================================ -->
-
-  <!-- Scroll-to-top floating button (appears after scrolling 400px) -->
-  <button class="to-top" id="toTop" aria-label="Back to top">
-    <i class="fa-solid fa-chevron-up"></i>
-  </button>
-
-  <!-- Toast notification (shown after form submissions) -->
+  <!-- ============================================================ UTILITIES ============================================================ -->
+  <button class="to-top" id="toTop" aria-label="Back to top"><i class="fa-solid fa-chevron-up"></i></button>
   <div class="toast" id="toast">
     <i class="fa-solid fa-circle-check"></i>
-    <div class="toast-txt">
-      <strong id="toastTitle">Done!</strong>
-      <span    id="toastMsg"></span>
-    </div>
+    <div class="toast-txt"><strong id="toastTitle">Done!</strong><span id="toastMsg"></span></div>
   </div>
 
-
-  <!-- ============================================================
-       JAVASCRIPT
-       ============================================================ -->
+  <script src="db.js"></script>
   <script src="script.js"></script>
-
+  <script src="booking-modal.js"></script>
 </body>
 </html>
