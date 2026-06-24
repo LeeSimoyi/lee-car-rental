@@ -1,7 +1,3 @@
-/* ═══════════════════════════════════════════════════════════════
-   LCR MAIN WEBSITE — Complete Stylesheet
-═══════════════════════════════════════════════════════════════ */
-
 /* ── CSS Variables ── */
 :root {
   --blue:       #4169E1;
@@ -25,19 +21,67 @@
 }
 
 /* ── Reset ── */
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior:smooth; scroll-padding-top:72px; overflow-x:hidden; }
-body { font-family:var(--font); font-size:clamp(15px,1.1vw,17px); background:var(--bg); color:var(--text); overflow-x:hidden; line-height:1.7; }
-a { text-decoration:none; color:inherit; }
-img, svg { max-width:100%; display:block; }
-button { font-family:var(--font); cursor:pointer; }
+*, *::before, *::after { 
+   margin:0; 
+   padding:0; 
+   box-sizing:border-box; 
+}
+html { 
+   scroll-behavior:smooth; 
+   scroll-padding-top:72px; 
+   overflow-x:hidden; 
+}
+body { 
+   font-family:var(--font); 
+   font-size:clamp(15px,1.1vw,17px); 
+   background:var(--bg); 
+   color:var(--text); 
+   overflow-x:hidden; 
+   line-height:1.7; 
+}
+a { 
+   text-decoration:none; 
+   color:inherit; 
+}
+img, svg { 
+   max-width:100%; 
+   display:block; 
+}
+button { 
+   font-family:var(--font); 
+   cursor:pointer; 
+}
 
 /* ── Layout ── */
-.wrap { width:100%; max-width:var(--container); margin-inline:auto; padding-inline:var(--pad); }
+.wrap { 
+   width:100%; 
+   max-width:var(--container); 
+   margin-inline:auto; 
+   padding-inline:var(--pad); 
+}
 .section { padding:clamp(64px,8vw,110px) 0; }
 
-.s-label { display:inline-flex; align-items:center; gap:8px; font-size:.78rem; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:var(--blue); background:var(--blue-light); padding:6px 14px; border-radius:999px; margin-bottom:16px; }
-.s-title { font-size:clamp(2rem,4vw,3rem); font-weight:800; line-height:1.1; color:var(--text); margin-bottom:14px; }
+.s-label { 
+   display:inline-flex; 
+   align-items:center; 
+   gap:8px; 
+   font-size:.78rem; 
+   font-weight:700; 
+   letter-spacing:2px; 
+   text-transform:uppercase; 
+   color:var(--blue); 
+   background:var(--blue-light); 
+   padding:6px 14px; 
+   border-radius:999px; 
+   margin-bottom:16px; 
+}
+.s-title { 
+   font-size:clamp(2rem,4vw,3rem); 
+   font-weight:800; 
+   line-height:1.1; 
+   color:var(--text); 
+   margin-bottom:14px; 
+}
 .s-title span { color:var(--blue); }
 .s-sub { font-size:clamp(.9rem,1.2vw,1rem); color:var(--text-2); max-width:560px; line-height:1.8; }
 
