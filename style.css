@@ -120,11 +120,32 @@ section:not(.hero) .btn-primary:hover {
   background:var(--blue-dark); 
   border-color:var(--blue-dark); 
 }
-.btn-ghost { display:inline-flex; align-items:center; gap:10px; padding:13px 26px; border:2px solid var(--border); color:var(--text); font-weight:600; font-size:.95rem; border-radius:999px; background:transparent; transition:var(--transition); cursor:pointer; }
-.btn-ghost:hover { border-color:var(--blue); color:var(--blue); transform:translateY(-3px); }
+.btn-ghost { 
+  display:inline-flex; 
+  align-items:center; 
+  gap:10px; 
+  padding:13px 26px; 
+  border:2px solid var(--border); 
+  color:var(--text); 
+  font-weight:600; 
+  font-size:.95rem; 
+  border-radius:999px; 
+  background:transparent; 
+  transition:var(--transition); 
+  cursor:pointer; 
+}
+.btn-ghost:hover { 
+  border-color:var(--blue); 
+  color:var(--blue); 
+  transform:translateY(-3px); 
+}
 
 /* ── Reveal animations ── */
-.reveal { opacity:0; transform:translateY(40px); transition:opacity .7s ease,transform .7s cubic-bezier(0.22,1,0.36,1); }
+.reveal { 
+  opacity:0; 
+  transform:translateY(40px); 
+  transition:opacity .7s ease,transform .7s cubic-bezier(0.22,1,0.36,1); 
+}
 .reveal.up { opacity:1; transform:none; }
 .reveal-l { transform:translateX(-50px); }
 .reveal-r { transform:translateX(50px); }
