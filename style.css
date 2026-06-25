@@ -337,13 +337,51 @@ section:not(.hero) .btn-primary:hover {
   inset:0; 
   z-index:10001; 
 }
-.nav-drawer-bg { position:absolute; inset:0; background:rgba(13,27,42,.52); backdrop-filter:blur(7px); opacity:0; transition:opacity .38s ease; }
-.nav-drawer-panel { position:absolute; left:0; top:0; width:min(300px,88vw); height:100%; background:#fff; display:flex; flex-direction:column; transform:translateX(-100%); transition:transform .42s cubic-bezier(.4,0,.2,1); box-shadow:20px 0 60px rgba(0,0,0,.15); }
+.nav-drawer-bg { 
+  position:absolute; 
+  inset:0; 
+  background:rgba(13,27,42,.52); 
+  backdrop-filter:blur(7px); 
+  opacity:0; 
+  transition:opacity .38s ease; 
+}
+.nav-drawer-panel { 
+  position:absolute; 
+  left:0; 
+  top:0; 
+  width:min(300px,88vw); 
+  height:100%; 
+  background:#fff; 
+  display:flex; 
+  flex-direction:column; 
+  transform:translateX(-100%); 
+  transition:transform .42s cubic-bezier(.4,0,.2,1); 
+  box-shadow:20px 0 60px rgba(0,0,0,.15); 
+}
 .nav-drawer.open { display:block; }
 .nav-drawer.open .nav-drawer-bg { opacity:1; }
 .nav-drawer.open .nav-drawer-panel { transform:translateX(0); }
-.nav-drawer-header { display:flex; align-items:center; justify-content:space-between; padding:18px 20px 14px; border-bottom:1px solid #f1f2f5; }
-.nav-drawer-close { width:38px; height:38px; border-radius:50%; border:2px solid var(--border); background:#f7f8fa; font-size:15px; color:var(--text-2); cursor:pointer; display:flex; align-items:center; justify-content:center; transition:var(--transition); }
+.nav-drawer-header { 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  padding:18px 20px 14px; 
+  border-bottom:1px solid #f1f2f5; 
+}
+.nav-drawer-close { 
+  width:38px; 
+  height:38px; 
+  border-radius:50%; 
+  border:2px solid var(--border); 
+  background:#f7f8fa; 
+  font-size:15px; 
+  color:var(--text-2); 
+  cursor:pointer; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  transition:var(--transition); 
+}
 .nav-drawer-close:hover { background:var(--blue); border-color:var(--blue); color:#fff; transform:scale(1.08) rotate(90deg); }
 .nav-drawer-logo { display:flex; align-items:center; gap:8px; }
 .nav-drawer-logo-mark { width:32px; height:32px; background:var(--blue); border-radius:8px; display:flex; align-items:center; justify-content:center; }
