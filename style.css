@@ -306,16 +306,37 @@ section:not(.hero) .btn-primary:hover {
   transition:border-color .25s,box-shadow .25s; 
   flex-shrink:0; 
 }
-.hamburger::before { content:''; position:absolute; inset:0; background:var(--blue-light); opacity:0; transition:opacity .25s; border-radius:inherit; }
+.hamburger::before { 
+  content:''; 
+  position:absolute; 
+  inset:0; 
+  background:var(--blue-light); 
+  opacity:0; 
+  transition:opacity .25s; 
+  border-radius:inherit; 
+}
 .hamburger:hover { border-color:var(--blue); }
 .hamburger:hover::before { opacity:1; }
-.hamburger span { width:18px; height:2px; background:var(--text); border-radius:99px; position:relative; z-index:1; transition:background .25s; }
+.hamburger span { 
+  width:18px; 
+  height:2px; 
+  background:var(--text); 
+  border-radius:99px; 
+  position:relative; 
+  z-index:1; 
+  transition:background .25s; 
+}
 .hamburger:hover span { background:var(--blue); }
 
 /* ══════════════════════════════════════════
    MOBILE DRAWER
 ══════════════════════════════════════════ */
-.nav-drawer { display:none; position:fixed; inset:0; z-index:10001; }
+.nav-drawer { 
+  display:none; 
+  position:fixed; 
+  inset:0; 
+  z-index:10001; 
+}
 .nav-drawer-bg { position:absolute; inset:0; background:rgba(13,27,42,.52); backdrop-filter:blur(7px); opacity:0; transition:opacity .38s ease; }
 .nav-drawer-panel { position:absolute; left:0; top:0; width:min(300px,88vw); height:100%; background:#fff; display:flex; flex-direction:column; transform:translateX(-100%); transition:transform .42s cubic-bezier(.4,0,.2,1); box-shadow:20px 0 60px rgba(0,0,0,.15); }
 .nav-drawer.open { display:block; }
