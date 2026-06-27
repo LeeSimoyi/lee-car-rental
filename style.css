@@ -639,23 +639,95 @@ section:not(.hero) .btn-primary:hover {
   font-family:var(--font); 
   backdrop-filter:blur(8px); 
 }
-.hero-track-btn:hover { background:rgba(255,255,255,0.18); color:#fff; }
-.hero-stats { display:flex; gap:0; border-top:1px solid rgba(255,255,255,.18); padding-top:32px; width:100%; max-width:460px; }
-.hero-stats .stat { flex:1; padding-right:24px; border-right:1px solid rgba(255,255,255,.18); }
-.hero-stats .stat:last-child { border-right:none; padding-right:0; padding-left:24px; }
+.hero-track-btn:hover { 
+  background:rgba(255,255,255,0.18); 
+  color:#fff; 
+}
+.hero-stats { 
+  display:flex; 
+  gap:0; 
+  border-top:1px solid rgba(255,255,255,.18); 
+  padding-top:32px; 
+  width:100%; 
+  max-width:460px; 
+}
+.hero-stats .stat { 
+  flex:1; 
+  padding-right:24px; 
+  border-right:1px solid rgba(255,255,255,.18); 
+}
+.hero-stats .stat:last-child { 
+  border-right:none; 
+  padding-right:0; 
+  padding-left:24px; 
+}
 .hero-stats .stat:nth-child(2) { padding-inline:24px; }
-.hero-stats .stat strong { display:block; font-size:clamp(1.5rem,2.5vw,2rem); font-weight:800; color:#fff; line-height:1; margin-bottom:4px; }
-.hero-stats .stat strong .sup { color:rgba(255,255,255,.7); font-size:70%; }
-.hero-stats .stat span { font-size:.78rem; color:rgba(255,255,255,.5); font-weight:500; line-height:1.4; }
-.hero-visual { position:relative; display:flex; align-items:center; justify-content:center; }
-.hero-card-stack { position:relative; width:100%; max-width:520px; }
-.hero-main-card { position:relative; border-radius:28px; overflow:hidden; aspect-ratio:4/3; box-shadow:0 40px 80px rgba(0,0,0,.35); border:1px solid rgba(255,255,255,.15); }
-.hero-main-card img { width:100%; height:100%; object-fit:cover; animation:heroZoom 12s ease-in-out infinite alternate; }
+.hero-stats .stat strong { 
+  display:block; 
+  font-size:clamp(1.5rem,2.5vw,2rem); 
+  font-weight:800; 
+  color:#fff; 
+  line-height:1; 
+  margin-bottom:4px; 
+}
+.hero-stats .stat strong .sup { 
+  color:rgba(255,255,255,.7); 
+  font-size:70%; 
+}
+.hero-stats .stat span { 
+  font-size:.78rem; 
+  color:rgba(255,255,255,.5); 
+  font-weight:500; 
+  line-height:1.4; 
+}
+.hero-visual { 
+  position:relative; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+}
+.hero-card-stack { 
+  position:relative; 
+  width:100%; 
+  max-width:520px; 
+}
+.hero-main-card { 
+  position:relative; 
+  border-radius:28px; 
+  overflow:hidden; 
+  aspect-ratio:4/3; 
+  box-shadow:0 40px 80px rgba(0,0,0,.35); 
+  border:1px solid rgba(255,255,255,.15); 
+}
+.hero-main-card img { 
+  width:100%; 
+  height:100%; 
+  object-fit:cover; 
+  animation:heroZoom 12s ease-in-out infinite alternate; 
+}
 @keyframes heroZoom { from{transform:scale(1)} to{transform:scale(1.06)} }
-.hero-main-card::after { content:''; position:absolute; inset:0; background:linear-gradient(to top,rgba(65,105,225,.55) 0%,transparent 50%); }
-.hero-car-label { position:absolute; bottom:20px; left:20px; z-index:2; color:#fff; }
-.hero-car-label strong { display:block; font-size:1.1rem; font-weight:800; }
-.hero-car-label span { font-size:.78rem; color:rgba(255,255,255,.7); }
+.hero-main-card::after { 
+  content:''; 
+  position:absolute; 
+  inset:0; 
+  background:linear-gradient(to top,rgba(65,105,225,.55) 0%,transparent 50%); 
+}
+.hero-car-label { 
+  position:absolute; 
+  bottom:20px; 
+  left:20px; 
+  z-index:2; 
+  color:#fff; 
+}
+.hero-car-label strong { 
+  display:block; 
+  font-size:1.1rem; 
+  font-weight:800; 
+}
+.hero-car-label span { 
+  font-size:.78rem; 
+  color:rgba(255,255,255,.7); 
+}
 .hero-float-card { position:absolute; background:rgba(255,255,255,.15); backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,.25); border-radius:18px; padding:14px 18px; color:#fff; display:flex; align-items:center; gap:12px; white-space:nowrap; box-shadow:0 16px 40px rgba(0,0,0,.2); }
 .hero-float-card .fc-icon { width:38px; height:38px; border-radius:12px; background:rgba(255,255,255,.2); display:flex; align-items:center; justify-content:center; font-size:.95rem; flex-shrink:0; }
 .hero-float-card .fc-text strong { display:block; font-size:.88rem; font-weight:700; }
