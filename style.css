@@ -834,17 +834,85 @@ section:not(.hero) .btn-primary:hover {
   bottom:0; 
   right:-16px; 
 }
-.about-founded-badge { position:absolute; top:20px; left:-16px; background:linear-gradient(135deg,var(--blue),var(--blue-dark)); color:#fff; border-radius:16px; padding:16px 20px; box-shadow:0 12px 30px rgba(65,105,225,.4); text-align:center; z-index:2; }
-.about-founded-badge strong { display:block; font-size:1.9rem; font-weight:800; line-height:1; }
-.about-founded-badge span { font-size:.7rem; letter-spacing:1.5px; text-transform:uppercase; opacity:.85; }
+.about-founded-badge { 
+  position:absolute; 
+  top:20px; left:-16px; 
+  background:linear-gradient(135deg,var(--blue),var(--blue-dark)); 
+  color:#fff; 
+  border-radius:16px; 
+  padding:16px 20px; 
+  box-shadow:0 12px 30px rgba(65,105,225,.4); 
+  text-align:center; 
+  z-index:2; 
+}
+.about-founded-badge strong { 
+  display:block; 
+  font-size:1.9rem; 
+  font-weight:800; 
+  line-height:1; 
+}
+.about-founded-badge span { 
+  font-size:.7rem; 
+  letter-spacing:1.5px; 
+  text-transform:uppercase; 
+  opacity:.85; 
+}
 .about-content .s-sub { margin-bottom:32px; }
-.about-pillars { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin-bottom:32px; }
-.about-pillar { background:var(--bg); border-radius:16px; border:1.5px solid var(--border); padding:20px; transition:var(--transition); display:flex; flex-direction:column; gap:10px; }
-.about-pillar:hover { border-color:rgba(65,105,225,.35); box-shadow:0 8px 28px rgba(65,105,225,.10); transform:translateY(-4px); background:var(--bg-white); }
-.about-pillar-icon { width:44px; height:44px; border-radius:12px; background:var(--blue-light); display:flex; align-items:center; justify-content:center; color:var(--blue); font-size:1.1rem; flex-shrink:0; }
-.about-pillar h4 { font-size:.93rem; font-weight:700; color:var(--text); margin:0; }
-.about-pillar p  { font-size:.82rem; color:var(--text-2); line-height:1.65; margin:0; }
-.about-team { display:flex; align-items:center; gap:16px; padding:20px 24px; background:var(--bg); border:1.5px solid var(--border); border-radius:16px; }
+.about-pillars { 
+  display:grid; 
+  grid-template-columns:1fr 1fr; 
+  gap:14px; 
+  margin-bottom:32px; 
+}
+.about-pillar { 
+  background:var(--bg); 
+  border-radius:16px; 
+  border:1.5px solid var(--border); 
+  padding:20px; 
+  transition:var(--transition); 
+  display:flex; 
+  flex-direction:column; 
+  gap:10px; 
+}
+.about-pillar:hover { 
+  border-color:rgba(65,105,225,.35); 
+  box-shadow:0 8px 28px rgba(65,105,225,.10); 
+  transform:translateY(-4px); 
+  background:var(--bg-white);
+}
+.about-pillar-icon { 
+  width:44px; 
+  height:44px; 
+  border-radius:12px; 
+  background:var(--blue-light); 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  color:var(--blue); 
+  font-size:1.1rem; 
+  flex-shrink:0; 
+}
+.about-pillar h4 { 
+  font-size:.93rem; 
+  font-weight:700; 
+  color:var(--text); 
+  margin:0; 
+}
+.about-pillar p  { 
+  font-size:.82rem; 
+  color:var(--text-2); 
+  line-height:1.65; 
+  margin:0; 
+}
+.about-team { 
+  display:flex; 
+  align-items:center; 
+  gap:16px; 
+  padding:20px 24px; 
+  background:var(--bg); 
+  border:1.5px solid var(--border); 
+  border-radius:16px; 
+}
 .team-avatars { display:flex; }
 .team-avatars .av { width:42px; height:42px; border-radius:50%; border:3px solid #fff; overflow:hidden; margin-left:-10px; box-shadow:0 2px 8px rgba(0,0,0,.12); }
 .team-avatars .av:first-child { margin-left:0; }
