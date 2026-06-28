@@ -104,12 +104,17 @@
   border-bottom: 1px solid #f0f1f5;
 }
 .bm-progress-bar-track {
-  height: 3px; background: #e5e7eb; border-radius: 999px; margin-bottom: 0;
+  height: 3px; 
+  background: #e5e7eb; 
+  border-radius: 999px; 
+  margin-bottom: 0;
   overflow: hidden;
 }
 .bm-progress-bar {
-  height: 3px; background: #4169E1;
-  border-radius: 999px; width: 0%;
+  height: 3px; 
+  background: #4169E1;
+  border-radius: 999px; 
+  width: 0%;
   transition: width 0.5s cubic-bezier(0.4,0,0.2,1);
 }
 .bm-steps {
