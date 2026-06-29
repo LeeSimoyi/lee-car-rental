@@ -982,12 +982,40 @@ section:not(.hero) .btn-primary:hover {
    FLEET
 ══════════════════════════════════════════ */
 .fleet { background:var(--bg); }
-.fleet-header { text-align:center; margin-bottom:60px; }
+.fleet-header { 
+  text-align:center; 
+  margin-bottom:60px; 
+}
 .fleet-header .s-sub { margin-inline:auto; }
-.fleet-filters { display:flex; gap:12px; justify-content:center; flex-wrap:wrap; margin:32px 0 48px; }
-.filter-btn { padding:10px 22px; border-radius:999px; border:1.5px solid var(--border); background:transparent; font-weight:600; font-size:.88rem; color:var(--text-2); transition:var(--transition); cursor:pointer; }
-.filter-btn:hover,.filter-btn.active { background:var(--blue); border-color:var(--blue); color:#fff; box-shadow:0 6px 20px rgba(65,105,225,.28); }
-.cars-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; }
+.fleet-filters { 
+  display:flex; 
+  gap:12px; 
+  justify-content:center; 
+  flex-wrap:wrap; 
+  margin:32px 0 48px; 
+}
+.filter-btn { 
+  padding:10px 22px; 
+  border-radius:999px; 
+  border:1.5px solid var(--border); 
+  background:transparent; 
+  font-weight:600; 
+  font-size:.88rem; 
+  color:var(--text-2); 
+  transition:var(--transition); 
+  cursor:pointer; 
+}
+.filter-btn:hover,.filter-btn.active { 
+  background:var(--blue); 
+  border-color:var(--blue); 
+  color:#fff; 
+  box-shadow:0 6px 20px rgba(65,105,225,.28); 
+}
+.cars-grid { 
+  display:grid; 
+  grid-template-columns:repeat(3,1fr); 
+  gap:28px; 
+}
 .car-card { background:var(--bg); border-radius:var(--radius); border:1.5px solid var(--border); overflow:hidden; transition:var(--transition); position:relative; }
 .car-card:hover { transform:translateY(-8px); box-shadow:var(--shadow-lg); border-color:rgba(65,105,225,.3); }
 .car-badge { position:absolute; top:16px; left:16px; background:var(--blue); color:#fff; font-size:.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:5px 12px; border-radius:999px; z-index:2; }
