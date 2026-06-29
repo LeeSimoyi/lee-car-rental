@@ -956,12 +956,27 @@ section:not(.hero) .btn-primary:hover {
   border-radius:20px; 
   overflow:hidden; 
 }
-.about-counter { padding:36px 24px; text-align:center; border-right:1px solid rgba(255,255,255,.08); transition:var(--transition); }
+.about-counter { 
+  padding:36px 24px; 
+  text-align:center; 
+  border-right:1px solid rgba(255,255,255,.08); 
+  transition:var(--transition); 
+}
 .about-counter:last-child { border-right:none; }
 .about-counter:hover { background:rgba(65,105,225,.12); }
-.about-counter strong { display:block; font-size:clamp(1.8rem,3vw,2.4rem); font-weight:800; color:#fff; line-height:1; margin-bottom:6px; }
+.about-counter strong { 
+  display:block; 
+  font-size:clamp(1.8rem,3vw,2.4rem); 
+  font-weight:800; 
+  color:#fff; 
+  line-height:1; 
+  margin-bottom:6px; 
+}
 .about-counter strong span { color:#6a9eff; }
-.about-counter p { font-size:.82rem; color:rgba(255,255,255,.5); }
+.about-counter p { 
+  font-size:.82rem; 
+  color:rgba(255,255,255,.5); 
+}
 
 /* ══════════════════════════════════════════
    FLEET
