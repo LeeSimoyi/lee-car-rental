@@ -1044,10 +1044,28 @@ section:not(.hero) .btn-primary:hover {
   z-index:2; 
 }
 .car-badge.popular{background:#f59e0b} .car-badge.premium{background:#8b5cf6} .car-badge.new{background:#ef4444}
-.car-img-wrap { width:100%; aspect-ratio:16/9; overflow:hidden; position:relative; }
-.car-img-wrap img { width:100%; height:100%; object-fit:cover; transition:transform .45s ease; }
+.car-img-wrap { 
+  width:100%; 
+  aspect-ratio:16/9; 
+  overflow:hidden; 
+  position:relative;
+}
+.car-img-wrap img { 
+  width:100%; 
+  height:100%; 
+  object-fit:cover; 
+  transition:transform .45s ease; 
+}
 .car-card:hover .car-img-wrap img { transform:scale(1.06); }
-.car-img-wrap::after { content:''; position:absolute; bottom:0; left:0; right:0; height:40%; background:linear-gradient(to top,rgba(0,0,0,.18),transparent); }
+.car-img-wrap::after { 
+  content:''; 
+  position:absolute; 
+  bottom:0; 
+  left:0; 
+  right:0; 
+  height:40%; 
+  background:linear-gradient(to top,rgba(0,0,0,.18),transparent); 
+}
 .car-info { padding:22px 24px 24px; }
 .car-name { font-size:1.15rem; font-weight:700; margin-bottom:4px; }
 .car-category { font-size:.82rem; color:var(--text-3); margin-bottom:16px; }
