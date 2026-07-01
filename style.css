@@ -1158,10 +1158,47 @@ section:not(.hero) .btn-primary:hover {
 /* ══════════════════════════════════════════
    CAR DETAIL PAGE
 ══════════════════════════════════════════ */
-.car-detail-page { position:fixed; inset:0; z-index:99990; background:var(--bg); overflow-y:auto; overflow-x:hidden; transform:translateX(100%); transition:transform .52s cubic-bezier(.22,1,.36,1); will-change:transform; }
+.car-detail-page { 
+  position:fixed; 
+  inset:0; 
+  z-index:99990; 
+  background:var(--bg); 
+  overflow-y:auto; 
+  overflow-x:hidden; 
+  transform:translateX(100%); 
+  transition:transform .52s cubic-bezier(.22,1,.36,1); 
+  will-change:transform; 
+}
 .car-detail-page.open { transform:translateX(0); }
-.cdp-topbar { position:sticky; top:0; z-index:100; background:rgba(255,255,255,.95); backdrop-filter:blur(16px); border-bottom:1px solid var(--border); padding:0 clamp(1rem,4vw,3rem); height:64px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
-.cdp-back-btn { display:inline-flex; align-items:center; gap:8px; padding:9px 20px; background:var(--bg); border:1.5px solid var(--border); border-radius:999px; font-weight:700; font-size:.88rem; color:var(--text); cursor:pointer; transition:var(--transition); font-family:var(--font); }
+.cdp-topbar { 
+  position:sticky; 
+  top:0; 
+  z-index:100; 
+  background:rgba(255,255,255,.95); 
+  backdrop-filter:blur(16px); 
+  border-bottom:1px solid var(--border); 
+  padding:0 clamp(1rem,4vw,3rem); 
+  height:64px; 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  gap:16px; 
+}
+.cdp-back-btn { 
+  display:inline-flex; 
+  align-items:center; 
+  gap:8px; 
+  padding:9px 20px; 
+  background:var(--bg); 
+  border:1.5px solid var(--border); 
+  border-radius:999px; 
+  font-weight:700; 
+  font-size:.88rem; 
+  color:var(--text); 
+  cursor:pointer; 
+  transition:var(--transition); 
+  font-family:var(--font); 
+}
 .cdp-back-btn:hover { border-color:var(--blue); color:var(--blue); background:var(--blue-light); }
 .cdp-back-btn i { font-size:.8rem; }
 .cdp-topbar-title { font-size:1rem; font-weight:700; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
