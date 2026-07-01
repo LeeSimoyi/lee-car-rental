@@ -1085,13 +1085,50 @@ section:not(.hero) .btn-primary:hover {
   border-bottom:1px solid var(--border); 
   margin-bottom:18px; 
 }
-.spec { display:flex; align-items:center; gap:6px; font-size:.82rem; color:var(--text-2); font-weight:500; }
-.spec i { color:var(--blue); font-size:.9rem; }
-.car-footer { display:flex; align-items:center; justify-content:space-between; gap:10px; }
-.car-price .price-strong { font-size:1.4rem; font-weight:800; color:var(--blue); }
-.car-price span { font-size:.8rem; color:var(--text-3); }
-.car-actions { display:flex; gap:8px; }
-.car-book-btn { padding:9px 16px; background:var(--blue); color:#fff; border:none; border-radius:999px; font-weight:700; font-size:.82rem; transition:var(--transition); cursor:pointer; white-space:nowrap; font-family:var(--font); }
+.spec { 
+  display:flex; 
+  align-items:center; 
+  gap:6px; 
+  font-size:.82rem; 
+  color:var(--text-2); 
+  font-weight:500; 
+}
+.spec i { 
+  color:var(--blue); 
+  font-size:.9rem; 
+}
+.car-footer { 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  gap:10px; 
+}
+.car-price .price-strong { 
+  font-size:1.4rem; 
+  font-weight:800; 
+  color:var(--blue);
+}
+.car-price span { 
+  font-size:.8rem; 
+  color:var(--text-3); 
+}
+.car-actions { 
+  display:flex; 
+  gap:8px;
+}
+.car-book-btn {
+  padding:9px 16px; 
+  background:var(--blue); 
+  color:#fff; 
+  border:none; 
+  border-radius:999px; 
+  font-weight:700;
+  font-size:.82rem; 
+  transition:var(--transition);
+  cursor:pointer; 
+  white-space:nowrap; 
+  font-family:var(--font); 
+}
 .car-book-btn:hover { background:var(--blue-dark); transform:scale(1.05); }
 .car-details-btn { padding:9px 16px; background:transparent; color:var(--blue); border:1.5px solid var(--blue); border-radius:999px; font-weight:700; font-size:.82rem; transition:var(--transition); cursor:pointer; display:inline-flex; align-items:center; gap:6px; white-space:nowrap; font-family:var(--font); }
 .car-details-btn:hover { background:var(--blue-light); transform:scale(1.05); }
