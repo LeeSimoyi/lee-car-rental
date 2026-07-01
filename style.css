@@ -1129,9 +1129,30 @@ section:not(.hero) .btn-primary:hover {
   white-space:nowrap; 
   font-family:var(--font); 
 }
-.car-book-btn:hover { background:var(--blue-dark); transform:scale(1.05); }
-.car-details-btn { padding:9px 16px; background:transparent; color:var(--blue); border:1.5px solid var(--blue); border-radius:999px; font-weight:700; font-size:.82rem; transition:var(--transition); cursor:pointer; display:inline-flex; align-items:center; gap:6px; white-space:nowrap; font-family:var(--font); }
-.car-details-btn:hover { background:var(--blue-light); transform:scale(1.05); }
+.car-book-btn:hover { 
+  background:var(--blue-dark); 
+  transform:scale(1.05); 
+}
+.car-details-btn { 
+  padding:9px 16px; 
+  background:transparent; 
+  color:var(--blue); 
+  border:1.5px solid var(--blue); 
+  border-radius:999px; 
+  font-weight:700; 
+  font-size:.82rem; 
+  transition:var(--transition); 
+  cursor:pointer; 
+  display:inline-flex; 
+  align-items:center; 
+  gap:6px; 
+  white-space:nowrap; 
+  font-family:var(--font); 
+}
+.car-details-btn:hover { 
+  background:var(--blue-light); 
+  transform:scale(1.05); 
+}
 .car-details-btn i { font-size:.75rem; }
 
 /* ══════════════════════════════════════════
