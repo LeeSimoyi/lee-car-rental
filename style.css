@@ -1199,12 +1199,48 @@ section:not(.hero) .btn-primary:hover {
   transition:var(--transition); 
   font-family:var(--font); 
 }
-.cdp-back-btn:hover { border-color:var(--blue); color:var(--blue); background:var(--blue-light); }
+.cdp-back-btn:hover { 
+  border-color:var(--blue); 
+  color:var(--blue); 
+  background:var(--blue-light); 
+}
 .cdp-back-btn i { font-size:.8rem; }
-.cdp-topbar-title { font-size:1rem; font-weight:700; color:var(--text); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
-.cdp-topbar-book { display:inline-flex; align-items:center; gap:8px; padding:9px 22px; background:var(--blue); color:#fff; border:none; border-radius:999px; font-weight:700; font-size:.88rem; cursor:pointer; transition:var(--transition); box-shadow:0 6px 18px rgba(65,105,225,.3); white-space:nowrap; flex-shrink:0; font-family:var(--font); }
-.cdp-topbar-book:hover { background:var(--blue-dark); transform:translateY(-2px); }
-.cdp-hero { position:relative; height:clamp(320px,50vw,520px); overflow:hidden; background:#0d1b2a; }
+.cdp-topbar-title { 
+  font-size:1rem; 
+  font-weight:700; 
+  color:var(--text); 
+  white-space:nowrap; 
+  overflow:hidden; 
+  text-overflow:ellipsis;
+}
+.cdp-topbar-book { 
+  display:inline-flex; 
+  align-items:center; 
+  gap:8px;
+  padding:9px 22px; 
+  background:var(--blue); 
+  color:#fff; 
+  border:none; 
+  border-radius:999px; 
+  font-weight:700; 
+  font-size:.88rem; 
+  cursor:pointer; 
+  transition:var(--transition); 
+  box-shadow:0 6px 18px rgba(65,105,225,.3); 
+  white-space:nowrap; 
+  flex-shrink:0; 
+  font-family:var(--font); 
+}
+.cdp-topbar-book:hover { 
+  background:var(--blue-dark); 
+  transform:translateY(-2px);
+}
+.cdp-hero { 
+  position:relative; 
+  height:clamp(320px,50vw,520px); 
+  overflow:hidden; 
+  background:#0d1b2a;
+}
 .cdp-hero-img { width:100%; height:100%; object-fit:cover; transition:opacity .4s ease,transform .6s ease; display:block; }
 .cdp-hero-overlay { position:absolute; inset:0; background:linear-gradient(to top,rgba(10,18,36,.75) 0%,rgba(10,18,36,.15) 50%,transparent 100%); }
 .cdp-thumbs { position:absolute; bottom:20px; left:50%; transform:translateX(-50%); display:flex; gap:10px; padding:10px 14px; background:rgba(0,0,0,.45); backdrop-filter:blur(12px); border-radius:16px; border:1px solid rgba(255,255,255,.12); }
