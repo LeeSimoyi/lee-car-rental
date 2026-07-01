@@ -1308,12 +1308,58 @@ section:not(.hero) .btn-primary:hover {
 }
 .cdp-arrow-prev { left:20px; }
 .cdp-arrow-next { right:20px; }
-.cdp-arrow-prev:hover,.cdp-arrow-next:hover { background:var(--blue); border-color:var(--blue); }
-.cdp-img-counter { position:absolute; top:20px; right:20px; background:rgba(0,0,0,.5); backdrop-filter:blur(8px); color:#fff; font-size:.78rem; font-weight:700; padding:5px 12px; border-radius:999px; border:1px solid rgba(255,255,255,.15); }
-.cdp-img-label { position:absolute; bottom:80px; left:20px; background:rgba(0,0,0,.5); backdrop-filter:blur(8px); color:#fff; font-size:.75rem; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; padding:5px 13px; border-radius:999px; border:1px solid rgba(255,255,255,.15); }
-.cdp-body { max-width:var(--container); margin:0 auto; padding:40px clamp(1rem,4vw,3rem) 80px; }
-.cdp-breadcrumb { display:flex; align-items:center; gap:8px; font-size:.82rem; color:var(--text-3); margin-bottom:28px; flex-wrap:wrap; }
-.cdp-breadcrumb a { color:var(--blue); font-weight:600; cursor:pointer; transition:color .2s; }
+.cdp-arrow-prev:hover,.cdp-arrow-next:hover { 
+  background:var(--blue); 
+  border-color:var(--blue); 
+}
+.cdp-img-counter { 
+  position:absolute; 
+  top:20px; 
+  right:20px; 
+  background:rgba(0,0,0,.5); 
+  backdrop-filter:blur(8px); 
+  color:#fff; 
+  font-size:.78rem; 
+  font-weight:700; 
+  padding:5px 12px;
+  border-radius:999px;
+  border:1px solid rgba(255,255,255,.15); 
+}
+.cdp-img-label {
+  position:absolute; 
+  bottom:80px; 
+  left:20px;
+  background:rgba(0,0,0,.5); 
+  backdrop-filter:blur(8px); 
+  color:#fff; 
+  font-size:.75rem; 
+  font-weight:700; 
+  letter-spacing:1.2px; 
+  text-transform:uppercase; 
+  padding:5px 13px;
+  border-radius:999px; 
+  border:1px solid rgba(255,255,255,.15); 
+}
+.cdp-body { 
+  max-width:var(--container); 
+  margin:0 auto; 
+  padding:40px clamp(1rem,4vw,3rem) 80px; 
+}
+.cdp-breadcrumb { 
+  display:flex; 
+  align-items:center; 
+  gap:8px; 
+  font-size:.82rem; 
+  color:var(--text-3);
+  margin-bottom:28px; 
+  flex-wrap:wrap; 
+}
+.cdp-breadcrumb a { 
+  color:var(--blue); 
+  font-weight:600; 
+  cursor:pointer; 
+  transition:color .2s;
+}
 .cdp-breadcrumb a:hover { color:var(--blue-dark); }
 .cdp-breadcrumb i { font-size:.7rem; }
 .cdp-breadcrumb span { color:var(--text-2); font-weight:600; }
