@@ -1476,19 +1476,57 @@ section:not(.hero) .btn-primary:hover {
   flex-shrink:0; 
   font-family:var(--font); 
 }
-.cdp-tab.active { color:var(--blue); border-bottom-color:var(--blue); }
+.cdp-tab.active { 
+  color:var(--blue); 
+  border-bottom-color:var(--blue); 
+}
 .cdp-tab:hover:not(.active) { color:var(--text-2); }
 .cdp-tab i { font-size:.85rem; }
-.cdp-tab-panel { display:none; animation:fadeUp .35s ease; }
+.cdp-tab-panel { 
+  display:none; 
+  animation:fadeUp .35s ease; 
+}
 .cdp-tab-panel.active { display:block; }
 @keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:none} }
-.cdp-overview-grid { display:grid; grid-template-columns:1fr 1fr; gap:24px; margin-bottom:28px; }
-.cdp-card { background:var(--bg-white); border:1.5px solid var(--border); border-radius:var(--radius); padding:28px; }
-.cdp-card-title { font-size:.82rem; font-weight:700; text-transform:uppercase; letter-spacing:1.2px; color:var(--text-3); display:flex; align-items:center; gap:8px; margin-bottom:20px; }
+.cdp-overview-grid { 
+  display:grid; 
+  grid-template-columns:1fr 1fr; 
+  gap:24px; 
+  margin-bottom:28px; 
+}
+.cdp-card { 
+  background:var(--bg-white); 
+  border:1.5px solid var(--border); 
+  border-radius:var(--radius); 
+  padding:28px; 
+}
+.cdp-card-title { 
+  font-size:.82rem; 
+  font-weight:700; 
+  text-transform:uppercase; 
+  letter-spacing:1.2px; 
+  color:var(--text-3); 
+  display:flex; 
+  align-items:center; 
+  gap:8px; 
+  margin-bottom:20px; 
+}
 .cdp-card-title i { color:var(--blue); }
-.cdp-spec-row { display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--border); }
+.cdp-spec-row { 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  padding:12px 0; 
+  border-bottom:1px solid var(--border); 
+}
 .cdp-spec-row:last-child { border-bottom:none; }
-.cdp-spec-label { display:flex; align-items:center; gap:9px; font-size:.88rem; color:var(--text-3); }
+.cdp-spec-label { 
+  display:flex; 
+  align-items:center; 
+  gap:9px; 
+  font-size:.88rem; 
+  color:var(--text-3); 
+}
 .cdp-spec-label i { color:var(--blue); width:16px; text-align:center; }
 .cdp-spec-val { font-size:.92rem; font-weight:700; color:var(--text); }
 .cdp-features-list { list-style:none; display:flex; flex-direction:column; gap:12px; }
