@@ -1362,11 +1362,39 @@ section:not(.hero) .btn-primary:hover {
 }
 .cdp-breadcrumb a:hover { color:var(--blue-dark); }
 .cdp-breadcrumb i { font-size:.7rem; }
-.cdp-breadcrumb span { color:var(--text-2); font-weight:600; }
-.cdp-header-row { display:flex; align-items:flex-start; justify-content:space-between; gap:24px; margin-bottom:36px; flex-wrap:wrap; }
-.cdp-badge-row { display:flex; gap:8px; margin-bottom:10px; flex-wrap:wrap; }
-.cdp-cat-badge { font-size:.72rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; padding:4px 13px; border-radius:999px; }
-.cdp-title    { font-size:clamp(1.8rem,3.5vw,2.6rem); font-weight:800; color:var(--text); line-height:1.1; margin-bottom:6px; }
+.cdp-breadcrumb span { 
+  color:var(--text-2); 
+  font-weight:600; 
+}
+.cdp-header-row { 
+  display:flex; 
+  align-items:flex-start; 
+  justify-content:space-between; 
+  gap:24px; 
+  margin-bottom:36px; 
+  flex-wrap:wrap; 
+}
+.cdp-badge-row { 
+  display:flex; 
+  gap:8px; 
+  margin-bottom:10px; 
+  flex-wrap:wrap; 
+}
+.cdp-cat-badge { 
+  font-size:.72rem; 
+  font-weight:700; 
+  letter-spacing:1px; 
+  text-transform:uppercase; 
+  padding:4px 13px; 
+  border-radius:999px; 
+}
+.cdp-title { 
+  font-size:clamp(1.8rem,3.5vw,2.6rem); 
+  font-weight:800; 
+  color:var(--text); 
+  line-height:1.1; 
+  margin-bottom:6px; 
+}
 .cdp-subtitle { font-size:.95rem; color:var(--text-3); }
 .cdp-price-col { text-align:right; flex-shrink:0; background:var(--blue-light); border:1.5px solid rgba(65,105,225,.2); border-radius:var(--radius); padding:20px 28px; }
 .cdp-price-col .from { font-size:.78rem; color:var(--text-3); font-weight:600; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px; }
