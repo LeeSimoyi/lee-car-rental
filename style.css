@@ -1618,8 +1618,22 @@ section:not(.hero) .btn-primary:hover {
   position:relative; 
   overflow:hidden; 
 }
-.cdp-pricing-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--blue); transform:scaleX(0); transition:transform .35s ease; }
-.cdp-pricing-card:hover { transform:translateY(-6px); box-shadow:var(--shadow); border-color:rgba(65,105,225,.3); }
+.cdp-pricing-card::before { 
+  content:''; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  right:0; 
+  height:3px; 
+  background:var(--blue); 
+  transform:scaleX(0); 
+  transition:transform .35s ease; 
+}
+.cdp-pricing-card:hover { 
+  transform:translateY(-6px); 
+  box-shadow:var(--shadow); 
+  border-color:rgba(65,105,225,.3); 
+}
 .cdp-pricing-card:hover::before { transform:scaleX(1); }
 .cdp-pricing-card.highlight { background:var(--blue); border-color:var(--blue); color:#fff; }
 .cdp-pricing-card.highlight::before { background:rgba(255,255,255,.4); transform:scaleX(1); }
