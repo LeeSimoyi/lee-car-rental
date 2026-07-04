@@ -1635,16 +1635,57 @@ section:not(.hero) .btn-primary:hover {
   border-color:rgba(65,105,225,.3); 
 }
 .cdp-pricing-card:hover::before { transform:scaleX(1); }
-.cdp-pricing-card.highlight { background:var(--blue); border-color:var(--blue); color:#fff; }
-.cdp-pricing-card.highlight::before { background:rgba(255,255,255,.4); transform:scaleX(1); }
-.cdp-pricing-card .dur { font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:1.5px; margin-bottom:14px; color:var(--text-3); }
+.cdp-pricing-card.highlight { 
+  background:var(--blue); 
+  border-color:var(--blue); 
+  color:#fff; 
+}
+.cdp-pricing-card.highlight::before { 
+  background:rgba(255,255,255,.4); 
+  transform:scaleX(1); 
+}
+.cdp-pricing-card .dur { 
+  font-size:.75rem; 
+  font-weight:700; 
+  text-transform:uppercase; 
+  letter-spacing:1.5px; 
+  margin-bottom:14px; 
+  color:var(--text-3); 
+}
 .cdp-pricing-card.highlight .dur { color:rgba(255,255,255,.75); }
-.cdp-pricing-card .price { font-size:2.2rem; font-weight:800; line-height:1; color:var(--text); margin-bottom:4px; }
+.cdp-pricing-card .price { 
+  font-size:2.2rem; 
+  font-weight:800; 
+  line-height:1; 
+  color:var(--text); 
+  margin-bottom:4px; 
+}
 .cdp-pricing-card.highlight .price { color:#fff; }
-.cdp-pricing-card .price span { font-size:.88rem; font-weight:500; opacity:.65; }
-.cdp-pricing-card .note { font-size:.82rem; color:var(--text-3); margin-top:10px; }
+.cdp-pricing-card .price span { 
+  font-size:.88rem; 
+  font-weight:500; 
+  opacity:.65; 
+}
+.cdp-pricing-card .note { 
+  font-size:.82rem; 
+  color:var(--text-3); 
+  margin-top:10px; 
+}
 .cdp-pricing-card.highlight .note { color:rgba(255,255,255,.7); }
-.cdp-best-label { position:absolute; top:14px; right:14px; background:rgba(255,255,255,.22); color:#fff; font-size:.68rem; font-weight:800; letter-spacing:1px; text-transform:uppercase; padding:3px 9px; border-radius:999px; border:1px solid rgba(255,255,255,.3); }
+.cdp-best-label { 
+  position:absolute; 
+  top:14px; 
+  right:14px; 
+  background:rgba(255,255,255,.22); 
+  color:#fff; 
+  font-size:.68rem; 
+  font-weight:800; 
+  letter-spacing:1px; 
+  text-transform:uppercase; 
+  padding:3px 9px; 
+  border-radius:999px; 
+  border:1px solid rgba(255,255,255,.3); 
+}
 .cdp-includes { background:var(--bg-white); border:1.5px solid var(--border); border-radius:var(--radius); padding:28px 32px; }
 .cdp-includes h4 { font-size:.88rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-3); display:flex; align-items:center; gap:8px; margin-bottom:20px; }
 .cdp-includes h4 i { color:#10b981; }
