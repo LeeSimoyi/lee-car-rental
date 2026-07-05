@@ -1747,21 +1747,55 @@ section:not(.hero) .btn-primary:hover {
   transition:var(--transition); 
   cursor:pointer; 
 }
-.cdp-also-card:hover { transform:translateY(-5px); box-shadow:var(--shadow); border-color:rgba(65,105,225,.3); }
-.cdp-also-img { width:100%; aspect-ratio:16/9; object-fit:cover; display:block; transition:transform .4s; }
+.cdp-also-card:hover { 
+  transform:translateY(-5px); 
+  box-shadow:var(--shadow); 
+  border-color:rgba(65,105,225,.3); 
+}
+.cdp-also-img { 
+  width:100%; 
+  aspect-ratio:16/9; 
+  object-fit:cover; 
+  display:block; 
+  transition:transform .4s; 
+}
 .cdp-also-card:hover .cdp-also-img { transform:scale(1.04); }
 .cdp-also-info { padding:14px 16px; }
-.cdp-also-name { font-size:.95rem; font-weight:700; margin-bottom:4px; }
-.cdp-also-price { font-size:.88rem; color:var(--blue); font-weight:700; }
-.cdp-also-price span { color:var(--text-3); font-weight:400; }
+.cdp-also-name { 
+  font-size:.95rem; 
+  font-weight:700; 
+  margin-bottom:4px; 
+}
+.cdp-also-price { 
+  font-size:.88rem; 
+  color:var(--blue); 
+  font-weight:700; 
+}
+.cdp-also-price span { 
+  color:var(--text-3); 
+  font-weight:400; 
+}
 
 /* ══════════════════════════════════════════
    SERVICES
 ══════════════════════════════════════════ */
 .services { background:var(--bg-white); }
-.services-header { text-align:center; margin-bottom:24px; }
+.services-header { 
+  text-align:center; 
+  margin-bottom:24px; 
+}
 .services-header .s-sub { margin-inline:auto; }
-.services-strip { display:flex; align-items:center; justify-content:center; gap:32px; flex-wrap:wrap; padding:28px; background:var(--blue-light); border-radius:var(--radius); margin-bottom:56px; }
+.services-strip { 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  gap:32px; 
+  flex-wrap:wrap; 
+  padding:28px; 
+  background:var(--blue-light); 
+  border-radius:var(--radius); 
+  margin-bottom:56px; 
+}
 .services-strip-item { display:flex; align-items:center; gap:10px; font-size:.88rem; font-weight:600; color:var(--blue); }
 .services-strip-sep { width:1px; height:24px; background:rgba(65,105,225,.2); }
 .services-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:24px; margin-bottom:60px; }
