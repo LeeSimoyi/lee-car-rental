@@ -1893,8 +1893,27 @@ section:not(.hero) .btn-primary:hover {
   font-size:.83rem; 
   color:var(--text-2); 
 }
-.service-features li i { color:var(--blue); font-size:.85rem; flex-shrink:0; }
-.service-more-chip { position:absolute; top:16px; right:16px; background:var(--blue-light); color:var(--blue); font-size:.68rem; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding:4px 10px; border-radius:999px; border:1px solid rgba(65,105,225,.2); opacity:0; transform:translateY(-4px); transition:opacity .3s,transform .3s; }
+.service-features li i { 
+  color:var(--blue); 
+  font-size:.85rem; 
+  flex-shrink:0; 
+}
+.service-more-chip { 
+  position:absolute; 
+  top:16px; 
+  right:16px; 
+  background:var(--blue-light); 
+  color:var(--blue); 
+  font-size:.68rem; 
+  font-weight:700; 
+  letter-spacing:.8px; 
+  text-transform:uppercase; 
+  padding:4px 10px; 
+  border-radius:999px; 
+  border:1px solid rgba(65,105,225,.2); 
+  opacity:0; transform:translateY(-4px); 
+  transition:opacity .3s,transform .3s; 
+}
 .service-card:hover .service-more-chip { opacity:1; transform:none; }
 .services-cta { background:linear-gradient(135deg,#0d1b2a,#0f1f4a); border-radius:var(--radius); padding:48px; display:grid; grid-template-columns:1fr auto; gap:32px; align-items:center; }
 .services-cta h3 { font-size:clamp(1.3rem,2.5vw,1.7rem); font-weight:800; color:#fff; margin-bottom:8px; }
