@@ -1686,10 +1686,29 @@ section:not(.hero) .btn-primary:hover {
   border-radius:999px; 
   border:1px solid rgba(255,255,255,.3); 
 }
-.cdp-includes { background:var(--bg-white); border:1.5px solid var(--border); border-radius:var(--radius); padding:28px 32px; }
-.cdp-includes h4 { font-size:.88rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:var(--text-3); display:flex; align-items:center; gap:8px; margin-bottom:20px; }
+.cdp-includes { 
+  background:var(--bg-white); 
+  border:1.5px solid var(--border); 
+  border-radius:var(--radius); 
+  padding:28px 32px; 
+}
+.cdp-includes h4 { 
+  font-size:.88rem; 
+  font-weight:700;
+  text-transform:uppercase; 
+  letter-spacing:1px; 
+  color:var(--text-3); 
+  display:flex; 
+  align-items:center; 
+  gap:8px; 
+  margin-bottom:20px; 
+}
 .cdp-includes h4 i { color:#10b981; }
-.cdp-includes-grid { display:grid; grid-template-columns:1fr 1fr 1fr; gap:12px; }
+.cdp-includes-grid { 
+  display:grid; 
+  grid-template-columns:1fr 1fr 1fr;
+  gap:12px;
+}
 .cdp-include-item { display:flex; align-items:center; gap:9px; font-size:.88rem; color:var(--text-2); padding:10px 14px; background:var(--bg); border-radius:var(--radius-sm); }
 .cdp-include-item i { color:#10b981; flex-shrink:0; }
 .cdp-also { margin-top:48px; padding-top:40px; border-top:1.5px solid var(--border); }
