@@ -1857,13 +1857,42 @@ section:not(.hero) .btn-primary:hover {
 }
 .service-card:hover .service-icon-wrap { transform:scale(1.1) rotate(-3deg); }
 .si-blue{background:#eef1fd;color:var(--blue)} .si-amber{background:#fef3c7;color:#d97706} .si-green{background:#d1fae5;color:#059669} .si-purple{background:#ede9fe;color:#7c3aed} .si-red{background:#fee2e2;color:#dc2626} .si-teal{background:#ccfbf1;color:#0d9488}
-.service-card h3 { font-size:1.1rem; font-weight:700; margin-bottom:10px; }
-.service-card p  { font-size:.88rem; color:var(--text-2); line-height:1.75; margin-bottom:20px; }
-.service-link { display:inline-flex; align-items:center; gap:6px; font-size:.85rem; font-weight:700; color:var(--blue); transition:gap .25s ease; }
+.service-card h3 { 
+  font-size:1.1rem; 
+  font-weight:700; 
+  margin-bottom:10px; 
+}
+.service-card p  { 
+  font-size:.88rem; 
+  color:var(--text-2); 
+  line-height:1.75; 
+  margin-bottom:20px; 
+}
+.service-link { 
+  display:inline-flex; 
+  align-items:center; 
+  gap:6px; 
+  font-size:.85rem; 
+  font-weight:700; 
+  color:var(--blue); 
+  transition:gap .25s ease; 
+}
 .service-card:hover .service-link { gap:10px; }
 .service-link i { font-size:.78rem; }
-.service-features { display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
-.service-features li { list-style:none; display:flex; align-items:center; gap:8px; font-size:.83rem; color:var(--text-2); }
+.service-features { 
+  display:flex; 
+  flex-direction:column; 
+  gap:8px; 
+  margin-bottom:20px; 
+}
+.service-features li { 
+  list-style:none; 
+  display:flex; 
+  align-items:center; 
+  gap:8px; 
+  font-size:.83rem; 
+  color:var(--text-2); 
+}
 .service-features li i { color:var(--blue); font-size:.85rem; flex-shrink:0; }
 .service-more-chip { position:absolute; top:16px; right:16px; background:var(--blue-light); color:var(--blue); font-size:.68rem; font-weight:700; letter-spacing:.8px; text-transform:uppercase; padding:4px 10px; border-radius:999px; border:1px solid rgba(65,105,225,.2); opacity:0; transform:translateY(-4px); transition:opacity .3s,transform .3s; }
 .service-card:hover .service-more-chip { opacity:1; transform:none; }
