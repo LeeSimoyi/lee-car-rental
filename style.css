@@ -1973,10 +1973,46 @@ section:not(.hero) .btn-primary:hover {
   opacity:1; 
   pointer-events:all; 
 }
-.svc-modal { background:var(--bg-white); border-radius:20px; width:100%; max-width:660px; max-height:90vh; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 40px 100px rgba(0,0,0,.35); transform:translateY(30px) scale(.97); transition:transform .4s cubic-bezier(.22,1,.36,1),opacity .35s ease; opacity:0; }
-.svc-modal-overlay.open .svc-modal { transform:none; opacity:1; }
-.svc-modal-sticky-bar { position:sticky; top:0; z-index:10; flex-shrink:0; background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%); padding:12px 18px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
-.svc-modal-bar-label { display:flex; align-items:center; gap:8px; color:rgba(255,255,255,.85); font-size:.8rem; font-weight:700; letter-spacing:1px; text-transform:uppercase; }
+.svc-modal { 
+  background:var(--bg-white); 
+  border-radius:20px; 
+  width:100%; 
+  max-width:660px; 
+  max-height:90vh; 
+  overflow:hidden; 
+  display:flex; 
+  flex-direction:column; 
+  box-shadow:0 40px 100px rgba(0,0,0,.35); 
+  transform:translateY(30px) scale(.97); 
+  transition:transform .4s cubic-bezier(.22,1,.36,1),opacity .35s ease; 
+  opacity:0; 
+}
+.svc-modal-overlay.open .svc-modal { 
+  transform:none; 
+  opacity:1; 
+}
+.svc-modal-sticky-bar { 
+  position:sticky; 
+  top:0; 
+  z-index:10; 
+  flex-shrink:0; 
+  background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%); 
+  padding:12px 18px; 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  gap:12px; 
+}
+.svc-modal-bar-label { 
+  display:flex; 
+  align-items:center; 
+  gap:8px; 
+  color:rgba(255,255,255,.85); 
+  font-size:.8rem; 
+  font-weight:700; 
+  letter-spacing:1px; 
+  text-transform:uppercase; 
+}
 .svc-modal-close-btn { width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.15); border:1.5px solid rgba(255,255,255,.25); color:#fff; font-size:.88rem; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:var(--transition); flex-shrink:0; }
 .svc-modal-close-btn:hover { background:rgba(255,255,255,.28); transform:scale(1.1) rotate(90deg); }
 .svc-modal-scroll { flex:1; overflow-y:auto; scrollbar-width:thin; scrollbar-color:rgba(65,105,225,.35) transparent; }
