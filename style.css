@@ -2013,7 +2013,21 @@ section:not(.hero) .btn-primary:hover {
   letter-spacing:1px; 
   text-transform:uppercase; 
 }
-.svc-modal-close-btn { width:36px; height:36px; border-radius:50%; background:rgba(255,255,255,.15); border:1.5px solid rgba(255,255,255,.25); color:#fff; font-size:.88rem; display:flex; align-items:center; justify-content:center; cursor:pointer; transition:var(--transition); flex-shrink:0; }
+.svc-modal-close-btn { 
+  width:36px; 
+  height:36px; 
+  border-radius:50%; 
+  background:rgba(255,255,255,.15); 
+  border:1.5px solid rgba(255,255,255,.25); 
+  color:#fff; 
+  font-size:.88rem; 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  cursor:pointer; 
+  transition:var(--transition); 
+  flex-shrink:0; 
+}
 .svc-modal-close-btn:hover { background:rgba(255,255,255,.28); transform:scale(1.1) rotate(90deg); }
 .svc-modal-scroll { flex:1; overflow-y:auto; scrollbar-width:thin; scrollbar-color:rgba(65,105,225,.35) transparent; }
 .svc-modal-scroll::-webkit-scrollbar { width:5px; }
