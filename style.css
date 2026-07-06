@@ -1955,8 +1955,24 @@ section:not(.hero) .btn-primary:hover {
 /* ══════════════════════════════════════════
    SERVICE MODAL
 ══════════════════════════════════════════ */
-.svc-modal-overlay { position:fixed; inset:0; z-index:100000; background:rgba(6,14,30,.7); backdrop-filter:blur(12px); display:flex; align-items:center; justify-content:center; padding:20px; opacity:0; pointer-events:none; transition:opacity .35s ease; }
-.svc-modal-overlay.open { opacity:1; pointer-events:all; }
+.svc-modal-overlay { 
+  position:fixed; 
+  inset:0; 
+  z-index:100000; 
+  background:rgba(6,14,30,.7); 
+  backdrop-filter:blur(12px); 
+  display:flex; 
+  align-items:center; 
+  justify-content:center; 
+  padding:20px; 
+  opacity:0; 
+  pointer-events:none; 
+  transition:opacity .35s ease; 
+}
+.svc-modal-overlay.open { 
+  opacity:1; 
+  pointer-events:all; 
+}
 .svc-modal { background:var(--bg-white); border-radius:20px; width:100%; max-width:660px; max-height:90vh; overflow:hidden; display:flex; flex-direction:column; box-shadow:0 40px 100px rgba(0,0,0,.35); transform:translateY(30px) scale(.97); transition:transform .4s cubic-bezier(.22,1,.36,1),opacity .35s ease; opacity:0; }
 .svc-modal-overlay.open .svc-modal { transform:none; opacity:1; }
 .svc-modal-sticky-bar { position:sticky; top:0; z-index:10; flex-shrink:0; background:linear-gradient(135deg,var(--blue) 0%,var(--blue-dark) 100%); padding:12px 18px; display:flex; align-items:center; justify-content:space-between; gap:12px; }
