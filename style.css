@@ -2760,20 +2760,38 @@ section:not(.hero) .btn-primary:hover {
   line-height: 1.5;
 }
 .faq-required, .faq-optional {
-  padding: 3px 10px; border-radius: 999px;
-  font-size: .68rem; font-weight: 800; white-space: nowrap; flex-shrink: 0;
+  padding: 3px 10px; 
+  border-radius: 999px;
+  font-size: .68rem; 
+  font-weight: 800; 
+  white-space: nowrap; 
+  flex-shrink: 0;
 }
-.faq-required { background: #fef2f2; color: #dc2626; }
-.faq-optional { background: #fffbeb; color: #d97706; }
+.faq-required { 
+  background: #fef2f2; 
+  color: #dc2626; 
+}
+.faq-optional { 
+  background: #fffbeb; 
+  color: #d97706; 
+}
 
 /* ── Payment methods grid ── */
 .faq-payment-grid {
-  display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin: 14px 0;
+  display: grid; 
+  grid-template-columns: repeat(3,1fr); 
+  gap: 10px; 
+  margin: 14px 0;
 }
 .faq-payment-item {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 6px; padding: 14px 10px; background: var(--bg);
-  border-radius: var(--radius-sm); border: 1px solid var(--border);
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+  gap: 6px; 
+  padding: 14px 10px; 
+  background: var(--bg);
+  border-radius: var(--radius-sm); 
+  border: 1px solid var(--border);
   text-align: center;
 }
 .faq-payment-item > i    { font-size: 1.5rem; }
