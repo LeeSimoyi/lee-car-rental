@@ -2818,14 +2818,31 @@ section:not(.hero) .btn-primary:hover {
   flex-direction: column; 
   align-items: center; 
   gap: 7px;
-  padding: 14px 12px; background: var(--bg); border-radius: var(--radius-sm);
-  border: 1px solid var(--border); text-align: center;
-  cursor: pointer; transition: var(--transition); text-decoration: none; color: inherit;
+  padding: 14px 12px; 
+  background: var(--bg); 
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border); 
+  text-align: center;
+  cursor: pointer; 
+  transition: var(--transition); 
+  text-decoration: none; 
+  color: inherit;
 }
-.faq-contact-item:hover { border-color: rgba(65,105,225,.3); box-shadow: 0 4px 14px rgba(65,105,225,.1); transform: translateY(-2px); }
+.faq-contact-item:hover { 
+  border-color: rgba(65,105,225,.3); 
+  box-shadow: 0 4px 14px rgba(65,105,225,.1); 
+  transform: translateY(-2px); 
+}
 .faq-contact-item > i    { font-size: 1.4rem; }
-.faq-contact-item strong { font-size: .83rem; font-weight: 700; color: var(--text); }
-.faq-contact-item span   { font-size: .75rem; color: var(--text-2); }
+.faq-contact-item strong { 
+  font-size: .83rem; 
+  font-weight: 700; 
+  color: var(--text); 
+}
+.faq-contact-item span   { 
+  font-size: .75rem; 
+  color: var(--text-2); 
+}
 
 /* ── Tip box inside FAQ answer ── */
 .faq-tip {
