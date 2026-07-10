@@ -2707,24 +2707,58 @@ section:not(.hero) .btn-primary:hover {
   border-color: #bbf7d0; 
 }
 .faq-policy-item.green i { color: #10b981; }
-.faq-policy-item.amber { background: #fffbeb; border-color: #fde68a; }
+.faq-policy-item.amber { 
+  background: #fffbeb; 
+  border-color: #fde68a; 
+}
 .faq-policy-item.amber i { color: #f59e0b; }
-.faq-policy-item.blue  { background: var(--blue-light); border-color: rgba(65,105,225,.2); }
+.faq-policy-item.blue  { 
+  background: var(--blue-light); 
+  border-color: rgba(65,105,225,.2);
+}
 .faq-policy-item.blue i  { color: var(--blue); }
-.faq-policy-item.red   { background: #fef2f2; border-color: #fca5a5; }
+.faq-policy-item.red   { 
+  background: #fef2f2; 
+  border-color: #fca5a5; 
+}
 .faq-policy-item.red i   { color: #ef4444; }
 
 /* ── Document checklist inside FAQ ── */
-.faq-doc-list { display: flex; flex-direction: column; gap: 8px; margin: 14px 0; }
-.faq-doc-item {
-  display: flex; align-items: flex-start; gap: 13px;
-  padding: 13px 15px; background: var(--bg);
-  border-radius: var(--radius-sm); border: 1px solid var(--border);
+.faq-doc-list { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+  margin: 14px 0; 
 }
-.faq-doc-item > i { font-size: 1.1rem; color: var(--blue); flex-shrink: 0; margin-top: 2px; }
+.faq-doc-item {
+  display: flex; 
+  align-items: flex-start; 
+  gap: 13px;
+  padding: 13px 15px; 
+  background: var(--bg);
+  border-radius: var(--radius-sm); 
+  border: 1px solid var(--border);
+}
+.faq-doc-item > i { 
+  font-size: 1.1rem; 
+  color: var(--blue); 
+  flex-shrink: 0; 
+  margin-top: 2px; 
+}
 .faq-doc-item div { flex: 1; min-width: 0; }
-.faq-doc-item div strong { display: block; font-size: .88rem; font-weight: 700; color: var(--text); margin-bottom: 2px; }
-.faq-doc-item div p { font-size: .78rem; color: var(--text-2); margin: 0; line-height: 1.5; }
+.faq-doc-item div strong { 
+  display: block; 
+  font-size: .88rem; 
+  font-weight: 700; 
+  color: var(--text); 
+  margin-bottom: 2px; 
+}
+.faq-doc-item div p { 
+  font-size: .78rem; 
+  color: var(--text-2); 
+  margin: 0; 
+  line-height: 1.5;
+}
 .faq-required, .faq-optional {
   padding: 3px 10px; border-radius: 999px;
   font-size: .68rem; font-weight: 800; white-space: nowrap; flex-shrink: 0;
