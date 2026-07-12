@@ -2967,8 +2967,24 @@ section:not(.hero) .btn-primary:hover {
   position:relative; 
   overflow:hidden; 
 }
-.contact-info-card::before { content:''; position:absolute; top:0; left:0; right:0; height:3px; background:var(--blue); transform:scaleX(0); transform-origin:left; transition:transform .4s; }
-.contact-info-card:hover { transform:translateY(-6px); box-shadow:var(--shadow); border-color:rgba(65,105,225,.25); background:var(--bg-white); }
+.contact-info-card::before { 
+  content:''; 
+  position:absolute; 
+  top:0; 
+  left:0; 
+  right:0; 
+  height:3px; 
+  background:var(--blue); 
+  transform:scaleX(0); 
+  transform-origin:left; 
+  transition:transform .4s; 
+}
+.contact-info-card:hover { 
+  transform:translateY(-6px); 
+  box-shadow:var(--shadow); 
+  border-color:rgba(65,105,225,.25); 
+  background:var(--bg-white); 
+}
 .contact-info-card:hover::before { transform:scaleX(1); }
 .contact-info-icon { width:60px; height:60px; border-radius:18px; background:var(--blue-light); display:flex; align-items:center; justify-content:center; font-size:1.4rem; color:var(--blue); margin:0 auto 18px; transition:var(--transition); }
 .contact-info-card:hover .contact-info-icon { background:var(--blue); color:#fff; transform:scale(1.08) rotate(-4deg); }
