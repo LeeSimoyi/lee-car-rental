@@ -2846,10 +2846,17 @@ section:not(.hero) .btn-primary:hover {
 
 /* ── Tip box inside FAQ answer ── */
 .faq-tip {
-  display: flex; align-items: flex-start; gap: 9px;
-  padding: 12px 15px; background: rgba(65,105,225,.07);
-  border-left: 3px solid var(--blue); border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-  font-size: .83rem; color: var(--text-2); line-height: 1.6; margin-top: 14px;
+  display: flex; 
+  align-items: flex-start; 
+  gap: 9px;
+  padding: 12px 15px; 
+  background: rgba(65,105,225,.07);
+  border-left: 3px solid var(--blue); 
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: .83rem; 
+  color: var(--text-2); 
+  line-height: 1.6; 
+  margin-top: 14px;
 }
 .faq-tip i { color: var(--blue); flex-shrink: 0; margin-top: 2px; }
 
