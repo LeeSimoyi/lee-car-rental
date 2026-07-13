@@ -143,17 +143,30 @@
   flex: 1;
 }
 .bm-step span {
-  width: 28px; height: 28px; border-radius: 50%;
-  background: #e5e7eb; color: #9ca3af;
-  font-size: 0.78rem; font-weight: 700;
-  display: flex; align-items: center; justify-content: center;
+  width: 28px; 
+  height: 28px; 
+  border-radius: 50%;
+  background: #e5e7eb; 
+  color: #9ca3af;
+  font-size: 0.78rem; 
+  font-weight: 700;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   transition: all 0.3s;
 }
 .bm-step label {
-  font-size: 0.68rem; font-weight: 600; color: #9ca3af;
-  transition: color 0.3s; white-space: nowrap;
+  font-size: 0.68rem; 
+  font-weight: 600; 
+  color: #9ca3af;
+  transition: color 0.3s; 
+  white-space: nowrap;
 }
-.bm-step.active span { background: #4169E1; color: #fff; box-shadow: 0 0 0 4px rgba(65,105,225,0.2); }
+.bm-step.active span { 
+  background: #4169E1; 
+  color: #fff; 
+  box-shadow: 0 0 0 4px rgba(65,105,225,0.2); 
+}
 .bm-step.active label { color: #4169E1; }
 .bm-step.completed span { background: #10b981; color: #fff; }
 .bm-step.completed span::after { content: '✓'; }
