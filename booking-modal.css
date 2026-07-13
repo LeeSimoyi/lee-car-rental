@@ -174,8 +174,11 @@
 
 /* ── Content area ── */
 .bm-content {
-  flex: 1; overflow-y: auto; overflow-x: hidden;
-  scrollbar-width: thin; scrollbar-color: rgba(65,105,225,0.3) transparent;
+  flex: 1; 
+  overflow-y: auto; 
+  overflow-x: hidden;
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(65,105,225,0.3) transparent;
 }
 .bm-content::-webkit-scrollbar { width: 4px; }
 .bm-content::-webkit-scrollbar-thumb { background: rgba(65,105,225,0.3); border-radius: 99px; }
@@ -196,10 +199,16 @@
 
 /* ── Car preview ── */
 .bm-car-preview {
-  width: 100%; height: 160px;
-  border-radius: 16px; overflow: hidden; position: relative;
-  background: #f0f1f5; margin-bottom: 20px;
-  display: flex; align-items: center; justify-content: center;
+  width: 100%; 
+  height: 160px;
+  border-radius: 16px; 
+  overflow: hidden; 
+  position: relative;
+  background: #f0f1f5; 
+  margin-bottom: 20px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
 .bm-car-img {
   width: 100%; height: 100%; object-fit: cover; display: block;
