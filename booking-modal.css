@@ -181,7 +181,10 @@
   scrollbar-color: rgba(65,105,225,0.3) transparent;
 }
 .bm-content::-webkit-scrollbar { width: 4px; }
-.bm-content::-webkit-scrollbar-thumb { background: rgba(65,105,225,0.3); border-radius: 99px; }
+.bm-content::-webkit-scrollbar-thumb { 
+  background: rgba(65,105,225,0.3); 
+  border-radius: 99px;
+}
 
 @keyframes bmSlideIn {
   from { opacity: 0; transform: translateX(20px); }
@@ -191,8 +194,12 @@
 
 .bm-step-content { padding: 24px 24px 8px; }
 .bm-step-title {
-  font-size: 1rem; font-weight: 700; color: #0d1b2a;
-  display: flex; align-items: center; gap: 9px;
+  font-size: 1rem; 
+  font-weight: 700; 
+  color: #0d1b2a;
+  display: flex; 
+  align-items: center; 
+  gap: 9px;
   margin-bottom: 20px;
 }
 .bm-step-title i { color: #4169E1; }
