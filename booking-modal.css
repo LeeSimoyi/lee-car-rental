@@ -218,15 +218,25 @@
   justify-content: center;
 }
 .bm-car-img {
-  width: 100%; height: 100%; object-fit: cover; display: block;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover; 
+  display: block;
 }
 .bm-car-overlay {
-  position: absolute; bottom: 0; left: 0; right: 0;
+  position: absolute; 
+  bottom: 0; 
+  left: 0; 
+  right: 0;
   background: linear-gradient(to top, rgba(10,18,36,0.75), transparent);
   padding: 16px 18px 12px;
   color: #fff;
 }
-.bm-car-overlay strong { display: block; font-size: 1rem; font-weight: 800; }
+.bm-car-overlay strong { 
+  display: block; 
+  font-size: 1rem; 
+  font-weight: 800; 
+}
 .bm-car-overlay span   { font-size: 0.8rem; opacity: 0.75; }
 .bm-car-placeholder {
   display: flex; flex-direction: column; align-items: center; gap: 8px;
