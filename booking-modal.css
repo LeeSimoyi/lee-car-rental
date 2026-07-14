@@ -239,18 +239,31 @@
 }
 .bm-car-overlay span   { font-size: 0.8rem; opacity: 0.75; }
 .bm-car-placeholder {
-  display: flex; flex-direction: column; align-items: center; gap: 8px;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 8px;
   color: #9ca3af;
 }
 .bm-car-placeholder i { font-size: 2.5rem; }
 .bm-car-placeholder span { font-size: 0.85rem; }
 
 /* ── Form fields ── */
-.bm-field { display: flex; flex-direction: column; gap: 6px; margin-bottom: 16px; }
+.bm-field { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 6px; 
+  margin-bottom: 16px; 
+}
 .bm-field label {
-  font-size: 0.78rem; font-weight: 700; color: #4b5563;
-  letter-spacing: 0.4px; text-transform: uppercase;
-  display: flex; align-items: center; gap: 6px;
+  font-size: 0.78rem; 
+  font-weight: 700; 
+  color: #4b5563;
+  letter-spacing: 0.4px; 
+  text-transform: uppercase;
+  display: flex; 
+  align-items: center; 
+  gap: 6px;
 }
 .bm-field label i { color: #4169E1; font-size: 0.8rem; }
 .bm-optional { font-weight: 400; text-transform: none; letter-spacing: 0; color: #9ca3af; }
