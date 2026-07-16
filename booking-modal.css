@@ -265,9 +265,21 @@
   align-items: center; 
   gap: 6px;
 }
-.bm-field label i { color: #4169E1; font-size: 0.8rem; }
-.bm-optional { font-weight: 400; text-transform: none; letter-spacing: 0; color: #9ca3af; }
-.bm-field-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.bm-field label i { 
+  color: #4169E1; 
+  font-size: 0.8rem; 
+}
+.bm-optional { 
+  font-weight: 400; 
+  text-transform: none; 
+  letter-spacing: 0; 
+  color: #9ca3af; 
+}
+.bm-field-row { 
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 14px; 
+}
 
 .bm-input, .bm-select, .bm-textarea {
   width: 100%; padding: 11px 14px;
