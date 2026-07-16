@@ -313,7 +313,10 @@
   gap: 5px;
   animation: errFadeIn 0.2s ease;
 }
-.bm-err-msg i { font-size: 0.7rem; flex-shrink: 0; }
+.bm-err-msg i { 
+  font-size: 0.7rem; 
+  flex-shrink: 0; 
+}
 @keyframes errFadeIn { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 
 /* Shake animation for Next button when validation fails */
@@ -331,15 +334,29 @@
 
 /* ── Price summary ── */
 .bm-price-summary {
-  background: #eef1fd; border: 1.5px solid rgba(65,105,225,0.2);
-  border-radius: 12px; padding: 14px 18px; margin-bottom: 16px;
+  background: #eef1fd; 
+  border: 1.5px solid rgba(65,105,225,0.2);
+  border-radius: 12px; 
+  padding: 14px 18px; 
+  margin-bottom: 16px;
 }
 .bm-summary-row {
-  display: flex; justify-content: space-between; align-items: center;
-  font-size: 0.88rem; color: #4b5563; padding: 4px 0;
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+  font-size: 0.88rem; 
+  color: #4b5563; 
+  padding: 4px 0;
 }
-.bm-summary-row strong { font-weight: 700; color: #0d1b2a; }
-.bm-summary-row.deposit { border-top: 1px solid rgba(65,105,225,0.2); margin-top: 6px; padding-top: 10px; }
+.bm-summary-row strong { 
+  font-weight: 700; 
+  color: #0d1b2a; 
+}
+.bm-summary-row.deposit { 
+  border-top: 1px solid rgba(65,105,225,0.2); 
+  margin-top: 6px; 
+  padding-top: 10px; 
+}
 .bm-summary-row.deposit strong { color: #4169E1; }
 
 /* ── Terms checkbox ── */
