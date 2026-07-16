@@ -282,14 +282,21 @@
 }
 
 .bm-input, .bm-select, .bm-textarea {
-  width: 100%; padding: 11px 14px;
-  background: #f8f9ff; border: 1.5px solid #e5e7eb;
-  border-radius: 10px; color: #0d1b2a;
-  font-family: 'Poppins', sans-serif; font-size: 0.9rem;
-  transition: all 0.25s; outline: none; appearance: none;
+  width: 100%; 
+  padding: 11px 14px;
+  background: #f8f9ff; 
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px; 
+  color: #0d1b2a;
+  font-family: 'Poppins', sans-serif; 
+  font-size: 0.9rem;
+  transition: all 0.25s; 
+  outline: none; 
+  appearance: none;
 }
 .bm-input:focus, .bm-select:focus, .bm-textarea:focus {
-  border-color: #4169E1; background: #fff;
+  border-color: #4169E1; 
+  background: #fff;
   box-shadow: 0 0 0 3px rgba(65,105,225,0.12);
 }
 .bm-input.bm-error, .bm-select.bm-error {
