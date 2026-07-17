@@ -2923,10 +2923,19 @@ section:not(.hero) .btn-primary:hover {
 }
 .faq-contact-card .btn-contact:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.15); }
 .faq-whatsapp-btn {
-  display: flex; align-items: center; justify-content: center; gap: 8px;
-  width: 100%; padding: 12px 20px; background: #25d366; color: #fff;
-  border-radius: 999px; font-weight: 700; font-size: .88rem;
-  text-decoration: none; transition: var(--transition);
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 8px;
+  width: 100%; 
+  padding: 12px 20px; 
+  background: #25d366; 
+  color: #fff;
+  border-radius: 999px; 
+  font-weight: 700; 
+  font-size: .88rem;
+  text-decoration: none; 
+  transition: var(--transition);
 }
 .faq-whatsapp-btn:hover { background: #20b858; transform: translateY(-2px); }
 
