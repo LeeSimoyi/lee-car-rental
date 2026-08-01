@@ -3113,11 +3113,33 @@ section:not(.hero) .btn-primary:hover {
   font-weight:600; 
   color:var(--text); 
 }
-.contact-hours { background:linear-gradient(135deg,#0d1b2a,#0f1f4a); border-radius:var(--radius); padding:28px 32px; }
-.contact-hours-title { display:flex; align-items:center; gap:10px; font-size:1rem; font-weight:700; color:#fff; margin-bottom:20px; }
+.contact-hours { 
+  background:linear-gradient(135deg,#0d1b2a,#0f1f4a); 
+  border-radius:var(--radius); 
+  padding:28px 32px; 
+}
+.contact-hours-title { 
+  display:flex; 
+  align-items:center; 
+  gap:10px; 
+  font-size:1rem; 
+  font-weight:700; 
+  color:#fff; 
+  margin-bottom:20px; 
+}
 .contact-hours-title i { color:#6a9eff; }
-.hours-list { display:flex; flex-direction:column; gap:10px; }
-.hours-row { display:flex; align-items:center; justify-content:space-between; padding:10px 0; border-bottom:1px solid rgba(255,255,255,.07); }
+.hours-list { 
+  display:flex; 
+  flex-direction:column; 
+  gap:10px;
+}
+.hours-row { 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  padding:10px 0; 
+  border-bottom:1px solid rgba(255,255,255,.07); 
+}
 .hours-row:last-child { border-bottom:none; }
 .hours-row span { font-size:.88rem; color:rgba(255,255,255,.6); }
 .hours-row strong { font-size:.88rem; color:#fff; font-weight:600; }
