@@ -3198,13 +3198,49 @@ section:not(.hero) .btn-primary:hover {
   color:var(--text); 
   margin-bottom:6px; 
 }
-.contact-form-header p  { font-size:.9rem; color:var(--text-2); }
-.contact-form-grid { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.contact-form-header p  { 
+  font-size:.9rem; 
+  color:var(--text-2); 
+}
+.contact-form-grid { 
+  display:grid; 
+  grid-template-columns:1fr 1fr; 
+  gap:16px; 
+}
 .contact-form-full { grid-column:1/-1; }
-.contact-form-group { display:flex; flex-direction:column; gap:7px; }
-.contact-form-group label { font-size:.82rem; font-weight:600; color:var(--text-2); letter-spacing:.4px; text-transform:uppercase; display:flex; align-items:center; gap:6px; }
-.contact-form-group label i { color:var(--blue); font-size:.82rem; }
-.contact-form-group input,.contact-form-group select,.contact-form-group textarea { width:100%; padding:13px 16px; background:var(--bg-white); border:1.5px solid var(--border); border-radius:var(--radius-sm); color:var(--text); font-family:var(--font); font-size:.95rem; transition:var(--transition); outline:none; appearance:none; resize:none; }
+.contact-form-group { 
+  display:flex; 
+  flex-direction:column; 
+  gap:7px; 
+}
+.contact-form-group label { 
+  font-size:.82rem; 
+  font-weight:600; 
+  color:var(--text-2); 
+  letter-spacing:.4px; 
+  text-transform:uppercase; 
+  display:flex; 
+  align-items:center; 
+  gap:6px; 
+}
+.contact-form-group label i { 
+  color:var(--blue); 
+  font-size:.82rem; 
+}
+.contact-form-group input,.contact-form-group select,.contact-form-group textarea { 
+  width:100%; 
+  padding:13px 16px; 
+  background:var(--bg-white); 
+  border:1.5px solid var(--border); 
+  border-radius:var(--radius-sm); 
+  color:var(--text); 
+  font-family:var(--font); 
+  font-size:.95rem; 
+  transition:var(--transition); 
+  outline:none; 
+  appearance:none; 
+  resize:none; 
+}
 .contact-form-group input::placeholder,.contact-form-group textarea::placeholder { color:var(--text-3); }
 .contact-form-group input:focus,.contact-form-group select:focus,.contact-form-group textarea:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(65,105,225,.12); }
 .contact-topics { display:flex; flex-wrap:wrap; gap:8px; padding:4px 0 8px; }
