@@ -2941,13 +2941,21 @@ section:not(.hero) .btn-primary:hover {
 
 /* ── Popular questions quick links ── */
 .faq-popular {
-  background: var(--bg-white); border: 1.5px solid var(--border);
-  border-radius: var(--radius); padding: 22px;
+  background: var(--bg-white); 
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius); 
+  padding: 22px;
 }
 .faq-popular-title {
-  font-size: .82rem; font-weight: 800; color: var(--text);
-  text-transform: uppercase; letter-spacing: .8px;
-  display: flex; align-items: center; gap: 7px; margin-bottom: 14px;
+  font-size: .82rem; 
+  font-weight: 800; 
+  color: var(--text);
+  text-transform: uppercase; 
+  letter-spacing: .8px;
+  display: flex; 
+  align-items: center; 
+  gap: 7px; 
+  margin-bottom: 14px;
 }
 .faq-popular-title i { color: #f59e0b; }
 .faq-popular-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
