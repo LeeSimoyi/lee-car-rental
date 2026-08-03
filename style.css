@@ -2497,7 +2497,8 @@ section:not(.hero) .btn-primary:hover {
 /* ── Category filter tabs ── */
 .faq-tabs {
   display: flex; 
-  gap: 8px; flex-wrap: wrap; 
+  gap: 8px; 
+  flex-wrap: wrap; 
   justify-content: center;
   margin-bottom: 48px;
 }
@@ -2958,15 +2959,32 @@ section:not(.hero) .btn-primary:hover {
   margin-bottom: 14px;
 }
 .faq-popular-title i { color: #f59e0b; }
-.faq-popular-list { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+.faq-popular-list { 
+  list-style: none; 
+  display: flex; 
+  flex-direction: column; 
+  gap: 4px; 
+}
 .faq-popular-list li {
-  display: flex; align-items: center; gap: 9px;
-  padding: 9px 10px; border-radius: var(--radius-sm);
-  font-size: .83rem; color: var(--text-2); font-weight: 500;
+  display: flex; 
+  align-items: center; 
+  gap: 9px;
+  padding: 9px 10px; 
+  border-radius: var(--radius-sm);
+  font-size: .83rem; 
+  color: var(--text-2); 
+  font-weight: 500;
   cursor: pointer; transition: var(--transition);
 }
-.faq-popular-list li i { color: var(--blue); font-size: .7rem; flex-shrink: 0; }
-.faq-popular-list li:hover { background: var(--blue-light); color: var(--blue); }
+.faq-popular-list li i { 
+  color: var(--blue); 
+  font-size: .7rem; 
+  flex-shrink: 0; 
+}
+.faq-popular-list li:hover { 
+  background: var(--blue-light); 
+  color: var(--blue); 
+}
 
 /* ── Responsive FAQ ── */
 @media (max-width: 1024px) {
