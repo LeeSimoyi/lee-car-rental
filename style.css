@@ -3431,9 +3431,23 @@ section:not(.hero) .btn-primary:hover {
 /* ══════════════════════════════════════════
    FOOTER
 ══════════════════════════════════════════ */
-footer { background:#0a1120; padding:clamp(48px,6vw,80px) 0 32px; color:rgba(255,255,255,.7); }
-.footer-grid { display:grid; grid-template-columns:1.5fr repeat(3,1fr); gap:48px; margin-bottom:56px; }
-.footer-logo { font-size:1.6rem; font-weight:800; color:#fff; margin-bottom:14px; }
+footer { 
+  background:#0a1120; 
+  padding:clamp(48px,6vw,80px) 0 32px; 
+  color:rgba(255,255,255,.7); 
+}
+.footer-grid { 
+  display:grid; 
+  grid-template-columns:1.5fr repeat(3,1fr); 
+  gap:48px;
+  margin-bottom:56px; 
+}
+.footer-logo { 
+  font-size:1.6rem; 
+  font-weight:800; 
+  color:#fff; 
+  margin-bottom:14px; 
+}
 .footer-logo span { color:#6a9eff; }
 .footer-tagline { font-size:.9rem; line-height:1.8; margin-bottom:24px; }
 .footer-socials { display:flex; gap:10px; }
