@@ -3242,9 +3242,28 @@ section:not(.hero) .btn-primary:hover {
   resize:none; 
 }
 .contact-form-group input::placeholder,.contact-form-group textarea::placeholder { color:var(--text-3); }
-.contact-form-group input:focus,.contact-form-group select:focus,.contact-form-group textarea:focus { border-color:var(--blue); box-shadow:0 0 0 3px rgba(65,105,225,.12); }
-.contact-topics { display:flex; flex-wrap:wrap; gap:8px; padding:4px 0 8px; }
-.topic-chip { padding:7px 16px; border-radius:999px; border:1.5px solid var(--border); background:var(--bg-white); font-size:.82rem; font-weight:600; color:var(--text-2); cursor:pointer; transition:var(--transition); font-family:var(--font); }
+.contact-form-group input:focus,.contact-form-group select:focus,.contact-form-group textarea:focus { 
+  border-color:var(--blue); 
+  box-shadow:0 0 0 3px rgba(65,105,225,.12); 
+}
+.contact-topics { 
+  display:flex; 
+  flex-wrap:wrap; 
+  gap:8px; 
+  padding:4px 0 8px; 
+}
+.topic-chip { 
+  padding:7px 16px; 
+  border-radius:999px; 
+  border:1.5px solid var(--border); 
+  background:var(--bg-white); 
+  font-size:.82rem; 
+  font-weight:600; 
+  color:var(--text-2); 
+  cursor:pointer; 
+  transition:var(--transition); 
+  font-family:var(--font); 
+}
 .topic-chip:hover,.topic-chip.active { background:var(--blue); border-color:var(--blue); color:#fff; }
 .contact-submit { width:100%; padding:15px; background:var(--blue); color:#fff; border:none; border-radius:var(--radius-sm); font-weight:700; font-size:1rem; display:flex; align-items:center; justify-content:center; gap:10px; box-shadow:0 10px 28px rgba(65,105,225,.30); transition:var(--transition); margin-top:4px; cursor:pointer; font-family:var(--font); }
 .contact-submit:hover { background:var(--blue-dark); transform:translateY(-3px); }
