@@ -3302,10 +3302,33 @@ section:not(.hero) .btn-primary:hover {
   color:var(--text-3); 
 }
 .contact-form-note i { color:var(--blue); }
-.contact-social-strip { margin-top:56px; background:var(--bg); border:1.5px solid var(--border); border-radius:var(--radius); padding:32px 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; flex-wrap:wrap; }
-.contact-social-left h4 { font-size:1.1rem; font-weight:800; color:var(--text); margin-bottom:4px; }
-.contact-social-left p  { font-size:.88rem; color:var(--text-2); }
-.contact-social-links { display:flex; gap:12px; flex-wrap:wrap; }
+.contact-social-strip { 
+  margin-top:56px; 
+  background:var(--bg); 
+  border:1.5px solid var(--border); 
+  border-radius:var(--radius); 
+  padding:32px 40px; 
+  display:flex; 
+  align-items:center; 
+  justify-content:space-between; 
+  gap:24px; 
+  flex-wrap:wrap; 
+}
+.contact-social-left h4 { 
+  font-size:1.1rem; 
+  font-weight:800; 
+  color:var(--text); 
+  margin-bottom:4px; 
+}
+.contact-social-left p  { 
+  font-size:.88rem; 
+  color:var(--text-2); 
+}
+.contact-social-links { 
+  display:flex; 
+  gap:12px; 
+  flex-wrap:wrap; 
+}
 .social-pill { display:inline-flex; align-items:center; gap:8px; padding:10px 20px; border-radius:999px; font-size:.85rem; font-weight:700; border:1.5px solid var(--border); color:var(--text); background:var(--bg-white); transition:var(--transition); }
 .social-pill:hover { transform:translateY(-3px); box-shadow:0 8px 20px rgba(0,0,0,.1); }
 .social-pill.whatsapp:hover  { background:#25d366; border-color:#25d366; color:#fff; }
