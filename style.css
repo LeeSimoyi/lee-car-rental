@@ -3724,9 +3724,17 @@ footer hr {
     padding:10px 14px;
     font-size:.82rem;
   }
-  .car-footer{flex-direction:column;align-items:flex-start;gap:12px;}
+  .car-footer{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:12px;
+  }
   .car-actions{width:100%;}
-  .car-book-btn,.car-details-btn{flex:1;justify-content:center;text-align:center;}
+  .car-book-btn,.car-details-btn{
+    flex:1;
+    justify-content:center;
+    text-align:center;
+  }
   .cdp-topbar-title{display:none;}
   .svc-modal-body{padding:20px;}
   .svc-modal-banner{height:140px;}
@@ -3738,5 +3746,10 @@ footer hr {
   .s-title{font-size:1.7rem;}
   .about-counters{grid-template-columns:1fr;}
   .contact-form-wrap{padding:20px;}
-  .to-top{bottom:20px;right:20px;width:44px;height:44px;}
+  .to-top{
+    bottom:20px;
+    right:20px;
+    width:44px;
+    height:44px;
+  }
 }
