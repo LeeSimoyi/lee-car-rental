@@ -3617,17 +3617,26 @@ footer hr {
   .hero-content  { align-items:center; }
   .hero-desc     { margin-inline:auto; }
   .hero-btns     { justify-content:center; }
-  .hero-stats    { justify-content:center; max-width:100%; }
+  .hero-stats    { 
+    justify-content:center; 
+    max-width:100%;
+  }
   .hero-visual   { display:none; }
   .about-inner   { grid-template-columns:1fr; }
   .about-visual  { display:none; }
   .about-counters{ grid-template-columns:repeat(2,1fr); }
   .services-grid { grid-template-columns:repeat(2,1fr); }
-  .services-cta  { grid-template-columns:1fr; text-align:center; }
+  .services-cta  { 
+    grid-template-columns:1fr; 
+    text-align:center; 
+  }
   .services-cta-btns { justify-content:center; }
   .contact-info-row { grid-template-columns:repeat(2,1fr); }
   .contact-body  { grid-template-columns:1fr; }
-  .contact-social-strip { flex-direction:column; text-align:center; }
+  .contact-social-strip { 
+    flex-direction:column;
+    text-align:center; 
+  }
   .contact-social-links { justify-content:center; }
   .cdp-overview-grid { grid-template-columns:1fr; }
   .cdp-pricing-grid  { grid-template-columns:1fr; }
@@ -3641,13 +3650,20 @@ footer hr {
   .hamburger { display:flex; }
   .cdp-hero  { height:280px; }
   .cdp-thumbs{ display:none; }
-  .cdp-price-col { text-align:left; width:100%; }
+  .cdp-price-col { 
+    text-align:left; 
+    width:100%; 
+  }
   .cdp-header-row { flex-direction:column; }
   .cdp-body  { padding:24px clamp(1rem,4vw,2rem) 60px; }
   .svc-modal-feat-grid { grid-template-columns:1fr; }
 }
 @media (max-width:720px) {
-  .cars-grid    { grid-template-columns:1fr; max-width:440px; margin-inline:auto; }
+  .cars-grid    { 
+    grid-template-columns:1fr; 
+    max-width:440px; 
+    margin-inline:auto;
+  }
   .reviews-grid { grid-template-columns:1fr; max-width:540px; margin-inline:auto; }
   .footer-grid  { grid-template-columns:1fr; gap:32px; }
   .services-grid{ grid-template-columns:1fr; max-width:480px; margin-inline:auto; }
