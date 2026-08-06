@@ -3664,17 +3664,34 @@ footer hr {
     max-width:440px; 
     margin-inline:auto;
   }
-  .reviews-grid { grid-template-columns:1fr; max-width:540px; margin-inline:auto; }
-  .footer-grid  { grid-template-columns:1fr; gap:32px; }
-  .services-grid{ grid-template-columns:1fr; max-width:480px; margin-inline:auto; }
+  .reviews-grid { 
+    grid-template-columns:1fr; 
+    max-width:540px; 
+    margin-inline:auto; 
+  }
+  .footer-grid  { 
+    grid-template-columns:1fr; 
+    gap:32px; 
+  }
+  .services-grid{ 
+    grid-template-columns:1fr; 
+    max-width:480px; 
+    margin-inline:auto; 
+  }
   .about-pillars{ grid-template-columns:1fr; }
   .about-counters{grid-template-columns:repeat(2,1fr);}
   .contact-info-row{grid-template-columns:repeat(2,1fr);}
   .contact-form-grid{grid-template-columns:1fr;}
   .cdp-photo-grid{grid-template-columns:1fr;}
-  .cdp-photo-item.large{grid-column:span 1;aspect-ratio:16/9;}
+  .cdp-photo-item.large{
+    grid-column:span 1;
+    aspect-ratio:16/9;
+  }
   .cdp-includes-grid{grid-template-columns:1fr;}
-  .cdp-also-grid{grid-template-columns:1fr;max-width:380px;}
+  .cdp-also-grid{
+    grid-template-columns:1fr;
+    max-width:380px;
+  }
 }
 @media (max-width:600px) {
   :root{--pad:1rem;}
