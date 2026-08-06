@@ -3575,10 +3575,24 @@ footer hr {
   transition:all .4s cubic-bezier(.22,.61,.36,1); 
   z-index:9999; 
 }
-.toast.show { transform:none; opacity:1; }
-.toast i { color:var(--blue); font-size:1.3rem; flex-shrink:0; }
-.toast-txt strong { display:block; font-size:.92rem; color:var(--text); }
-.toast-txt span { font-size:.82rem; color:var(--text-2); }
+.toast.show { 
+  transform:none; 
+  opacity:1; 
+}
+.toast i { 
+  color:var(--blue); 
+  font-size:1.3rem; 
+  flex-shrink:0; 
+}
+.toast-txt strong { 
+  display:block; 
+  font-size:.92rem; 
+  color:var(--text); 
+}
+.toast-txt span { 
+  font-size:.82rem; 
+  color:var(--text-2);
+}
 
 /* ══════════════════════════════════════════
    RESPONSIVE
@@ -3586,11 +3600,20 @@ footer hr {
 @media (max-width:1024px) {
   .cars-grid     { grid-template-columns:repeat(2,1fr); }
   .reviews-grid  { grid-template-columns:repeat(2,1fr); }
-  .footer-grid   { grid-template-columns:1fr 1fr; gap:36px; }
-  .faq-inner     { grid-template-columns:1fr; gap:40px; }
+  .footer-grid   { 
+    grid-template-columns:1fr 1fr; 
+    gap:36px; 
+  }
+  .faq-inner     { 
+    grid-template-columns:1fr; 
+    gap:40px; 
+  }
   .steps-grid    { grid-template-columns:repeat(2,1fr); }
   .steps-grid::before { display:none; }
-  .hero-inner    { grid-template-columns:1fr; text-align:center; }
+  .hero-inner    { 
+    grid-template-columns:1fr; 
+    text-align:center; 
+  }
   .hero-content  { align-items:center; }
   .hero-desc     { margin-inline:auto; }
   .hero-btns     { justify-content:center; }
