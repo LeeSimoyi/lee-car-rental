@@ -360,10 +360,18 @@
 .bm-summary-row.deposit strong { color: #4169E1; }
 
 /* ── Terms checkbox ── */
-.bm-terms { margin-top: 4px; margin-bottom: 16px; }
+.bm-terms {
+   margin-top: 4px; 
+   margin-bottom: 16px; 
+}
 .bm-checkbox-label {
-  display: flex; align-items: flex-start; gap: 10px;
-  font-size: 0.85rem; color: #4b5563; cursor: pointer; line-height: 1.5;
+  display: flex; 
+  align-items: flex-start; 
+  gap: 10px;
+  font-size: 0.85rem; 
+  color: #4b5563; 
+  cursor: pointer; 
+  line-height: 1.5;
 }
 .bm-checkbox-label input { margin-top: 3px; accent-color: #4169E1; flex-shrink: 0; }
 .bm-checkbox-label a { color: #4169E1; font-weight: 600; }
