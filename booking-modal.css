@@ -477,11 +477,20 @@
 
 /* ── Alert ── */
 .bm-alert {
-  position: absolute; bottom: 80px; left: 50%; transform: translateX(-50%) translateY(10px);
-  background: #ef4444; color: #fff; padding: 10px 20px;
-  border-radius: 999px; font-size: 0.85rem; font-weight: 600;
-  white-space: nowrap; opacity: 0; pointer-events: none;
-  transition: all 0.3s; z-index: 10;
+  position: absolute; 
+  bottom: 80px; 
+  left: 50%; transform: translateX(-50%) translateY(10px);
+  background: #ef4444; 
+  color: #fff; 
+  padding: 10px 20px;
+  border-radius: 999px; 
+  font-size: 0.85rem; 
+  font-weight: 600;
+  white-space: nowrap; 
+  opacity: 0; 
+  pointer-events: none;
+  transition: all 0.3s; 
+  z-index: 10;
 }
 .bm-alert.show { opacity: 1; transform: translateX(-50%) translateY(0); }
 
