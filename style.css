@@ -2994,7 +2994,10 @@ section:not(.hero) .btn-primary:hover {
     flex-direction: row; 
     flex-wrap: wrap; 
   }
-  .faq-sidebar > * { flex: 1; min-width: 260px; }
+  .faq-sidebar > * { 
+    flex: 1; 
+    min-width: 260px; 
+  }
 }
 @media (max-width: 720px) {
   .faq-tabs { gap: 6px; }
@@ -3011,7 +3014,10 @@ section:not(.hero) .btn-primary:hover {
 @media (max-width: 480px) {
   .faq-payment-grid { grid-template-columns: 1fr 1fr 1fr; }
   .faq-q { padding: 14px 16px; }
-  .faq-a-inner { padding: 0 16px 16px; padding-top: 14px; }
+  .faq-a-inner { 
+    padding: 0 16px 16px; 
+    padding-top: 14px; 
+  }
 }
 
 /* ══════════════════════════════════════════
