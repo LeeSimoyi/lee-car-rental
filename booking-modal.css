@@ -373,22 +373,37 @@
   cursor: pointer; 
   line-height: 1.5;
 }
-.bm-checkbox-label input { margin-top: 3px; accent-color: #4169E1; flex-shrink: 0; }
-.bm-checkbox-label a { color: #4169E1; font-weight: 600; }
+.bm-checkbox-label input {
+   margin-top: 3px; 
+   accent-color: #4169E1; 
+   flex-shrink: 0; 
+}
+.bm-checkbox-label a { 
+   color: #4169E1; 
+   font-weight: 600;
+}
 
 /* ── Review step ── */
 .bm-review-card {
-  background: #f8f9ff; border: 1.5px solid #e5e7eb;
-  border-radius: 16px; overflow: hidden;
+  background: #f8f9ff; 
+  border: 1.5px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
 }
 .bm-review-car {
-  display: flex; align-items: center; gap: 14px;
-  padding: 16px 18px; background: #fff;
+  display: flex; 
+  align-items: center; 
+  gap: 14px;
+  padding: 16px 18px; 
+  background: #fff;
   border-bottom: 1px solid #f0f1f5;
 }
 .bm-review-car img {
-  width: 80px; height: 54px; object-fit: cover;
-  border-radius: 10px; flex-shrink: 0;
+  width: 80px; 
+  height: 54px;
+  object-fit: cover;
+  border-radius: 10px; 
+  flex-shrink: 0;
 }
 .bm-review-car h3 { font-size: 1rem; font-weight: 700; color: #0d1b2a; margin: 0 0 2px; }
 .bm-review-car span { font-size: 0.82rem; color: #9ca3af; }
