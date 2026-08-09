@@ -405,12 +405,22 @@
   border-radius: 10px; 
   flex-shrink: 0;
 }
-.bm-review-car h3 { font-size: 1rem; font-weight: 700; color: #0d1b2a; margin: 0 0 2px; }
-.bm-review-car span { font-size: 0.82rem; color: #9ca3af; }
+.bm-review-car h3 { 
+  font-size: 1rem; 
+  font-weight: 700; 
+  color: #0d1b2a; 
+  margin: 0 0 2px; 
+}
+.bm-review-car span { 
+  font-size: 0.82rem; 
+  color: #9ca3af; 
+}
 
 .bm-review-grid {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 0; padding: 8px 0;
+  display: grid; 
+  grid-template-columns: 1fr 1fr;
+  gap: 0; 
+  padding: 8px 0;
 }
 .bm-review-item {
   display: flex; align-items: center; gap: 12px;
