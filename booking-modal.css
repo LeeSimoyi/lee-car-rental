@@ -644,16 +644,29 @@
 .bm-ref-copy:hover { background: #2f54c8; }
 
 .bm-confirm-steps {
-  display: flex; flex-direction: column; gap: 10px;
-  text-align: left; margin-bottom: 28px;
+  display: flex; 
+  flex-direction: column; 
+  gap: 10px;
+  text-align: left; 
+  margin-bottom: 28px;
 }
 .bm-cs-item {
-  display: flex; align-items: center; gap: 12px;
-  padding: 10px 14px; border-radius: 10px;
-  background: #f8f9ff; border: 1px solid #f0f1f5;
-  font-size: 0.87rem; color: #4b5563;
+  display: flex; 
+  align-items: center; 
+  gap: 12px;
+  padding: 10px 14px; 
+  border-radius: 10px;
+  background: #f8f9ff; 
+  border: 1px solid #f0f1f5;
+  font-size: 0.87rem; 
+  color: #4b5563;
 }
-.bm-cs-item i { width: 18px; text-align: center; flex-shrink: 0; color: #9ca3af; }
+.bm-cs-item i { 
+  width: 18px; 
+  text-align: center; 
+  flex-shrink: 0; 
+  color: #9ca3af; 
+}
 .bm-cs-item.done { background: #f0fdf4; border-color: #bbf7d0; }
 .bm-cs-item.done i { color: #10b981; }
 .bm-cs-item.active { background: #eef1fd; border-color: rgba(65,105,225,0.2); }
