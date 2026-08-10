@@ -520,13 +520,24 @@
   transition: all 0.25s;
   font-family: 'Poppins', sans-serif;
 }
-.bm-btn-back:hover { border-color: #4169E1; color: #4169E1; background: #eef1fd; }
+.bm-btn-back:hover { 
+  border-color: #4169E1; 
+  color: #4169E1; 
+  background: #eef1fd; 
+}
 .bm-btn-next, .bm-btn-confirm {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 11px 26px; border-radius: 999px;
-  background: #4169E1; border: none; color: #fff;
-  font-size: 0.9rem; font-weight: 700;
-  cursor: pointer; transition: all 0.25s;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  padding: 11px 26px; 
+  border-radius: 999px;
+  background: #4169E1; 
+  border: none; 
+  color: #fff;
+  font-size: 0.9rem; 
+  font-weight: 700;
+  cursor: pointer; 
+  transition: all 0.25s;
   box-shadow: 0 8px 22px rgba(65,105,225,0.3);
   font-family: 'Poppins', sans-serif;
 }
