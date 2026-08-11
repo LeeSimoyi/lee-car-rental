@@ -667,9 +667,15 @@
   flex-shrink: 0; 
   color: #9ca3af; 
 }
-.bm-cs-item.done { background: #f0fdf4; border-color: #bbf7d0; }
+.bm-cs-item.done { 
+  background: #f0fdf4; 
+  border-color: #bbf7d0; 
+}
 .bm-cs-item.done i { color: #10b981; }
-.bm-cs-item.active { background: #eef1fd; border-color: rgba(65,105,225,0.2); }
+.bm-cs-item.active { 
+  background: #eef1fd; 
+  border-color: rgba(65,105,225,0.2); 
+}
 .bm-cs-item.active i { color: #4169E1; }
 
 .bm-confirm-actions {
@@ -695,11 +701,19 @@
   border: none;
   box-shadow: 0 8px 22px rgba(65,105,225,0.28);
 }
-.bm-btn-status:hover { background: #2f54c8; transform: translateY(-2px); }
-.bm-btn-done {
-  background: #f8f9ff; color: #4b5563; border: 1.5px solid #e5e7eb;
+.bm-btn-status:hover { 
+  background: #2f54c8; 
+  transform: translateY(-2px); 
 }
-.bm-btn-done:hover { border-color: #4169E1; color: #4169E1; }
+.bm-btn-done {
+  background: #f8f9ff; 
+  color: #4b5563; 
+  border: 1.5px solid #e5e7eb;
+}
+.bm-btn-done:hover { 
+  border-color: #4169E1; 
+  color: #4169E1; 
+}
 
 /* ══════════════════════════════════════════
    STATUS CHECKER MODAL
