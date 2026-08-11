@@ -782,16 +782,34 @@
   color: #fff; 
 }
 .sc-body { padding: 20px 22px 24px; }
-.sc-desc { font-size: 0.88rem; color: #4b5563; margin-bottom: 18px; line-height: 1.6; }
-.sc-input-row { display: flex; gap: 10px; margin-bottom: 18px; }
-.sc-input {
-  flex: 1; padding: 11px 14px;
-  background: #f8f9ff; border: 1.5px solid #e5e7eb;
-  border-radius: 10px; font-family: 'Poppins', sans-serif;
-  font-size: 0.9rem; color: #0d1b2a; outline: none;
-  text-transform: uppercase; letter-spacing: 1px;
+.sc-desc { 
+  font-size: 0.88rem; 
+  color: #4b5563; 
+  margin-bottom: 18px; 
+  line-height: 1.6; 
 }
-.sc-input:focus { border-color: #4169E1; box-shadow: 0 0 0 3px rgba(65,105,225,0.12); }
+.sc-input-row { 
+  display: flex; 
+  gap: 10px; 
+  margin-bottom: 18px; 
+}
+.sc-input {
+  flex: 1; 
+  padding: 11px 14px;
+  background: #f8f9ff; 
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px; 
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.9rem; 
+  color: #0d1b2a; 
+  outline: none;
+  text-transform: uppercase; 
+  letter-spacing: 1px;
+}
+.sc-input:focus { 
+  border-color: #4169E1; 
+  box-shadow: 0 0 0 3px rgba(65,105,225,0.12); 
+}
 .sc-search-btn {
   padding: 11px 18px; background: #4169E1; color: #fff;
   border: none; border-radius: 10px; font-weight: 700; font-size: 0.88rem;
