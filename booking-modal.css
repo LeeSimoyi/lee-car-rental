@@ -673,17 +673,26 @@
 .bm-cs-item.active i { color: #4169E1; }
 
 .bm-confirm-actions {
-  display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
+  display: flex; 
+  gap: 12px; 
+  justify-content: center; 
+  flex-wrap: wrap;
 }
 .bm-btn-status, .bm-btn-done {
-  display: inline-flex; align-items: center; gap: 8px;
-  padding: 11px 22px; border-radius: 999px;
-  font-size: 0.88rem; font-weight: 700;
+  display: inline-flex; 
+  align-items: center; 
+  gap: 8px;
+  padding: 11px 22px; 
+  border-radius: 999px;
+  font-size: 0.88rem; 
+  font-weight: 700;
   cursor: pointer; transition: all 0.25s;
   font-family: 'Poppins', sans-serif;
 }
 .bm-btn-status {
-  background: #4169E1; color: #fff; border: none;
+  background: #4169E1; 
+  color: #fff; 
+  border: none;
   box-shadow: 0 8px 22px rgba(65,105,225,0.28);
 }
 .bm-btn-status:hover { background: #2f54c8; transform: translateY(-2px); }
