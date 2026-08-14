@@ -960,27 +960,50 @@
   }
   .bm-header { padding: 14px 18px 12px; }
   .bm-step-content { padding: 16px 16px 8px; }
-  .bm-footer { padding: 12px 16px; gap: 10px; }
+  .bm-footer { 
+    padding: 12px 16px; 
+    gap: 10px; 
+  }
   .bm-car-preview { height: 140px; }
   .bm-confirm-content { padding: 24px 16px; }
   .bm-confirm-actions { flex-direction: column; }
-  .bm-btn-status, .bm-btn-done { width: 100%; justify-content: center; }
-  .bm-review-car img { width: 66px; height: 46px; }
+  .bm-btn-status, .bm-btn-done {
+    width: 100%; 
+    justify-content: center; 
+  }
+  .bm-review-car img { 
+    width: 66px; 
+    height: 46px; 
+  }
   .bm-field-row { grid-template-columns: 1fr; }
   .bm-review-grid { grid-template-columns: 1fr; }
   .bm-review-item:nth-last-child(-n+2) { border-bottom: 1px solid #f0f1f5; }
   .bm-review-item:last-child { border-bottom: none; }
   .bm-ref-code { font-size: 1.2rem; }
   .bm-progress { padding: 0 14px; }
-  .bm-steps::before { left: 22px; right: 22px; }
+  .bm-steps::before { 
+    left: 22px; 
+    right: 22px; 
+  }
 }
 
 @media (max-width: 390px) {
   .bm-step label { font-size: 0.58rem; }
-  .bm-step span  { width: 22px; height: 22px; font-size: 0.7rem; }
+  .bm-step span  { 
+    width: 22px; 
+    height: 22px; 
+    font-size: 0.7rem; 
+  }
   .bm-modal { border-radius: 18px 18px 0 0; }
   .bm-step-content { padding: 14px 14px 6px; }
   .bm-footer { flex-direction: column; }
-  .bm-btn-next, .bm-btn-confirm { width: 100%; justify-content: center; }
-  .bm-btn-back { width: 100%; justify-content: center; order: 2; }
+  .bm-btn-next, .bm-btn-confirm { 
+    width: 100%; 
+    justify-content: center; 
+  }
+  .bm-btn-back { 
+    width: 100%; 
+    justify-content: center; 
+    order: 2; 
+  }
 }
