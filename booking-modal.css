@@ -171,7 +171,10 @@
   box-shadow: 0 0 0 4px rgba(65,105,225,0.2); 
 }
 .bm-step.active label { color: #4169E1; }
-.bm-step.completed span { background: #10b981; color: #fff; }
+.bm-step.completed span { 
+  background: #10b981; 
+  color: #fff; 
+}
 .bm-step.completed span::after { content: '✓'; }
 .bm-step.completed label { color: #10b981; }
 
