@@ -855,9 +855,16 @@ tbody tr:hover td { background: #f8f9ff; }
   text-transform: uppercase; letter-spacing: 0.5px;
 }
 .settings-input, .settings-select {
-  padding: 10px 14px; background: var(--bg); border: 1.5px solid var(--border);
-  border-radius: var(--radius-sm); font-size: 0.9rem; color: var(--text);
-  outline: none; transition: var(--transition); font-family: var(--font); appearance: none;
+  padding: 10px 14px; 
+  background: var(--bg); 
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-sm); 
+  font-size: 0.9rem; 
+  color: var(--text);
+  outline: none; 
+  transition: var(--transition); 
+  font-family: var(--font); 
+  appearance: none;
 }
 .settings-input:focus, .settings-select:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(65,105,225,0.1); }
 .settings-toggle-row {
