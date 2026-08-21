@@ -353,11 +353,18 @@ input, select, textarea { font-family:var(--font); }
 }
 .topbar-avatar-img:hover { transform: scale(1.08); }
 .topbar-avatar {
-  width: 34px; height: 34px; border-radius: 50%;
-  background: var(--blue); color: #fff;
-  font-size: 0.85rem; font-weight: 800;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; transition: var(--transition);
+  width: 34px;
+  height: 34px; 
+  border-radius: 50%;
+  background: var(--blue);
+  color: #fff;
+  font-size: 0.85rem; 
+  font-weight: 800;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer; 
+  transition: var(--transition);
 }
 .topbar-avatar:hover { transform: scale(1.08); }
 
