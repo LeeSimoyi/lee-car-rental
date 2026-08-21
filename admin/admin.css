@@ -52,14 +52,20 @@ input, select, textarea { font-family:var(--font); }
    LOGIN SCREEN — car background + stacked layout
 ══════════════════════════════════════════ */
 .login-screen {
-  position: fixed; inset: 0; z-index: 99999;
-  display: flex; align-items: center; justify-content: center;
+  position: fixed; 
+  inset: 0; 
+  z-index: 99999;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   padding: 20px;
 }
 
 /* Full-screen car background image */
 .login-bg-img {
-  position: absolute; inset: 0; z-index: 0;
+  position: absolute; 
+  inset: 0; 
+  z-index: 0;
   background-image: url('https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=1920&q=90');
   background-size: cover;
   background-position: center 40%;
@@ -68,13 +74,10 @@ input, select, textarea { font-family:var(--font); }
 
 /* Dark gradient overlay on the car image */
 .login-overlay {
-  position: absolute; inset: 0; z-index: 1;
-  background: linear-gradient(
-    135deg,
-    rgba(6, 12, 34, 0.82) 0%,
-    rgba(13, 27, 74, 0.75) 40%,
-    rgba(6, 10, 28, 0.88) 100%
-  );
+  position: absolute; 
+  inset: 0; 
+  z-index: 1;
+  background: linear-gradient(135deg,rgba(6, 12, 34, 0.82) 0%,rgba(13, 27, 74, 0.75) 40%,rgba(6, 10, 28, 0.88) 100%);
   backdrop-filter: blur(1px);
 }
 
