@@ -272,18 +272,46 @@ input, select, textarea { font-family:var(--font); }
   min-width: 0; 
 }
 .sidebar-logo-mark {
-  width: 34px; height: 34px; border-radius: 9px;
-  background: var(--blue); display: flex; align-items: center; justify-content: center;
+  width: 34px; 
+  height: 34px; 
+  border-radius: 9px;
+  background: var(--blue); 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   flex-shrink: 0;
 }
-.sidebar-logo-mark span { font-weight: 900; font-size: 0.82rem; color: #fff; }
-.sidebar-logo-text strong { display: block; font-size: 0.88rem; font-weight: 800; color: #fff; white-space: nowrap; }
-.sidebar-logo-text span { font-size: 0.68rem; color: rgba(255,255,255,0.4); white-space: nowrap; }
+.sidebar-logo-mark span { 
+  font-weight: 900; 
+  font-size: 0.82rem; 
+  color: #fff;
+}
+.sidebar-logo-text strong { 
+  display: block; 
+  font-size: 0.88rem; 
+  font-weight: 800; 
+  color: #fff; 
+  white-space: nowrap; 
+}
+.sidebar-logo-text span { 
+  font-size: 0.68rem; 
+  color: rgba(255,255,255,0.4); 
+  white-space: nowrap; 
+}
 .sidebar-close {
-  width: 30px; height: 30px; border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.06);
-  color: rgba(255,255,255,0.6); font-size: 0.85rem; cursor: pointer;
-  display: none; align-items: center; justify-content: center; transition: var(--transition); flex-shrink: 0;
+  width: 30px; 
+  height: 30px; 
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.12); 
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.6); 
+  font-size: 0.85rem; 
+  cursor: pointer;
+  display: none; 
+  align-items: center; 
+  justify-content: center;
+  transition: var(--transition); 
+  flex-shrink: 0;
 }
 .sidebar-close:hover { background: rgba(255,255,255,0.14); color: #fff; }
 
