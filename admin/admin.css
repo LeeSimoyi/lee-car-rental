@@ -504,12 +504,23 @@ input, select, textarea { font-family:var(--font); }
   flex-shrink: 0; 
 }
 .topbar-search-wrap { position: relative; }
-.topbar-search-icon { position: absolute; left: 11px; top: 50%; transform: translateY(-50%); color: var(--text-3); font-size: 0.8rem; }
+.topbar-search-icon { 
+  position: absolute; 
+  left: 11px; top: 50%; 
+  transform: translateY(-50%); 
+  color: var(--text-3); 
+  font-size: 0.8rem; 
+}
 .topbar-search {
-  width: 200px; padding: 8px 12px 8px 30px;
-  background: var(--bg); border: 1.5px solid var(--border);
-  border-radius: 999px; font-size: 0.83rem; outline: none;
-  transition: var(--transition); color: var(--text);
+  width: 200px; 
+  padding: 8px 12px 8px 30px;
+  background: var(--bg); 
+  border: 1.5px solid var(--border);
+  border-radius: 999px; 
+  font-size: 0.83rem; 
+  outline: none;
+  transition: var(--transition); 
+  color: var(--text);
 }
 .topbar-search:focus { border-color: var(--blue); width: 240px; box-shadow: 0 0 0 3px rgba(65,105,225,0.1); }
 .topbar-notif, .topbar-refresh {
