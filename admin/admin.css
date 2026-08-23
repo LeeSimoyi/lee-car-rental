@@ -108,13 +108,21 @@ input, select, textarea { font-family:var(--font); }
 }
 
 .login-logo {
-  display: flex; align-items: center; gap: 12px; margin-bottom: 24px;
+  display: flex; 
+  align-items: center; 
+  gap: 12px; 
+  margin-bottom: 24px;
 }
 .login-logo-mark {
-  width: 46px; height: 46px; border-radius: 13px;
+  width: 46px; 
+  height: 46px; 
+  border-radius: 13px;
   background: linear-gradient(135deg, var(--blue), var(--blue-dark));
-  display: flex; align-items: center; justify-content: center;
-  flex-shrink: 0; box-shadow: 0 6px 18px rgba(65,105,225,0.4);
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  flex-shrink: 0; 
+  box-shadow: 0 6px 18px rgba(65,105,225,0.4);
 }
 .login-logo-mark span { font-weight: 900; font-size: 1rem; color: #fff; letter-spacing: -0.5px; }
 .login-logo strong { display: block; font-size: 1.05rem; font-weight: 800; color: var(--text); }
