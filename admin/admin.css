@@ -29,7 +29,11 @@
 }
 
 /* ── Reset ── */
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+*, *::before, *::after { 
+   margin:0; 
+   padding:0; 
+   box-sizing:border-box; 
+}
 html { overflow-x:hidden; }
 body {
   font-family: var(--font);
@@ -40,8 +44,15 @@ body {
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
 }
-a { text-decoration:none; color:inherit; cursor:pointer; }
-button { font-family:var(--font); cursor:pointer; }
+a { 
+ text-decoration:none; 
+ color:inherit; 
+ cursor:pointer; 
+}
+button { 
+ font-family:var(--font); 
+ cursor:pointer; 
+}
 img { max-width:100%; display:block; }
 input, select, textarea { font-family:var(--font); }
 
