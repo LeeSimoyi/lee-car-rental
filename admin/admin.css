@@ -124,8 +124,18 @@ input, select, textarea { font-family:var(--font); }
   flex-shrink: 0; 
   box-shadow: 0 6px 18px rgba(65,105,225,0.4);
 }
-.login-logo-mark span { font-weight: 900; font-size: 1rem; color: #fff; letter-spacing: -0.5px; }
-.login-logo strong { display: block; font-size: 1.05rem; font-weight: 800; color: var(--text); }
+.login-logo-mark span { 
+  font-weight: 900; 
+  font-size: 1rem; 
+  color: #fff; 
+  letter-spacing: -0.5px; 
+}
+.login-logo strong {
+  display: block; 
+  font-size: 1.05rem;
+  font-weight: 800; 
+  color: var(--text); 
+}
 .login-logo span    { font-size: 0.7rem; color: var(--text-3); font-weight: 500; }
 
 .login-title { font-size: 1.65rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
