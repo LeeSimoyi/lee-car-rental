@@ -1095,21 +1095,40 @@ tbody tr:hover td { background: #f8f9ff; }
 .car-form-textarea { resize: vertical; min-height: 80px; }
 
 /* Image URL list in car form */
-.img-url-list { display: flex; flex-direction: column; gap: 8px; }
+.img-url-list { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 8px; 
+}
 .img-url-row {
-  display: flex; gap: 8px; align-items: center;
+  display: flex; 
+  gap: 8px; 
+  align-items: center;
 }
 .img-url-row input { flex: 1; }
 .img-url-preview {
-  width: 44px; height: 36px; border-radius: 6px;
-  object-fit: cover; border: 1.5px solid var(--border);
-  flex-shrink: 0; background: var(--bg);
+  width: 44px; 
+  height: 36px; 
+  border-radius: 6px;
+  object-fit: cover; 
+  border: 1.5px solid var(--border);
+  flex-shrink: 0; 
+  background: var(--bg);
 }
 .img-url-remove {
-  width: 30px; height: 30px; border-radius: 50%;
-  border: 1.5px solid #fca5a5; background: #fff; color: var(--red);
-  cursor: pointer; display: flex; align-items: center; justify-content: center;
-  font-size: 0.75rem; transition: var(--transition); flex-shrink: 0;
+  width: 30px; 
+  height: 30px; 
+  border-radius: 50%;
+  border: 1.5px solid #fca5a5; 
+  background: #fff; 
+  color: var(--red);
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 0.75rem; 
+  transition: var(--transition); 
+  flex-shrink: 0;
 }
 .img-url-remove:hover { background: var(--red); color: #fff; border-color: var(--red); }
 .add-img-btn {
