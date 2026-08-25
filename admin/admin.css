@@ -93,11 +93,13 @@ input, select, textarea { font-family:var(--font); }
 }
 
 .login-card {
-  position: relative; z-index: 2;
+  position: relative; 
+  z-index: 2;
   background: #fff;
   border-radius: 24px;
   padding: clamp(28px, 6vw, 44px) clamp(24px, 5vw, 40px);
-  width: 100%; max-width: 400px;
+  width: 100%; 
+  max-width: 400px;
   box-shadow: 0 40px 100px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
   animation: loginCardIn 0.5s cubic-bezier(0.22,1,0.36,1);
 }
