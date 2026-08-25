@@ -395,13 +395,22 @@ input, select, textarea { font-family:var(--font); }
   display: block;
 }
 .sidebar-admin-avatar {
-  width: 36px; height: 36px; border-radius: 50%;
-  background: var(--blue); color: #fff; font-size: 0.9rem;
-  font-weight: 800; display: flex; align-items: center; justify-content: center;
+  width: 36px; 
+  height: 36px; 
+  border-radius: 50%;
+  background: var(--blue); 
+  color: #fff; 
+  font-size: 0.9rem;
+  font-weight: 800; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
   border: 2px solid rgba(255,255,255,0.2);
 }
 .sidebar-avatar-badge {
-  position: absolute; bottom: 1px; right: 1px;
+  position: absolute; 
+  bottom: 1px; 
+  right: 1px;
   font-size: 0.42rem; color: #22c55e;
   background: #0d1b2a; border-radius: 50%;
   width: 10px; height: 10px;
