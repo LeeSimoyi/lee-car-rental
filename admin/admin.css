@@ -775,10 +775,19 @@ tbody tr:hover td { background: #f8f9ff; }
 .pagination-info { font-size: 0.82rem; color: var(--text-3); }
 .pagination-btns { display: flex; gap: 4px; }
 .pag-btn {
-  width: 32px; height: 32px; border-radius: 8px;
-  border: 1.5px solid var(--border); background: #fff;
-  font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: var(--transition);
-  display: flex; align-items: center; justify-content: center; color: var(--text-2);
+  width: 32px; 
+  height: 32px; 
+  border-radius: 8px;
+  border: 1.5px solid var(--border);
+  background: #fff;
+  font-size: 0.82rem; 
+  font-weight: 600; 
+  cursor: pointer; 
+  transition: var(--transition);
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  color: var(--text-2);
 }
 .pag-btn:hover, .pag-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
 .pag-btn:disabled { opacity: 0.4; pointer-events: none; }
