@@ -212,8 +212,19 @@ input, select, textarea { font-family:var(--font); }
 }
 .login-btn:active { transform: translateY(0); }
 
-.login-hint  { font-size: 0.78rem; color: var(--text-3); text-align: center; }
-.login-error { font-size: 0.82rem; color: var(--red); font-weight: 600; min-height: 20px; margin-top: 4px; text-align: center; }
+.login-hint  { 
+  font-size: 0.78rem; 
+  color: var(--text-3); 
+  text-align: center; 
+}
+.login-error { 
+  font-size: 0.82rem; 
+  color: var(--red); 
+  font-weight: 600; 
+  min-height: 20px; 
+  margin-top: 4px; 
+  text-align: center;
+}
 
 .login-demo-note {
   margin-top: 22px; padding: 12px 14px;
