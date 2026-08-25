@@ -227,12 +227,17 @@ input, select, textarea { font-family:var(--font); }
 }
 
 .login-demo-note {
-  margin-top: 22px; padding: 12px 14px;
+  margin-top: 22px;
+  padding: 12px 14px;
   background: rgba(65,105,225,0.07);
   border: 1px solid rgba(65,105,225,0.12);
   border-radius: var(--radius-sm);
-  font-size: 0.8rem; color: var(--text-2);
-  display: flex; align-items: center; gap: 8px; line-height: 1.5;
+  font-size: 0.8rem; 
+  color: var(--text-2);
+  display: flex; 
+  align-items: center; 
+  gap: 8px; 
+  line-height: 1.5;
 }
 .login-demo-note i { color: var(--blue); flex-shrink: 0; }
 
