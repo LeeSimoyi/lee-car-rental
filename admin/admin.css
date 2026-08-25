@@ -727,13 +727,25 @@ input, select, textarea { font-family:var(--font); }
   background: var(--blue); border-color: var(--blue); color: #fff;
 }
 
-.table-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+.table-wrap { 
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+table { 
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 600px;
+}
 thead th {
-  text-align: left; padding: 11px 16px;
-  font-size: 0.72rem; font-weight: 700; color: var(--text-3);
-  text-transform: uppercase; letter-spacing: 0.8px;
-  background: var(--bg); border-bottom: 1px solid var(--border);
+  text-align: left; 
+  padding: 11px 16px;
+  font-size: 0.72rem; 
+  font-weight: 700; 
+  color: var(--text-3);
+  text-transform: uppercase; 
+  letter-spacing: 0.8px;
+  background: var(--bg); 
+  border-bottom: 1px solid var(--border);
   white-space: nowrap;
 }
 tbody td { padding: 12px 16px; border-bottom: 1px solid #f5f6fa; font-size: 0.85rem; color: var(--text); }
@@ -743,9 +755,14 @@ tbody tr:hover td { background: #f8f9ff; }
 
 /* ── Status badges ── */
 .badge {
-  display: inline-flex; align-items: center; gap: 5px;
-  padding: 4px 10px; border-radius: 999px;
-  font-size: 0.72rem; font-weight: 700; white-space: nowrap;
+  display: inline-flex; 
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px; 
+  border-radius: 999px;
+  font-size: 0.72rem; 
+  font-weight: 700; 
+  white-space: nowrap;
 }
 .badge-pending   { background: #fef3c7; color: #d97706; }
 .badge-approved  { background: #d1fae5; color: #059669; }
