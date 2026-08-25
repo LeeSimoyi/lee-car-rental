@@ -827,9 +827,16 @@ tbody tr:hover td { background: #f8f9ff; }
 .booking-drawer.open { transform: translateX(0); }
 
 .drawer-topbar {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 20px; border-bottom: 1px solid var(--border);
-  flex-shrink: 0; background: #fff; position: sticky; top: 0; z-index: 1;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 16px 20px; 
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0; 
+  background: #fff; 
+  position: sticky; 
+  top: 0;
+  z-index: 1;
 }
 .drawer-title { font-size: 1rem; font-weight: 800; color: var(--text); display: flex; align-items: center; }
 .drawer-close-btn {
