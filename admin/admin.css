@@ -700,19 +700,31 @@ input, select, textarea { font-family:var(--font); }
 .stat-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 16px; margin-bottom: 24px;
+  gap: 16px; 
+  margin-bottom: 24px;
 }
 .stat-card {
-  background: #fff; border-radius: var(--radius);
-  border: 1.5px solid var(--border); padding: 20px 22px;
-  display: flex; align-items: flex-start; gap: 14px;
-  transition: var(--transition); position: relative; overflow: hidden;
+  background: #fff; 
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border); 
+  padding: 20px 22px;
+  display: flex; 
+  align-items: flex-start; 
+  gap: 14px;
+  transition: var(--transition); 
+  position: relative; 
+  overflow: hidden;
 }
 .stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,105,225,0.2); }
 .stat-card-icon {
-  width: 44px; height: 44px; border-radius: 12px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.1rem; flex-shrink: 0;
+  width: 44px; 
+  height: 44px; 
+  border-radius: 12px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  font-size: 1.1rem; 
+  flex-shrink: 0;
 }
 .sci-blue   { background: #eef1fd; color: var(--blue); }
 .sci-green  { background: #d1fae5; color: var(--green); }
