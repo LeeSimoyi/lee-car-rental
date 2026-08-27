@@ -138,14 +138,30 @@ input, select, textarea { font-family:var(--font); }
   font-weight: 800; 
   color: var(--text); 
 }
-.login-logo span    { font-size: 0.7rem; color: var(--text-3); font-weight: 500; }
+.login-logo span    { 
+  font-size: 0.7rem; 
+  color: var(--text-3); 
+  font-weight: 500; 
+}
 
-.login-title { font-size: 1.65rem; font-weight: 800; color: var(--text); margin-bottom: 6px; }
-.login-sub   { font-size: 0.88rem; color: var(--text-2); margin-bottom: 28px; line-height: 1.6; }
+.login-title { 
+  font-size: 1.65rem; 
+  font-weight: 800; 
+  color: var(--text); 
+  margin-bottom: 6px; 
+}
+.login-sub   { 
+  font-size: 0.88rem; 
+  color: var(--text-2); 
+  margin-bottom: 28px; 
+  line-height: 1.6; 
+}
 
 /* Stacked field: input on top, button below — fully column layout */
 .login-field {
-  display: flex; flex-direction: column; gap: 0;
+  display: flex; 
+  flex-direction: column; 
+  gap: 0;
 }
 .login-field label {
   font-size: 0.75rem; font-weight: 700; color: var(--text-2);
