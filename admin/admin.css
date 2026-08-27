@@ -507,12 +507,19 @@ input, select, textarea { font-family:var(--font); }
   color: rgba(255,255,255,0.5); 
   cursor: pointer; 
   font-size: 0.85rem;
-  display: flex; align-items: center; justify-content: center; transition: var(--transition); flex-shrink: 0;
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  transition: var(--transition); 
+  flex-shrink: 0;
 }
 .sidebar-logout:hover { background: rgba(239,68,68,0.25); border-color: rgba(239,68,68,0.5); color: #fca5a5; }
 
 /* Topbar avatar with profile picture support */
-.topbar-avatar-wrap { position: relative; cursor: pointer; }
+.topbar-avatar-wrap { 
+  position: relative; 
+  cursor: pointer; 
+}
 .topbar-avatar-img {
   width: 34px; 
   height: 34px; 
