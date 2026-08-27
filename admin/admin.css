@@ -472,14 +472,32 @@ input, select, textarea { font-family:var(--font); }
   position: absolute; 
   bottom: 1px; 
   right: 1px;
-  font-size: 0.42rem; color: #22c55e;
-  background: #0d1b2a; border-radius: 50%;
-  width: 10px; height: 10px;
-  display: flex; align-items: center; justify-content: center;
+  font-size: 0.42rem; 
+  color: #22c55e;
+  background: #0d1b2a; 
+  border-radius: 50%;
+  width: 10px; 
+  height: 10px;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
 }
-.sidebar-admin-info { flex: 1; min-width: 0; }
-.sidebar-admin-info strong { display: block; font-size: 0.82rem; color: #fff; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-.sidebar-admin-info span { font-size: 0.68rem; color: rgba(255,255,255,0.4); }
+.sidebar-admin-info { 
+  flex: 1; 
+  min-width: 0; 
+}
+.sidebar-admin-info strong { 
+  display: block; 
+  font-size: 0.82rem; 
+  color: #fff; 
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+}
+.sidebar-admin-info span { 
+  font-size: 0.68rem;
+  color: rgba(255,255,255,0.4); 
+}
 .sidebar-logout {
   width: 30px; 
   height: 30px; 
