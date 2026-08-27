@@ -164,12 +164,20 @@ input, select, textarea { font-family:var(--font); }
   gap: 0;
 }
 .login-field label {
-  font-size: 0.75rem; font-weight: 700; color: var(--text-2);
-  display: flex; align-items: center; gap: 6px;
-  text-transform: uppercase; letter-spacing: 0.6px;
+  font-size: 0.75rem; 
+  font-weight: 700; 
+  color: var(--text-2);
+  display: flex; 
+  align-items: center; 
+  gap: 6px;
+  text-transform: uppercase; 
+  letter-spacing: 0.6px;
   margin-bottom: 8px;
 }
-.login-field label i { color: var(--blue); font-size: 0.8rem; }
+.login-field label i { 
+  color: var(--blue); 
+  font-size: 0.8rem; 
+}
 
 /* Full-width input */
 /* ── PIN Input — large rounded border radius ── */
@@ -385,12 +393,24 @@ input, select, textarea { font-family:var(--font); }
   width: 100%; 
   text-align: left;
 }
-.sidebar-link:hover  { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.9); }
-.sidebar-link.active { background: rgba(65,105,225,0.25); color: #fff; }
+.sidebar-link:hover  { 
+  background: rgba(255,255,255,0.07); 
+  color: rgba(255,255,255,0.9); 
+}
+.sidebar-link.active { 
+  background: rgba(65,105,225,0.25); 
+  color: #fff; 
+}
 .sidebar-link.active::before {
-  content: ''; position: absolute; left: 0; top: 50%;
-  transform: translateY(-50%); width: 3px; height: 20px;
-  background: var(--blue); border-radius: 0 3px 3px 0;
+  content: ''; 
+  position: absolute; 
+  left: 0; 
+  top: 50%;
+  transform: translateY(-50%); 
+  width: 3px; 
+  height: 20px;
+  background: var(--blue); 
+  border-radius: 0 3px 3px 0;
 }
 .sidebar-link i { width: 18px; text-align: center; font-size: 0.95rem; flex-shrink: 0; }
 .sidebar-link span { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
