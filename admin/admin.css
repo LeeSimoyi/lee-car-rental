@@ -1129,15 +1129,29 @@ tbody tr:hover td { background: #f8f9ff; }
 .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 160px; padding-top: 10px; }
 .bar-item  { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 0; }
 .bar-fill  {
-  width: 100%; border-radius: 6px 6px 0 0;
-  background: var(--blue); min-height: 4px; transition: height 0.6s cubic-bezier(0.4,0,0.2,1);
+  width: 100%; 
+  border-radius: 6px 6px 0 0;
+  background: var(--blue); 
+  min-height: 4px; 
+  transition: height 0.6s cubic-bezier(0.4,0,0.2,1);
   position: relative;
 }
 .bar-fill:hover { background: var(--blue-dark); }
 .bar-fill .bar-tooltip {
-  position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
-  background: var(--text); color: #fff; font-size: 0.7rem; font-weight: 700;
-  padding: 3px 8px; border-radius: 6px; white-space: nowrap; opacity: 0; transition: opacity 0.2s; pointer-events: none;
+  position: absolute; 
+  bottom: calc(100% + 6px); 
+  left: 50%; 
+  transform: translateX(-50%);
+  background: var(--text); 
+  color: #fff; 
+  font-size: 0.7rem; 
+  font-weight: 700;
+  padding: 3px 8px; 
+  border-radius: 6px; 
+  white-space: nowrap; 
+  opacity: 0; 
+  transition: opacity 0.2s; 
+  pointer-events: none;
 }
 .bar-fill:hover .bar-tooltip { opacity: 1; }
 .bar-label { font-size: 0.68rem; color: var(--text-3); font-weight: 600; }
