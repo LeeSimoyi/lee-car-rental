@@ -954,7 +954,13 @@ tbody tr:hover td { background: #f8f9ff; }
   top: 0;
   z-index: 1;
 }
-.drawer-title { font-size: 1rem; font-weight: 800; color: var(--text); display: flex; align-items: center; }
+.drawer-title { 
+  font-size: 1rem; 
+  font-weight: 800; 
+  color: var(--text); 
+  display: flex;
+  align-items: center; 
+}
 .drawer-close-btn {
   width: 36px; 
   height: 36px;
@@ -989,10 +995,17 @@ tbody tr:hover td { background: #f8f9ff; }
 /* Drawer sections */
 .drawer-section { margin-bottom: 20px; }
 .drawer-section-title {
-  font-size: 0.72rem; font-weight: 800; color: var(--text-3);
-  text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 10px;
-  padding-bottom: 6px; border-bottom: 1px solid var(--border);
-  display: flex; align-items: center; gap: 6px;
+  font-size: 0.72rem; 
+  font-weight: 800; 
+  color: var(--text-3);
+  text-transform: uppercase; 
+  letter-spacing: 1.2px; 
+  margin-bottom: 10px;
+  padding-bottom: 6px; 
+  border-bottom: 1px solid var(--border);
+  display: flex; 
+  align-items: center; 
+  gap: 6px;
 }
 .drawer-section-title i { color: var(--blue); }
 .drawer-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
