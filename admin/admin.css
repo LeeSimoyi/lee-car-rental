@@ -659,26 +659,53 @@ input, select, textarea { font-family:var(--font); }
   transition: var(--transition); 
   color: var(--text);
 }
-.topbar-search:focus { border-color: var(--blue); width: 240px; box-shadow: 0 0 0 3px rgba(65,105,225,0.1); }
-.topbar-notif, .topbar-refresh {
-  width: 36px; height: 36px; border-radius: 9px;
-  border: 1.5px solid var(--border); background: var(--bg);
-  color: var(--text-2); font-size: 0.9rem;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; position: relative; transition: var(--transition);
+.topbar-search:focus { 
+  border-color: var(--blue);
+  width: 240px; 
+  box-shadow: 0 0 0 3px rgba(65,105,225,0.1); 
 }
-.topbar-notif:hover, .topbar-refresh:hover { border-color: var(--blue); color: var(--blue); }
+.topbar-notif, .topbar-refresh {
+  width: 36px; 
+  height: 36px; 
+  border-radius: 9px;
+  border: 1.5px solid var(--border); 
+  background: var(--bg);
+  color: var(--text-2);
+  font-size: 0.9rem;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer; 
+  position: relative; 
+  transition: var(--transition);
+}
+.topbar-notif:hover, .topbar-refresh:hover { 
+  border-color: var(--blue); 
+  color: var(--blue); 
+}
 .notif-dot {
-  position: absolute; top: 6px; right: 6px;
-  width: 8px; height: 8px; background: var(--red);
-  border-radius: 50%; border: 2px solid #fff;
+  position: absolute; 
+  top: 6px; 
+  right: 6px;
+  width: 8px; 
+  height: 8px; 
+  background: var(--red);
+  border-radius: 50%; 
+  border: 2px solid #fff;
 }
 .topbar-avatar {
-  width: 34px; height: 34px; border-radius: 50%;
-  background: var(--blue); color: #fff;
-  font-size: 0.85rem; font-weight: 800;
-  display: flex; align-items: center; justify-content: center;
-  cursor: pointer; transition: var(--transition);
+  width: 34px; 
+  height: 34px; 
+  border-radius: 50%;
+  background: var(--blue); 
+  color: #fff;
+  font-size: 0.85rem; 
+  font-weight: 800;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  cursor: pointer; 
+  transition: var(--transition);
 }
 .topbar-avatar:hover { transform: scale(1.08); }
 
