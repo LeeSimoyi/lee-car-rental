@@ -759,21 +759,30 @@ input, select, textarea { font-family:var(--font); }
   font-family: var(--font); 
   white-space: nowrap;
 }
-.btn-primary-sm:hover { background: var(--blue-dark); transform: translateY(-2px); }
+.btn-primary-sm:hover { 
+  background: var(--blue-dark); 
+  transform: translateY(-2px); 
+}
 .btn-ghost-sm {
   display: inline-flex; 
-  align-items: center; gap: 7px;
+  align-items: center; 
+  gap: 7px;
   padding: 8px 16px; 
-  background: #fff; color: var(--text-2);
+  background: #fff; 
+  color: var(--text-2);
   border: 1.5px solid var(--border); 
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.83rem; 
-  cursor: pointer; transition: var(--transition);
+  cursor: pointer; 
+  transition: var(--transition);
   font-family: var(--font); 
   white-space: nowrap;
 }
-.btn-ghost-sm:hover { border-color: var(--blue); color: var(--blue); }
+.btn-ghost-sm:hover { 
+  border-color: var(--blue); 
+  color: var(--blue); 
+}
 
 /* ══════════════════════════════════════════
    STAT CARDS
@@ -796,7 +805,11 @@ input, select, textarea { font-family:var(--font); }
   position: relative; 
   overflow: hidden;
 }
-.stat-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: rgba(65,105,225,0.2); }
+.stat-card:hover { 
+  transform: translateY(-3px); 
+  box-shadow: var(--shadow-lg); 
+  border-color: rgba(65,105,225,0.2);
+}
 .stat-card-icon {
   width: 44px; 
   height: 44px; 
