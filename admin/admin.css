@@ -726,9 +726,22 @@ input, select, textarea { font-family:var(--font); }
   gap: 14px; 
   flex-wrap: wrap;
 }
-.page-header-left h1 { font-size: clamp(1.2rem, 3vw, 1.6rem); font-weight: 800; color: var(--text); margin-bottom: 4px; }
-.page-header-left p  { font-size: 0.85rem; color: var(--text-2); }
-.page-header-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.page-header-left h1 { 
+  font-size: clamp(1.2rem, 3vw, 1.6rem); 
+  font-weight: 800; 
+  color: var(--text); 
+  margin-bottom: 4px; 
+}
+.page-header-left p  { 
+  font-size: 0.85rem; 
+  color: var(--text-2);
+}
+.page-header-actions { 
+  display: flex; 
+  gap: 10px; 
+  align-items: center; 
+  flex-wrap: wrap; 
+}
 .btn-primary-sm {
   display: inline-flex; 
   align-items: center; 
