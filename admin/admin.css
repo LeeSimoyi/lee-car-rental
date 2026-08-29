@@ -895,13 +895,21 @@ input, select, textarea { font-family:var(--font); }
   background: var(--bg);
 }
 .filter-chip {
-  padding: 5px 14px; border-radius: 999px;
-  border: 1.5px solid var(--border); background: #fff;
-  font-size: 0.78rem; font-weight: 600; color: var(--text-2);
-  cursor: pointer; transition: var(--transition); white-space: nowrap;
+  padding: 5px 14px; 
+  border-radius: 999px;
+  border: 1.5px solid var(--border); 
+  background: #fff;
+  font-size: 0.78rem; 
+  font-weight: 600; 
+  color: var(--text-2);
+  cursor: pointer; 
+  transition: var(--transition); 
+  white-space: nowrap;
 }
 .filter-chip:hover, .filter-chip.active {
-  background: var(--blue); border-color: var(--blue); color: #fff;
+  background: var(--blue); 
+  border-color: var(--blue); 
+  color: #fff;
 }
 
 .table-wrap { 
