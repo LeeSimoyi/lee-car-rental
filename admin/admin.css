@@ -962,12 +962,23 @@ tbody tr:hover td { background: #f8f9ff; }
 
 /* ── Pagination ── */
 .pagination {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 14px 20px; border-top: 1px solid var(--border);
-  background: var(--bg); flex-wrap: wrap; gap: 10px;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 14px 20px; 
+  border-top: 1px solid var(--border);
+  background: var(--bg); 
+  flex-wrap: wrap; 
+  gap: 10px;
 }
-.pagination-info { font-size: 0.82rem; color: var(--text-3); }
-.pagination-btns { display: flex; gap: 4px; }
+.pagination-info { 
+  font-size: 0.82rem; 
+  color: var(--text-3); 
+}
+.pagination-btns { 
+  display: flex; 
+  gap: 4px; 
+}
 .pag-btn {
   width: 32px; 
   height: 32px; 
