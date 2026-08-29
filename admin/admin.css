@@ -813,12 +813,26 @@ input, select, textarea { font-family:var(--font); }
 .sci-red    { background: #fee2e2; color: var(--red); }
 .sci-purple { background: #ede9fe; color: var(--purple); }
 .stat-card-body { flex: 1; min-width: 0; }
-.stat-card-value { font-size: clamp(1.4rem, 3vw, 1.9rem); font-weight: 800; color: var(--text); line-height: 1; margin-bottom: 4px; }
-.stat-card-label { font-size: 0.8rem; color: var(--text-3); font-weight: 500; }
+.stat-card-value { 
+  font-size: clamp(1.4rem, 3vw, 1.9rem); 
+  font-weight: 800; 
+  color: var(--text); 
+  line-height: 1; 
+  margin-bottom: 4px; 
+}
+.stat-card-label { 
+  font-size: 0.8rem; 
+  color: var(--text-3); 
+  font-weight: 500; 
+}
 .stat-card-change {
-  position: absolute; top: 14px; right: 14px;
-  font-size: 0.72rem; font-weight: 700;
-  padding: 3px 8px; border-radius: 999px;
+  position: absolute;
+  top: 14px; 
+  right: 14px;
+  font-size: 0.72rem; 
+  font-weight: 700;
+  padding: 3px 8px; 
+  border-radius: 999px;
 }
 .change-up   { background: #d1fae5; color: #059669; }
 .change-down { background: #fee2e2; color: #dc2626; }
@@ -828,8 +842,10 @@ input, select, textarea { font-family:var(--font); }
    TABLES
 ══════════════════════════════════════════ */
 .table-card {
-  background: #fff; border-radius: var(--radius);
-  border: 1.5px solid var(--border); overflow: hidden;
+  background: #fff; 
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border); 
+  overflow: hidden;
   margin-bottom: 24px;
 }
 .table-card-header {
