@@ -862,17 +862,36 @@ input, select, textarea { font-family:var(--font); }
   margin-bottom: 24px;
 }
 .table-card-header {
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 16px 20px; border-bottom: 1px solid var(--border);
-  gap: 12px; flex-wrap: wrap;
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between;
+  padding: 16px 20px; 
+  border-bottom: 1px solid var(--border);
+  gap: 12px; 
+  flex-wrap: wrap;
 }
-.table-card-title { font-size: 0.95rem; font-weight: 700; color: var(--text); display: flex; align-items: center; gap: 8px; }
+.table-card-title { 
+  font-size: 0.95rem; 
+  font-weight: 700; 
+  color: var(--text); 
+  display: flex; 
+  align-items: center;
+  gap: 8px; 
+}
 .table-card-title i { color: var(--blue); }
-.table-actions { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.table-actions { 
+  display: flex; 
+  gap: 8px; 
+  align-items: center; 
+  flex-wrap: wrap; 
+}
 
 .table-filter-row {
-  display: flex; gap: 8px; padding: 12px 20px;
-  border-bottom: 1px solid var(--border); flex-wrap: wrap;
+  display: flex; 
+  gap: 8px; 
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border); 
+  flex-wrap: wrap;
   background: var(--bg);
 }
 .filter-chip {
