@@ -956,12 +956,24 @@ tbody tr:hover td { background: #f8f9ff; }
 .badge-rejected  { background: #fee2e2; color: #dc2626; }
 
 /* ── Action buttons ── */
-.tbl-actions { display: flex; gap: 6px; align-items: center; }
+.tbl-actions { 
+  display: flex; 
+  gap: 6px; 
+  align-items: center; 
+}
 .tbl-btn {
-  width: 30px; height: 30px; border-radius: 8px;
-  border: 1.5px solid var(--border); background: #fff;
-  font-size: 0.78rem; cursor: pointer; transition: var(--transition);
-  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+  width: 30px; 
+  height: 30px; 
+  border-radius: 8px;
+  border: 1.5px solid var(--border); 
+  background: #fff;
+  font-size: 0.78rem; 
+  cursor: pointer; 
+  transition: var(--transition);
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  flex-shrink: 0;
 }
 .tbl-btn-approve:hover { background: #d1fae5; border-color: #a7f3d0; color: #059669; }
 .tbl-btn-reject:hover  { background: #fee2e2; border-color: #fca5a5; color: #dc2626; }
