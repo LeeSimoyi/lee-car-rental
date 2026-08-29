@@ -1173,22 +1173,40 @@ tbody tr:hover td { background: #f8f9ff; }
    ANALYTICS PAGE
 ══════════════════════════════════════════ */
 .analytics-grid {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 24px;
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  gap: 18px;
+  margin-bottom: 24px;
 }
 .chart-card {
-  background: #fff; border-radius: var(--radius);
-  border: 1.5px solid var(--border); padding: 20px; overflow: hidden;
+  background: #fff; 
+  border-radius: var(--radius);
+  border: 1.5px solid var(--border); 
+  padding: 20px; 
+  overflow: hidden;
 }
 .chart-card.full { grid-column: 1 / -1; }
 .chart-card-title {
-  font-size: 0.88rem; font-weight: 700; color: var(--text);
-  margin-bottom: 18px; display: flex; align-items: center; gap: 8px;
+  font-size: 0.88rem; 
+  font-weight: 700; 
+  color: var(--text);
+  margin-bottom: 18px; 
+  display: flex; 
+  align-items: center; 
+  gap: 8px;
 }
 .chart-card-title i { color: var(--blue); }
 
 /* Bar chart */
 .bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 160px; padding-top: 10px; }
-.bar-item  { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 6px; min-width: 0; }
+.bar-item  { 
+  flex: 1; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  gap: 6px; 
+  min-width: 0; 
+}
 .bar-fill  {
   width: 100%; 
   border-radius: 6px 6px 0 0;
