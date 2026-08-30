@@ -948,7 +948,10 @@ tbody td {
   color: var(--text); 
 }
 tbody tr:last-child td { border-bottom: none; }
-tbody tr { transition: background 0.2s; cursor: pointer; }
+tbody tr { 
+  transition: background 0.2s; 
+  cursor: pointer; 
+}
 tbody tr:hover td { background: #f8f9ff; }
 
 /* ── Status badges ── */
@@ -988,10 +991,26 @@ tbody tr:hover td { background: #f8f9ff; }
   justify-content: center; 
   flex-shrink: 0;
 }
-.tbl-btn-approve:hover { background: #d1fae5; border-color: #a7f3d0; color: #059669; }
-.tbl-btn-reject:hover  { background: #fee2e2; border-color: #fca5a5; color: #dc2626; }
-.tbl-btn-view:hover    { background: var(--blue-light); border-color: rgba(65,105,225,0.3); color: var(--blue); }
-.tbl-btn-complete:hover{ background: #dbeafe; border-color: #93c5fd; color: #2563eb; }
+.tbl-btn-approve:hover { 
+  background: #d1fae5; 
+  border-color: #a7f3d0; 
+  color: #059669; 
+}
+.tbl-btn-reject:hover  { 
+  background: #fee2e2; 
+  border-color: #fca5a5; 
+  color: #dc2626; 
+}
+.tbl-btn-view:hover    { 
+  background: var(--blue-light); 
+  border-color: rgba(65,105,225,0.3); 
+  color: var(--blue); 
+}
+.tbl-btn-complete:hover{ 
+  background: #dbeafe; 
+  border-color: #93c5fd; 
+  color: #2563eb; 
+}
 
 /* ── Pagination ── */
 .pagination {
