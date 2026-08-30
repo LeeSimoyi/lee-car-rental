@@ -529,7 +529,11 @@ input, select, textarea { font-family:var(--font); }
   transition: var(--transition); 
   flex-shrink: 0;
 }
-.sidebar-logout:hover { background: rgba(239,68,68,0.25); border-color: rgba(239,68,68,0.5); color: #fca5a5; }
+.sidebar-logout:hover { 
+  background: rgba(239,68,68,0.25); 
+  border-color: rgba(239,68,68,0.5); 
+  color: #fca5a5;
+}
 
 /* Topbar avatar with profile picture support */
 .topbar-avatar-wrap { 
@@ -563,8 +567,12 @@ input, select, textarea { font-family:var(--font); }
 .topbar-avatar:hover { transform: scale(1.08); }
 
 .sidebar-overlay {
-  display: none; position: fixed; inset: 0; z-index: 899;
-  background: rgba(0,0,0,0.55); backdrop-filter: blur(4px);
+  display: none; 
+  position: fixed; 
+  inset: 0; 
+  z-index: 899;
+  background: rgba(0,0,0,0.55); 
+  backdrop-filter: blur(4px);
 }
 
 /* ══════════════════════════════════════════
