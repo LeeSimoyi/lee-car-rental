@@ -719,7 +719,8 @@ input, select, textarea { font-family:var(--font); }
 
 /* ── Page content ── */
 .admin-content {
-  flex: 1; padding: clamp(16px, 3vw, 28px);
+  flex: 1; 
+  padding: clamp(16px, 3vw, 28px);
   overflow-x: hidden;
 }
 
@@ -1046,8 +1047,15 @@ tbody tr:hover td { background: #f8f9ff; }
   justify-content: center; 
   color: var(--text-2);
 }
-.pag-btn:hover, .pag-btn.active { background: var(--blue); border-color: var(--blue); color: #fff; }
-.pag-btn:disabled { opacity: 0.4; pointer-events: none; }
+.pag-btn:hover, .pag-btn.active { 
+  background: var(--blue); 
+  border-color: var(--blue); 
+  color: #fff; 
+}
+.pag-btn:disabled { 
+  opacity: 0.4; 
+  pointer-events: none; 
+}
 
 /* ══════════════════════════════════════════
    BOOKING DETAIL DRAWER
