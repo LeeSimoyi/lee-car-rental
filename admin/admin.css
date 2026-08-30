@@ -1207,10 +1207,19 @@ tbody tr:hover td { background: #f8f9ff; }
 
 .drawer-action-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
 .drawer-action-row button {
-  flex: 1; padding: 10px 14px; border-radius: var(--radius-sm);
-  font-size: 0.85rem; font-weight: 700; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; gap: 7px;
-  transition: var(--transition); font-family: var(--font); white-space: nowrap;
+  flex: 1; 
+  padding: 10px 14px; 
+  border-radius: var(--radius-sm);
+  font-size: 0.85rem; 
+  font-weight: 700; 
+  cursor: pointer;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  gap: 7px;
+  transition: var(--transition); 
+  font-family: var(--font); 
+  white-space: nowrap;
 }
 .btn-approve { background: var(--green); color: #fff; border: none; box-shadow: 0 6px 18px rgba(16,185,129,0.28); }
 .btn-approve:hover { background: #059669; transform: translateY(-2px); }
