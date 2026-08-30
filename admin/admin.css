@@ -1269,7 +1269,13 @@ tbody tr:hover td { background: #f8f9ff; }
 .chart-card-title i { color: var(--blue); }
 
 /* Bar chart */
-.bar-chart { display: flex; align-items: flex-end; gap: 8px; height: 160px; padding-top: 10px; }
+.bar-chart { 
+  display: flex; 
+  align-items: flex-end; 
+  gap: 8px; 
+  height: 160px; 
+  padding-top: 10px; 
+}
 .bar-item  { 
   flex: 1; 
   display: flex; 
@@ -1304,7 +1310,11 @@ tbody tr:hover td { background: #f8f9ff; }
   pointer-events: none;
 }
 .bar-fill:hover .bar-tooltip { opacity: 1; }
-.bar-label { font-size: 0.68rem; color: var(--text-3); font-weight: 600; }
+.bar-label { 
+  font-size: 0.68rem; 
+  color: var(--text-3); 
+  font-weight: 600; 
+}
 
 /* Donut chart (CSS-based) */
 .donut-wrap { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
