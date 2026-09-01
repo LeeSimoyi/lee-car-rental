@@ -1152,7 +1152,11 @@ tbody tr:hover td { background: #f8f9ff; }
 }
 .drawer-section-title i { color: var(--blue); }
 .drawer-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-.drawer-info-item { background: var(--bg); border-radius: 10px; padding: 10px 14px; }
+.drawer-info-item { 
+  background: var(--bg); 
+  border-radius: 10px; 
+  padding: 10px 14px; 
+}
 .drawer-info-item label { 
   font-size: 0.7rem; 
   color: var(--text-3); 
