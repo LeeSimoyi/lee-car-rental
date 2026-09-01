@@ -1267,10 +1267,18 @@ tbody tr:hover td { background: #f8f9ff; }
 .fleet-stat span   { font-size: 0.7rem; color: var(--text-3); }
 .fleet-card-actions { display: flex; gap: 8px; }
 .fleet-toggle-btn {
-  flex: 1; padding: 9px; border-radius: var(--radius-sm);
-  font-size: 0.82rem; font-weight: 700; cursor: pointer;
-  display: flex; align-items: center; justify-content: center; gap: 6px;
-  transition: var(--transition); font-family: var(--font);
+  flex: 1; 
+  padding: 9px; 
+  border-radius: var(--radius-sm);
+  font-size: 0.82rem; 
+  font-weight: 700; 
+  cursor: pointer;
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+  gap: 6px;
+  transition: var(--transition); 
+  font-family: var(--font);
 }
 .fleet-toggle-available   { background: var(--green); color: #fff; border: none; }
 .fleet-toggle-available:hover { background: #059669; }
