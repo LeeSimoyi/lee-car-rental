@@ -1153,8 +1153,20 @@ tbody tr:hover td { background: #f8f9ff; }
 .drawer-section-title i { color: var(--blue); }
 .drawer-info-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
 .drawer-info-item { background: var(--bg); border-radius: 10px; padding: 10px 14px; }
-.drawer-info-item label { font-size: 0.7rem; color: var(--text-3); font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 3px; }
-.drawer-info-item span  { font-size: 0.88rem; color: var(--text); font-weight: 600; }
+.drawer-info-item label { 
+  font-size: 0.7rem; 
+  color: var(--text-3); 
+  font-weight: 700; 
+  text-transform: uppercase; 
+  letter-spacing: 0.5px; 
+  display: block; 
+  margin-bottom: 3px; 
+}
+.drawer-info-item span  { 
+  font-size: 0.88rem; 
+  color: var(--text); 
+  font-weight: 600; 
+}
 .drawer-info-full { grid-column: 1 / -1; }
 
 .drawer-car-thumb {
