@@ -651,7 +651,8 @@ input, select, textarea { font-family:var(--font); }
 .topbar-search-wrap { position: relative; }
 .topbar-search-icon { 
   position: absolute; 
-  left: 11px; top: 50%; 
+  left: 11px; 
+  top: 50%; 
   transform: translateY(-50%); 
   color: var(--text-3); 
   font-size: 0.8rem; 
@@ -1223,9 +1224,17 @@ tbody tr:hover td { background: #f8f9ff; }
   transition: var(--transition); 
   color: var(--text);
 }
-.drawer-admin-note-input:focus { border-color: var(--blue); box-shadow: 0 0 0 3px rgba(65,105,225,0.1); }
+.drawer-admin-note-input:focus { 
+  border-color: var(--blue); 
+  box-shadow: 0 0 0 3px rgba(65,105,225,0.1); 
+}
 
-.drawer-action-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+.drawer-action-row { 
+  display: flex; 
+  gap: 8px; 
+  flex-wrap: wrap; 
+  margin-top: 8px; 
+}
 .drawer-action-row button {
   flex: 1; 
   padding: 10px 14px; 
